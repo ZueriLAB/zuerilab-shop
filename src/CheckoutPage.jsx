@@ -89,17 +89,20 @@ const handleSubmit = async () => {
       }),
     });
 
-    const data = await res.json();
-    console.log("API response:", data);
-    alert(JSON.stringify(data));
+   const raw = await res.text();
+console.log("API raw response:", raw);
+alert(raw || "LEERE ANTWORT");
+
+let data = {};
+try {
+  data = raw ? JSON.parse(raw) : {};
+} catch (e) {
+  throw new Error("API hat kein gültiges JSON zurückgegeben.");
+}
 
 if (!res.ok || !data.success) {
   throw new Error(data.error || "Mail konnte nicht gesendet werden.");
 }
-
-    if (!res.ok || !data.success) {
-      throw new Error(data.error || "Mail konnte nicht gesendet werden.");
-    }
 
     navigate("/success", {
       state: {
