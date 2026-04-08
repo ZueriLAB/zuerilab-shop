@@ -90,6 +90,7 @@ const handleSubmit = async () => {
 
     const data = await res.json();
     console.log("API response:", data);
+    
 
     if (!res.ok || !data.success) {
       throw new Error(data.error || "Mail konnte nicht gesendet werden.");
