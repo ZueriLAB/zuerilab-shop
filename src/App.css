@@ -1964,3 +1964,296 @@ button {
   font-size: 12px;
   opacity: 0.6;
 }
+.reviews-luxury-section {
+  max-width: 1600px;
+  margin: 42px auto 0;
+  padding: 34px 24px 38px;
+  border-radius: 28px;
+  border: 1px solid rgba(250, 204, 21, 0.12);
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.08), transparent 24%),
+    linear-gradient(180deg, #111111 0%, #090909 100%);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.reviews-luxury-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.reviews-luxury-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.08);
+  border: 1px solid rgba(250, 204, 21, 0.18);
+  color: #facc15;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.reviews-luxury-title {
+  margin: 16px 0 10px;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #fff;
+}
+
+.reviews-luxury-subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.reviews-luxury-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.reviews-luxury-summary {
+  position: sticky;
+  top: 24px;
+  padding: 24px 20px;
+  border-radius: 22px;
+  border: 1px solid #202020;
+  background: linear-gradient(180deg, #101010 0%, #0b0b0b 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.reviews-luxury-score {
+  font-size: 58px;
+  line-height: 1;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.reviews-luxury-stars,
+.reviews-luxury-card-stars {
+  color: #facc15;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.reviews-luxury-count {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.reviews-luxury-bars {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reviews-luxury-bar-row {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.reviews-luxury-bar-row span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.reviews-luxury-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: #1b1b1b;
+  overflow: hidden;
+}
+
+.reviews-luxury-bar div {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #facc15, #ffb300);
+}
+
+.reviews-luxury-note {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.reviews-luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.reviews-luxury-card {
+  min-height: 220px;
+  padding: 22px 20px;
+  border-radius: 22px;
+  border: 1px solid #202020;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.05), transparent 26%),
+    linear-gradient(180deg, #101010 0%, #090909 100%);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.reviews-luxury-card:hover {
+  transform: translateY(-4px);
+  border-color: #323232;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.reviews-luxury-card.featured {
+  grid-column: span 2;
+  min-height: 240px;
+  border-color: rgba(250, 204, 21, 0.18);
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.1), transparent 24%),
+    linear-gradient(180deg, #121212 0%, #0b0b0b 100%);
+}
+
+.reviews-luxury-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.reviews-luxury-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reviews-luxury-text {
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.reviews-luxury-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.reviews-luxury-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #101010);
+  border: 1px solid rgba(250, 204, 21, 0.18);
+  color: #facc15;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.reviews-luxury-author {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reviews-luxury-meta {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .reviews-luxury-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-luxury-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-luxury-section {
+    margin-top: 26px;
+    padding: 22px 14px 24px;
+    border-radius: 20px;
+  }
+
+  .reviews-luxury-head {
+    margin-bottom: 20px;
+  }
+
+  .reviews-luxury-subtitle {
+    font-size: 14px;
+  }
+
+  .reviews-luxury-layout {
+    gap: 14px;
+  }
+
+  .reviews-luxury-summary {
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  .reviews-luxury-score {
+    font-size: 42px;
+  }
+
+  .reviews-luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .reviews-luxury-card,
+  .reviews-luxury-card.featured {
+    grid-column: span 1;
+    min-height: unset;
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  .reviews-luxury-card-top {
+    align-items: flex-start;
+  }
+
+  .reviews-luxury-text {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+}
