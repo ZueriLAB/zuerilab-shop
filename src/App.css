@@ -1876,77 +1876,58 @@ button {
   text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
 }
 @media (max-width: 768px) {
+  .product-detail {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 12px !important;
+  }
+
   .detail-gallery {
     width: auto !important;
     height: auto !important;
+    min-height: unset !important;
+    max-height: unset !important;
     overflow: visible !important;
     background: transparent !important;
     padding: 0 !important;
-    margin: 0 auto !important;
-    display: block !important;
+    margin: 0 auto 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    line-height: 0 !important;
   }
 
   .detail-main-image {
     width: 180px !important;
     height: auto !important;
+    max-height: none !important;
     object-fit: contain !important;
-
-    transform: none !important; /* entfernt Zoom nur auf Mobile */
-  }
-}
-@media (max-width: 768px) {
-  .product-detail {
-    grid-template-columns: 1fr !important;
-    gap: 0px !important;
-    padding: 16px !important;
-  }
-
-  .detail-gallery {
-    margin: 0 auto 6px auto !important;
-    padding: 0 !important;
-  }
-
-  .detail-info h1 {
-    margin-top: 0 !important;
-    margin-bottom: 10px !important;
-  }
-
-  .description {
-    margin-top: 0 !important;
-  }
-}
-@media (max-width: 768px) {
-  .product-detail {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-    padding: 12px !important;
-  }
-
-  .detail-gallery {
-    margin: 0 auto 4px auto !important;
-    padding: 0 !important;
-  }
-
-  .detail-main-image {
+    display: block !important;
     margin: 0 !important;
+    transform: none !important;
   }
 
   .detail-info {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .detail-info h1 {
-    margin-top: 0 !important;
-    margin-bottom: 8px !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    line-height: 1.15 !important;
   }
 
   .description {
-    margin-top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
-}
-@media (max-width: 768px) {
+
+  .button-row {
+    margin-top: 12px !important;
+  }
+
   .image-wrap {
     margin: 0 !important;
     padding: 0 !important;
