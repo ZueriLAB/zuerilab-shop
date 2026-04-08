@@ -1880,3 +1880,13 @@ button {
     transform: scale(1.1) !important;
   }
 }
+@media (max-width: 768px) {
+  .detail-gallery {
+    width: 180px !important;
+    height: 220px !important;
+    padding: 0 !important; /* entfernt unnötigen Rand */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
