@@ -1894,3 +1894,24 @@ button {
     transform: none !important; /* entfernt Zoom nur auf Mobile */
   }
 }
+@media (max-width: 768px) {
+  .product-detail {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 16px !important;
+  }
+
+  .detail-gallery {
+    margin: 0 auto 6px auto !important;
+    padding: 0 !important;
+  }
+
+  .detail-info h1 {
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .description {
+    margin-top: 0 !important;
+  }
+}
