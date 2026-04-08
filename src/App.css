@@ -1840,21 +1840,58 @@ button {
     font-size: 17px;
   }
 }
-/* 🔥 CHECKOUT BUTTON (NUR BEZAHLEN BUTTON) */
+/* 🍏 APPLE STYLE CHECKOUT BUTTON */
 .checkout-actions .buy-btn,
 .checkout-summary-box .buy-btn {
-  background: linear-gradient(135deg, #facc15, #ffb300);
-  color: #111;
+  background: #000;
+  color: #fff;
   border-radius: 14px;
-  padding: 16px;
-  font-size: 16px;
-  font-weight: 800;
-  box-shadow: 0 10px 28px rgba(250, 204, 21, 0.2);
-  border: 1px solid rgba(250, 204, 21, 0.3);
+  padding: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition: all 0.2s ease;
 }
 
+/* Hover = leicht heller */
 .checkout-actions .buy-btn:hover,
 .checkout-summary-box .buy-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(250, 204, 21, 0.28);
+  background: #111;
+  transform: translateY(-1px);
+}
+
+/* Klick Effekt */
+.checkout-actions .buy-btn:active,
+.checkout-summary-box .buy-btn:active {
+  transform: translateY(0);
+  background: #0a0a0a;
+}
+
+/* Optional: Apple Glow */
+.checkout-actions .buy-btn::before,
+.checkout-summary-box .buy-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.checkout-actions .buy-btn:hover::before,
+.checkout-summary-box .buy-btn:hover::before {
+  opacity: 1;
 }
