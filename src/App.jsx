@@ -497,6 +497,7 @@ export default function App() {
                       Zum Warenkorb
                     </Link>
                   </div>
+                  <div className="card-buttons"></div>
 
                   <div className="search-bar hero-search">
                     <input
