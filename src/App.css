@@ -1843,7 +1843,7 @@ button {
 /* 🍏 APPLE STYLE CHECKOUT BUTTON */
 .checkout-actions .buy-btn,
 .checkout-summary-box .buy-btn {
-  background: #f3d632;
+  background: #ffffff;
   color: #000000;
   border-radius: 14px;
   padding: 18px;
@@ -1884,7 +1884,7 @@ button {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(21, 235, 32, 0.61),
+    rgba(21, 235, 32, 0.007),
     transparent
   );
   opacity: 0;
