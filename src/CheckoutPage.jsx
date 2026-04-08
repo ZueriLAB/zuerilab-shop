@@ -43,81 +43,85 @@ export default function CheckoutPage({ cart = [] }) {
     }));
   };
 
-const handleSubmit = async () => {
-  alert("handleSubmit läuft");
-  let newErrors = {};
+  const handleSubmit = async () => {
+    if (isSubmitting) return;
 
-  if (!form.firstName.trim()) newErrors.firstName = true;
-  if (!form.lastName.trim()) newErrors.lastName = true;
-  if (!form.country.trim()) newErrors.country = true;
-  if (!form.street.trim()) newErrors.street = true;
-  if (!form.city.trim()) newErrors.city = true;
-  if (!form.zip.trim()) newErrors.zip = true;
+    let newErrors = {};
 
-  if (!form.email.trim()) {
-    newErrors.email = true;
-  } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-    newErrors.email = "invalid";
-  }
+    if (!form.firstName.trim()) newErrors.firstName = true;
+    if (!form.lastName.trim()) newErrors.lastName = true;
+    if (!form.country.trim()) newErrors.country = true;
+    if (!form.street.trim()) newErrors.street = true;
+    if (!form.city.trim()) newErrors.city = true;
+    if (!form.zip.trim()) newErrors.zip = true;
 
-  if (cart.length === 0) {
-    setSubmitError("Dein Warenkorb ist leer.");
-    return;
-  }
+    if (!form.email.trim()) {
+      newErrors.email = true;
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "invalid";
+    }
 
-  setErrors(newErrors);
+    if (cart.length === 0) {
+      setSubmitError("Dein Warenkorb ist leer.");
+      return;
+    }
 
-  if (Object.keys(newErrors).length > 0) return;
+    setErrors(newErrors);
 
-  const orderNumber = "SP-" + Math.floor(100000 + Math.random() * 900000);
-  const date = new Date().toLocaleDateString("de-DE");
+    if (Object.keys(newErrors).length > 0) return;
 
-  setSubmitError("");
+    const orderNumber = "SP-" + Math.floor(100000 + Math.random() * 900000);
+    const date = new Date().toLocaleDateString("de-DE");
 
-  try {
-    const res = await fetch("/api/order", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        orderNumber,
-        date,
-        total,
-        cart,
-        form,
-      }),
-    });
+    setSubmitError("");
+    setIsSubmitting(true);
 
-    const raw = await res.text();
-console.log("API raw response:", raw);
+    try {
+      const res = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          orderNumber,
+          date,
+          total,
+          cart,
+          form,
+        }),
+      });
 
-let data = {};
-try {
-  data = raw ? JSON.parse(raw) : {};
-} catch (e) {
-  throw new Error("API hat kein gültiges JSON zurückgegeben.");
-}
+      const raw = await res.text();
+      console.log("API raw response:", raw);
 
-if (!res.ok || !data.success) {
-  throw new Error(data.error || "Mail konnte nicht gesendet werden.");
-}
+      let data = {};
+      try {
+        data = raw ? JSON.parse(raw) : {};
+      } catch (e) {
+        throw new Error("API hat kein gültiges JSON zurückgegeben.");
+      }
 
-    navigate("/success", {
-      state: {
-        orderNumber,
-        date,
-        total,
-        paymentMethod: "Kreditkarte",
-        cart,
-        form,
-      },
-    });
-  } catch (err) {
-    console.error("Mail Fehler:", err);
-    setSubmitError(err.message || "Mail Versand fehlgeschlagen.");
-  }
-};
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Mail konnte nicht gesendet werden.");
+      }
+
+      navigate("/success", {
+        state: {
+          orderNumber,
+          date,
+          total,
+          paymentMethod: "Kreditkarte",
+          cart,
+          form,
+        },
+      });
+    } catch (err) {
+      console.error("Mail Fehler:", err);
+      setSubmitError(err.message || "Mail Versand fehlgeschlagen.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="page">
