@@ -1877,21 +1877,20 @@ button {
 }
 @media (max-width: 768px) {
   .detail-gallery {
-    width: 180px !important;
-    height: 100px !important;
-    min-height: 100px !important;
-    max-height: 100px !important;
-    margin: 0 auto !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
     padding: 0 !important;
-    overflow: hidden !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    align-self: start !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 
-.detail-main-image {
-  object-fit: contain !important;
-  transform: scale(1.2) !important;
-}
+  .detail-main-image {
+    width: 180px !important;
+    height: auto !important;
+    object-fit: contain !important;
+
+    transform: none !important; /* entfernt Zoom nur auf Mobile */
+  }
 }
