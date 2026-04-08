@@ -82,7 +82,11 @@ body {
   border: 1px solid #222;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: 0.25s;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
@@ -106,6 +110,9 @@ body {
   top: 12px;
   left: 12px;
 }
+.card-content .buy-btn {
+  margin-top: auto;
+}
 
 .badge {
   display: inline-block;
@@ -118,7 +125,11 @@ body {
 }
 
 .card-content {
-  padding: 18px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-content h3 {
