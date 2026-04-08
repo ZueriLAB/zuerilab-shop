@@ -5,9 +5,9 @@ import "./App.css";
 export default function ProductPage({ products, addToCart, cart }) {
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
-  useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "instant" });
+}, [id]);
 
   if (!product) {
     return (
