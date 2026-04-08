@@ -1876,11 +1876,6 @@ button {
   text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
 }
 @media (max-width: 768px) {
-  .detail-main-image {
-    transform: scale(1.1) !important;
-  }
-}
-@media (max-width: 768px) {
   .detail-gallery {
     width: 180px !important;
     height: 100px !important;
@@ -1894,8 +1889,7 @@ button {
     align-items: center !important;
     align-self: start !important;
   }
-}
-@media (max-width: 768px) {
+
   .detail-main-image {
     max-height: 100% !important;
   }
