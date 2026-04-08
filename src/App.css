@@ -1934,3 +1934,33 @@ button {
     min-height: unset !important;
   }
 }
+.reviews {
+  color: #facc15;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.reviews span {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin-left: 6px;
+}
+.review-box {
+  background: #0f0f0f;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.review-box p:first-child {
+  color: #facc15;
+  margin: 0 0 6px;
+}
+
+.review-box span {
+  font-size: 12px;
+  opacity: 0.6;
+}
