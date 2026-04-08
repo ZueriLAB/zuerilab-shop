@@ -89,6 +89,7 @@ const handleSubmit = async () => {
       }),
     });
 
+    const raw = await res.text();
 console.log("API raw response:", raw);
 
 let data = {};
