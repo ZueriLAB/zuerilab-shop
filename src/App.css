@@ -2257,3 +2257,11 @@ button {
     margin-bottom: 18px;
   }
 }
+.featured-strip-section {
+  margin: 4px auto 10px !important;
+  padding: 0 20px !important;
+}
+
+.featured-strip-header {
+  display: none !important;
+}

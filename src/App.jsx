@@ -587,29 +587,8 @@ export default function App() {
                   </div>
                 </div>
               </section>
-
-              {searchTerm.trim() === "" && bestsellers.length > 0 && (
-                <section className="featured-strip-section">
-                  <div className="featured-strip-header">
-                    <span className="featured-strip-kicker">Beliebt im Shop</span>
-                    <h2 className="featured-strip-title">Unsere Bestseller</h2>
-                  </div>
-
-                  <div className="featured-strip">
-                    {bestsellers.slice(0, 4).map((product) => (
-                      <a
-                        key={product.id}
-                        href={`#product-${product.id}`}
-                        className="featured-chip"
-                      >
-                        <img src={product.image} alt={product.title} />
-                        <span>{product.title}</span>
-                      </a>
-                    ))}
-                  </div>
-                </section>
-              )}
-
+            
+        
               {filteredProducts.length === 0 ? (
                 <section className="product-section">
                   <h2 className="section-title">SUCHERGEBNIS</h2>
