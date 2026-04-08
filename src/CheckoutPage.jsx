@@ -8,7 +8,7 @@ export default function CheckoutPage({ cart = [] }) {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
-    country: "Deutschland",
+    country: "Schweiz",
     street: "",
     addressExtra: "",
     city: "",

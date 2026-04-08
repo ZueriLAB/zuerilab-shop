@@ -4,6 +4,7 @@ export async function onRequestPost(context) {
     const body = await request.json();
 
     const { orderNumber, date, total, cart, form } = body || {};
+    console.log("ADMIN NOTES:", form?.notes);
 
     if (!orderNumber || !form?.email || !Array.isArray(cart)) {
       return new Response(
