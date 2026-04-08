@@ -888,21 +888,25 @@ a {
 
 .success-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.2fr 0.9fr;
   gap: 40px;
-  margin-top: 30px;
+  align-items: start;
+  margin-top: 40px;
 }
 
 .success-subtitle {
-  margin-bottom: 18px;
-  font-size: 22px;
-  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: white;
 }
 
-.success-order-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.success-order-list,
+.success-address {
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
 }
 
 .success-order-item {
@@ -910,14 +914,15 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid #333;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .success-order-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  min-width: 0;
 }
 
 .success-order-image {
@@ -925,44 +930,58 @@ a {
   height: 68px;
   object-fit: cover;
   border-radius: 12px;
-  background: #fff;
-  padding: 4px;
+  background: white;
+  flex-shrink: 0;
 }
 
 .success-order-name {
+  font-size: 28px;
   font-weight: 700;
+  color: white;
+  line-height: 1.2;
 }
 
 .success-order-qty {
-  font-size: 14px;
-  color: #bbb;
+  margin-top: 6px;
+  font-size: 22px;
+  color: #d0d0d0;
 }
 
 .success-order-price {
+  font-size: 30px;
   font-weight: 700;
+  color: white;
   white-space: nowrap;
 }
 
 .success-total {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  font-size: 32px;
   font-weight: 700;
-  margin-top: 16px;
-  font-size: 18px;
-}
-
-.success-address {
-  line-height: 1.9;
-  border-top: 1px solid #333;
-  padding-top: 16px;
+  color: white;
 }
 
 .success-address p {
-  margin: 8px 0;
+  margin: 0 0 18px 0;
+  font-size: 24px;
+  line-height: 1.5;
+  color: white;
+}
+
+.success-address strong {
+  color: white;
 }
 
 .success-btn {
-  margin-top: 30px;
-  width: 100%;
+  display: block;
+  width: fit-content;
+  min-width: 260px;
+  margin: 40px auto 0;
+  padding: 16px 32px;
+  border-radius: 14px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
