@@ -1904,7 +1904,7 @@ button {
 @media (max-width: 768px) {
   .detail-gallery {
     width: 180px !important;
-    height: 180px !important;   /* ← hier kürzer machen */
+    height: 150px !important;   /* ← hier kürzer machen */
     margin: 0 auto !important;
     overflow: hidden !important;
     display: flex !important;
