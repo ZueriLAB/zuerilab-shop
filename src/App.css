@@ -666,9 +666,20 @@ button {
   max-width: 360px;
   max-height: 360px;
   object-fit: contain;
-  transform: scale(2.8);
+  transform: scale(1.6);
 }
+@media (max-width: 768px) {
+  .detail-gallery {
+    min-height: 260px;
+    padding: 20px;
+  }
 
+  .detail-main-image {
+    max-width: 220px;
+    max-height: 220px;
+    transform: scale(1);
+  }
+}
 .detail-info h1 {
   font-size: 36px;
 }
