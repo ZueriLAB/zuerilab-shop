@@ -326,6 +326,14 @@ export default function App() {
     (product) => product.category === "SUPPORT"
   );
 
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  const cartTotal = cart
+    .reduce((sum, item) => sum + item.quantity * parseFloat(item.price), 0)
+    .toFixed(2);
+
+  const bestsellers = products.filter((product) => product.badge === "BESTSELLER");
+
   const addToCart = (product) => {
     if (product.inStock === false) return;
 
@@ -395,6 +403,10 @@ export default function App() {
       </div>
 
       <div className="card-content">
+        <div className="card-meta-row">
+          <span className="card-category">{product.category}</span>
+        </div>
+
         <h3>{product.title}</h3>
 
         <div className="price-row">
@@ -410,23 +422,25 @@ export default function App() {
           <p className="out-of-stock-text">Nicht verfügbar</p>
         )}
 
-        <Link to={`/produkt/${product.id}`}>
-          <button className="buy-btn full">Produkt Details</button>
-        </Link>
+        <div className="card-actions">
+          <Link to={`/produkt/${product.id}`}>
+            <button className="buy-btn full">Produkt Details</button>
+          </Link>
 
-        {product.inStock === false ? (
-          <button className="secondary-btn full" disabled>
-            Ausverkauft
-          </button>
-        ) : (
-          <button
-            className="buy-btn full"
-            onClick={() => addToCart(product)}
-          >
-            In den Warenkorb
-            <span className="cart-icon">🛒</span>
-          </button>
-        )}
+          {product.inStock === false ? (
+            <button className="secondary-btn full" disabled>
+              Ausverkauft
+            </button>
+          ) : (
+            <button
+              className="buy-btn full"
+              onClick={() => addToCart(product)}
+            >
+              In den Warenkorb
+              <span className="cart-icon">🛒</span>
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -449,22 +463,51 @@ export default function App() {
               </header>
 
               <nav className="nav">
-                <span className="nav-link">Neu</span>
-                <span className="nav-link">Infos</span>
-                <span className="nav-link">Support</span>
+                <a href="#neu" className="nav-link">Neu</a>
+                <a href="#peptide" className="nav-link">Peptide</a>
+                <a href="#muskel-gain" className="nav-link">Muskel Gain</a>
+                <a href="#support" className="nav-link">Support</a>
                 <Link to="/warenkorb" className="nav-link cart-link">
-                  🛒 Warenkorb ({cart.reduce((sum, item) => sum + item.quantity, 0)})
+                  🛒 Warenkorb ({cartCount})
                 </Link>
               </nav>
 
-              <div className="search-bar">
-                <input
-                  type="text"
-                  placeholder="Produkte suchen..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
+              <section className="hero-section" id="neu">
+                <div className="hero-inner">
+                  <div className="hero-badge">
+                    Schweizer Qualität • Laborgeprüft • Diskreter Versand
+                  </div>
+
+                  <h1 className="hero-title">
+                    Premium Performance Produkte
+                    <br />
+                    mit klarem Fokus auf Qualität
+                  </h1>
+
+                  <p className="hero-subtitle">
+                    Entdecke ausgewählte Peptide und Performance-Produkte
+                    in einem klaren, diskreten und modernen Bestellprozess.
+                  </p>
+
+                  <div className="hero-actions">
+                    <a href="#peptide" className="hero-btn hero-btn-primary">
+                      Bestseller ansehen
+                    </a>
+                    <Link to="/warenkorb" className="hero-btn hero-btn-secondary">
+                      Zum Warenkorb
+                    </Link>
+                  </div>
+
+                  <div className="search-bar hero-search">
+                    <input
+                      type="text"
+                      placeholder="Produkte suchen..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                  </div>
+                </div>
+              </section>
 
               <div className="trust-strip">
                 <div className="trust-strip-item">
@@ -473,7 +516,7 @@ export default function App() {
                 </div>
 
                 <div className="trust-strip-item">
-                  <span>Nur Laborgeprüfte Produkte</span>
+                  <span>Nur laborgeprüfte Produkte</span>
                 </div>
 
                 <div className="trust-strip-item">
@@ -487,38 +530,84 @@ export default function App() {
                 </div>
               </div>
 
+              {searchTerm.trim() === "" && bestsellers.length > 0 && (
+                <section className="featured-strip-section">
+                  <div className="featured-strip-header">
+                    <span className="featured-strip-kicker">Beliebt im Shop</span>
+                    <h2 className="featured-strip-title">Unsere Bestseller</h2>
+                  </div>
+
+                  <div className="featured-strip">
+                    {bestsellers.slice(0, 4).map((product) => (
+                      <a
+                        key={product.id}
+                        href={`#product-${product.id}`}
+                        className="featured-chip"
+                      >
+                        <img src={product.image} alt={product.title} />
+                        <span>{product.title}</span>
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              )}
+
               {filteredProducts.length === 0 ? (
                 <section className="product-section">
                   <h2 className="section-title">SUCHERGEBNIS</h2>
-                  <div className="product-grid">
-                    <p className="empty-search">Keine Produkte gefunden.</p>
+                  <div className="empty-search-box">
+                    <h3>Keine Produkte gefunden</h3>
+                    <p>
+                      Versuche einen anderen Suchbegriff oder prüfe deine Schreibweise.
+                    </p>
                   </div>
                 </section>
               ) : (
                 <>
                   {peptideProducts.length > 0 && (
-                    <section className="product-section">
-                      <h2 className="section-title">PEPTIDE</h2>
+                    <section className="product-section" id="peptide">
+                      <div className="section-heading-wrap">
+                        <span className="section-kicker">Kategorie</span>
+                        <h2 className="section-title">PEPTIDE</h2>
+                      </div>
                       <div className="product-grid">
-                        {peptideProducts.map(renderProductCard)}
+                        {peptideProducts.map((product) => (
+                          <div id={`product-${product.id}`} key={product.id}>
+                            {renderProductCard(product)}
+                          </div>
+                        ))}
                       </div>
                     </section>
                   )}
 
                   {muscleGainProducts.length > 0 && (
-                    <section className="product-section">
-                      <h2 className="section-title">FATBURNER</h2>
+                    <section className="product-section" id="muskel-gain">
+                      <div className="section-heading-wrap">
+                        <span className="section-kicker">Kategorie</span>
+                        <h2 className="section-title">MUSKEL GAIN</h2>
+                      </div>
                       <div className="product-grid">
-                        {muscleGainProducts.map(renderProductCard)}
+                        {muscleGainProducts.map((product) => (
+                          <div id={`product-${product.id}`} key={product.id}>
+                            {renderProductCard(product)}
+                          </div>
+                        ))}
                       </div>
                     </section>
                   )}
 
                   {supportProducts.length > 0 && (
-                    <section className="product-section">
-                      <h2 className="section-title">SUPPORT</h2>
+                    <section className="product-section" id="support">
+                      <div className="section-heading-wrap">
+                        <span className="section-kicker">Kategorie</span>
+                        <h2 className="section-title">SUPPORT</h2>
+                      </div>
                       <div className="product-grid">
-                        {supportProducts.map(renderProductCard)}
+                        {supportProducts.map((product) => (
+                          <div id={`product-${product.id}`} key={product.id}>
+                            {renderProductCard(product)}
+                          </div>
+                        ))}
                       </div>
                     </section>
                   )}
@@ -562,44 +651,52 @@ export default function App() {
         />
       </Routes>
 
-        {isCartOpen && (
-    <div className="cart-overlay" onClick={() => setIsCartOpen(false)} />
-  )}
+      {isCartOpen && (
+        <div className="cart-overlay" onClick={() => setIsCartOpen(false)} />
+      )}
 
-  <div className={`cart-drawer ${isCartOpen ? "open" : ""}`}>
-    <div className="cart-drawer-content">
+      <div className={`cart-drawer ${isCartOpen ? "open" : ""}`}>
+        <div className="cart-drawer-content">
+          <button className="close-btn" onClick={() => setIsCartOpen(false)}>
+            ✕
+          </button>
 
-      <button className="close-btn" onClick={() => setIsCartOpen(false)}>
-        ✕
-      </button>
+          <h2>Warenkorb</h2>
 
-      <h2>Warenkorb</h2>
+          {cart.length === 0 ? (
+            <div className="cart-drawer-empty">
+              <p>Dein Warenkorb ist aktuell leer.</p>
+            </div>
+          ) : (
+            <>
+              <div className="cart-drawer-list">
+                {cart.map((item) => (
+                  <div key={item.id} className="cart-drawer-item">
+                    <img src={item.image} alt={item.title} />
+                    <div>
+                      <p>{item.title}</p>
+                      <p>{item.quantity} x {item.price}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-      {cart.map((item) => (
-        <div key={item.id} className="cart-drawer-item">
-          <img src={item.image} alt={item.title} />
-          <div>
-            <p>{item.title}</p>
-            <p>{item.quantity} x {item.price}</p>
-          </div>
+              <div className="cart-total">
+                Gesamt: {cartTotal} CHF
+              </div>
+
+              <Link to="/warenkorb">
+                <button
+                  className="buy-btn full"
+                  onClick={() => setIsCartOpen(false)}
+                >
+                  Zum Warenkorb
+                </button>
+              </Link>
+            </>
+          )}
         </div>
-      ))}
-
-      <div className="cart-total">
-        Gesamt:{" "}
-        {cart
-          .reduce((sum, item) => sum + item.quantity * parseFloat(item.price), 0)
-          .toFixed(2)} CHF
       </div>
-
-      <Link to="/warenkorb">
-        <button className="buy-btn full" onClick={() => setIsCartOpen(false)}>
-          Zum Warenkorb
-        </button>
-      </Link>
-
-    </div>
-  </div>
     </>
   );
 }
