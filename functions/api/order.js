@@ -1,20 +1,7 @@
-export async function onRequestGet(context) {
-  return new Response(
-    JSON.stringify({
-      ok: true,
-      message: "API lebt",
-      hasResendKey: !!context.env.RESEND_API_KEY,
-      hasFromEmail: !!context.env.RESEND_FROM_EMAIL,
-      hasAdminEmail: !!context.env.ADMIN_ORDER_EMAIL,
-    }),
-    {
-      headers: { "Content-Type": "application/json" },
-    }
-  );
+export async function onRequestPost(context) {
   try {
     const { request, env } = context;
     const body = await request.json();
-    
 
     const { orderNumber, date, total, cart, form } = body || {};
 
@@ -75,17 +62,8 @@ export async function onRequestGet(context) {
         <h3>Lieferadresse</h3>
         <p>${shippingAddress}</p>
 
-        ${
-          form.phone
-            ? `<p><strong>Telefon:</strong> ${form.phone}</p>`
-            : ""
-        }
-
-        ${
-          form.notes
-            ? `<p><strong>Anmerkungen:</strong><br/>${form.notes}</p>`
-            : ""
-        }
+        ${form.phone ? `<p><strong>Telefon:</strong> ${form.phone}</p>` : ""}
+        ${form.notes ? `<p><strong>Anmerkungen:</strong><br/>${form.notes}</p>` : ""}
 
         <p style="margin-top:24px;">Wir melden uns, sobald deine Bestellung bearbeitet wurde.</p>
       </div>
@@ -109,11 +87,7 @@ export async function onRequestGet(context) {
         <h3>Adresse</h3>
         <p>${shippingAddress}</p>
 
-        ${
-          form.notes
-            ? `<p><strong>Notiz:</strong><br/>${form.notes}</p>`
-            : ""
-        }
+        ${form.notes ? `<p><strong>Notiz:</strong><br/>${form.notes}</p>` : ""}
 
         <h3>Produkte</h3>
         <table style="width:100%;border-collapse:collapse;">
@@ -134,6 +108,19 @@ export async function onRequestGet(context) {
     const resendEndpoint = "https://api.resend.com/emails";
     const fromEmail = env.RESEND_FROM_EMAIL;
     const adminEmail = env.ADMIN_ORDER_EMAIL;
+
+    if (!env.RESEND_API_KEY || !fromEmail || !adminEmail) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: "Fehlende ENV Variablen für Mailversand",
+        }),
+        {
+          status: 500,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+    }
 
     const sendCustomer = fetch(resendEndpoint, {
       method: "POST",
