@@ -1883,32 +1883,15 @@ button {
 @media (max-width: 768px) {
   .detail-gallery {
     width: 180px !important;
-    height: 220px !important;
-    padding: 0 !important; /* entfernt unnötigen Rand */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
-@media (max-width: 768px) {
-  .detail-gallery {
-    width: 180px !important;
-    height: 220px !important;
-
-    margin: 0 auto !important;   /* ← DAS zentriert den Kasten */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
-@media (max-width: 768px) {
-  .detail-gallery {
-    width: 180px !important;
-    height: 100px !important;   /* ← hier kürzer machen */
+    height: 100px !important;
+    min-height: 100px !important;
+    max-height: 100px !important;
     margin: 0 auto !important;
+    padding: 0 !important;
     overflow: hidden !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    align-self: start !important;
   }
 }
