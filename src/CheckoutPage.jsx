@@ -91,7 +91,6 @@ const handleSubmit = async () => {
 
    const raw = await res.text();
 console.log("API raw response:", raw);
-alert(raw || "LEERE ANTWORT");
 
 let data = {};
 try {
