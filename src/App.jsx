@@ -46,7 +46,7 @@ const products = [
     badge: "BESTSELLER",
     image: "/RETA10.png",
     description:
-      "Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
+      " Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
     details:
       "Hauptwirkungen von Retatrutid: Dreifache Rezeptor-Aktivierung: Retatrutid ahmt die Hormone GLP-1, GIP und Glukagon nach, was zu einer intensiven Stoffwechselregulation führt. Appetitregulation & Sättigung: Die Kombination aus GLP-1 und GIP dämpft den Hunger deutlich stärker und fördert ein früheres Sättigungsgefühl. Erhöhter Kalorienverbrauch: Die Glukagon-Aktivierung kurbelt die Thermogenese an und unterstützt die Fettverbrennung. Blutzuckerkontrolle & Gewichtsabnahme: Es verbessert den HbA1c-Wert und führt in Studien zu einer starken Gewichtsabnahme.",
     gallery: ["/RETA10.png"],
@@ -61,7 +61,7 @@ const products = [
     badge: "SALE",
     image: "/TIRZE.png",
     description:
-      "Tirzepatide wirkt auf die Hormone GLP-1 und GIP, senkt dadurch stark den Appetit und verbessert die Insulinwirkung.",
+      "Willst du Gewicht verlieren? Tirzepatide wirkt auf die Hormone GLP-1 und GIP, senkt dadurch stark den Appetit und verbessert die Insulinwirkung.",
     details:
       "Doppelte Wirkung (GIP & GLP-1): Tirzepatid ahmt die Darmhormone GIP und GLP-1 nach. Blutzuckerkontrolle: Es steigert glukoseabhängig die Insulinsekretion und senkt die Glukagonkonzentration. Gewichtsabnahme: Es hemmt den Appetit und fördert ein schnelleres, längeres Sättigungsgefühl. Körperzusammensetzung: Studien zeigen, dass Tirzepatid den Taillenumfang und die viszerale Fettmasse reduziert.",
     gallery: ["/TIRZE.png"],
