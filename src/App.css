@@ -467,6 +467,19 @@ button {
   flex-direction: column;
   gap: 10px;
 }
+@media (max-width: 768px) {
+  .card-content h3 {
+    min-height: 50px;
+  }
+
+  .price-row {
+    min-height: 36px;
+  }
+
+  .card-content p {
+    min-height: 100px;
+  }
+}
 
 .image-wrap {
   position: relative;
