@@ -36,12 +36,19 @@ export async function onRequestPost(context) {
     `;
 
     const customerHtml = `
-      <div style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;color:#111;">
-        <h2>Vielen Dank für deine Bestellung bei SwissPharmaLab</h2>
+      <div style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;color:#111;line-height:1.6;">
+        <h2 style="margin-bottom:8px;">Vielen Dank für deine Bestellung bei SwissPharmaLab</h2>
         <p>Deine Bestellung ist bei uns eingegangen.</p>
 
-        <p><strong>Bestellnummer:</strong> ${orderNumber}<br/>
-        <strong>Datum:</strong> ${date}</p>
+        <div style="background:#f8f8f8;border:1px solid #ddd;border-radius:10px;padding:16px;margin:20px 0;">
+          <p style="margin:0 0 6px 0;"><strong>Bestellnummer:</strong> ${orderNumber}</p>
+          <p style="margin:0;"><strong>Datum:</strong> ${date}</p>
+        </div>
+
+        <div style="background:#f8f8f8;border:1px solid #ddd;border-radius:10px;padding:16px;margin:20px 0;">
+          <h3 style="margin:0 0 8px 0;">Zu zahlender Betrag</h3>
+          <p style="font-size:28px;font-weight:bold;margin:0;">${total.toFixed(2)} CHF</p>
+        </div>
 
         <h3>Bestellübersicht</h3>
         <table style="width:100%;border-collapse:collapse;">
@@ -65,7 +72,54 @@ export async function onRequestPost(context) {
         ${form.phone ? `<p><strong>Telefon:</strong> ${form.phone}</p>` : ""}
         ${form.notes ? `<p><strong>Anmerkungen:</strong><br/>${form.notes}</p>` : ""}
 
-        <p style="margin-top:24px;">Wir melden uns, sobald deine Bestellung bearbeitet wurde.</p>
+        <hr style="margin:28px 0;border:none;border-top:1px solid #ddd;" />
+
+        <h3>Zahlungsanleitung</h3>
+        <p>
+          Bitte führe jetzt die Zahlung über eine der folgenden Optionen durch.
+          Nach erfolgreicher Prüfung wird deine Bestellung bearbeitet und versendet.
+        </p>
+
+        <div style="border:1px solid #ddd;border-radius:10px;padding:16px;margin:20px 0;">
+          <h3 style="margin-top:0;">Option 1: Bezahlung via Kreditkarte (Bitcoin über Ramp)</h3>
+          <ol style="padding-left:20px;margin-bottom:12px;">
+            <li>Gehe auf www.rampnetwork.com</li>
+            <li>Wähle „Bitcoin kaufen“.</li>
+            <li>Logge dich ein oder erstelle ein Konto.</li>
+            <li>Gib den Betrag von <strong>${total.toFixed(2)} CHF</strong> ein.</li>
+            <li>Trage unsere Bitcoin Wallet Adresse als Empfänger ein.</li>
+            <li>Bezahle bequem mit deiner Kreditkarte.</li>
+            <li>Sende uns danach einen Screenshot oder Zahlungsnachweis, indem du einfach auf diese E-Mail antwortest.</li>
+          </ol>
+
+          <p style="margin-bottom:8px;"><strong>Bitcoin Wallet Adresse:</strong></p>
+          <p style="word-break:break-all;font-family:monospace;background:#f8f8f8;padding:10px;border-radius:6px;margin-top:0;">
+            3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA
+          </p>
+
+          <p style="margin-top:12px;">
+            Die Transaktion dauert in der Regel nur wenige Minuten
+            (ca. 3–4 Minuten). Deine Bestellnummer ist bereits im Betreff dieser E-Mail enthalten.
+          </p>
+        </div>
+
+        <div style="border:1px solid #ddd;border-radius:10px;padding:16px;margin:20px 0;">
+          <h3 style="margin-top:0;">Option 2: Paysafe</h3>
+          <ol style="padding-left:20px;margin-bottom:12px;">
+            <li>Kaufe Paysafe Guthaben bei einem SBB Schalter, k kiosk oder in der PostFinance App.</li>
+            <li>Der Betrag kann frei gewählt werden, insgesamt müssen <strong>${total.toFixed(2)} CHF</strong> erreicht werden.</li>
+            <li>Sende uns den Paysafe Code, indem du einfach auf diese E-Mail antwortest.</li>
+            <li>Nach erfolgreicher Prüfung wird deine Bestellung bearbeitet und versendet.</li>
+          </ol>
+
+          <p style="margin:0;">
+            Deine Bestellnummer ist bereits im Betreff dieser E-Mail enthalten.
+          </p>
+        </div>
+
+        <p style="margin-top:24px;">
+          Wir melden uns, sobald deine Bestellung bearbeitet wurde.
+        </p>
       </div>
     `;
 

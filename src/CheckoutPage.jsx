@@ -110,7 +110,7 @@ export default function CheckoutPage({ cart = [] }) {
           orderNumber,
           date,
           total,
-          paymentMethod: "Kreditkarte",
+          paymentMethod: "Zahlungsanweisungen anzeigen",
           cart,
           form,
         },

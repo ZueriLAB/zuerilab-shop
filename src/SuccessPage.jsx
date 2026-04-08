@@ -33,7 +33,7 @@ export default function SuccessPage() {
       <div className="success-box">
         <div className="success-header">
           <div className="success-icon">✓</div>
-          <h1>Bestellung erhalten</h1>
+          <h1>Bestellung erhalten – bitte Zahlung jetzt abschließen</h1>
 
           <p className="success-main-text">
             Vielen Dank für deine Bestellung!
@@ -218,7 +218,7 @@ export default function SuccessPage() {
                 <strong>Land:</strong> {form.country}
               </p>
               <p>
-                <strong>Straße:</strong> {form.address}
+                <strong>Straße:</strong> {form.street}
               </p>
               <p>
                 <strong>Ort / Stadt:</strong> {form.city}
