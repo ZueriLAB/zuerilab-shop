@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./App.css";
 
 export default function ProductPage({ products, addToCart, cart }) {
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   if (!product) {
     return (
