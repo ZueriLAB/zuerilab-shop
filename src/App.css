@@ -1915,3 +1915,34 @@ button {
     margin-top: 0 !important;
   }
 }
+@media (max-width: 768px) {
+  .product-detail {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding: 12px !important;
+  }
+
+  .detail-gallery {
+    margin: 0 auto 4px auto !important;
+    padding: 0 !important;
+  }
+
+  .detail-main-image {
+    margin: 0 !important;
+  }
+
+  .detail-info {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .detail-info h1 {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .description {
+    margin-top: 0 !important;
+  }
+}
