@@ -1895,9 +1895,8 @@ button {
   height: 100% !important;
 
   object-fit: cover !important;
-  object-position: center 30% !important; /* ← WICHTIG */
+  object-position: center 25% !important;
 
   transform: scale(1.4) !important;
-  transform-origin: center center !important;
 }
 }
