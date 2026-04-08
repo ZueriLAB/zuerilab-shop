@@ -1897,7 +1897,7 @@ button {
 @media (max-width: 768px) {
   .product-detail {
     grid-template-columns: 1fr !important;
-    gap: 10px !important;
+    gap: 4px !important;
     padding: 16px !important;
   }
 
@@ -1908,7 +1908,7 @@ button {
 
   .detail-info h1 {
     margin-top: 0 !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 10px !important;
   }
 
   .description {
