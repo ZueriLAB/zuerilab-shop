@@ -681,7 +681,7 @@ button {
     object-fit: contain;
 
     /* 🔥 perfekter Zoom */
-    transform: scale(1.25);
+    transform: scale(1.60);
   }
 }
 .detail-info h1 {
