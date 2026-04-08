@@ -670,14 +670,18 @@ button {
 }
 @media (max-width: 768px) {
   .detail-gallery {
-    min-height: 260px;
+    min-height: 300px;
     padding: 20px;
   }
 
   .detail-main-image {
-    max-width: 220px;
-    max-height: 220px;
-    transform: scale(1);
+    max-width: 260px;
+    max-height: 260px;
+
+    object-fit: contain;
+
+    /* 🔥 perfekter Zoom */
+    transform: scale(1.25);
   }
 }
 .detail-info h1 {
