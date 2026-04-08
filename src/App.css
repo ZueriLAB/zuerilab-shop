@@ -1874,3 +1874,7 @@ button {
   transform: translateY(0);
   background: #eaeaea;
 }
+.checkout-summary-title {
+  color: #facc15;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+}
