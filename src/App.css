@@ -1890,7 +1890,12 @@ button {
     align-self: start !important;
   }
 
-  .detail-main-image {
-    max-height: 100% !important;
-  }
+ .detail-main-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: scale(1.6) !important;
+  transform-origin: center center !important;
+}
 }
