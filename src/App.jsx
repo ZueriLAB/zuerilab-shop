@@ -486,7 +486,7 @@ export default function App() {
 
                   <p className="hero-subtitle">
                     Entdecke ausgewählte Peptide und Performance-Produkte
-                    in einem klaren, diskreten und modernen Bestellprozess.
+                    in einem klaren, diskreten und modernen Bestellprozess mit Versand aus der Schweiz
                   </p>
 
                   <div className="hero-actions">
@@ -508,9 +508,6 @@ export default function App() {
                   </div>
                 </div>
               </section>
-<div className="hero-trust">
-  🇨🇭 Schweizer Qualität • 🔬 Laborgeprüft • 🔒 Sicher • 📦 Versand
-</div>
 
               {searchTerm.trim() === "" && bestsellers.length > 0 && (
                 <section className="featured-strip-section">
