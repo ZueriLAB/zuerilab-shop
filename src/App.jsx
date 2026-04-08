@@ -508,27 +508,9 @@ export default function App() {
                   </div>
                 </div>
               </section>
-
-              <div className="trust-strip">
-                <div className="trust-strip-item">
-                  <img src="/swiss.png" alt="Schweizer Flagge" className="trust-flag" />
-                  <span>Schweizer Qualität</span>
-                </div>
-
-                <div className="trust-strip-item">
-                  <span>Nur laborgeprüfte Produkte</span>
-                </div>
-
-                <div className="trust-strip-item">
-                  <span className="trust-icon">🔒</span>
-                  <span>Sichere Bestellung</span>
-                </div>
-
-                <div className="trust-strip-item">
-                  <span className="trust-icon">📦</span>
-                  <span>Schneller Versand</span>
-                </div>
-              </div>
+<div className="hero-trust">
+  🇨🇭 Schweizer Qualität • 🔬 Laborgeprüft • 🔒 Sicher • 📦 Versand
+</div>
 
               {searchTerm.trim() === "" && bestsellers.length > 0 && (
                 <section className="featured-strip-section">
