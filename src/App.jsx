@@ -56,8 +56,8 @@ const products = [
     id: 4,
     title: "TIRZEPATIDE 30",
     category: "PEPTIDE",
-    price: "110.00 CHF",
-    oldPrice: "120.00 CHF",
+    price: "160.00 CHF",
+    oldPrice: "170.00 CHF",
     badge: "SALE",
     image: "/TIRZE.png",
     description:
@@ -157,6 +157,84 @@ const products = [
     gallery: ["/AOD.png"],
     inStock: true,
   },
+    {
+    id: 11,
+    title: "SS-31 10",
+    category: "PEPTIDE",
+    price: "80.00 CHF",
+    oldPrice: "85.00 CHF",
+    badge: "SALE",
+    image: "/SS.png",
+    description:
+      "SS-31 bindet an Cardiolipin in der inneren mitochondrialen Membran, verhindert dessen Oxidation und stabilisiert so die Struktur der Mitochondrien.",
+    details:
+      "Das Peptid SS-31 (auch Elamipretid) wirkt positiv auf die Mitochondrien, indem es deren Energieproduktion verbessert und sie vor oxidativem Stress schützt. Dadurch kann es die Zellfunktion stabilisieren und möglicherweise Ermüdung sowie altersbedingte Schäden reduzieren. Insgesamt wird es vor allem zur Unterstützung von Herz-, Muskel- und Gehirnzellen erforscht.",
+    gallery: ["/SS.png"],
+    inStock: true,
+  },
+   {
+    id: 12,
+    title: "GHRP-2",
+    category: "PEPTIDE",
+    price: "90.00 CHF",
+    oldPrice: "99.00 CHF",
+    badge: "SALE",
+    image: "/GHRP.png",
+    description:
+      "GHRP-2 (Growth Hormone Releasing Peptide-2) ist ein synthetisches Peptid, das die Ausschüttung von Wachstumshormon (GH) anregt, indem es die Hypophyse stimuliert.",
+    details:
+      "Das Peptid GHRP-2 (Growth Hormone Releasing Peptide-2) ist ein synthetisches Peptid, das die Ausschüttung von Wachstumshormon (GH) anregt, indem es die Hypophyse stimuliert. Dadurch kann es Muskelaufbau, Regeneration und Fettabbau unterstützen sowie den Schlaf und die Erholung verbessern. Zusätzlich steigert es oft den Appetit und kann die körpereigene IGF-1-Produktion erhöhen.",
+    gallery: ["/GHRP.png"],
+    inStock: true,
+  },
+    {
+    id: 13,
+    title: "GHRP-6",
+    category: "PEPTIDE",
+    price: "90.00 CHF",
+    oldPrice: "99.00 CHF",
+    badge: "SALE",
+    image: "/GHRP6.png",
+    description:
+      "GHRP-6 (Growth Hormone Releasing Peptide-6) ist ein Peptid, das die Freisetzung von Wachstumshormon stark stimuliert. Es kann Muskelaufbau, Fettabbau und Regeneration fördern, wirkt aber besonders deutlich appetitsteigernd.",
+    details:
+      "Das Peptid GHRP-6 (Growth Hormone Releasing Peptide-6) ist ein Peptid, das die Freisetzung von Wachstumshormon stark stimuliert. Es kann Muskelaufbau, Fettabbau und Regeneration fördern, wirkt aber besonders deutlich appetitsteigernd. Zusätzlich wird es häufig mit verbessertem Schlaf und schnellerer Erholung in Verbindung gebracht.",
+    gallery: ["/GHRP6.png"],
+    inStock: true,
+  },
+
+ {
+    id: 14,
+    title: "BPC-157",
+    category: "PEPTIDE",
+    price: "79.00 CHF",
+    oldPrice: "85.00 CHF",
+    badge: "SALE",
+    image: "/BPC.png",
+    description:
+      "BPC-157 (Body Protection Compound-157) ist ein Peptid, das für seine mögliche heilungsfördernde Wirkung bekannt ist, besonders bei Sehnen, Muskeln und dem Verdauungstrakt.",
+    details:
+      "BPC-157 (Body Protection Compound-157) ist ein Peptid, das für seine mögliche heilungsfördernde Wirkung bekannt ist, besonders bei Sehnen, Muskeln und dem Verdauungstrakt. Es kann die Geweberegeneration beschleunigen, Entzündungen reduzieren und die Durchblutung verbessern. Deshalb wird es häufig im Kontext von Verletzungen und Magen-Darm-Beschwerden erforscht.",
+    gallery: ["/BPC.png"],
+    inStock: true,
+  },
+
+  {
+    id: 15,
+    title: "TB-500 10",
+    category: "PEPTIDE",
+    price: "89.00 CHF",
+    oldPrice: "95.00 CHF",
+    badge: "SALE",
+    image: "/TB500.png",
+    description:
+      "TB-500 (Thymosin Beta-4) ist ein Peptid, das die Zellmigration und Gewebereparatur fördert, wodurch Heilungsprozesse besonders bei Muskeln, Sehnen und Bändern beschleunigt werden.",
+    details:
+      "TB-500 (Thymosin Beta-4) ist ein Peptid, das die Zellmigration und Gewebereparatur fördert, wodurch Heilungsprozesse – besonders bei Muskeln, Sehnen und Bändern – beschleunigt werden können. Es kann zudem Entzündungen reduzieren und die Flexibilität des Gewebes verbessern.",
+    gallery: ["/TB500.png"],
+    inStock: true,
+  },
+
   {
     id: 20,
     title: "TESTOSTERON-ENANTHAT",

@@ -634,31 +634,38 @@ button {
 /* PRODUCT DETAIL */
 .product-detail {
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 24px;
   padding: 24px;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .detail-gallery {
-  background: #111;
-  border-radius: 16px;
+  width: 300px !important;
+  height: 220px !important;
+  overflow: hidden !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 520px;
-  overflow: hidden;
-  padding: 10px;
+}
+.detail-gallery {
+  padding: 80px !important; /* ← macht Bild optisch kleiner */
 }
 
 .detail-main-image {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  object-fit: cover;
-  transform: scale(1.35);
-  display: block;
+  width: 100% !important;   /* ← hier kleiner machen */
+  height:80% !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+
+  transform: scale(2.3) !important;
+  transform-origin: center center !important;
+
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 .detail-info h1 {
@@ -1697,16 +1704,6 @@ button {
     grid-template-columns: 1fr;
     padding: 16px;
     gap: 18px;
-  }
-
-  .detail-gallery {
-    min-height: 340px;
-    padding: 8px;
-  }
-
-  .detail-main-image {
-    max-width: 100%;
-    transform: scale(1.2);
   }
 
   .button-row {
