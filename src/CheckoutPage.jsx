@@ -20,9 +20,11 @@ export default function CheckoutPage({ cart = [] }) {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const parsePrice = (price) => {
-    return Number(price.replace(" CHF", "").replace(",", "."));
+    return Number(String(price).replace(" CHF", "").replace(",", "."));
   };
 
   const total = cart.reduce((sum, item) => {
@@ -41,40 +43,73 @@ export default function CheckoutPage({ cart = [] }) {
     }));
   };
 
-  const handleSubmit = () => {
-    let newErrors = {};
+const handleSubmit = async () => {
+  let newErrors = {};
 
-    if (!form.firstName.trim()) newErrors.firstName = true;
-    if (!form.lastName.trim()) newErrors.lastName = true;
-    if (!form.country.trim()) newErrors.country = true;
-    if (!form.street.trim()) newErrors.street = true;
-    if (!form.city.trim()) newErrors.city = true;
-    if (!form.zip.trim()) newErrors.zip = true;
+  if (!form.firstName.trim()) newErrors.firstName = true;
+  if (!form.lastName.trim()) newErrors.lastName = true;
+  if (!form.country.trim()) newErrors.country = true;
+  if (!form.street.trim()) newErrors.street = true;
+  if (!form.city.trim()) newErrors.city = true;
+  if (!form.zip.trim()) newErrors.zip = true;
 
-    if (!form.email.trim()) {
-      newErrors.email = true;
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "invalid";
+  if (!form.email.trim()) {
+    newErrors.email = true;
+  } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+    newErrors.email = "invalid";
+  }
+
+  if (cart.length === 0) {
+    setSubmitError("Dein Warenkorb ist leer.");
+    return;
+  }
+
+  setErrors(newErrors);
+
+  if (Object.keys(newErrors).length > 0) return;
+
+  const orderNumber = "SP-" + Math.floor(100000 + Math.random() * 900000);
+  const date = new Date().toLocaleDateString("de-DE");
+
+  setSubmitError("");
+
+  try {
+    const res = await fetch("/api/order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        orderNumber,
+        date,
+        total,
+        cart,
+        form,
+      }),
+    });
+
+    const data = await res.json();
+    console.log("API response:", data);
+
+    if (!res.ok || !data.success) {
+      throw new Error(data.error || "Mail konnte nicht gesendet werden.");
     }
 
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      const orderNumber = "SP-" + Math.floor(100000 + Math.random() * 900000);
-      const date = new Date().toLocaleDateString("de-DE");
-
-      navigate("/success", {
-        state: {
-          orderNumber,
-          date,
-          total,
-          paymentMethod: "Kreditkarte",
-          cart,
-          form,
-        },
-      });
-    }
-  };
+    navigate("/success", {
+      state: {
+        orderNumber,
+        date,
+        total,
+        paymentMethod: "Kreditkarte",
+        cart,
+        form,
+      },
+    });
+  } catch (err) {
+    console.error("Mail Fehler:", err);
+    setSubmitError(err.message || "Mail Versand fehlgeschlagen.");
+  }
+};
 
   return (
     <div className="page">
@@ -96,7 +131,13 @@ export default function CheckoutPage({ cart = [] }) {
           <div className="checkout-form-box">
             <h1 className="checkout-title">Versand Daten</h1>
 
-            <form className="checkout-form">
+            <form
+              className="checkout-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSubmit();
+              }}
+            >
               <div className="checkout-row two-cols">
                 <div className="checkout-field">
                   <label>Vorname *</label>
@@ -230,6 +271,8 @@ export default function CheckoutPage({ cart = [] }) {
                   onChange={(e) => handleChange("notes", e.target.value)}
                 />
               </div>
+
+              {submitError && <span className="error">{submitError}</span>}
             </form>
           </div>
 
@@ -279,8 +322,9 @@ export default function CheckoutPage({ cart = [] }) {
               type="button"
               className="buy-btn checkout-pay-btn"
               onClick={handleSubmit}
+              disabled={isSubmitting}
             >
-              Bezahlen
+              {isSubmitting ? "Wird gesendet..." : "Bezahlen"}
             </button>
 
             <div className="shipping-row">
