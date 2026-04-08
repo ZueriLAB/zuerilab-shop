@@ -1895,3 +1895,8 @@ button {
     align-self: start !important;
   }
 }
+@media (max-width: 768px) {
+  .detail-main-image {
+    max-height: 100% !important;
+  }
+}
