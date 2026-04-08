@@ -44,6 +44,7 @@ export default function CheckoutPage({ cart = [] }) {
   };
 
 const handleSubmit = async () => {
+  alert("handleSubmit läuft");
   let newErrors = {};
 
   if (!form.firstName.trim()) newErrors.firstName = true;

@@ -14,9 +14,7 @@ export async function onRequestGet(context) {
   try {
     const { request, env } = context;
     const body = await request.json();
-    const data = await res.json();
-console.log("API response:", data);
-alert(JSON.stringify(data));
+    
 
     const { orderNumber, date, total, cart, form } = body || {};
 
