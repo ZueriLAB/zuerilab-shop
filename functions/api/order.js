@@ -1,4 +1,16 @@
-export async function onRequestPost(context) {
+export async function onRequestGet(context) {
+  return new Response(
+    JSON.stringify({
+      ok: true,
+      message: "API lebt",
+      hasResendKey: !!context.env.RESEND_API_KEY,
+      hasFromEmail: !!context.env.RESEND_FROM_EMAIL,
+      hasAdminEmail: !!context.env.ADMIN_ORDER_EMAIL,
+    }),
+    {
+      headers: { "Content-Type": "application/json" },
+    }
+  );
   try {
     const { request, env } = context;
     const body = await request.json();
