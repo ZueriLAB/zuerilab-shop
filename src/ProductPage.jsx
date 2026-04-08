@@ -50,13 +50,33 @@ useEffect(() => {
       </nav>
 
       <section className="product-detail">
-        <div className="detail-gallery">
-          <img
-            src={product.image}
-            alt={product.title}
-            className="detail-main-image"
-          />
-        </div>
+  <div
+    className="detail-gallery"
+    style={{
+      minHeight: "520px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      overflow: "hidden",
+      background: "#111",
+      borderRadius: "16px",
+      padding: "10px"
+    }}
+  >
+    <img
+      src={product.image}
+      alt={product.title}
+      className="detail-main-image"
+      style={{
+        width: "100%",
+        maxWidth: "900px",
+        height: "auto",
+        objectFit: "cover",
+        transform: "scale(1.35)",
+        display: "block"
+      }}
+    />
+  </div>
 
         <div className="detail-info">
           <h1>{product.title}</h1>
