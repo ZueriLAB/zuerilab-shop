@@ -1840,96 +1840,37 @@ button {
     font-size: 17px;
   }
 }
-/* 💎 ULTRA LUXURY CHECKOUT BUTTON */
+/* ⚪ CLEAN WHITE LUXURY BUTTON */
 .checkout-actions .buy-btn,
 .checkout-summary-box .buy-btn {
-  position: relative;
-  width: 100%;
-
-  background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
 
   border-radius: 16px;
   padding: 18px;
   font-size: 17px;
   font-weight: 800;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 
-  overflow: hidden;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
-/* ✨ Glow Ring */
-.checkout-actions .buy-btn::before,
-.checkout-summary-box .buy-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(120deg, #facc15, transparent, #facc15);
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* ✨ Shine Effekt */
-.checkout-actions .buy-btn::after,
-.checkout-summary-box .buy-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
-  transform: skewX(-20deg);
-}
-
-/* 🟡 Hover */
+/* Hover */
 .checkout-actions .buy-btn:hover,
 .checkout-summary-box .buy-btn:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.7),
-    0 0 20px rgba(250, 204, 21, 0.15);
-}
-
-/* Glow aktiv */
-.checkout-actions .buy-btn:hover::before,
-.checkout-summary-box .buy-btn:hover::before {
-  opacity: 1;
-}
-
-/* Shine Animation */
-.checkout-actions .buy-btn:hover::after,
-.checkout-summary-box .buy-btn:hover::after {
-  animation: shineMove 0.9s ease forwards;
-}
-
-@keyframes shineMove {
-  0% { left: -120%; }
-  100% { left: 120%; }
+  background: #f5f5f5;
+  transform: translateY(-2px);
 }
 
 /* Klick */
 .checkout-actions .buy-btn:active,
 .checkout-summary-box .buy-btn:active {
-  transform: translateY(-1px);
+  transform: translateY(0);
+  background: #eaeaea;
 }
