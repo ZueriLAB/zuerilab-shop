@@ -1890,3 +1890,14 @@ button {
     align-items: center !important;
   }
 }
+@media (max-width: 768px) {
+  .detail-gallery {
+    width: 180px !important;
+    height: 220px !important;
+
+    margin: 0 auto !important;   /* ← DAS zentriert den Kasten */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
