@@ -110,7 +110,7 @@ export default function CheckoutPage({ cart = [] }) {
           orderNumber,
           date,
           total,
-          paymentMethod: "Zahlungsanweisungen anzeigen",
+          paymentMethod: "Kreit Karte oder PaySafe",
           cart,
           form,
         },
