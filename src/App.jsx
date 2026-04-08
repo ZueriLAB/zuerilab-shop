@@ -11,8 +11,8 @@ const products = [
     id: 1,
     title: "GHK-CU",
     category: "PEPTIDE",
-    price: "80.00 CHF",
-    oldPrice: "92.00 CHF",
+    price: "110.00 CHF",
+    oldPrice: "125.00 CHF",
     badge: "BESTSELLER",
     image: "/GHK-CU.png",
     description:
@@ -26,8 +26,8 @@ const products = [
     id: 2,
     title: "HGH FRAGMENT 176-191",
     category: "PEPTIDE",
-    price: "75.00 CHF",
-    oldPrice: "85.00 CHF",
+    price: "110.00 CHF",
+    oldPrice: "125.00 CHF",
     badge: "BESTSELLER",
     image: "/HGH-FRAG.png",
     description:
@@ -57,7 +57,7 @@ const products = [
     title: "TIRZEPATIDE 30",
     category: "PEPTIDE",
     price: "110.00 CHF",
-    oldPrice: "125.00 CHF",
+    oldPrice: "120.00 CHF",
     badge: "SALE",
     image: "/TIRZE.png",
     description:
@@ -71,8 +71,8 @@ const products = [
     id: 5,
     title: "CJC-1295",
     category: "PEPTIDE",
-    price: "59.00 CHF",
-    oldPrice: "79.00 CHF",
+    price: "84.00 CHF",
+    oldPrice: "90.00 CHF",
     badge: "SALE",
     image: "/CJC.png",
     description:
@@ -86,8 +86,8 @@ const products = [
     id: 6,
     title: "IPAMORELIN",
     category: "PEPTIDE",
-    price: "50.00 CHF",
-    oldPrice: "60.00 CHF",
+    price: "70.00 CHF",
+    oldPrice: "75.00 CHF",
     badge: "SALE",
     image: "/IPA.png",
     description:
@@ -101,8 +101,8 @@ const products = [
     id: 7,
     title: "THYMOSIN ALPHA",
     category: "PEPTIDE",
-    price: "80.00 CHF",
-    oldPrice: "85.00 CHF",
+    price: "100.00 CHF",
+    oldPrice: "109.00 CHF",
     badge: "SALE",
     image: "/THY.png",
     description:
@@ -117,7 +117,7 @@ const products = [
     title: "KLOW",
     category: "PEPTIDE",
     price: "170.00 CHF",
-    oldPrice: "210.00 CHF",
+    oldPrice: "180.00 CHF",
     badge: "SALE",
     image: "/KLOW.png",
     description:
@@ -131,8 +131,8 @@ const products = [
     id: 9,
     title: "GLOW",
     category: "PEPTIDE",
-    price: "115.00 CHF",
-    oldPrice: "125.00 CHF",
+    price: "125.00 CHF",
+    oldPrice: "130.00 CHF",
     badge: "SALE",
     image: "/GLOW.png",
     description:
@@ -146,8 +146,8 @@ const products = [
     id: 10,
     title: "AOD-9604",
     category: "PEPTIDE",
-    price: "60.00 CHF",
-    oldPrice: "79.00 CHF",
+    price: "90.00 CHF",
+    oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/AOD.png",
     description:
@@ -161,7 +161,7 @@ const products = [
     id: 20,
     title: "TESTOSTERON-ENANTHAT",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "90.00 CHF",
     image: "/TESTOE.png",
     description:
       "Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte.",
@@ -174,7 +174,7 @@ const products = [
     id: 19,
     title: "TESTOSTERON-PROPIONAT",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "79.00 CHF",
     image: "/TESTOP.png",
     description:
       "Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte.",
@@ -187,7 +187,7 @@ const products = [
     id: 18,
     title: "TESTOSTERON-CYPIONAT",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "85.00 CHF",
     image: "/TESTOC.png",
     description:
       "Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte.",
@@ -200,7 +200,7 @@ const products = [
     id: 17,
     title: "TRENBOLON A",
     category: "MUSKEL GAIN",
-    price: "70.00 CHF",
+    price: "100.00 CHF",
     image: "/TRENA.png",
     description:
       "Trenbolon-Acetat ist ein starkes anaboles Steroid, das Bodybuilder für effektiven Muskelaufbau nutzen.",
@@ -226,7 +226,7 @@ const products = [
     id: 15,
     title: "NANDROLON PP",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "85.00 CHF",
     image: "/NANDRO.png",
     description:
       "Nandrolon-Phenylpropionat wird von Wettkampfathleten, Bodybuildern und Kraftsportlern genutzt, um Physis und Leistung zu verbessern. Es fördert Muskelwachstum, regt den Appetit an, steigert die Produktion roter Blutkörperchen und verbessert die Knochendichte.",
@@ -239,7 +239,7 @@ const products = [
     id: 14,
     title: "NANDROLON D",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "95.00 CHF",
     image: "/NANDROD.png",
     description:
       "Nandrolon-Decanoat ist ein injizierbares anaboles Steroid, das Bodybuilder in 8-12-wöchigen Bulking-Zyklen verwenden, oft in Kombination mit Testosteron. Es gilt als „Klassiker“.",
@@ -252,7 +252,7 @@ const products = [
     id: 13,
     title: "SUSTANON",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "95.00 CHF",
     image: "/SUSTA.png",
     description:
       "Sustanon ist eine Mischung aus mehreren Testosteronestern und wird von Athleten aufgrund seiner starken Wirkung bei nur einer Injektion pro Monat sehr geschätzt.",
@@ -265,7 +265,7 @@ const products = [
     id: 12,
     title: "STANOZOLOL",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "90.00 CHF",
     image: "/STANON.png",
     description:
       "Stanozolol ist bei Bodybuildern sehr beliebt, da es anabole Effekte fördert und Muskelmasse ohne Wassereinlagerungen oder Gewichtszunahme erhält.",
@@ -278,7 +278,7 @@ const products = [
     id: 11,
     title: "DROSTANON P",
     category: "MUSKEL GAIN",
-    price: "60.00 CHF",
+    price: "100.00 CHF",
     badge: "AUSVERKAUFT",
     image: "/DROSTA.png",
     description:
