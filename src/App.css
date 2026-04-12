@@ -2265,17 +2265,44 @@ button {
 .featured-strip-header {
   display: none !important;
 }
-.secondary {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  margin-bottom: 10px;
-}
+
 .cart-drawer-actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 16px;
+}
+
+.cart-drawer-actions .buy-btn {
+  width: 100%;
+  display: block;
+  position: static;
+}
+
+.cart-drawer-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, #0d0d0d 18%);
+}
+
+.cart-total {
+  font-size: 24px;
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.cart-drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-drawer-actions .buy-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .secondary {
