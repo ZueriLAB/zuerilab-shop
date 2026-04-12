@@ -723,7 +723,6 @@ return (
               <div className="cart-total">
                 Gesamt: {cartTotal} CHF
               </div>
-
 <button
   className="buy-btn full secondary"
   onClick={() => setIsCartOpen(false)}
