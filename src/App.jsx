@@ -724,14 +724,28 @@ return (
                 Gesamt: {cartTotal} CHF
               </div>
 
-              <Link to="/warenkorb">
-                <button
-                  className="buy-btn full"
-                  onClick={() => setIsCartOpen(false)}
-                >
-                  Zum Warenkorb
-                </button>
-              </Link>
+<button
+  className="buy-btn full secondary"
+  onClick={() => setIsCartOpen(false)}
+>
+  Weiter einkaufen
+</button>
+
+<button
+  className="buy-btn full"
+  onClick={() => {
+    setIsCartOpen(false);
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTo(0, 0);
+    document.body.scrollTo(0, 0);
+
+    setTimeout(() => {
+      window.location.href = "/warenkorb";
+    }, 0);
+  }}
+>
+  Zum Warenkorb
+</button>
             </>
           )}
         </div>

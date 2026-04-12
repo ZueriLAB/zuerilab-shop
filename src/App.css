@@ -2265,3 +2265,9 @@ button {
 .featured-strip-header {
   display: none !important;
 }
+.secondary {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-bottom: 10px;
+}
