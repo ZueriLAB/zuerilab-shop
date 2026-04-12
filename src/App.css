@@ -2295,13 +2295,11 @@ button {
   justify-content: center;
   align-items: center;
 }
-
 .secondary {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
-
 .secondary:hover {
   background: #1a1a1a;
 }
