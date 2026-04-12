@@ -5,6 +5,7 @@ import ProductPage from "./ProductPage";
 import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import SuccessPage from "./SuccessPage";
+import ScrollToTop from "./ScrollToTop";
 
 const products = [
   {
@@ -523,8 +524,9 @@ export default function App() {
     </div>
   );
 
-  return (
-    <>
+return (
+  <>
+    <ScrollToTop />
       <Routes>
         <Route
           path="/"
