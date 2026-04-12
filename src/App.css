@@ -2271,3 +2271,15 @@ button {
   color: #fff;
   margin-bottom: 10px;
 }
+.cart-drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
