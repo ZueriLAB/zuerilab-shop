@@ -695,60 +695,65 @@ return (
       )}
 
       <div className={`cart-drawer ${isCartOpen ? "open" : ""}`}>
-        <div className="cart-drawer-content">
-          <button className="close-btn" onClick={() => setIsCartOpen(false)}>
-            ✕
-          </button>
+  <div className="cart-drawer-content">
+    <button className="close-btn" onClick={() => setIsCartOpen(false)}>
+      ✕
+    </button>
 
-          <h2>Warenkorb</h2>
+    <h2>Warenkorb</h2>
 
-          {cart.length === 0 ? (
-            <div className="cart-drawer-empty">
-              <p>Dein Warenkorb ist aktuell leer.</p>
+    {cart.length === 0 ? (
+      <div className="cart-drawer-empty">Dein Warenkorb ist leer.</div>
+    ) : (
+      <>
+        <div className="cart-drawer-list">
+          {cart.map((item, index) => (
+            <div key={index} className="cart-drawer-item">
+              <img src={item.image} alt={item.name} />
+              <div>
+                <p>{item.name}</p>
+                <p>
+                  {item.quantity} x {item.price} CHF
+                </p>
+              </div>
             </div>
-          ) : (
-            <>
-              <div className="cart-drawer-list">
-                {cart.map((item) => (
-                  <div key={item.id} className="cart-drawer-item">
-                    <img src={item.image} alt={item.title} />
-                    <div>
-                      <p>{item.title}</p>
-                      <p>{item.quantity} x {item.price}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="cart-total">
-                Gesamt: {cartTotal} CHF
-              </div>
-<button
-  className="buy-btn full secondary"
-  onClick={() => setIsCartOpen(false)}
->
-  Weiter einkaufen
-</button>
-
-<button
-  className="buy-btn full"
-  onClick={() => {
-    setIsCartOpen(false);
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTo(0, 0);
-    document.body.scrollTo(0, 0);
-
-    setTimeout(() => {
-      window.location.href = "/warenkorb";
-    }, 0);
-  }}
->
-  Zum Warenkorb
-</button>
-            </>
-          )}
+          ))}
         </div>
-      </div>
+
+        <div className="cart-drawer-footer">
+          <div className="cart-total">
+            Gesamt: {cartTotal} CHF
+          </div>
+
+          <div className="cart-drawer-actions">
+            <button
+              className="buy-btn secondary"
+              onClick={() => setIsCartOpen(false)}
+            >
+              Weiter einkaufen
+            </button>
+
+            <button
+              className="buy-btn"
+              onClick={() => {
+                setIsCartOpen(false);
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTo(0, 0);
+                document.body.scrollTo(0, 0);
+
+                setTimeout(() => {
+                  window.location.href = "/warenkorb";
+                }, 0);
+              }}
+            >
+              Zum Warenkorb
+            </button>
+          </div>
+        </div>
+      </>
+    )}
+  </div>
+</div>
     </>
   );
 }
