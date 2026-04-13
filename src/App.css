@@ -2305,7 +2305,3 @@ button {
 .secondary:hover {
   background: #1a1a1a;
 }
-.cart-drawer-actions .buy-btn {
-  background: red !important;
-  color: white !important;
-}
