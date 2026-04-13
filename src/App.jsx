@@ -1,11 +1,11 @@
-import React, { useMemo, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import React, { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import ProductPage from "./ProductPage";
 import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import SuccessPage from "./SuccessPage";
 import ScrollToTop from "./ScrollToTop";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 const products = [
   {
@@ -369,9 +369,29 @@ const products = [
   },
 ];
 export default function App() {
-  const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
+
+  const [cart, setCart] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error("Fehler beim Laden des Warenkorbs:", error);
+      return [];
+    }
+  });
+
   const [searchTerm, setSearchTerm] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
+  console.log("APP CART:", cart);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    } catch (error) {
+      console.error("Fehler beim Speichern des Warenkorbs:", error);
+    }
+  }, [cart]);
 
   const filteredProducts = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -408,10 +428,19 @@ export default function App() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const cartTotal = cart
-    .reduce((sum, item) => sum + item.quantity * parseFloat(item.price), 0)
+    .reduce((sum, item) => {
+      const numericPrice =
+        typeof item.price === "string"
+          ? Number(item.price.replace(" CHF", "").replace(",", "."))
+          : Number(item.price);
+
+      return sum + item.quantity * numericPrice;
+    }, 0)
     .toFixed(2);
 
-  const bestsellers = products.filter((product) => product.badge === "BESTSELLER");
+  const bestsellers = products.filter(
+    (product) => product.badge === "BESTSELLER"
+  );
 
   const addToCart = (product) => {
     if (product.inStock === false) return;
@@ -524,9 +553,9 @@ export default function App() {
     </div>
   );
 
-return (
-  <>
-    <ScrollToTop />
+  return (
+    <>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -589,8 +618,7 @@ return (
                   </div>
                 </div>
               </section>
-            
-        
+
               {filteredProducts.length === 0 ? (
                 <section className="product-section">
                   <h2 className="section-title">SUCHERGEBNIS</h2>
@@ -695,65 +723,58 @@ return (
       )}
 
       <div className={`cart-drawer ${isCartOpen ? "open" : ""}`}>
-  <div className="cart-drawer-content">
-    <button className="close-btn" onClick={() => setIsCartOpen(false)}>
-      ✕
-    </button>
+        <div className="cart-drawer-content">
+          <button className="close-btn" onClick={() => setIsCartOpen(false)}>
+            ✕
+          </button>
 
-    <h2>Warenkorb</h2>
+          <h2>Warenkorb</h2>
 
-    {cart.length === 0 ? (
-      <div className="cart-drawer-empty">Dein Warenkorb ist leer.</div>
-    ) : (
-      <>
-        <div className="cart-drawer-list">
-          {cart.map((item, index) => (
-            <div key={index} className="cart-drawer-item">
-              <img src={item.image} alt={item.name} />
-              <div>
-                <p>{item.name}</p>
-                <p>
-                  {item.quantity} x {item.price} CHF
-                </p>
+          {cart.length === 0 ? (
+            <div className="cart-drawer-empty">Dein Warenkorb ist leer.</div>
+          ) : (
+            <>
+              <div className="cart-drawer-list">
+                {cart.map((item) => (
+                  <div key={item.id} className="cart-drawer-item">
+                    <img src={item.image} alt={item.title} />
+                    <div>
+                      <p>{item.title}</p>
+                      <p>{item.quantity} x {item.price}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
-          ))}
+
+              <div className="cart-drawer-footer">
+                <div className="cart-total">
+                  Gesamt: {cartTotal} CHF
+                </div>
+
+                <div className="cart-drawer-actions">
+                  <button
+                    className="buy-btn secondary"
+                    onClick={() => setIsCartOpen(false)}
+                  >
+                    Weiter einkaufen
+                  </button>
+
+                  <button
+                    className="buy-btn"
+                    onClick={() => {
+                      setIsCartOpen(false);
+                      navigate("/warenkorb");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    Zum Warenkorb
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
-
-        <div className="cart-drawer-footer">
-          <div className="cart-total">
-            Gesamt: {cartTotal} CHF
-          </div>
-
-          <div className="cart-drawer-actions">
-            <button
-              className="buy-btn secondary"
-              onClick={() => setIsCartOpen(false)}
-            >
-              Weiter einkaufen
-            </button>
-
-            <button
-              className="buy-btn"
-              onClick={() => {
-                setIsCartOpen(false);
-                window.scrollTo(0, 0);
-                document.documentElement.scrollTo(0, 0);
-                document.body.scrollTo(0, 0);
-
-                setTimeout(() => {
-                  window.location.href = "/warenkorb";
-                }, 0);
-              }}
-            >
-              Zum Warenkorb
-            </button>
-          </div>
-        </div>
-      </>
-    )}
-  </div>
-</div>
+      </div>
     </>
   );
 }

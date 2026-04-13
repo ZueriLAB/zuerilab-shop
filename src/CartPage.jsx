@@ -7,6 +7,7 @@ export default function CartPage({
   increaseQty,
   decreaseQty,
 }) {
+  console.log("CARTPAGE CART:", cart);
   const total = cart.reduce((sum, item) => {
     const numericPrice = Number(
       item.price.replace(" CHF", "").replace(",", ".")
