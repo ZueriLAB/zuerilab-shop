@@ -145,9 +145,9 @@ export default function SuccessPage() {
               Der Betrag kann frei gewählt werden, insgesamt müssen{" "}
               <strong>{formattedTotal}</strong> erreicht werden.
             </li>
-            <li>Sende uns den Paysafe Code per E-Mail.</li>
+            <li>Sende uns den Paysafe Code via E-Mail an support@swisspharmalab.ch.</li>
             <li>
-              Nach erfolgreicher Prüfung wird deine Bestellung bearbeitet und
+              Nach erfolgreicher Prüfung wird deine Bestellung unverzüglich bearbeitet und
               versendet.
             </li>
           </ol>

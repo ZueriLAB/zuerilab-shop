@@ -32,7 +32,7 @@ export default function SupportPage({ cart }) {
 
           <p>
             Unser Support-Team unterstützt dich bei sämtlichen Fragen zu
-            Bestellungen, Versand, Produkten und Anwendung. Anfragen werden in
+            Bestellungen, Bezahlung, Versand, Produkten und Anwendung. Anfragen werden in
             der Regel innerhalb weniger Stunden bearbeitet.
           </p>
 
