@@ -28,7 +28,7 @@ export default function SupportPage({ cart }) {
         <h2 className="section-title">SUPPORT</h2>
 
         <div className="support-card">
-          <h3>Kundensupport</h3>
+          <h3>Kundenservice</h3>
 
           <p>
             Unser Support-Team unterstützt dich bei sämtlichen Fragen zu
@@ -41,11 +41,15 @@ export default function SupportPage({ cart }) {
             produktspezifischen Anwendungen kannst du uns jederzeit
             kontaktieren – wir beraten dich gerne diskret und zuverlässig.
           </p>
-
-          <div className="support-row">
-            <strong>E-Mail:</strong>
-            <span>support@swisspharmalab.ch</span>
-          </div>
+<div className="support-row">
+  <strong>E-Mail:</strong>
+  <a
+    href="mailto:support@swisspharmalab.ch"
+    className="support-mail"
+  >
+    support@swisspharmalab.ch
+  </a>
+</div>        
         </div>
       </section>
     </div>

@@ -5,6 +5,7 @@ import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import SuccessPage from "./SuccessPage";
 import SupportPage from "./SupportPage";
+import BusinessPage from "./BusinessPage";
 import ScrollToTop from "./ScrollToTop";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
@@ -423,7 +424,7 @@ export default function App() {
   );
 
   const supportProducts = filteredProducts.filter(
-    (product) => product.category === "SUPPORT"
+    (product) => product.category === "Kundenservice"
   );
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -573,10 +574,10 @@ export default function App() {
               </header>
 
               <nav className="nav">
-                <a href="#neu" className="nav-link">Neu</a>
                 <a href="#peptide" className="nav-link">Peptide</a>
                 <a href="#muskel-gain" className="nav-link">Muskel Gain</a>
-                <a href="#support" className="nav-link">Support</a>
+                <Link to="/support" className="nav-link">Kundenservice</Link>
+                 <Link to="/business" className="nav-link">Business</Link>
                 <Link to="/warenkorb" className="nav-link cart-link">
                   🛒 Warenkorb ({cartCount})
                 </Link>
@@ -696,6 +697,7 @@ export default function App() {
           }
         />
         <Route path="/support" element={<SupportPage cart={cart} />} />
+        <Route path="/business" element={<BusinessPage cart={cart} />} />
 
         <Route
           path="/warenkorb"
