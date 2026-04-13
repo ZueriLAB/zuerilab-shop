@@ -746,7 +746,7 @@ return (
                 }, 0);
               }}
             >
-              Zum Warenkorb
+              Zum Warenkorb AA
             </button>
           </div>
         </div>
