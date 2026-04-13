@@ -4,6 +4,7 @@ import ProductPage from "./ProductPage";
 import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import SuccessPage from "./SuccessPage";
+import SupportPage from "./SupportPage";
 import ScrollToTop from "./ScrollToTop";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
@@ -694,6 +695,7 @@ export default function App() {
             />
           }
         />
+        <Route path="/support" element={<SupportPage cart={cart} />} />
 
         <Route
           path="/warenkorb"
