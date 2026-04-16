@@ -77,22 +77,23 @@ export default function CheckoutPage({ cart = [] }) {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/order", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          orderNumber,
-          date,
-          total,
-          cart,
-          form,
-        }),
-      });
+const res = await fetch("/api/order", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    orderNumber,
+    date,
+    total,
+    cart,
+    form,
+  }),
+});
 
-      const raw = await res.text();
-      console.log("API raw response:", raw);
+console.log("Status:", res.status);
+const raw = await res.text();
+console.log("API raw response:", raw);
 
       let data = {};
       try {
@@ -110,7 +111,7 @@ export default function CheckoutPage({ cart = [] }) {
           orderNumber,
           date,
           total,
-          paymentMethod: "Kreit Karte oder PaySafe",
+          paymentMethod: "Kredit Karte oder PaySafe",
           cart,
           form,
         },
