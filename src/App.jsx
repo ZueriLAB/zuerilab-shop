@@ -61,14 +61,14 @@ const products = [
     category: "PEPTIDE",
     price: "160.00 CHF",
     oldPrice: "170.00 CHF",
-    badge: "SALE",
+    badge: "AUSVERKAUFT",
     image: "/TIRZE.png",
     description:
       "Willst du Gewicht verlieren? Tirzepatide wirkt auf die Hormone GLP-1 und GIP, senkt dadurch stark den Appetit und verbessert die Insulinwirkung.",
     details:
       "Doppelte Wirkung (GIP & GLP-1): Tirzepatid ahmt die Darmhormone GIP und GLP-1 nach. Blutzuckerkontrolle: Es steigert glukoseabhängig die Insulinsekretion und senkt die Glukagonkonzentration. Gewichtsabnahme: Es hemmt den Appetit und fördert ein schnelleres, längeres Sättigungsgefühl. Körperzusammensetzung: Studien zeigen, dass Tirzepatid den Taillenumfang und die viszerale Fettmasse reduziert.",
     gallery: ["/TIRZE.png"],
-    inStock: true,
+    inStock: false,
   },
   {
     id: 5,
