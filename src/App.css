@@ -2410,3 +2410,8 @@ button {
 .support-mail:hover {
   text-decoration: underline;
 }
+.badge-out {
+  background-color: #e53935;
+  color: white;
+  font-weight: bold;
+}
