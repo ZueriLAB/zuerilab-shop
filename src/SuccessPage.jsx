@@ -17,14 +17,7 @@ export default function SuccessPage() {
     );
   }
 
-  const {
-    orderNumber,
-    date,
-    total,
-    paymentMethod,
-    cart = [],
-    form = {},
-  } = state;
+  const { orderNumber, date, total, paymentMethod, cart = [], form = {} } = state;
 
   const formattedTotal = `${parseFloat(total).toFixed(2)} CHF`;
 
@@ -35,9 +28,7 @@ export default function SuccessPage() {
           <div className="success-icon">✓</div>
           <h1>Bestellung erhalten – bitte Zahlung jetzt abschließen</h1>
 
-          <p className="success-main-text">
-            Vielen Dank für deine Bestellung!
-          </p>
+          <p className="success-main-text">Vielen Dank für deine Bestellung!</p>
 
           <p className="success-email-info">
             Deine Bestelldetails wurden an deine E-Mail-Adresse gesendet.
@@ -53,11 +44,53 @@ export default function SuccessPage() {
           <h3>Zu zahlender Betrag</h3>
           <p className="payment-amount">{formattedTotal}</p>
         </div>
+<div className="payment-method-box">
+  <div className="payment-title-row">
+    <h3>Option 1: Paysafe</h3>
+
+    <div className="payment-logos">
+      <img
+        src="/paysafe.png"
+        alt="Paysafe"
+        className="payment-logo"
+      />
+
+      <img
+        src="/twint.png"
+        alt="TWINT"
+        className="payment-logo"
+      />
+    </div>
+  </div>
+
+          <ol className="payment-steps">
+            <li>
+              Kaufe Paysafe Guthaben einfach via TWINT APP bei Digitale Gutscheine oder PostFinance App, 
+              bei einem SBB Schalter, k kiosk oder Tankstelle.
+            </li>
+            <li>
+              Der Betrag kann frei gewählt werden, insgesamt müssen{" "}
+              <strong>{formattedTotal}</strong> erreicht werden.
+            </li>
+            <li>
+              Sende uns den Paysafe Code via E-Mail an
+              support@swisspharmalab.ch.
+            </li>
+            <li>
+              Nach erfolgreicher Prüfung wird deine Bestellung unverzüglich
+              bearbeitet und versendet.
+            </li>
+          </ol>
+
+          <p className="payment-note">
+            Bitte sende auch hier immer deine Bestellnummer mit.
+          </p>
+        </div>
 
         <div className="payment-method-box payment-grid">
           <div>
             <div className="payment-title-row">
-              <h3>Bezahlung via Kreditkarte (Bitcoin über Ramp)</h3>
+              <h3>Option 2: Bezahlung via Kreditkarte / Bitcoin</h3>
 
               <img
                 src="/mastercard.png"
@@ -98,63 +131,30 @@ export default function SuccessPage() {
           </div>
 
           <div className="qr-box">
-  <h4>Bitcoin Wallet</h4>
+            <h4>Bitcoin Wallet</h4>
 
-  <img
-    src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=bitcoin:3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA`}
-    alt="Bitcoin QR Code"
-    className="qr-image"
-  />
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=bitcoin:3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA"
+              alt="Bitcoin QR Code"
+              className="qr-image"
+            />
 
-  <p className="wallet-address">
-    3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA
-  </p>
+            <p className="wallet-address">
+              3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA
+            </p>
 
-  <button
-    className="copy-btn"
-    onClick={() => {
-      navigator.clipboard.writeText("3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA");
-      alert("Adresse kopiert!");
-    }}
-  >
-    Adresse kopieren
-  </button>
+            <button
+              className="copy-btn"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  "3M6rjxUfiLU18UMnpMMJwW2KTxa8fC4wpA"
+                );
+                alert("Adresse kopiert!");
+              }}
+            >
+              Adresse kopieren
+            </button>
           </div>
-        </div>
-
-        <div className="payment-method-box">
-<div className="payment-title-row">
-
-
-  <h3>Option 2: Paysafe</h3>
-
-
-  <img
-    src="/paysafe.png"
-    alt="Paysafe"
-    className="payment-logo"
-  />
-</div>
-
-          <ol className="payment-steps">
-            <li>
-              Kaufe Paysafe Guthaben bei einem SBB Schalter, k kiosk oder in
-              der PostFinance App.
-            </li>
-            <li>
-              Der Betrag kann frei gewählt werden, insgesamt müssen{" "}
-              <strong>{formattedTotal}</strong> erreicht werden.
-            </li>
-            <li>Sende uns den Paysafe Code via E-Mail an support@swisspharmalab.ch.</li>
-            <li>
-              Nach erfolgreicher Prüfung wird deine Bestellung unverzüglich bearbeitet und
-              versendet.
-            </li>
-          </ol>
-
-          <p className="payment-note">
-            Bitte sende auch hier immer deine Bestellnummer mit.
-          </p>
         </div>
 
         <div className="success-details">

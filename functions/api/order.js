@@ -178,7 +178,7 @@ export async function onRequestPost(context) {
               </h3>
 
               <ol style="margin:0 0 12px 0;padding-left:20px;color:#ffffff;line-height:1.8;">
-                <li>Kaufe Paysafe Guthaben bei einem SBB Schalter, k kiosk oder in der PostFinance App.</li>
+                <li>Kaufe Paysafe Guthaben einfach via TWINT APP bei Digitale Gutscheine oder PostFinance App, bei einem SBB Schalter, k kiosk oder Tankstelle.</li>
                 <li>Der Betrag kann frei gewählt werden, insgesamt müssen <strong>${Number(total).toFixed(2)} CHF</strong> erreicht werden.</li>
                 <li>Sende uns den Paysafe Code, indem du einfach auf diese E-Mail antwortest.</li>
                 <li>Nach erfolgreicher Prüfung wird deine Bestellung bearbeitet und versendet.</li>

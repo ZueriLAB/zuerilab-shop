@@ -1318,6 +1318,11 @@ button {
   height: 28px;
   object-fit: contain;
 }
+.payment-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .copy-btn {
   margin-top: 10px;
@@ -2437,4 +2442,69 @@ button {
 .badge-new {
   background: #00c853;
   color: white;
+}
+.discount-box {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.discount-box input {
+  flex: 1;
+  height: 44px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: white;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.discount-box input:focus {
+  outline: none;
+  border-color: #ffd400;
+}
+
+.discount-box button {
+  height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ffd400;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.discount-box button:hover {
+  opacity: 0.9;
+}
+.payment-methods-box {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.payment-title {
+  color: #ffd400;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }

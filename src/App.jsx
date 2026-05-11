@@ -271,7 +271,7 @@ const products = [
   {
     id: 20,
     title: "TESTOSTERON-ENANTHAT",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "90.00 CHF",
     image: "/TESTOE.png",
     description:
@@ -284,7 +284,7 @@ const products = [
   {
     id: 19,
     title: "TESTOSTERON-PROPIONAT",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "79.00 CHF",
     image: "/TESTOP.png",
     description:
@@ -297,7 +297,7 @@ const products = [
   {
     id: 18,
     title: "TESTOSTERON-CYPIONAT",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "85.00 CHF",
     image: "/TESTOC.png",
     description:
@@ -310,7 +310,7 @@ const products = [
   {
     id: 17,
     title: "TRENBOLON A",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "100.00 CHF",
     image: "/TRENA.png",
     description:
@@ -323,7 +323,7 @@ const products = [
   {
     id: 16,
     title: "TRENBOLON E",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "110.00 CHF",
     image: "/TRENE.png",
     description:
@@ -336,7 +336,7 @@ const products = [
   {
     id: 15,
     title: "NANDROLON PP",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "85.00 CHF",
     image: "/NANDRO.png",
     description:
@@ -349,7 +349,7 @@ const products = [
   {
     id: 14,
     title: "NANDROLON D",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "95.00 CHF",
     image: "/NANDROD.png",
     description:
@@ -362,7 +362,7 @@ const products = [
   {
     id: 13,
     title: "SUSTANON",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "95.00 CHF",
     image: "/SUSTA.png",
     description:
@@ -375,7 +375,7 @@ const products = [
   {
     id: 12,
     title: "STANOZOLOL",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "90.00 CHF",
     image: "/STANON.png",
     description:
@@ -388,7 +388,7 @@ const products = [
   {
     id: 11,
     title: "DROSTANON P",
-    category: "MUSKEL GAIN",
+    category: "Muskelaufbau",
     price: "100.00 CHF",
     badge: "AUSVERKAUFT",
     image: "/DROSTA.png",
@@ -450,7 +450,7 @@ export default function App() {
   );
 
   const muscleGainProducts = filteredProducts.filter(
-    (product) => product.category === "MUSKEL GAIN"
+    (product) => product.category === "Muskelaufbau"
   );
 
   const supportProducts = filteredProducts.filter(
@@ -607,7 +607,7 @@ export default function App() {
 
               <nav className="nav">
                 <a href="#peptide" className="nav-link">Peptide</a>
-                <a href="#muskel-gain" className="nav-link">Muskel Gain</a>
+                <a href="#Muskelaufbau" className="nav-link">Muskelaufbau</a>
                 <Link to="/support" className="nav-link">Kundenservice</Link>
                  <Link to="/business" className="nav-link">Business</Link>
                 <Link to="/warenkorb" className="nav-link cart-link">
@@ -699,10 +699,10 @@ export default function App() {
                   )}
 
                   {muscleGainProducts.length > 0 && (
-                    <section className="product-section" id="muskel-gain">
+                    <section className="product-section" id="Muskelaufbau">
                       <div className="section-heading-wrap">
                         <span className="section-kicker">Kategorie</span>
-                        <h2 className="section-title">MUSKEL GAIN</h2>
+                        <h2 className="section-title">Muskelaufbau</h2>
                       </div>
                       <div className="product-grid">
                         {muscleGainProducts.map((product) => (

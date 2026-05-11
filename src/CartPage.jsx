@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 
 export default function CartPage({
@@ -14,6 +15,22 @@ export default function CartPage({
     );
     return sum + numericPrice * item.quantity;
   }, 0);
+  const [discountCode, setDiscountCode] = useState("");
+const [discount, setDiscount] = useState(0);
+
+const applyDiscount = () => {
+  const code = discountCode.trim().toUpperCase();
+
+  if (code === "RETA10") {
+    setDiscount(10);
+  } else {
+    setDiscount(0);
+    alert("Ungültiger Rabattcode");
+  }
+};
+
+const discountAmount = total * (discount / 100);
+const finalTotal = total - discountAmount;
 
   return (
     <div className="page">
@@ -69,48 +86,56 @@ export default function CartPage({
                 ))}
               </div>
             </div>
+<div className="cart-right">
+  <div className="cart-summary-box">
+    <h3 className="cart-summary-title">Bestellübersicht</h3>
 
-            <div className="cart-right">
-              <div className="cart-summary-box">
-                <h3 className="cart-summary-title">Bestellübersicht</h3>
+    <div className="cart-summary-row">
+      <span>Zwischensumme</span>
+      <span>{total.toFixed(2)} CHF</span>
+    </div>
 
-                <div className="cart-summary-row">
-                  <span>Zwischensumme</span>
-                  <span>{total.toFixed(2)} CHF</span>
-                </div>
+    {discount > 0 && (
+      <div className="cart-summary-row">
+        <span>Rabatt ({discount}%)</span>
+        <span>-{discountAmount.toFixed(2)} CHF</span>
+      </div>
+    )}
 
-                <div className="cart-summary-row">
-                  <span>Versand</span>
-                  <span>Inklusive</span>
-                </div>
+    <div className="cart-summary-row">
+      <span>Versand</span>
+      <span>Inklusive</span>
+    </div>
 
-                <div className="cart-summary-divider" />
+    <div className="discount-box">
+      <input
+        value={discountCode}
+        onChange={(e) => setDiscountCode(e.target.value)}
+        placeholder="Rabattcode eingeben"
+      />
+      <button onClick={applyDiscount}>Einlösen</button>
+    </div>
 
-                <div className="cart-summary-row cart-summary-total">
-                  <span>Gesamt</span>
-                  <span>{total.toFixed(2)} CHF</span>
-                </div>
+    <div className="cart-summary-divider" />
 
-<div className="shipping-info shipping-row">
-  <span>Lieferzeit: 2–7 Tage</span>
+    <div className="cart-summary-row cart-summary-total">
+      <span>Gesamt</span>
+      <span>{finalTotal.toFixed(2)} CHF</span>
+    </div>
 
-  <img
-    src="/POST.png"
-    alt="Swiss Post"
-    className="post-logo"
-  />
+    <div className="shipping-info shipping-row">
+      <span>Lieferzeit: 2–7 Tage</span>
+      <img src="/POST.png" alt="Swiss Post" className="post-logo" />
+    </div>
+
+    <div className="shipping-sub">Versand aus der Schweiz</div>
+
+    <Link to="/checkout">
+      <button className="buy-btn checkout-btn">Zur Kasse</button>
+    </Link>
+  </div>
 </div>
-
-<div className="shipping-sub">
-  Versand aus der Schweiz
-</div>
-
-                <Link to="/checkout">
-  <button className="buy-btn checkout-btn">Zur Kasse</button>
-</Link>
-              </div>
-            </div>
-          </div>
+      </div>
         )}
       </section>
     </div>

@@ -17,6 +17,7 @@ export default function CheckoutPage({ cart = [] }) {
     phone: "",
     differentShipping: false,
     notes: "",
+    paymentMethod: "TWINT",
   });
 
   const [errors, setErrors] = useState({});
@@ -24,7 +25,8 @@ export default function CheckoutPage({ cart = [] }) {
   const [submitError, setSubmitError] = useState("");
 
   const parsePrice = (price) => {
-    return Number(String(price).replace(" CHF", "").replace(",", "."));
+    const value = Number(String(price).replace(" CHF", "").replace(",", "."));
+    return Number.isFinite(value) ? value : 0;
   };
 
   const total = cart.reduce((sum, item) => {
@@ -54,6 +56,7 @@ export default function CheckoutPage({ cart = [] }) {
     if (!form.street.trim()) newErrors.street = true;
     if (!form.city.trim()) newErrors.city = true;
     if (!form.zip.trim()) newErrors.zip = true;
+    if (!form.paymentMethod.trim()) newErrors.paymentMethod = true;
 
     if (!form.email.trim()) {
       newErrors.email = true;
@@ -77,23 +80,24 @@ export default function CheckoutPage({ cart = [] }) {
     setIsSubmitting(true);
 
     try {
-const res = await fetch("/api/order", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    orderNumber,
-    date,
-    total,
-    cart,
-    form,
-  }),
-});
+      const res = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          orderNumber,
+          date,
+          total,
+          cart,
+          form,
+          paymentMethod: form.paymentMethod,
+        }),
+      });
 
-console.log("Status:", res.status);
-const raw = await res.text();
-console.log("API raw response:", raw);
+      console.log("Status:", res.status);
+      const raw = await res.text();
+      console.log("API raw response:", raw);
 
       let data = {};
       try {
@@ -111,7 +115,7 @@ console.log("API raw response:", raw);
           orderNumber,
           date,
           total,
-          paymentMethod: "Kredit Karte oder PaySafe",
+          paymentMethod: form.paymentMethod,
           cart,
           form,
         },
@@ -135,8 +139,12 @@ console.log("API raw response:", raw);
       </header>
 
       <nav className="nav">
-        <Link to="/" className="nav-link">Zurück zum Shop</Link>
-        <Link to="/warenkorb" className="nav-link">Zurück zum Warenkorb</Link>
+        <Link to="/" className="nav-link">
+          Zurück zum Shop
+        </Link>
+        <Link to="/warenkorb" className="nav-link">
+          Zurück zum Warenkorb
+        </Link>
       </nav>
 
       <section className="checkout-page">
@@ -262,6 +270,23 @@ console.log("API raw response:", raw);
                 />
               </div>
 
+              <div className="checkout-field">
+                <label>Bezahlmethode *</label>
+                <select
+                  value={form.paymentMethod}
+                  onChange={(e) =>
+                    handleChange("paymentMethod", e.target.value)
+                  }
+                >
+                  <option value="TWINT">TWINT</option>
+                  <option value="Kreditkarte">Kreditkarte</option>
+                  <option value="Bitcoin">Bitcoin</option>
+                </select>
+                {errors.paymentMethod && (
+                  <span className="error">Bitte Bezahlmethode auswählen</span>
+                )}
+              </div>
+
               <div className="checkout-checkbox-row">
                 <label className="checkbox-label">
                   Lieferung an eine andere Adresse senden?
@@ -308,7 +333,9 @@ console.log("API raw response:", raw);
                           className="checkout-summary-image"
                         />
                         <div>
-                          <div className="checkout-summary-name">{item.title}</div>
+                          <div className="checkout-summary-name">
+                            {item.title}
+                          </div>
                           <div className="checkout-summary-qty">
                             Menge: {item.quantity}
                           </div>
@@ -325,6 +352,49 @@ console.log("API raw response:", raw);
             )}
 
             <div className="checkout-summary-divider" />
+
+            <div className="payment-methods-box">
+  <h3 className="payment-title">Bezahlmethode</h3>
+
+  <label className="payment-option">
+    <input
+      type="radio"
+      name="paymentMethod"
+      value="TWINT"
+      checked={form.paymentMethod === "TWINT"}
+      onChange={(e) =>
+        handleChange("paymentMethod", e.target.value)
+      }
+    />
+    <span>TWINT</span>
+  </label>
+
+  <label className="payment-option">
+    <input
+      type="radio"
+      name="paymentMethod"
+      value="Kreditkarte"
+      checked={form.paymentMethod === "Kreditkarte"}
+      onChange={(e) =>
+        handleChange("paymentMethod", e.target.value)
+      }
+    />
+    <span>Kreditkarte</span>
+  </label>
+
+  <label className="payment-option">
+    <input
+      type="radio"
+      name="paymentMethod"
+      value="Bitcoin"
+      checked={form.paymentMethod === "Bitcoin"}
+      onChange={(e) =>
+        handleChange("paymentMethod", e.target.value)
+      }
+    />
+    <span>Bitcoin</span>
+  </label>
+</div>
 
             <div className="checkout-summary-row">
               <span>Gesamtsumme inkl. Versand</span>
