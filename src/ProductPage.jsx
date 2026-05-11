@@ -71,15 +71,17 @@ useEffect(() => {
         width: "100%",
         maxWidth: "900px",
         height: "auto",
-        objectFit: "cover",
-        transform: "scale(1.35)",
+        objectFit: "contain",
+        transform: product.id === 99 ? "scale(1)" : "scale(1.35)",
         display: "block"
       }}
     />
   </div>
 
         <div className="detail-info">
-          <h1>{product.title}</h1>
+     <h1 className={product.id === 99 ? "reta-title" : ""}>
+  {product.title}
+</h1>
 
           <div className="price-row">
             <span className="price">{product.price}</span>

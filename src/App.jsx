@@ -10,6 +10,36 @@ import ScrollToTop from "./ScrollToTop";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 const products = [
+    {
+    id: 99,
+    title: "RETATRUTIDE 20 MG FERTIGPEN",
+    category: "NEU",
+    price: "260.00 CHF",
+    badge: "NEU",
+    image: "/RETAPEN.png",
+    description:
+      "Retatruide PEN 20mg exclusive nur bei SwissPharmaLab.",
+    details:
+      "Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
+    gallery: ["/RETAPEN.png"],
+    inStock: true,
+  },
+    {
+    id: 98,
+    title: "OZEMPIC 1MG (4MG SEMAGLUTIDE/3ML)",
+    category: "NEU",
+    price: "210.00 CHF",
+    badge: "NEU",
+    image: "/OZEN.png",
+    description:
+      "Original Ozempic PEN exclusive nur bei SwissPharmaLab.",
+    details:
+      "Ozempic ist ein moderner Fertigpen mit dem Wirkstoff Semaglutid zur wöchentlichen Anwendung bei Typ-2-Diabetes und zur Unterstützung der Gewichtsreduktion. Das Medikament hilft, den Blutzuckerspiegel zu regulieren, das Sättigungsgefühl zu erhöhen und Heißhunger zu reduzieren.",
+    gallery: ["/OZEN.png"],
+    inStock: true,
+  },
+
+
   {
     id: 1,
     title: "GHK-CU",
@@ -497,19 +527,21 @@ export default function App() {
           className="card-image"
         />
 
-        {(product.inStock === false || product.badge) && (
-          <div
-            className={`badge card-badge ${
-              product.inStock === false
-                ? "badge-out"
-                : product.badge === "BESTSELLER"
-                ? "badge-bestseller"
-                : "badge-default"
-            }`}
-          >
-            {product.inStock === false ? "AUSVERKAUFT" : product.badge}
-          </div>
-        )}
+      {(product.inStock === false || product.badge) && (
+  <div
+    className={`badge card-badge ${
+      product.inStock === false
+        ? "badge-out"
+        : product.badge === "BESTSELLER"
+        ? "badge-bestseller"
+        : product.badge === "NEU"
+        ? "badge-new"
+        : "badge-default"
+    }`}
+  >
+    {product.inStock === false ? "AUSVERKAUFT" : product.badge}
+  </div>
+)}
       </div>
 
       <div className="card-content">
@@ -632,7 +664,24 @@ export default function App() {
                   </div>
                 </section>
               ) : (
-                <>
+                <>{products.filter((p) => p.badge === "NEU").length > 0 && (
+  <section className="product-section" id="new-products">
+    <div className="section-heading-wrap">
+      <span className="section-kicker">Neu</span>
+      <h2 className="section-title">NEU BEI SWISSPHARMALAB</h2>
+    </div>
+
+    <div className="product-grid new-grid">
+      {products
+        .filter((product) => product.badge === "NEU")
+        .map((product) => (
+          <div id={`product-${product.id}`} key={product.id}>
+            {renderProductCard(product)}
+          </div>
+        ))}
+    </div>
+  </section>
+)}
                   {peptideProducts.length > 0 && (
                     <section className="product-section" id="peptide">
                       <div className="section-heading-wrap">

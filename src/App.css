@@ -430,6 +430,8 @@ button {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
+  justify-content: center;
+  justify-items: center;
 }
 
 /* CARD */
@@ -643,26 +645,22 @@ button {
 }
 
 .detail-gallery {
-  width: 300px !important;
-  height: 220px !important;
+  width: 320px !important;
+  height: 420px !important;
   overflow: hidden !important;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.detail-gallery {
-  padding: 80px !important; /* ← macht Bild optisch kleiner */
+  padding: 0px !important;
 }
 
 .detail-main-image {
-  width: 100% !important;   /* ← hier kleiner machen */
-  height:80% !important;
+  width: 100% !important;
+  height: 100% !important;
 
-  object-fit: cover !important;
-  object-position: center !important;
+  object-fit: contain !important;
 
-  transform: scale(2.3) !important;
-  transform-origin: center center !important;
+  transform: scale(1.65) !important;
 
   display: block !important;
   margin: 0 auto !important;
@@ -1899,7 +1897,7 @@ button {
   }
 
   .detail-main-image {
-    width: 180px !important;
+    width: 320px !important;
     height: auto !important;
     max-height: none !important;
     object-fit: contain !important;
@@ -2414,4 +2412,29 @@ button {
   background-color: #e53935;
   color: white;
   font-weight: bold;
+}
+.badge-new {
+  background-color: #00c853; 
+  color: white;              
+}
+.big-title {
+  font-size: 42px;
+}
+.big-title {
+  font-size: 52px !important;
+  line-height: 1.1;
+}
+.detail-info h1.reta-title {
+  font-size: 54px !important;
+  line-height: 1.05 !important;
+}
+.new-grid {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.badge-new {
+  background: #00c853;
+  color: white;
 }
