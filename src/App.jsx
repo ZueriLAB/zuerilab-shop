@@ -7,6 +7,7 @@ import SuccessPage from "./SuccessPage";
 import SupportPage from "./SupportPage";
 import BusinessPage from "./BusinessPage";
 import ScrollToTop from "./ScrollToTop";
+import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 const products = [
@@ -415,6 +416,7 @@ export default function App() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   console.log("APP CART:", cart);
 
   useEffect(() => {
@@ -424,6 +426,15 @@ export default function App() {
       console.error("Fehler beim Speichern des Warenkorbs:", error);
     }
   }, [cart]);
+  useEffect(() => {
+
+  const timer = setTimeout(() => {
+    setShowPopup(true);
+  }, 5000);
+
+  return () => clearTimeout(timer);
+
+}, []);
 
   const filteredProducts = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -770,6 +781,29 @@ export default function App() {
           element={<SuccessPage />}
         />
       </Routes>
+      {showPopup && (
+
+  <div className="popup-overlay">
+
+    <div className="popup-box">
+
+      <button
+        className="popup-close-btn"
+        onClick={() => setShowPopup(false)}
+      >
+        ✕
+      </button>
+
+      <img
+        src={reportImage}
+        alt="SwissPharmaLab Report"
+      />
+
+    </div>
+
+  </div>
+
+)}
 
       {isCartOpen && (
         <div className="cart-overlay" onClick={() => setIsCartOpen(false)} />
