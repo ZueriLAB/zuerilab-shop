@@ -47,14 +47,14 @@ const products = [
     category: "PEPTIDE",
     price: "110.00 CHF",
     oldPrice: "125.00 CHF",
-    badge: "AUSVERKAUFT",
+    badge: "Bestseller",
     image: "/GHK-CU.png",
     description:
       "Ein hautverjüngendes Kupfer-Peptid, das die natürliche Regeneration ankurbelt und für sichtbar glattere, festere und gesünder aussehende Haut sorgt.",
     details:
       "Hauptwirkungen von GHK-CU Hautregeneration & Anti-Aging: GHK-Cu strafft die Haut, erhöht die Elastizität, reduziert feine Linien und hellt Pigmentflecken auf. Wundheilung & Narbenreduktion: Es stimuliert Fibroblasten, fördert die Angiogenese (Bildung neuer Blutgefäße) und hemmt die Narbenbildung. Entzündungshemmung & Antioxidativ: Kupferpeptide beruhigen gereizte Haut, reduzieren Rötungen und wirken als Antioxidantien gegen Lichtschäden. Haarwachstum: Es kann die Haarfollikel stimulieren, die Mikrozirkulation der Kopfhaut verbessern und so Haarausfall entgegenwirken.",
     gallery: ["/GHK-CU.png"],
-    inStock: false,
+    inStock: true,
   },
   {
     id: 2,
