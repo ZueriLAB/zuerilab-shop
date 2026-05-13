@@ -47,7 +47,7 @@ const products = [
     category: "PEPTIDE",
     price: "110.00 CHF",
     oldPrice: "125.00 CHF",
-    badge: "Bestseller",
+    badge: "BESTSELLER",
     image: "/GHK-CU.png",
     description:
       "Ein hautverjüngendes Kupfer-Peptid, das die natürliche Regeneration ankurbelt und für sichtbar glattere, festere und gesünder aussehende Haut sorgt.",
