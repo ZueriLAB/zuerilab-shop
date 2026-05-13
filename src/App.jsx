@@ -20,7 +20,7 @@ const products = [
     description:
       "Retatruide PEN 20mg exclusive nur bei SwissPharmaLab.",
     details:
-      "Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
+      "Unser 20mg Retatrutide Pen wurde exklusiv für SwissPharmaLab entwickelt und bietet maximale Benutzerfreundlichkeit durch individuell einstellbare Dosierungen. Dank der einfachen Handhabung ermöglicht der Pen eine präzise und flexible Anwendung – ganz ohne komplizierte Vorbereitung. Als derzeit einziges Unternehmen in der Schweiz bieten wir diese innovative Lösung in dieser Form an. Hochwertige Verarbeitung, moderne Technologie und maximaler Komfort machen unseren Pen zur idealen Wahl für anspruchsvolle Nutzer.Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
     gallery: ["/RETAPEN.png"],
     inStock: true,
   },
