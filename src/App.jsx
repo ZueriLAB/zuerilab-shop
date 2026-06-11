@@ -428,10 +428,6 @@ export default function App() {
   }, [cart]);
   useEffect(() => {
 
-  const timer = setTimeout(() => {
-    setShowPopup(true);
-  }, 5000);
-
   return () => clearTimeout(timer);
 
 }, []);
