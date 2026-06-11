@@ -32,6 +32,10 @@ export default function CheckoutPage({ cart = [] }) {
   const total = cart.reduce((sum, item) => {
     return sum + parsePrice(item.price) * item.quantity;
   }, 0);
+  const discount = Number(localStorage.getItem("discount")) || 0;
+
+const discountAmount = total * (discount / 100);
+const finalTotal = total - discountAmount;
 
   const handleChange = (field, value) => {
     setForm((prev) => ({
@@ -398,7 +402,7 @@ export default function CheckoutPage({ cart = [] }) {
 
             <div className="checkout-summary-row">
               <span>Gesamtsumme inkl. Versand</span>
-              <span>{total.toFixed(2)} CHF</span>
+             <span>{finalTotal.toFixed(2)} CHF</span>
             </div>
 
             <button

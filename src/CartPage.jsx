@@ -21,9 +21,12 @@ const [discount, setDiscount] = useState(0);
 const applyDiscount = () => {
   const code = discountCode.trim().toUpperCase();
 
-  if (code === "RETA10") {
-    setDiscount(10);
-  } else {
+if (code === "RETA10") {
+  setDiscount(10);
+  localStorage.setItem("discount", "10");
+} else {
+  setDiscount(0);
+  localStorage.setItem("discount", "0");
     setDiscount(0);
     alert("Ungültiger Rabattcode");
   }
