@@ -145,12 +145,16 @@ const products = [
   },
   {
     id: 3,
-    title: "RETATRUTIDE 10mg",
+    title: "RETATRUTIDE 10mg / 20mg",
     category: "PEPTIDE",
     price: "120.00 CHF",
     oldPrice: "130.00 CHF",
     badge: "BESTSELLER",
     image: "/RETA10.png",
+    doses: [
+  { label: "10 mg", price: "120.00 CHF" },
+  { label: "20 mg", price: "170.00 CHF" }
+],
      variants: ["Vial", "Kartusche"],
     description:
       " Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
@@ -654,6 +658,19 @@ export default function App() {
       {product.variants.map((variant) => (
         <option key={variant} value={variant}>
           {variant}
+        </option>
+      ))}
+    </select>
+  </div>
+)}
+{product.doses && (
+  <div className="variant-select">
+    <label>Dosierung</label>
+
+    <select defaultValue={product.doses[0].label}>
+      {product.doses.map((dose) => (
+        <option key={dose.label} value={dose.label}>
+          {dose.label}
         </option>
       ))}
     </select>
