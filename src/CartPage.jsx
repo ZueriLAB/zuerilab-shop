@@ -29,7 +29,7 @@ if (code === "RETA10") {
   setDiscount(15);
   localStorage.setItem("discount", "15");
 
-} else if (code === "Anna") {
+} else if (code === "ANNA") {
   setDiscount(20);
   localStorage.setItem("discount", "20");
 
