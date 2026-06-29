@@ -10,16 +10,17 @@ import ScrollToTop from "./ScrollToTop";
 import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
+
 const products = [
     {
     id: 99,
-    title: "RETATRUTIDE 20 MG FERTIGPEN",
+    title: "RETATRUTIDE 20mg Fertigpen",
     category: "NEU",
     price: "260.00 CHF",
     badge: "NEU",
     image: "/RETAPEN.png",
     description:
-      "Retatruide PEN 20mg exclusive nur bei SwissPharmaLab.",
+      "Retatrutide 20mg exclusive nur bei SwissPharmaLab.",
     details:
       "Unser 20mg Retatrutide Pen wurde exklusiv für SwissPharmaLab entwickelt und bietet maximale Benutzerfreundlichkeit durch individuell einstellbare Dosierungen. Dank der einfachen Handhabung ermöglicht der Pen eine präzise und flexible Anwendung – ganz ohne komplizierte Vorbereitung. Als derzeit einziges Unternehmen in der Schweiz bieten wir diese innovative Lösung in dieser Form an. Hochwertige Verarbeitung, moderne Technologie und maximaler Komfort machen unseren Pen zur idealen Wahl für anspruchsvolle Nutzer.Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
     gallery: ["/RETAPEN.png"],
@@ -27,19 +28,88 @@ const products = [
   },
     {
     id: 98,
-    title: "OZEMPIC 1MG (4MG SEMAGLUTIDE/3ML)",
+    title: "GHK-CU 50mg Fertigpen",
     category: "NEU",
     price: "210.00 CHF",
     badge: "NEU",
     image: "/OZEN.png",
     description:
-      "Original Ozempic PEN exclusive nur bei SwissPharmaLab.",
+      "GHK-CU 50mg Fertigpen exclusive nur bei SwissPharmaLab.",
     details:
-      "Ozempic ist ein moderner Fertigpen mit dem Wirkstoff Semaglutid zur wöchentlichen Anwendung bei Typ-2-Diabetes und zur Unterstützung der Gewichtsreduktion. Das Medikament hilft, den Blutzuckerspiegel zu regulieren, das Sättigungsgefühl zu erhöhen und Heißhunger zu reduzieren.",
+      "GHK-Cu ist ein hochwertiges Kupferpeptid, das für seine regenerierenden Eigenschaften und seine Unterstützung der Kollagenbildung geschätzt wird. Es wird häufig zur Förderung eines frischen Hautbildes sowie zur Unterstützung natürlicher Erneuerungsprozesse eingesetzt.",
     gallery: ["/OZEN.png"],
     inStock: true,
   },
+    {
+    id: 97,
+    title: "MOTS-C 10mg Fertigpen",
+    category: "NEU",
+    price: "220.00 CHF",
+    badge: "NEU",
+    image: "/MOTS.png",
+    description:
+      "MOTS-C 10mg Fertigpen exclusive nur bei SwissPharmaLab",
+    details:
+      "MOTS-C ist ein modernes Peptid, das den zellulären Energiestoffwechsel unterstützt und zu mehr Vitalität beitragen kann. Es wird häufig zur Förderung von Regeneration, Ausdauer und allgemeinem Wohlbefinden eingesetzt.",
+    gallery: ["/MOTS.png"],
+    inStock: true,
+  },
+   {
+    id: 96,
+    title: "NAD+ 500mg Fertigpen",
+    category: "NEU",
+    price: "200.00 CHF",
+    badge: "NEU",
+    image: "/NAD.png",
+    description:
+      "MOTS-C 10mg Fertigpen exclusive nur bei SwissPharmaLab",
+    details:
+      "NAD+ ist ein essenzieller Bestandteil des zellulären Energiestoffwechsels und unterstützt Vitalität sowie natürliche Regenerationsprozesse. Es wird besonders von Menschen geschätzt, die ihre Energie und Leistungsfähigkeit im Alltag fördern möchten.",
+    gallery: ["/NAD.png"],
+    inStock: true,
+  },
+   {
+    id: 95,
+    title: "IGF-1 LR3",
+    category: "NEU",
+    price: "230.00 CHF",
+    badge: "NEU",
+    image: "/IGF.png",
+    description:
+      "IGF-1 LR3 Fertigpen exclusiv nur bei SwisPharmaLab.",
+    details:
+      "IGF-1 LR3 unterstützt Muskelwachstum, Regeneration und körperliche Leistungsfähigkeit. Es wird besonders von Athleten geschätzt, die ihre Erholung optimieren und ihre Fortschritte im Training fördern möchten.",
+    gallery: ["/IGF.png"],
+    inStock: true,
+  },
+    {
 
+    id: 94,
+
+    title: "Semax", 
+
+    category: "NEU",
+
+    price: "190.00 CHF",
+
+    badge: "NEU",
+
+    image: "/semax.png", 
+
+    description:
+
+      "Semax 30mg Fertigpen exclusive nur bei SwissPharmaLab",
+
+    details:
+
+      "Semax wird besonders für seine Unterstützung von Konzentration, mentaler Leistungsfähigkeit und Fokus geschätzt. Es eignet sich ideal für Menschen, die im Alltag oder Beruf dauerhaft aufmerksam und leistungsfähig bleiben möchten.",
+
+    gallery: ["/semax.png"], 
+
+    inStock: true,
+
+  },
+  
 
   {
     id: 1,
@@ -49,6 +119,7 @@ const products = [
     oldPrice: "125.00 CHF",
     badge: "BESTSELLER",
     image: "/GHK-CU.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Ein hautverjüngendes Kupfer-Peptid, das die natürliche Regeneration ankurbelt und für sichtbar glattere, festere und gesünder aussehende Haut sorgt.",
     details:
@@ -64,6 +135,7 @@ const products = [
     oldPrice: "125.00 CHF",
     badge: "BESTSELLER",
     image: "/HGH-FRAG.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Ein Peptid, das gezielt den Fettabbau (Lipolyse) unterstützt ohne die typischen Nebenwirkungen des vollständigen Wachstumshormons zu verursachen.",
     details:
@@ -73,33 +145,35 @@ const products = [
   },
   {
     id: 3,
-    title: "RETATRUIDE 10mg",
+    title: "RETATRUTIDE 10mg",
     category: "PEPTIDE",
     price: "120.00 CHF",
     oldPrice: "130.00 CHF",
     badge: "BESTSELLER",
     image: "/RETA10.png",
+     variants: ["Vial", "Kartusche"],
     description:
       " Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
     details:
-      "Hauptwirkungen von Retatrutid: Dreifache Rezeptor-Aktivierung: Retatrutid ahmt die Hormone GLP-1, GIP und Glukagon nach, was zu einer intensiven Stoffwechselregulation führt. Appetitregulation & Sättigung: Die Kombination aus GLP-1 und GIP dämpft den Hunger deutlich stärker und fördert ein früheres Sättigungsgefühl. Erhöhter Kalorienverbrauch: Die Glukagon-Aktivierung kurbelt die Thermogenese an und unterstützt die Fettverbrennung. Blutzuckerkontrolle & Gewichtsabnahme: Es verbessert den HbA1c-Wert und führt in Studien zu einer starken Gewichtsabnahme.",
+      "Hauptwirkungen von Retatrutide,Dreifache Rezeptor-Aktivierung: Retatrutid ahmt die Hormone GLP-1, GIP und Glukagon nach, was zu einer intensiven Stoffwechselregulation führt. Appetitregulation & Sättigung: Die Kombination aus GLP-1 und GIP dämpft den Hunger deutlich stärker und fördert ein früheres Sättigungsgefühl. Erhöhter Kalorienverbrauch: Die Glukagon-Aktivierung kurbelt die Thermogenese an und unterstützt die Fettverbrennung. Blutzuckerkontrolle & Gewichtsabnahme: Es verbessert den HbA1c-Wert und führt in Studien zu einer starken Gewichtsabnahme.",
     gallery: ["/RETA10.png"],
     inStock: true,
   },
   {
     id: 4,
-    title: "TIRZEPATIDE 30",
+    title: "MOTS-C 10mg",
     category: "PEPTIDE",
-    price: "160.00 CHF",
-    oldPrice: "170.00 CHF",
-    badge: "AUSVERKAUFT",
-    image: "/TIRZE.png",
+    price: "110.00 CHF",
+    oldPrice: "120.00 CHF",
+badge: "BESTSELLER",
+    image: "/MOTS1.png",
+     variants: ["Vial", "Kartusche"],
     description:
-      "Willst du Gewicht verlieren? Tirzepatide wirkt auf die Hormone GLP-1 und GIP, senkt dadurch stark den Appetit und verbessert die Insulinwirkung.",
+      "MOTS-C ist ein modernes Peptid, das den zellulären Energiestoffwechsel unterstützt und zu mehr Vitalität beitragen kann. Es wird häufig zur Förderung von Regeneration, Ausdauer und allgemeinem Wohlbefinden eingesetzt.",
     details:
-      "Doppelte Wirkung (GIP & GLP-1): Tirzepatid ahmt die Darmhormone GIP und GLP-1 nach. Blutzuckerkontrolle: Es steigert glukoseabhängig die Insulinsekretion und senkt die Glukagonkonzentration. Gewichtsabnahme: Es hemmt den Appetit und fördert ein schnelleres, längeres Sättigungsgefühl. Körperzusammensetzung: Studien zeigen, dass Tirzepatid den Taillenumfang und die viszerale Fettmasse reduziert.",
-    gallery: ["/TIRZE.png"],
-    inStock: false,
+      ",MOTS-C ist ein modernes Peptid, das den zellulären Energiestoffwechsel unterstützt und zu mehr Vitalität beitragen kann. Es wird häufig zur Förderung von Regeneration, Ausdauer und allgemeinem Wohlbefinden eingesetzt.",
+    gallery: ["/MOTS1.png"],
+    inStock: true,
   },
   {
     id: 5,
@@ -109,6 +183,7 @@ const products = [
     oldPrice: "90.00 CHF",
     badge: "SALE",
     image: "/CJC.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Erhöhte endogene Wachstumshormon-Ausschüttung, verbesserte Regeneration und Schlafqualität.",
     details:
@@ -124,6 +199,7 @@ const products = [
     oldPrice: "75.00 CHF",
     badge: "SALE",
     image: "/IPA.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Ipamorelin steigert gezielt die natürliche Ausschüttung von Wachstumshormon.",
     details:
@@ -139,6 +215,7 @@ const products = [
     oldPrice: "109.00 CHF",
     badge: "SALE",
     image: "/THY.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Thymosin Alpha-1 stärkt das Immunsystem und verbessert die körpereigene Immunantwort.",
     details:
@@ -154,6 +231,7 @@ const products = [
     oldPrice: "180.00 CHF",
     badge: "SALE",
     image: "/KLOW.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Synthetische Peptid-Mischung aus GHK-Cu, BPC-157, TB-500 und KPV.",
     details:
@@ -169,6 +247,7 @@ const products = [
     oldPrice: "130.00 CHF",
     badge: "SALE",
     image: "/GLOW.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "Synthetische Peptid-Mischung zur Geweberegeneration, Hautverjüngung und Heilungsförderung.",
     details:
@@ -184,6 +263,7 @@ const products = [
     oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/AOD.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "AOD-9604 aktiviert gezielt den Fettstoffwechsel und hemmt die Einlagerung von neuem Fett.",
     details:
@@ -199,6 +279,7 @@ const products = [
     oldPrice: "85.00 CHF",
     badge: "SALE",
     image: "/SS.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "SS-31 bindet an Cardiolipin in der inneren mitochondrialen Membran, verhindert dessen Oxidation und stabilisiert so die Struktur der Mitochondrien.",
     details:
@@ -214,6 +295,7 @@ const products = [
     oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/GHRP.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "GHRP-2 (Growth Hormone Releasing Peptide-2) ist ein synthetisches Peptid, das die Ausschüttung von Wachstumshormon (GH) anregt, indem es die Hypophyse stimuliert.",
     details:
@@ -229,6 +311,7 @@ const products = [
     oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/GHRP6.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "GHRP-6 (Growth Hormone Releasing Peptide-6) ist ein Peptid, das die Freisetzung von Wachstumshormon stark stimuliert. Es kann Muskelaufbau, Fettabbau und Regeneration fördern, wirkt aber besonders deutlich appetitsteigernd.",
     details:
@@ -245,6 +328,7 @@ const products = [
     oldPrice: "85.00 CHF",
     badge: "SALE",
     image: "/BPC.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "BPC-157 (Body Protection Compound-157) ist ein Peptid, das für seine mögliche heilungsfördernde Wirkung bekannt ist, besonders bei Sehnen, Muskeln und dem Verdauungstrakt.",
     details:
@@ -261,6 +345,7 @@ const products = [
     oldPrice: "95.00 CHF",
     badge: "SALE",
     image: "/TB500.png",
+     variants: ["Vial", "Kartusche"],
     description:
       "TB-500 (Thymosin Beta-4) ist ein Peptid, das die Zellmigration und Gewebereparatur fördert, wodurch Heilungsprozesse besonders bei Muskeln, Sehnen und Bändern beschleunigt werden.",
     details:
@@ -426,11 +511,6 @@ export default function App() {
       console.error("Fehler beim Speichern des Warenkorbs:", error);
     }
   }, [cart]);
-  useEffect(() => {
-
-  return () => clearTimeout(timer);
-
-}, []);
 
   const filteredProducts = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -566,6 +646,19 @@ export default function App() {
         </div>
 
         <p>{product.description}</p>
+        {product.variants && (
+  <div className="variant-select">
+    <label>Ausführung</label>
+
+    <select defaultValue="Vial">
+      {product.variants.map((variant) => (
+        <option key={variant} value={variant}>
+          {variant}
+        </option>
+      ))}
+    </select>
+  </div>
+)}
 
         {product.inStock === false && (
           <p className="out-of-stock-text">Nicht verfügbar</p>
@@ -583,7 +676,17 @@ export default function App() {
           ) : (
             <button
               className="buy-btn full"
-              onClick={() => addToCart(product)}
+          onClick={(e) => {
+  const variant =
+    e.currentTarget
+      .closest(".card")
+      .querySelector(".variant-select select")?.value || "Vial";
+
+  addToCart({
+    ...product,
+    variant,
+  });
+}}
             >
               In den Warenkorb
               <span className="cart-icon">🛒</span>
@@ -675,7 +778,7 @@ export default function App() {
   <section className="product-section" id="new-products">
     <div className="section-heading-wrap">
       <span className="section-kicker">Neu</span>
-      <h2 className="section-title">NEU BEI SWISSPHARMALAB</h2>
+    <h2 className="section-title">SwissPharmaLab Fertigpen</h2>
     </div>
 
     <div className="product-grid new-grid">
@@ -822,7 +925,10 @@ export default function App() {
                   <div key={item.id} className="cart-drawer-item">
                     <img src={item.image} alt={item.title} />
                     <div>
-                      <p>{item.title}</p>
+                    <p>
+  {item.title}
+  {item.variant && ` – ${item.variant}`}
+</p>
                       <p>{item.quantity} x {item.price}</p>
                     </div>
                   </div>

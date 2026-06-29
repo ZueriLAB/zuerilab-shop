@@ -11,7 +11,7 @@ body {
   background:
     radial-gradient(circle at top, rgba(250, 204, 21, 0.08), transparent 28%),
     #050505;
-  color: #fff;
+  color: #b12525;
   font-family: Arial, sans-serif;
 }
 
@@ -50,7 +50,7 @@ button {
   align-items: center;
   min-height: 42px;
   padding: 10px 16px;
-  background: #f3f3f3;
+  background: #44be34;
   color: #111;
   font-size: 13px;
   font-weight: 700;
@@ -105,7 +105,7 @@ button {
   position: relative;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(26, 197, 49, 0.92);
   transition: color 0.25s ease;
 }
 
@@ -146,16 +146,31 @@ button {
 .hero-inner {
   position: relative;
   overflow: hidden;
+
   padding: 44px 30px 34px;
   border-radius: 28px;
-  border: 1px solid rgba(250, 204, 21, 0.555);
-  background:
-    radial-gradient(circle at top right, rgba(250, 204, 21, 0.12), transparent 28%),
-    linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+
+  border: 1px solid rgba(0,0,0,.08);
+
+  background-image: url("/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   box-shadow:
-    0 18px 50px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    0 18px 50px rgba(0,0,0,.15),
+    0 35px 80px rgba(0,0,0,.08);
+
   text-align: center;
+}
+.hero-inner::before {
+  display: none;
+}
+
+
+.hero-inner > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-badge {
@@ -242,7 +257,7 @@ button {
   border-radius: 14px;
   border: 1px solid #dfba1467;
   background: #0c0c0c;
-  color: #fff;
+  color: #a4a8a5;
   font-size: 15px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -370,15 +385,40 @@ button {
   display: block;
 }
 
-/* SECTION */
 .product-section {
   margin: 24px auto;
   padding: 26px 22px 34px;
   border-radius: 24px;
   max-width: 1600px;
-  background: linear-gradient(180deg, #0d0d0d 0%, #090909 100%);
-  border: 1px solid #191919;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  background-image: url("/section-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid rgba(0,0,0,.08);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.08),
+    0 25px 60px rgba(0,0,0,.12);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.product-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255,255,255,.72);
+
+  z-index: 0;
+}
+
+.product-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section-heading-wrap {
@@ -617,7 +657,7 @@ button {
 }
 
 .buy-btn {
-  background: #fff;
+  background: #525352;
   color: #000;
 }
 
@@ -683,15 +723,15 @@ button {
 }
 
 .description {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(12, 11, 11, 0.72);
   line-height: 1.7;
   font-size: 15px;
   margin-bottom: 18px;
 }
 
 .info-box {
-  color: #22c55e;
-  border: 1px solid #1f3d2b;
+  color: #000000;
+  border: 1px solid #000000;
   background: #0f1a14;
   padding: 14px 16px;
   border-radius: 12px;
@@ -699,12 +739,12 @@ button {
   font-size: 15px;
   font-weight: 600;
   box-shadow: 0 0 10px rgba(34, 197, 94, 0.15);
-  text-shadow: 0 0 6px rgba(34, 197, 94, 0.4);
+  text-shadow: 0 0 6px rgba(7, 8, 8, 0.4);
   transition: all 0.25s ease;
 }
 
 .info-box:hover {
-  box-shadow: 0 0 16px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 0 16px rgba(121, 122, 121, 0.3);
   transform: translateY(-2px);
 }
 
@@ -1058,6 +1098,24 @@ button {
 
 .checkout-pay-btn {
   margin-top: 18px;
+
+  background: #e11d2e !important;
+  color: #fff !important;
+  border: none !important;
+
+  box-shadow:
+    0 8px 20px rgba(225, 29, 46, 0.30);
+
+  transition: all .25s ease;
+}
+
+.checkout-pay-btn:hover {
+  background: #c91425 !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 32px rgba(225, 29, 46, 0.40);
 }
 
 .error {
@@ -2594,4 +2652,662 @@ button {
       right:8px;
   }
 
+}
+
+/* =========================================================
+   APPLE WHITE GLOW THEME OVERRIDES
+   Eingefügt am Ende der Datei, damit dein bestehendes Layout
+   erhalten bleibt und nur Farben / Glow / Schatten geändert werden.
+   ========================================================= */
+
+:root {
+  --apple-bg: #f5f5f7;
+  --apple-surface: rgba(255, 255, 255, 0.86);
+  --apple-surface-solid: #ffffff;
+  --apple-border: rgba(0, 0, 0, 0.08);
+  --apple-border-soft: rgba(255, 255, 255, 0.88);
+  --apple-text: #111111;
+  --apple-muted: #5f6368;
+  --apple-soft-muted: #7a7f87;
+  --apple-glow: rgba(255, 255, 255, 0.9);
+  --apple-shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.04);
+  --apple-shadow-md: 0 18px 48px rgba(0, 0, 0, 0.08);
+  --apple-shadow-lg: 0 28px 80px rgba(0, 0, 0, 0.10);
+  --apple-red: #e30613;
+  --apple-red-soft: rgba(227, 6, 19, 0.10);
+}
+
+html {
+  background: var(--apple-bg) !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.95), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, var(--apple-bg) 46%, #eef0f4 100%) !important;
+  color: var(--apple-text) !important;
+}
+
+.page {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.94), transparent 26%),
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,245,247,0.94)) !important;
+  border: 1px solid rgba(255,255,255,0.88) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 24px 80px rgba(0,0,0,0.08),
+    0 0 70px rgba(255,255,255,0.75) !important;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.88) !important;
+  color: var(--apple-text) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.header,
+.nav {
+  background: rgba(255,255,255,0.82) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+}
+
+.brand {
+  border-radius: 22px !important;
+  padding: 8px 18px !important;
+  background: rgba(255,255,255,0.7) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 10px 30px rgba(0,0,0,0.06),
+    0 0 35px rgba(255,255,255,0.75) !important;
+}
+
+.logo {
+  filter: none !important;
+}
+
+.nav-link {
+  color: rgba(17,17,17,0.86) !important;
+}
+
+.nav-link:hover,
+.cart-link,
+.cart-link:hover {
+  color: var(--apple-red) !important;
+}
+
+.nav-link::after {
+  background: linear-gradient(90deg, transparent, var(--apple-red), transparent) !important;
+}
+
+.hero-inner,
+.product-section,
+.reviews-luxury-section,
+.support-card,
+.business-card,
+.cart-summary-box,
+.checkout-summary-box,
+.success-box,
+.payment-box,
+.payment-method-box,
+.bonus-box {
+  background:
+    radial-gradient(circle at top right, rgba(238, 237, 236, 0.95), transparent 26%),
+    rgba(236, 236, 233, 0.973) !important;
+  border: 1px solid rgba(10, 9, 9, 0.88) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(221, 217, 217, 0.95),
+    0 10px 30px rgba(0,0,0,0.045),
+    0 28px 70px rgba(0,0,0,0.08),
+    0 0 55px rgba(12, 11, 11, 0.72) !important;
+  color: var(--apple-text) !important;
+}
+
+.hero-inner:hover,
+.product-section:hover,
+.reviews-luxury-section:hover,
+.support-card:hover,
+.business-card:hover {
+  box-shadow:
+    inset 0 1px 0 rgb(234, 236, 234),
+    0 14px 36px rgba(0,0,0,0.055),
+    0 34px 90px rgba(0,0,0,0.10),
+    0 0 70px rgba(36, 36, 35, 0.82) !important;
+}
+
+.hero-badge,
+.section-kicker,
+.featured-strip-kicker,
+.card-category,
+.reviews-luxury-kicker,
+.reviews-luxury-verified {
+  background: rgba(208, 211, 208, 0.72) !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  color: var(--apple-red) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(240, 239, 239, 0.95),
+    0 8px 24px rgba(0,0,0,0.04) !important;
+}
+
+.hero-title,
+.section-title,
+.featured-strip-title,
+.card-content h3,
+.detail-info h1,
+.checkout-summary-title,
+.checkout-title,
+.cart-summary-title,
+.success-subtitle,
+.success-order-name,
+.success-order-price,
+.success-total,
+.payment-amount,
+.reviews-luxury-title,
+.reviews-luxury-score,
+.reviews-luxury-author,
+.business-card h3,
+.support-card h3,
+.cart-drawer-content h2,
+.price {
+  color: var(--apple-text) !important;
+  text-shadow: none !important;
+}
+
+.hero-subtitle,
+.hero-trust,
+.card-content p,
+.description,
+.old-price,
+.featured-chip span,
+.cart-summary-row,
+.shipping-info,
+.shipping-sub,
+.checkout-summary-qty,
+.checkout-empty,
+.success-subtext,
+.payment-steps,
+.payment-note,
+.bonus-list,
+.reviews-luxury-subtitle,
+.reviews-luxury-count,
+.reviews-luxury-note,
+.reviews-luxury-text,
+.reviews-luxury-meta,
+.business-card p,
+.support-card p,
+.cart-drawer-empty,
+.cart-drawer-item p {
+  color: var(--apple-muted) !important;
+  text-shadow: none !important;
+}
+
+.hero-btn-primary,
+.discount-box button,
+.buy-btn {
+  background: linear-gradient(180deg, #faf9f9, #07080854) !important;
+  color: var(--apple-text) !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 10px 24px rgba(0,0,0,0.08),
+    0 0 28px rgba(255,255,255,0.78) !important;
+}
+
+.hero-btn-primary:hover,
+.discount-box button:hover,
+.buy-btn:hover {
+  background: #807d7d !important;
+  transform: translateY(-2px) !important;
+  box-shadow:
+    inset 0 1px 0 rgb(88, 87, 87),
+    0 16px 34px rgba(0,0,0,0.10),
+    0 0 42px rgba(75, 73, 73, 0.9) !important;
+}
+
+.hero-btn-secondary,
+.secondary-btn,
+.secondary,
+.copy-btn {
+  background: rgba(170, 169, 167, 0.68) !important;
+  color: var(--apple-text) !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 8px 22px rgba(230, 222, 222, 0.05) !important;
+}
+
+.hero-btn-secondary:hover,
+.secondary-btn:hover,
+.secondary:hover,
+.copy-btn:hover {
+  background: #989c99 !important;
+  color: var(--apple-red) !important;
+  border-color: rgba(227,6,19,0.18) !important;
+}
+
+.search-bar input,
+.discount-box input,
+.checkout-field input,
+.checkout-field select,
+.checkout-field textarea {
+  background: rgba(224, 230, 224, 0.86) !important;
+  color: var(--apple-text) !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(12, 12, 12, 0.95),
+    0 8px 22px rgba(0,0,0,0.04) !important;
+}
+
+.search-bar input:focus,
+.discount-box input:focus,
+.checkout-field input:focus,
+.checkout-field select:focus,
+.checkout-field textarea:focus {
+  border-color: rgba(3, 5, 3, 0.801) !important;
+  box-shadow:
+    0 0 0 4px rgba(7, 1, 1, 0.07),
+    0 10px 28px rgba(3, 1, 1, 0.863) !important;
+}
+
+.section-title::before,
+.section-title::after {
+  background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent) !important;
+}
+
+.card,
+.featured-chip,
+.trust-strip-item,
+.cart-item,
+.cart-drawer-item,
+.reviews-luxury-summary,
+.reviews-luxury-card,
+.reviews-luxury-card.featured,
+.empty-search-box,
+.review-box,
+.checkout-form-box,
+.success-order-list,
+.success-address,
+.qr-box,
+.popup-box {
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.95), transparent 24%),
+    #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 12px 32px rgba(0,0,0,0.06),
+    0 0 42px rgba(255,255,255,0.78) !important;
+  color: var(--apple-text) !important;
+}
+
+.card:hover,
+.featured-chip:hover,
+.trust-strip-item:hover,
+.reviews-luxury-card:hover,
+.business-card:hover,
+.support-card:hover,
+.bonus-box:hover {
+  border-color: rgba(0,0,0,0.10) !important;
+  box-shadow:
+    inset 0 1px 0 rgb(8, 4, 4),
+    0 18px 44px rgba(0,0,0,0.09),
+    0 0 55px rgba(14, 6, 6, 0.9) !important;
+}
+
+.image-wrap,
+.cart-item-image,
+.checkout-summary-image,
+.success-order-image,
+.featured-chip img,
+.cart-drawer-item img,
+.qr-image {
+  background:
+    linear-gradient(180deg, #070606, #050505) !important;
+  border: 1px solid rgba(0, 0, 0, 0.897) !important;
+}
+
+.badge-bestseller {
+  background: linear-gradient(135deg, var(--apple-red), #cea625) !important;
+  color: #ffffff !important;
+}
+
+.badge-new {
+  background: linear-gradient(135deg, #00c853, #38e27a) !important;
+  color: #ffffff !important;
+}
+
+.badge-default {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+.badge-out {
+  background: linear-gradient(135deg, #020101, #000000) !important;
+  color: #030303 !important;
+}
+
+.reviews,
+.review-box p:first-child,
+.reviews-luxury-stars,
+.reviews-luxury-card-stars,
+.success-row:first-child span,
+.payment-box h3,
+.payment-method-box h3,
+.qr-box h4,
+.bonus-content h3,
+.bonus-box:hover .bonus-content h3,
+.support-row strong,
+.support-row span,
+.support-mail,
+.business-mail,
+.payment-title {
+  color: var(--apple-red) !important;
+  text-shadow: none !important;
+}
+
+.reviews-luxury-bar {
+  background: rgba(0,0,0,0.08) !important;
+}
+
+.reviews-luxury-bar div {
+  background: linear-gradient(90deg, var(--apple-red), #080808) !important;
+}
+
+.reviews-luxury-avatar {
+  background: linear-gradient(180deg, #000000, #000000) !important;
+  border: 1px solid rgb(28, 207, 11) !important;
+  color: var(--apple-red) !important;
+}
+
+.reviews-luxury-note,
+.success-row,
+.checkout-summary-divider,
+.cart-summary-divider,
+.success-order-item,
+.support-row {
+  border-color: rgba(0,0,0,0.08) !important;
+}
+
+.cart-drawer {
+  background:
+    radial-gradient(circle at top right, rgba(132, 134, 132, 0.95), transparent 28%),
+    rgb(243, 240, 243) !important;
+  border-left: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow:
+    -20px 0 70px rgba(0,0,0,0.12),
+    0 0 60px rgba(7, 1, 1, 0.74) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+}
+
+.cart-drawer-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+
+  background: #ffffff !important;
+  padding: 16px;
+
+  border-top: 1px solid #ddd;
+
+  box-shadow:
+    0 -8px 24px rgba(0,0,0,.08);
+}
+
+.cart-overlay,
+.popup-overlay {
+  background: rgba(0,0,0,0.28) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.close-btn,
+.popup-close-btn {
+  background: rgba(17,17,17,0.92) !important;
+  color: #ffffff !important;
+}
+
+.info-box {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border: 5px solid rgba(38, 175, 20, 0.753) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 24px rgba(17, 24, 20, 0.1) !important;
+  text-shadow: none !important;
+}
+
+.payment-option,
+.checkout-checkbox-label,
+.checkout-checkbox-row,
+.checkout-field label,
+.checkout-summary-price,
+.cart-summary-total,
+.cart-item-price,
+.success-address p,
+.success-address strong,
+.success-main-text,
+.success-email-info,
+.payment-info-text,
+.wallet-address {
+  color: var(--apple-text) !important;
+}
+
+@media (max-width: 768px) {
+  .page {
+    margin: 10px !important;
+    border-radius: 22px !important;
+  }
+
+  .brand {
+    padding: 6px 14px !important;
+    border-radius: 18px !important;
+  }
+}
+.hero-section .hero-inner {
+  background-image: url("/hero-bg.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.product-section {
+    background: url("/section-bg.png") center center / cover no-repeat !important;
+}
+.variant-select {
+  margin: 12px 0;
+}
+
+.variant-select label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.variant-select select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6d6d6;
+  background: #fff;
+}
+.variant-select {
+  margin: 14px 0 16px;
+}
+
+.variant-select label {
+  color: #111;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.variant-select select {
+  margin-top: 6px;
+  width: 100%;
+  padding: 12px 14px;
+
+  background: #f7f7f7;
+  color: #111;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    0 3px 10px rgba(0,0,0,.06);
+}
+
+.variant-select select:focus {
+  outline: none;
+  border-color: #111;
+  background: #fff;
+}
+/* ===========================
+   PREMIUM REVIEWS
+=========================== */
+
+.reviews-luxury-section{
+    max-width:1600px !important;
+    margin:50px auto !important;
+    padding:42px !important;
+
+    border-radius:34px !important;
+
+    background:linear-gradient(180deg,#ffffff 0%,#f5f5f5 100%) !important;
+
+    border:1px solid rgba(0,0,0,.06) !important;
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.12) !important;
+}
+
+.reviews-luxury-layout{
+    display:grid !important;
+    grid-template-columns:340px 1fr !important;
+    gap:28px !important;
+    align-items:start !important;
+}
+
+.reviews-luxury-summary{
+    background:#ffffff !important;
+
+    border-radius:28px !important;
+
+    padding:34px !important;
+
+    border:1px solid rgba(0,0,0,.06) !important;
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.08) !important;
+}
+
+.reviews-luxury-score{
+    font-size:64px !important;
+    font-weight:800 !important;
+    color:#111 !important;
+    line-height:1 !important;
+}
+
+.reviews-luxury-stars{
+    color:#d4af37 !important;
+    font-size:24px !important;
+    letter-spacing:3px !important;
+    margin:12px 0 !important;
+}
+
+.reviews-luxury-count{
+    color:#666 !important;
+    font-size:15px !important;
+    margin-bottom:24px !important;
+}
+
+.reviews-luxury-note{
+    margin-top:24px !important;
+    color:#555 !important;
+    line-height:1.6 !important;
+}
+
+.reviews-luxury-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:22px !important;
+}
+
+.reviews-luxury-card{
+    background:#ffffff !important;
+
+    border-radius:24px !important;
+
+    padding:28px !important;
+
+    border:1px solid rgba(0,0,0,.06) !important;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08) !important;
+
+    transition:all .25s ease !important;
+}
+
+.reviews-luxury-card:hover{
+    transform:translateY(-6px) !important;
+
+    box-shadow:
+    0 30px 65px rgba(0,0,0,.15) !important;
+}
+
+.reviews-luxury-card-stars{
+    color:#d4af37 !important;
+    font-size:18px !important;
+}
+
+.reviews-luxury-verified{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:6px !important;
+
+    background:#111 !important;
+    color:#fff !important;
+
+    padding:7px 14px !important;
+
+    border-radius:999px !important;
+
+    font-size:12px !important;
+
+    font-weight:700 !important;
+}
+
+.reviews-luxury-text{
+    margin:18px 0 !important;
+    color:#333 !important;
+    line-height:1.8 !important;
+}
+
+.reviews-luxury-avatar{
+    width:54px !important;
+    height:54px !important;
+
+    border-radius:50% !important;
+
+    background:#111 !important;
+
+    color:#fff !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    font-weight:700 !important;
+
+    box-shadow:
+    0 10px 22px rgba(0,0,0,.15) !important;
+}
+
+.reviews-luxury-author{
+    color:#111 !important;
+    font-weight:700 !important;
+}
+
+.reviews-luxury-meta{
+    color:#777 !important;
+    font-size:13px !important;
 }

@@ -95,7 +95,7 @@ useEffect(() => {
           </p>
 
           <div className="info-box">✔ Sofort verfügbar</div>
-          <div className="info-box">✔ Lieferzeit 2–7 Tage</div>
+          <div className="info-box">✔ Lieferzeit 1–7 Tage</div>
           <div className="info-box">✔ Sichere Bestellung</div>
  {product.category === "PEPTIDE" && (
   <div className="bonus-box">

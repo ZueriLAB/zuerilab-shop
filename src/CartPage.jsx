@@ -69,7 +69,10 @@ const finalTotal = total - discountAmount;
                     />
 
                     <div className="cart-item-info">
-                      <h3>{item.title}</h3>
+                    <h3>
+  {item.title}
+  {item.variant && ` – ${item.variant}`}
+</h3>
                       <p className="cart-item-price">{item.price}</p>
 
                       <div className="cart-actions">
