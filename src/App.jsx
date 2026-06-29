@@ -669,9 +669,9 @@ export default function App() {
 
     <select defaultValue={product.doses[0].label}>
       {product.doses.map((dose) => (
-        <option key={dose.label} value={dose.label}>
-          {dose.label}
-        </option>
+ <option key={dose.label} value={dose.label}>
+  {dose.label} – {dose.price}
+</option>
       ))}
     </select>
   </div>
@@ -693,15 +693,26 @@ export default function App() {
           ) : (
             <button
               className="buy-btn full"
-          onClick={(e) => {
-  const variant =
-    e.currentTarget
-      .closest(".card")
-      .querySelector(".variant-select select")?.value || "Vial";
+onClick={(e) => {
+  const card = e.currentTarget.closest(".card");
+  const selects = card.querySelectorAll("select");
+
+  const variant = selects[0]?.value || "Vial";
+  const dose = selects[1]?.value || null;
+
+  let price = product.price;
+
+  if (product.doses && dose) {
+    const selectedDose = product.doses.find((d) => d.label === dose);
+    if (selectedDose) price = selectedDose.price;
+  }
 
   addToCart({
     ...product,
     variant,
+    dose,
+    price,
+    title: dose ? `${product.title} ${dose}` : product.title,
   });
 }}
             >
