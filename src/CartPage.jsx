@@ -24,12 +24,20 @@ const applyDiscount = () => {
 if (code === "RETA10") {
   setDiscount(10);
   localStorage.setItem("discount", "10");
+
+} else if (code === "WELCOME15") {
+  setDiscount(15);
+  localStorage.setItem("discount", "15");
+
+} else if (code === "Anna") {
+  setDiscount(20);
+  localStorage.setItem("discount", "20");
+
 } else {
   setDiscount(0);
   localStorage.setItem("discount", "0");
-    setDiscount(0);
-    alert("Ungültiger Rabattcode");
-  }
+  alert("Ungültiger Rabattcode");
+}
 };
 
 const discountAmount = total * (discount / 100);
