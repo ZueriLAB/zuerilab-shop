@@ -54,8 +54,8 @@ export async function onRequestPost(context) {
       .join("");
 
     const customerHtml = `
-      <div style="background:#f5f5f5;padding:30px;font-family:Arial,sans-serif;color:#111;">
-        <div style="max-width:760px;margin:0 auto;background:#ffffff;border-radius:24px;padding:32px;border:1px solid #e5e5e5;box-shadow:0 20px 50px rgba(0,0,0,.08);">
+   <div style="background:#f5f5f5;padding:12px;font-family:Arial,sans-serif;color:#111;width:100%;">
+  <div style="width:100%;max-width:760px;margin:0 auto;background:#ffffff;border-radius:18px;padding:18px;box-sizing:border-box;
 
           <div style="text-align:center;margin-bottom:28px;">
             <img
