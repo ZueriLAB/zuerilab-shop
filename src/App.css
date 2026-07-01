@@ -3311,3 +3311,35 @@ body {
     color:#777 !important;
     font-size:13px !important;
 }
+@media (max-width: 768px) {
+  .product-grid,
+  .featured-grid,
+  .new-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .card-image {
+    height: 150px !important;
+    object-fit: contain !important;
+  }
+
+  .card-content {
+    padding: 12px !important;
+  }
+
+  .card h3 {
+    font-size: 15px !important;
+  }
+
+  .price {
+    font-size: 16px !important;
+  }
+}
