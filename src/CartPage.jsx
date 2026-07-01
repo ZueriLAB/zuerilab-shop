@@ -138,7 +138,7 @@ const finalTotal = total - discountAmount;
     </div>
 
     <div className="shipping-info shipping-row">
-      <span>Lieferzeit: 2–7 Tage</span>
+      <span>Lieferzeit: 1–7 Tage</span>
       <img src="/POST.png" alt="Swiss Post" className="post-logo" />
     </div>
 

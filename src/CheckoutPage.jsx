@@ -113,6 +113,7 @@ const finalTotal = total - discountAmount;
       if (!res.ok || !data.success) {
         throw new Error(data.error || "Mail konnte nicht gesendet werden.");
       }
+      localStorage.removeItem("discount");
 
       navigate("/success", {
         state: {
