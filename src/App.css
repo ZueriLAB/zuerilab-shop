@@ -3343,3 +3343,37 @@ body {
     font-size: 16px !important;
   }
 }
+@media (max-width: 768px) {
+  .reviews-luxury-section {
+    padding: 18px !important;
+    margin: 24px 12px !important;
+    border-radius: 22px !important;
+  }
+
+  .reviews-luxury-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .reviews-luxury-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .reviews-luxury-summary,
+  .reviews-luxury-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .reviews-luxury-card {
+    padding: 20px !important;
+  }
+
+  .reviews-luxury-score {
+    font-size: 48px !important;
+  }
+}
