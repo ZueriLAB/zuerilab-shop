@@ -70,7 +70,7 @@ const products = [
   },
    {
     id: 95,
-    title: "IGF-1 LR3",
+    title: "IGF-1 LR3 1mg Fertigpen",
     category: "NEU",
     price: "230.00 CHF",
     badge: "NEU",
@@ -86,7 +86,7 @@ const products = [
 
     id: 94,
 
-    title: "Semax", 
+    title: "Semax 30mg Fertigpen", 
 
     category: "NEU",
 
@@ -113,7 +113,7 @@ const products = [
 
   {
     id: 1,
-    title: "GHK-CU",
+    title: "GHK-CU 50mg",
     category: "PEPTIDE",
     price: "110.00 CHF",
     oldPrice: "125.00 CHF",
@@ -129,7 +129,7 @@ const products = [
   },
   {
     id: 2,
-    title: "HGH FRAGMENT 176-191",
+    title: "HGH FRAGMENT 176-191 5mg",
     category: "PEPTIDE",
     price: "110.00 CHF",
     oldPrice: "125.00 CHF",
@@ -181,18 +181,18 @@ badge: "BESTSELLER",
   },
   {
     id: 5,
-    title: "CJC-1295",
+    title: "IGF-1 LR3 1mg",
     category: "PEPTIDE",
-    price: "84.00 CHF",
-    oldPrice: "90.00 CHF",
+    price: "110.00 CHF",
+    oldPrice: "120.00 CHF",
     badge: "SALE",
-    image: "/CJC.png",
+    image: "/igf-lr.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Erhöhte endogene Wachstumshormon-Ausschüttung, verbesserte Regeneration und Schlafqualität.",
+      " IGF-1 LR3 stimuliert das Muskelwachstum durch Hyperplasie (Zunahme der Anzahl der Muskelzellen) und Hypertrophie (Zunahme der Größe der bestehenden Muskelzellen). Es verbessert auch die Proteinsynthese, die für den Aufbau und die Reparatur von Muskelgewebe entscheidend ist..",
     details:
-      "Muskelaufbau: Erhöht den IGF-1-Spiegel und fördert die Muskelprotein-Synthese. Fettverbrennung: Fördert die Lipolyse, besonders an hartnäckigen Stellen. Verbesserte Regeneration: Beschleunigt die Heilung von Muskeln, Sehnen und Bändern. Anti-Aging-Effekte: Kann die Hautqualität verbessern und den Schlaf fördern. Starke Wachstumshormon-Steigerung: Die Wirkung hält aufgrund einer langen Halbwertszeit oft mehrere Tage an.",
-    gallery: ["/CJC.png"],
+      "IGF-1 LR3 fördert den Muskelaufbau durch Aktivierung des mTOR-Signalwegs und kann zusätzlich die Bildung neuer Muskelzellen (Hyperplasie) unterstützen. Außerdem beeinflusst es den Fettstoffwechsel zugunsten der Muskelmasse, birgt jedoch Risiken wie Blutzuckerschwankungen und bei langfristiger Anwendung eine mögliche Insulinresistenz..",
+    gallery: ["/igf-lr.png"],
     inStock: true,
   },
   {
@@ -261,34 +261,33 @@ badge: "BESTSELLER",
   },
   {
     id: 10,
-    title: "AOD-9604",
+    title: "SEMAX 30mg",
     category: "PEPTIDE",
     price: "90.00 CHF",
     oldPrice: "99.00 CHF",
     badge: "SALE",
-    image: "/AOD.png",
+    image: "/semaxx.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "AOD-9604 aktiviert gezielt den Fettstoffwechsel und hemmt die Einlagerung von neuem Fett.",
+      "Semax ist hilfreich zur Verbesserung der kognitiven Fähigkeiten, zur Steigerung der Leistungsfähigkeit nach einer schlaflosen Nacht, zur Erleichterung des Lern- und Erinnerungsprozesses sowie zur Reduktion von chronischem Stress und Angst..",
     details:
-      "AOD-9604 ist ein synthetisches Peptidfragment des menschlichen Wachstumshormons. Fettverbrennung: Wird genutzt, um die Fettverbrennung zu steigern. Gewichtsreduktion: Studien deuten darauf hin, dass es bei der Gewichtsabnahme helfen kann. Stoffwechselregulierung: Es soll helfen, den Stoffwechsel zu regulieren. Gelenkgesundheit: Einige Hinweise deuten auf positive Auswirkungen auf die Knorpelreparatur und Gelenkgesundheit hin.",
-    gallery: ["/AOD.png"],
+      "N-Acetyl Semax Amidate unterstützt die kognitive Funktion und fördert Konzentration sowie mentale Klarheit. Durch seine neuroprotektiven und neurotrophen Eigenschaften kann es die Bildung von BDNF und NGF anregen und mentale Erschöpfung sowie Stress reduzieren. Im Vergleich zu nicht-acyliertem Semax zeichnet es sich zudem durch eine längere und stabilere Wirkungsdauer aus.",
     inStock: true,
   },
     {
     id: 11,
-    title: "SS-31 10",
+    title: "NAD+ 500mg",
     category: "PEPTIDE",
     price: "80.00 CHF",
     oldPrice: "85.00 CHF",
     badge: "SALE",
-    image: "/SS.png",
+    image: "/nad++.png",
      variants: ["Vial", "Kartusche"],
     description:
       "SS-31 bindet an Cardiolipin in der inneren mitochondrialen Membran, verhindert dessen Oxidation und stabilisiert so die Struktur der Mitochondrien.",
     details:
-      "Das Peptid SS-31 (auch Elamipretid) wirkt positiv auf die Mitochondrien, indem es deren Energieproduktion verbessert und sie vor oxidativem Stress schützt. Dadurch kann es die Zellfunktion stabilisieren und möglicherweise Ermüdung sowie altersbedingte Schäden reduzieren. Insgesamt wird es vor allem zur Unterstützung von Herz-, Muskel- und Gehirnzellen erforscht.",
-    gallery: ["/SS.png"],
+      "NAD+ (Nicotinamid-Adenin-Dinukleotid) ist ein lebenswichtiges Coenzym für den Energiestoffwechsel, die Zellregeneration und DNA-Reparatur. Es steigert die körperliche und mentale Leistungsfähigkeit, reduziert Müdigkeit (Brain Fog) und wirkt als zentrales Element in der Anti-Aging- bzw. Langlebigkeitsforschung, da es altersbedingte Zellschäden bekämpft.",
+    gallery: ["/nad++.png"],
     inStock: true,
   },
    {
@@ -475,20 +474,7 @@ badge: "BESTSELLER",
     gallery: ["/STANON.png"],
     inStock: true,
   },
-  {
-    id: 11,
-    title: "DROSTANON P",
-    category: "Muskelaufbau",
-    price: "100.00 CHF",
-    badge: "AUSVERKAUFT",
-    image: "/DROSTA.png",
-    description:
-      "Drosta P (Drostanolonpropionat) ist ein stark androgenes, anaboles Steroid mit primär antieostrogenen Eigenschaften.",
-    details:
-      "Es wirkt stark vermännlichend, fördert den Muskelaufbau, erhöht die Härte und Dichte der Muskeln und wird im Sport häufig in Definitionsphasen verwendet. Aufgrund seiner Eigenschaften wird es im Bodybuilding genutzt, um den Körperfettanteil optisch zu senken und die Muskelmasse härter erscheinen zu lassen.",
-    gallery: ["/DROSTA.png"],
-    inStock: false,
-  },
+  
 ];
 export default function App() {
   const navigate = useNavigate();
