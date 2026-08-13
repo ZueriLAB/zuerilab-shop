@@ -755,7 +755,7 @@ onClick={(e) => {
       <h3>About Us</h3>
     </div>
 
-    <div className="footer-column">
+   <div className="footer-column footer-info">
       <h3>Informationen</h3>
 
       <span>FAQs</span>
