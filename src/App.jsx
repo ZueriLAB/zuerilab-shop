@@ -356,124 +356,6 @@ badge: "BESTSELLER",
     gallery: ["/TB500.png"],
     inStock: true,
   },
-
-  {
-    id: 20,
-    title: "TESTOSTERON-ENANTHAT",
-    category: "Muskelaufbau",
-    price: "90.00 CHF",
-    image: "/TESTOE.png",
-    description:
-      "Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte.",
-    details:
-      "Testosteron Enantat ist ein langwirksames injizierbares Androgen zur Behandlung von Testosteronmangel (TRT). Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte. Die Wirkung tritt schnell ein (innerhalb weniger Tage), erfordert jedoch regelmäßige intramuskuläre Injektionen.",
-    gallery: ["/TESTOE.png"],
-    inStock: true,
-  },
-  {
-    id: 19,
-    title: "TESTOSTERON-PROPIONAT",
-    category: "Muskelaufbau",
-    price: "79.00 CHF",
-    image: "/TESTOP.png",
-    description:
-      "Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte.",
-    details:
-      "AOD-9604 ist ein synthetisches Peptidfragment des menschlichen Wachstumshormons. Fettverbrennung: Wird genutzt, um die Fettverbrennung zu steigern. Gewichtsreduktion: Studien deuten darauf hin, dass es bei der Gewichtsabnahme helfen kann. Stoffwechselregulierung: Es soll helfen, den Stoffwechsel zu regulieren. Gelenkgesundheit: Einige Hinweise deuten auf positive Auswirkungen auf die Knorpelreparatur und Gelenkgesundheit hin.",
-    gallery: ["/TESTOP.png"],
-    inStock: true,
-  },
-  {
-    id: 18,
-    title: "TESTOSTERON-CYPIONAT",
-    category: "Muskelaufbau",
-    price: "85.00 CHF",
-    image: "/TESTOC.png",
-    description:
-      "Es steigert die Proteinsynthese, fördert Muskelaufbau, Kraft, Libido und Knochendichte.",
-    details:
-      "AOD-9604 ist ein synthetisches Peptidfragment des menschlichen Wachstumshormons. Fettverbrennung: Wird genutzt, um die Fettverbrennung zu steigern. Gewichtsreduktion: Studien deuten darauf hin, dass es bei der Gewichtsabnahme helfen kann. Stoffwechselregulierung: Es soll helfen, den Stoffwechsel zu regulieren. Gelenkgesundheit: Einige Hinweise deuten auf positive Auswirkungen auf die Knorpelreparatur und Gelenkgesundheit hin.",
-    gallery: ["/TESTOC.png"],
-    inStock: true,
-  },
-  {
-    id: 17,
-    title: "TRENBOLON A",
-    category: "Muskelaufbau",
-    price: "100.00 CHF",
-    image: "/TRENA.png",
-    description:
-      "Trenbolon-Acetat ist ein starkes anaboles Steroid, das Bodybuilder für effektiven Muskelaufbau nutzen.",
-    details:
-      "Trenbolon ist ein stark wirkendes anaboles Steroid, das im Bodybuilding für extremen Muskelaufbau, Kraftsteigerung und Fettverbrennung genutzt wird. Es wirkt durch starke Bindung an Androgenrezeptoren.",
-    gallery: ["/TRENA.png"],
-    inStock: true,
-  },
-  {
-    id: 16,
-    title: "TRENBOLON E",
-    category: "Muskelaufbau",
-    price: "110.00 CHF",
-    image: "/TRENE.png",
-    description:
-      "Massiver Muskelaufbau: Fördert den Aufbau von Muskelmasse und Kraft.",
-    details:
-      "Trenbolon ist ein stark wirkendes anaboles Steroid, das im Bodybuilding für extremen Muskelaufbau, Kraftsteigerung und Fettverbrennung genutzt wird. Es wirkt durch starke Bindung an Androgenrezeptoren.",
-    gallery: ["/TRENE.png"],
-    inStock: true,
-  },
-  {
-    id: 15,
-    title: "NANDROLON PP",
-    category: "Muskelaufbau",
-    price: "85.00 CHF",
-    image: "/NANDRO.png",
-    description:
-      "Nandrolon-Phenylpropionat wird von Wettkampfathleten, Bodybuildern und Kraftsportlern genutzt, um Physis und Leistung zu verbessern. Es fördert Muskelwachstum, regt den Appetit an, steigert die Produktion roter Blutkörperchen und verbessert die Knochendichte.",
-    details:
-      "Nandrolon ist ein anaboles Steroid, das durch seine Bindung an Androgenrezeptoren die Proteinsynthese fördert. Es wird klinisch zur Behandlung von Anämien, Kachexie und bestimmten Formen von Osteoporose eingesetzt, indem es das Wachstum von Muskelmasse und die Knochenmineraldichte erhöht.",
-    gallery: ["/NANDRO.png"],
-    inStock: true,
-  },
-  {
-    id: 14,
-    title: "NANDROLON D",
-    category: "Muskelaufbau",
-    price: "95.00 CHF",
-    image: "/NANDROD.png",
-    description:
-      "Nandrolon-Decanoat ist ein injizierbares anaboles Steroid, das Bodybuilder in 8-12-wöchigen Bulking-Zyklen verwenden, oft in Kombination mit Testosteron. Es gilt als „Klassiker“.",
-    details:
-      "Nandrolon ist ein anaboles Steroid, das durch seine Bindung an Androgenrezeptoren die Proteinsynthese fördert. Es wird klinisch zur Behandlung von Anämien, Kachexie und bestimmten Formen von Osteoporose eingesetzt, indem es das Wachstum von Muskelmasse und die Knochenmineraldichte erhöht.",
-    gallery: ["/NANDROD.png"],
-    inStock: true,
-  },
-  {
-    id: 13,
-    title: "SUSTANON",
-    category: "Muskelaufbau",
-    price: "95.00 CHF",
-    image: "/SUSTA.png",
-    description:
-      "Sustanon ist eine Mischung aus mehreren Testosteronestern und wird von Athleten aufgrund seiner starken Wirkung bei nur einer Injektion pro Monat sehr geschätzt.",
-    details:
-      "Sustanon ist ein injizierbares Testosteron-Gemisch aus vier verschiedenen Estern, das eine schnelle und zugleich lang anhaltende Testosteronzufuhr bietet. Es wird medizinisch bei männlichem Hypogonadismus eingesetzt, um Energie, Libido, Stimmung und Muskelmasse zu verbessern.",
-    gallery: ["/SUSTA.png"],
-    inStock: true,
-  },
-  {
-    id: 12,
-    title: "STANOZOLOL",
-    category: "Muskelaufbau",
-    price: "90.00 CHF",
-    image: "/STANON.png",
-    description:
-      "Stanozolol ist bei Bodybuildern sehr beliebt, da es anabole Effekte fördert und Muskelmasse ohne Wassereinlagerungen oder Gewichtszunahme erhält.",
-    details:
-      "Stanozolol ist ein synthetisches, von Testosteron abgeleitetes anaboles Steroid, das primär den Muskelaufbau fördert, die Kraft steigert und den Appetit anregt. Es wird häufig als Dopingmittel genutzt, da es den Fettabbau unterstützt und die Kollagensynthese erhöht.",
-    gallery: ["/STANON.png"],
-    inStock: true,
-  },
   
 ];
 export default function App() {
@@ -822,21 +704,34 @@ onClick={(e) => {
                     </section>
                   )}
 
-                  {muscleGainProducts.length > 0 && (
-                    <section className="product-section" id="Muskelaufbau">
-                      <div className="section-heading-wrap">
-                        <span className="section-kicker">Kategorie</span>
-                        <h2 className="section-title">Muskelaufbau</h2>
-                      </div>
-                      <div className="product-grid">
-                        {muscleGainProducts.map((product) => (
-                          <div id={`product-${product.id}`} key={product.id}>
-                            {renderProductCard(product)}
-                          </div>
-                        ))}
-                      </div>
-                    </section>
-                  )}
+                  <section className="product-section" id="Muskelaufbau">
+  <div className="section-heading-wrap">
+    <span className="section-kicker">Kategorie</span>
+    <h2 className="section-title">Muskelaufbau</h2>
+  </div>
+
+  <div className="muscle-whatsapp-box">
+    <h3>Muskelaufbau-Produkte</h3>
+
+    <p>
+      Informationen zu unseren Produkten für den Bereich Muskelaufbau
+      erhalten Sie gerne direkt über WhatsApp.
+    </p>
+
+    <p>
+      Für eine individuelle Anfrage kontaktieren Sie uns bitte direkt.
+    </p>
+
+    <a
+      href="https://wa.me/19543389150?text=Hallo%2C%20ich%20interessiere%20mich%20für%20Produkte%20im%20Bereich%20Muskelaufbau."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="muscle-whatsapp-btn"
+    >
+      💬 Muskelaufbau via WhatsApp anfragen
+    </a>
+  </div>
+</section>
 
                   {supportProducts.length > 0 && (
                     <section className="product-section" id="support">
@@ -901,7 +796,7 @@ onClick={(e) => {
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-button"
-        aria-label="Kontaktiere uns via WhatsApp"
+        aria-label=" WhatsApp"
       >
         <svg
           className="whatsapp-icon"
