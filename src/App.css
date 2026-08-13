@@ -3547,41 +3547,27 @@ body {
 @media (max-width: 600px) {
 
   .whatsapp-button {
-
-    right: 9px;
-    bottom: 9px;
+    right: 12px;
+    bottom: 75px;
 
     min-width: auto;
-
     width: auto;
     height: 52px;
 
     padding: 0 14px;
-
     border-radius: 28px;
-
     gap: 8px;
-
   }
-
 
   .whatsapp-icon {
-
-    width: 26px;
-    height: 26px;
-
+    width: 29px;
+    height: 29px;
   }
-
 
   .whatsapp-text {
-
     display: block;
-
-    font-size: 9.5px;
+    font-size: 10px;
     font-weight: 600;
-
     white-space: nowrap;
-
   }
-
 }
