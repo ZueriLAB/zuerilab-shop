@@ -3574,9 +3574,9 @@ body {
 .site-footer {
   margin-top: 80px;
   padding: 55px 30px 25px;
-  background: #111;
-  color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  color: #222;
+  border-top: 1px solid #e8e8e8;
 }
 
 .footer-content {
@@ -3592,12 +3592,13 @@ body {
   margin: 0 0 18px;
   font-size: 18px;
   font-weight: 700;
+  color: #222;
 }
 
 .footer-column span {
   display: block;
   margin-bottom: 10px;
-  color: #aaa;
+  color: #666;
   font-size: 14px;
 }
 
@@ -3606,18 +3607,16 @@ body {
   margin: 40px auto 0;
   padding-top: 20px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #eeeeee;
 
   text-align: center;
-  color: #777;
+  color: #888;
   font-size: 12px;
 }
-
 
 /* MOBILE */
 
 @media (max-width: 600px) {
-
   .site-footer {
     margin-top: 60px;
     padding: 40px 20px 20px;

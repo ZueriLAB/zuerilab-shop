@@ -748,29 +748,29 @@ onClick={(e) => {
                       </div>
                     </section>
                   )}
-                   <footer className="site-footer">
-                    <div className="footer-content">
+                  <footer className="site-footer">
+  <div className="footer-content">
 
-                      <div className="footer-column">
-                        <h3>About Us</h3>
-                      </div>
+    <div className="footer-column">
+      <h3>About Us</h3>
+    </div>
 
-                      <div className="footer-column">
-                        <h3>Informationen</h3>
+    <div className="footer-column">
+      <h3>Informationen</h3>
 
-                        <span>FAQs</span>
-                        <span>Terms & Conditions</span>
-                        <span>Privacy Policy</span>
-                        <span>Shipping Policy</span>
-                        <span>Refund Policy</span>
-                      </div>
+      <span>FAQs</span>
+      <span>Terms & Conditions</span>
+      <span>Privacy Policy</span>
+      <span>Shipping Policy</span>
+      <span>Refund Policy</span>
+    </div>
 
-                    </div>
+  </div>
 
-                    <div className="footer-bottom">
-                      © {new Date().getFullYear()} SwissPharmaLab. Alle Rechte vorbehalten.
-                    </div>
-                  </footer>
+  <div className="footer-bottom">
+    © {new Date().getFullYear()} SwissPharmaLab. Alle Rechte vorbehalten.
+  </div>
+</footer>
                 </>
               )}
             </div>
