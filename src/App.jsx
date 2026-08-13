@@ -893,7 +893,7 @@ onClick={(e) => {
           path="/success"
           element={<SuccessPage />}
         />
-         </Routes>
+          </Routes>
 
       {/* WhatsApp Button */}
       <a
@@ -901,7 +901,7 @@ onClick={(e) => {
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-button"
-        aria-label="WhatsApp kontaktieren"
+        aria-label="Kontaktiere uns via WhatsApp"
       >
         <svg
           className="whatsapp-icon"
@@ -911,38 +911,42 @@ onClick={(e) => {
         >
           <path
             fill="currentColor"
-            d="M19.11 17.19c-.27-.14-1.59-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.59-.65 1.81-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+            d="M19.11 17.19c-.27-.14-1.59-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.18-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.65.21 1.59-.65 1.81-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
           />
           <path
             fill="currentColor"
             d="M16.01 3C8.83 3 3 8.83 3 16.01c0 2.3.6 4.46 1.66 6.34L3 29l6.83-1.62a12.94 12.94 0 0 0 6.18 1.57h.01C23.19 28.95 29 23.12 29 15.99 29 8.82 23.18 3 16.01 3zm0 23.68h-.01c-1.93 0-3.82-.52-5.47-1.5l-.39-.23-4.05.96.98-3.95-.25-.41a10.93 10.93 0 0 1-1.67-5.84C5.15 9.72 10.03 4.84 16.01 4.84c5.99 0 10.85 4.88 10.85 10.86 0 5.99-4.87 10.98-10.85 10.98z"
           />
         </svg>
+
+        <span className="whatsapp-text">
+          Kontaktiere uns via WhatsApp
+        </span>
       </a>
 
+      {/* Report Popup */}
       {showPopup && (
+        <div className="popup-overlay">
 
-  <div className="popup-overlay">
+          <div className="popup-box">
 
-    <div className="popup-box">
+            <button
+              className="popup-close-btn"
+              onClick={() => setShowPopup(false)}
+            >
+              ✕
+            </button>
 
-      <button
-        className="popup-close-btn"
-        onClick={() => setShowPopup(false)}
-      >
-        ✕
-      </button>
+            <img
+              src={reportImage}
+              alt="SwissPharmaLab Report"
+            />
 
-      <img
-        src={reportImage}
-        alt="SwissPharmaLab Report"
-      />
+          </div>
 
-    </div>
-
-  </div>
-
-)}
+        </div>
+      )}
+    
 
       {isCartOpen && (
         <div className="cart-overlay" onClick={() => setIsCartOpen(false)} />

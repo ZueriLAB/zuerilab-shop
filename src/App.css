@@ -3386,17 +3386,20 @@ body {
   right: 22px;
   bottom: 22px;
 
-  width: 62px;
+  min-width: 62px;
   height: 62px;
+
+  padding: 0 18px;
 
   background: #25D366;
   color: #ffffff;
 
-  border-radius: 50%;
+  border-radius: 35px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
   text-decoration: none;
 
@@ -3411,43 +3414,53 @@ body {
     box-shadow 0.2s ease;
 }
 
-/* Echtes WhatsApp-Symbol */
-
 .whatsapp-icon {
   width: 34px;
   height: 34px;
   color: #ffffff;
+  flex-shrink: 0;
 }
 
-/* Hover am Computer */
+.whatsapp-text {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
 
 .whatsapp-button:hover {
-  transform: scale(1.10);
+  transform: scale(1.05);
 
   box-shadow:
     0 7px 20px rgba(0, 0, 0, 0.28),
     0 3px 8px rgba(0, 0, 0, 0.18);
 }
 
-/* Klick-Effekt */
-
 .whatsapp-button:active {
-  transform: scale(0.94);
+  transform: scale(0.96);
 }
 
 /* Handy */
 
 @media (max-width: 600px) {
   .whatsapp-button {
+    right: 16px;
+    bottom: 16px;
+
+    min-width: 56px;
     width: 56px;
     height: 56px;
 
-    right: 16px;
-    bottom: 16px;
+    padding: 0;
+
+    border-radius: 50%;
   }
 
   .whatsapp-icon {
     width: 31px;
     height: 31px;
+  }
+
+  .whatsapp-text {
+    display: none;
   }
 }
