@@ -769,10 +769,21 @@ onClick={(e) => {
     FAQs
   </Link>
 
-  <span>Terms & Conditions</span>
-  <span>Privacy Policy</span>
-  <span>Shipping Policy</span>
-  <span>Refund Policy</span>
+  <Link to="/terms" className="footer-link">
+    Terms & Conditions
+  </Link>
+
+  <Link to="/privacy-policy" className="footer-link">
+    Privacy Policy
+  </Link>
+
+  <Link to="/shipping-policy" className="footer-link">
+    Shipping Policy
+  </Link>
+
+  <Link to="/refund-policy" className="footer-link">
+    Refund Policy
+  </Link>
 </div>
 
   </div>

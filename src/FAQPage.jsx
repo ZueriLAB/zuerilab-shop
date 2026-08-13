@@ -1,13 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 
-export default function FAQPage({ cart }) {
+export default function FAQsPage({ cart }) {
+  const [openFaq, setOpenFaq] = useState(null);
+
   const cartCount =
     cart?.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
+  const faqs = [
+    {
+      question: "Was sind Peptide?",
+      answer:
+        "Peptide sind kurze Ketten aus Aminosäuren, die in der Forschung für unterschiedliche biologische Prozesse untersucht werden.",
+    },
+    {
+      question: "Woher kommen eure Produkte?",
+      answer:
+        "Unsere Produkte werden für Forschungszwecke angeboten und entsprechend unseren Qualitätsanforderungen ausgewählt.",
+    },
+    {
+      question: "Werden die Produkte geprüft?",
+      answer:
+        "Unsere Produkte werden entsprechend den verfügbaren Qualitäts- und Laborinformationen geprüft.",
+    },
+    {
+      question: "Wie lange dauert der Versand?",
+      answer:
+        "Der Versand erfolgt aus der Schweiz. Die Lieferzeit beträgt in der Regel 1 bis 7 Werktage, abhängig vom Zielland und der jeweiligen Versandart.",
+    },
+    {
+      question: "Wie kann ich meine Bestellung bezahlen?",
+      answer:
+        "Die verfügbaren Zahlungsmethoden werden dir während des Bestellvorgangs angezeigt.",
+    },
+    {
+      question: "Kann ich meine Bestellung zurückgeben?",
+      answer:
+        "Informationen zu Rückgaben und Erstattungen findest du in unserer Refund Policy.",
+    },
+    {
+      question: "Wie kann ich den Kundenservice kontaktieren?",
+      answer:
+        "Bei Fragen kannst du dich direkt über unseren Kundenservice oder WhatsApp an uns wenden.",
+    },
+  ];
+
   return (
     <div className="page">
+
+      {/* HEADER */}
 
       <header className="header">
         <Link to="/" className="brand">
@@ -19,7 +61,11 @@ export default function FAQPage({ cart }) {
         </Link>
       </header>
 
+
+      {/* NAVIGATION */}
+
       <nav className="nav">
+
         <Link to="/" className="nav-link">
           Peptide
         </Link>
@@ -35,110 +81,134 @@ export default function FAQPage({ cart }) {
         <Link to="/warenkorb" className="nav-link cart-link">
           🛒 Warenkorb ({cartCount})
         </Link>
+
       </nav>
 
-      <main className="faq-page">
 
-        <div className="about-badge">
-          SWISSPHARMALAB • FAQ
+      {/* FAQ PAGE */}
+
+      <main className="info-page">
+
+
+        {/* HERO */}
+
+        <div className="info-hero">
+
+          <div className="info-badge">
+            SWISSPHARMALAB • FAQ
+          </div>
+
+          <h1>
+            FAQs
+          </h1>
+
+          <p>
+            Hier findest du Antworten auf häufig gestellte Fragen
+            rund um unsere Produkte, Bestellungen und den Versand.
+          </p>
+
         </div>
 
-        <h1>FAQs</h1>
 
-        <p className="faq-intro">
-          Hier findest du Antworten auf häufig gestellte Fragen
-          rund um unsere Produkte, Bestellungen und den Versand.
-        </p>
+        {/* FAQ CONTENT */}
 
-        <div className="faq-list">
+        <div className="info-content">
 
-          {/* FAQ 1 */}
-          <div className="faq-item">
-            <h2>Was sind Peptide?</h2>
+          <div className="faq-list">
 
-            <p>
-              Peptide sind kurze Ketten aus Aminosäuren, die in der
-              Forschung für unterschiedliche biologische Prozesse
-              untersucht werden.
-            </p>
-          </div>
+            {faqs.map((faq, index) => (
 
+              <div
+                className={`faq-item ${
+                  openFaq === index ? "faq-open" : ""
+                }`}
+                key={index}
+              >
 
-          {/* FAQ 2 */}
-          <div className="faq-item">
-            <h2>Woher kommen eure Produkte?</h2>
+                <button
+                  className="faq-question"
+                  onClick={() =>
+                    setOpenFaq(
+                      openFaq === index ? null : index
+                    )
+                  }
+                >
 
-            <p>
-              Unsere Produkte werden für Forschungszwecke angeboten
-              und entsprechend unseren Qualitätsanforderungen
-              ausgewählt.
-            </p>
-          </div>
+                  <span>
+                    {faq.question}
+                  </span>
 
+                  <span className="faq-icon">
+                    {openFaq === index ? "−" : "+"}
+                  </span>
 
-          {/* FAQ 3 */}
-          <div className="faq-item">
-            <h2>Werden die Produkte geprüft?</h2>
-
-            <p>
-              Unsere Produkte werden entsprechend den verfügbaren
-              Qualitäts- und Laborinformationen geprüft.
-            </p>
-          </div>
+                </button>
 
 
-          {/* FAQ 4 */}
-          <div className="faq-item">
-            <h2>Wie lange dauert der Versand?</h2>
+                {openFaq === index && (
 
-            <p>
-              Der Versand erfolgt aus der Schweiz. Die Lieferzeit
-              beträgt in der Regel 1 bis 7 Werktage, abhängig vom
-              Zielland und der jeweiligen Versandart.
-            </p>
-          </div>
+                  <div className="faq-answer">
 
+                    <p>
+                      {faq.answer}
+                    </p>
 
-          {/* FAQ 5 */}
-          <div className="faq-item">
-            <h2>Wie kann ich meine Bestellung bezahlen?</h2>
+                  </div>
 
-            <p>
-              Die verfügbaren Zahlungsmethoden werden dir während
-              des Bestellvorgangs angezeigt.
-            </p>
-          </div>
+                )}
 
+              </div>
 
-          {/* FAQ 6 */}
-          <div className="faq-item">
-            <h2>Kann ich meine Bestellung zurückgeben?</h2>
+            ))}
 
-            <p>
-              Informationen zu Rückgaben und Erstattungen findest du
-              in unserer Refund Policy.
-            </p>
-          </div>
-
-
-          {/* FAQ 7 */}
-          <div className="faq-item">
-            <h2>Wie kann ich den Kundenservice kontaktieren?</h2>
-
-            <p>
-              Bei Fragen kannst du dich direkt über unseren
-              Kundenservice oder WhatsApp an uns wenden.
-            </p>
           </div>
 
         </div>
 
+
+        {/* CONTACT BOX */}
+
+        <div className="faq-contact-box">
+
+          <h2>
+            Noch Fragen?
+          </h2>
+
+          <p>
+            Wenn deine Frage hier nicht beantwortet wurde,
+            kannst du uns direkt kontaktieren.
+          </p>
+
+          <div className="faq-actions">
+
+            <Link
+              to="/support"
+              className="hero-btn hero-btn-primary"
+            >
+              Kundenservice
+            </Link>
+
+            <a
+              href="https://wa.me/19543389150"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-btn hero-btn-secondary"
+            >
+              WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+
+        {/* BACK BUTTON */}
 
         <Link
-          to="/support"
-          className="hero-btn hero-btn-primary"
+          to="/"
+          className="hero-btn hero-btn-primary info-back-button"
         >
-          Kundenservice kontaktieren
+          Zurück zum Shop
         </Link>
 
       </main>
