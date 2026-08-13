@@ -33,29 +33,27 @@ export default function AboutUsPage({ cart }) {
 
         <h1>About Us</h1>
 
-        <h2>About Peptigen</h2>
+        <h2>SwissPharmaLab</h2>
 
         <h3>Premium Peptide Research Solutions from Switzerland</h3>
 
         <p>
-          At Peptigen, we focus on delivering premium-quality research
-          peptides, laboratory essentials, and trusted peptide solutions
-          for professional research purposes.
+         Bei SwissPharmaLab konzentrieren wir uns darauf, 
+         hochwertige Forschungspeptide, 
+         Laborbedarf und zuverlässige Peptidlösungen für professionelle Forschungszwecke anzubieten.
         </p>
 
         <p>
-          Based in Switzerland, we combine quality, reliability, and fast
-          international shipping to support laboratories and researchers
-          worldwide.
+          Mit Sitz in der Schweiz verbinden wir Qualität, Zuverlässigkeit und schnellen internationalen Versand, 
+          um Labore und Forschende weltweit zu unterstützen.
         </p>
 
         <p>
-          Our mission is simple: precision, trust, and excellence in every
-          order.
+          Unsere Mission ist einfach: Präzision, Vertrauen und höchste Qualität bei jeder Bestellung.
         </p>
 
         <Link to="/" className="hero-btn hero-btn-primary">
-          Explore Products
+         Unsere Produkte
         </Link>
 
       </main>

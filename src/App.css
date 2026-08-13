@@ -3675,19 +3675,24 @@ body {
   border: 1px solid #e8e8e8;
 }
 
-.about-badge {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 8px 16px;
+.about-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 30px;
+  text-align: center;
 
-  border-radius: 30px;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.55)
+    ),
+    url("/hero-bg.png");
 
-  background: #f3f3f3;
-  color: #555;
+  background-size: cover;
+  background-position: center;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
 }
 
 .about-page h1 {
