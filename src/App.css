@@ -3580,12 +3580,12 @@ body {
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 20px;
 }
 
 .footer-column h3 {

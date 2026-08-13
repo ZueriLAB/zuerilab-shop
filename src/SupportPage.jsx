@@ -44,10 +44,10 @@ export default function SupportPage({ cart }) {
 <div className="support-row">
   <strong>E-Mail:</strong>
   <a
-    href="mailto:support@swisspharmalab.ch"
+    href="mailto:info@swisspharmalab.ch"
     className="support-mail"
   >
-    support@swisspharmalab.ch
+    info@swisspharmalab.ch
   </a>
 </div>        
         </div>

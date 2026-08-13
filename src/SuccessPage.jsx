@@ -46,7 +46,7 @@ export default function SuccessPage() {
         </div>
 <div className="payment-method-box">
   <div className="payment-title-row">
-    <h3>Option 1: Paysafe</h3>
+    <h3>Option 1: TWINT / Paysafe</h3>
 
     <div className="payment-logos">
       <img
@@ -74,7 +74,7 @@ export default function SuccessPage() {
             </li>
             <li>
               Sende uns den Paysafe Code via E-Mail an
-              support@swisspharmalab.ch.
+              info@swisspharmalab.ch.
             </li>
             <li>
               Nach erfolgreicher Prüfung wird deine Bestellung unverzüglich

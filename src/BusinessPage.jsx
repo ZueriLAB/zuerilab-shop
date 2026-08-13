@@ -61,7 +61,7 @@ export default function BusinessPage({ cart }) {
       href="mailto:support@swisspharmalab.ch"
       className="business-mail"
     >
-      support@swisspharmalab.ch
+      info@swisspharmalab.ch
     </a>.
     Wir bearbeiten Anfragen persönlich und erstellen individuelle
     Angebote passend zu deinem Geschäftsmodell.

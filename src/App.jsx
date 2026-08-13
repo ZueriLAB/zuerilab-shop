@@ -8,6 +8,8 @@ import SupportPage from "./SupportPage";
 import BusinessPage from "./BusinessPage";
 import ScrollToTop from "./ScrollToTop";
 import AboutUsPage from "./AboutUsPage";
+import FAQPage from "./FAQPage";
+import TermsPage from "./TermsPage";
 import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
@@ -752,7 +754,7 @@ onClick={(e) => {
                   <footer className="site-footer">
   <div className="footer-content">
 
- <div className="footer-column">
+<div className="footer-column">
   <h3>About Us</h3>
 
   <Link to="/about-us" className="footer-link">
@@ -760,15 +762,18 @@ onClick={(e) => {
   </Link>
 </div>
 
-   <div className="footer-column footer-info">
-      <h3>Informationen</h3>
+<div className="footer-column footer-info">
+  <h3>Informationen</h3>
 
-      <span>FAQs</span>
-      <span>Terms & Conditions</span>
-      <span>Privacy Policy</span>
-      <span>Shipping Policy</span>
-      <span>Refund Policy</span>
-    </div>
+  <Link to="/faqs" className="footer-link">
+    FAQs
+  </Link>
+
+  <span>Terms & Conditions</span>
+  <span>Privacy Policy</span>
+  <span>Shipping Policy</span>
+  <span>Refund Policy</span>
+</div>
 
   </div>
 
@@ -795,6 +800,8 @@ onClick={(e) => {
         <Route path="/support" element={<SupportPage cart={cart} />} />
         <Route path="/business" element={<BusinessPage cart={cart} />} />
         <Route path="/about-us" element={<AboutUsPage cart={cart} />} />
+        <Route path="/faqs" element={<FAQPage cart={cart} />} />
+        <Route path="/terms" element={<TermsPage cart={cart} />} />
 
         <Route
           path="/warenkorb"
