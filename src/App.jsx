@@ -634,13 +634,13 @@ onClick={(e) => {
                   </div>
 
                   <h1 className="hero-title">
-                    Premium Performance Produkte
+                    Premium Performance Forschungs Produkte
                     <br />
                     mit klarem Fokus auf Qualität
                   </h1>
 
                   <p className="hero-subtitle">
-                    Entdecke ausgewählte Peptide und Performance-Produkte
+                    Entdecke ausgewählte Forschungs Peptide und Performance-Produkte
                     in einem klaren, diskreten und modernen Bestellprozess mit Versand aus der Schweiz
                   </p>
 
@@ -807,6 +807,11 @@ onClick={(e) => {
   >
     WhatsApp
   </a>
+   <div className="footer-link footer-address">
+    <strong>Adresse</strong><br />
+    Lindenstrasse 22<br />
+    8008 Zürich
+  </div>
 </div>
   </div>
 
