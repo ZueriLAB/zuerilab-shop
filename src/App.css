@@ -3571,52 +3571,16 @@ body {
     white-space: nowrap;
   }
 }
+/* =========================
+   FOOTER
+========================= */
+
 .site-footer {
   margin-top: 80px;
-  padding: 55px 30px 25px;
-  background: #ffffff;
+  padding: 60px 30px 25px;
+
   color: #222;
-  border-top: 1px solid #e8e8e8;
-}
 
-.footer-content {
-  max-width: 700px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.footer-column h3 {
-  margin: 0 0 18px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #222;
-}
-
-.footer-column span {
-  display: block;
-  margin-bottom: 10px;
-  color: #666;
-  font-size: 14px;
-}
-
-.footer-bottom {
-  max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 20px;
-
-  border-top: 1px solid #eeeeee;
-
-  text-align: center;
-  color: #888;
-  font-size: 12px;
-}
-.site-footer {
-  margin-top: 80px;
-  padding: 55px 30px 25px;
-  color: #222;
   border-top: 1px solid #e8e8e8;
 
   background-image:
@@ -3630,49 +3594,94 @@ body {
   background-position: center;
 }
 
-/* MOBILE */
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
 
-@media (max-width: 600px) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h3 {
+  margin: 0 0 18px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #222;
+}
+
+.footer-link {
+  display: block;
+  width: fit-content;
+
+  margin-bottom: 11px;
+
+  color: #666;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #111;
+  transform: translateX(2px);
+}
+
+.footer-bottom {
+  max-width: 1100px;
+
+  margin: 45px auto 0;
+  padding-top: 22px;
+
+  border-top: 1px solid #e5e5e5;
+
+  text-align: center;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
   .site-footer {
     margin-top: 60px;
-    padding: 40px 20px 20px;
+    padding: 45px 25px 20px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 32px;
   }
 
   .footer-column h3 {
     font-size: 17px;
   }
 
-  .footer-column span {
-    font-size: 13px;
+  .footer-link {
+    font-size: 14px;
   }
 
   .footer-bottom {
-    margin-top: 30px;
+    margin-top: 35px;
   }
-}
-.about-page {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 60px 30px;
-  text-align: center;
-
-  background:
-    linear-gradient(
-      rgba(255, 255, 255, 0.90),
-      rgba(255, 255, 255, 0.90)
-    ),
-    url("/hero-bg.png");
-
-  background-size: cover;
-  background-position: center;
-
-  border-radius: 20px;
-  border: 1px solid #e8e8e8;
 }
 
 .about-page {
@@ -3727,17 +3736,6 @@ body {
   text-decoration: none;
 }
 
-.footer-link {
-  display: block;
-  margin-bottom: 10px;
-  color: #666;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  color: #111;
-}
 /* =========================
    INFO / LEGAL PAGES
    FAQ • TERMS • ABOUT US

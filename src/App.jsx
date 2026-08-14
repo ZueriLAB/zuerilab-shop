@@ -789,6 +789,25 @@ onClick={(e) => {
   </Link>
 </div>
 
+<div className="footer-column">
+  <h3>Kontakt</h3>
+
+  <a
+    href="mailto:info@swisspharmalab.ch"
+    className="footer-link"
+  >
+    Mail: info@swisspharmalab.ch
+  </a>
+
+  <a
+    href="https://wa.me/19543389150"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-link"
+  >
+    WhatsApp
+  </a>
+</div>
   </div>
 
   <div className="footer-bottom">
