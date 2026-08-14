@@ -618,17 +618,38 @@ onClick={(e) => {
                   <img src="/logo1.png" alt="SwissPharmaLab" className="logo" />
                 </Link>
               </header>
+<nav className="nav">
+  <a href="#peptide" className="nav-link">Peptide</a>
 
-              <nav className="nav">
-                <a href="#peptide" className="nav-link">Peptide</a>
-                <a href="#Muskelaufbau" className="nav-link">Muskelaufbau</a>
-                <Link to="/support" className="nav-link">Kundenservice</Link>
-                 <Link to="/business" className="nav-link">Business</Link>
-                <Link to="/warenkorb" className="nav-link cart-link">
-                  🛒 Warenkorb ({cartCount})
-                </Link>
-              </nav>
+  <a href="#Muskelaufbau" className="nav-link">Muskelaufbau</a>
 
+  <Link to="/support" className="nav-link">Kundenservice</Link>
+
+  <Link to="/business" className="nav-link">Business</Link>
+
+  <Link to="/warenkorb" className="nav-link cart-link">
+    🛒 Warenkorb ({cartCount})
+  </Link>
+
+  <div className="payment-security">
+    <div className="payment-icons">
+      <div className="payment-card visa">VISA</div>
+
+      <div className="payment-card mastercard">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div className="payment-secure">
+      <span className="secure-lock">🔒</span>
+      <div>
+        <strong>Sichere Zahlung</strong>
+        <small>SSL · Secure Checkout</small>
+      </div>
+    </div>
+  </div>
+</nav>
               <section className="hero-section" id="neu">
                 <div className="hero-inner">
                   <div className="hero-badge">
