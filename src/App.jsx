@@ -895,7 +895,7 @@ onClick={(e) => {
         </svg>
 
         <span className="whatsapp-text">
-          Kontaktiere uns via WhatsApp
+          WhatsApp
         </span>
       </a>
 
