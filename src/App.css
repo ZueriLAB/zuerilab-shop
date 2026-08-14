@@ -2504,10 +2504,9 @@ button {
   line-height: 1.05 !important;
 }
 .new-grid {
-  display: flex !important;
-  justify-content: center !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  flex-wrap: wrap;
 }
 .badge-new {
   background: #00c853;
