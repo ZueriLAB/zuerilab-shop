@@ -15,33 +15,79 @@ export default function CartPage({
     );
     return sum + numericPrice * item.quantity;
   }, 0);
-  const [discountCode, setDiscountCode] = useState("");
-const [discount, setDiscount] = useState(0);
+const [discountCode, setDiscountCode] = useState("");
+
+const [discount, setDiscount] = useState(() => {
+  return Number(localStorage.getItem("discount")) || 0;
+});
+
+const [voucherCode, setVoucherCode] = useState(() => {
+  return localStorage.getItem("voucherCode") || "";
+});
 
 const applyDiscount = () => {
   const code = discountCode.trim().toUpperCase();
 
-if (code === "RETA10") {
-  setDiscount(10);
-  localStorage.setItem("discount", "10");
+  if (code === "SIBEL") {
+    setDiscount(0);
+    setVoucherCode("SIBEL");
 
-} else if (code === "WELCOME15") {
-  setDiscount(15);
-  localStorage.setItem("discount", "15");
+    localStorage.setItem("discount", "0");
+    localStorage.setItem("voucherCode", "SIBEL");
 
-} else if (code === "ANNA") {
-  setDiscount(20);
-  localStorage.setItem("discount", "20");
+    return;
+  }
 
-} else {
+  if (code === "RETA10") {
+    setDiscount(10);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "10");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  if (code === "WELCOME15") {
+    setDiscount(15);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "15");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  if (code === "ANNA") {
+    setDiscount(20);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "20");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
   setDiscount(0);
-  localStorage.setItem("discount", "0");
-  alert("Ungültiger Rabattcode");
-}
-};
+  setVoucherCode("");
 
+  localStorage.removeItem("discount");
+  localStorage.removeItem("voucherCode");
+
+  alert("Ungültiger Rabattcode");
+};
 const discountAmount = total * (discount / 100);
-const finalTotal = total - discountAmount;
+
+const afterPercentDiscount =
+  total - discountAmount;
+
+const voucherAmount =
+  voucherCode === "SIBEL" ? 80 : 0;
+
+const finalTotal = Math.max(
+  0,
+  afterPercentDiscount - voucherAmount
+);
 
   return (
     <div className="page">
@@ -115,6 +161,12 @@ const finalTotal = total - discountAmount;
         <span>-{discountAmount.toFixed(2)} CHF</span>
       </div>
     )}
+    {voucherAmount > 0 && (
+  <div className="cart-summary-row">
+    <span>Gutschein SIBEL</span>
+    <span>-80.00 CHF</span>
+  </div>
+)}
 
     <div className="cart-summary-row">
       <span>Versand</span>
