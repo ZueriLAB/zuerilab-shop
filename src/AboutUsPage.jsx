@@ -15,48 +15,36 @@ export default function AboutUsPage({ cart }) {
           />
         </Link>
       </header>
+<nav className="nav">
+  <Link to="/" className="nav-link">Peptide</Link>
 
-      <nav className="nav">
-        <Link to="/" className="nav-link">
-          Peptide
-        </Link>
+  <Link to="/support" className="nav-link">Kundenservice</Link>
 
-        <Link to="/support" className="nav-link">
-          Kundenservice
-        </Link>
+  <Link to="/business" className="nav-link">Business</Link>
 
-        <Link to="/business" className="nav-link">
-          Business
-        </Link>
+  <Link to="/warenkorb" className="nav-link cart-link">
+    🛒 Warenkorb ({cart?.reduce((sum, item) => sum + item.quantity, 0) || 0})
+  </Link>
 
-        <Link to="/warenkorb" className="nav-link cart-link">
-          🛒 Warenkorb (
-          {cart?.reduce((sum, item) => sum + item.quantity, 0) || 0}
-          )
-        </Link>
+  <div className="payment-security">
+    <div className="payment-icons">
+      <div className="payment-card visa">VISA</div>
 
-        <div className="payment-security">
-          <div className="payment-icons">
-            <div className="payment-card visa">
-              VISA
-            </div>
+      <div className="payment-card mastercard">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
 
-            <div className="payment-card mastercard">
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-
-          <div className="payment-secure">
-            <span className="secure-lock">🔒</span>
-
-            <div>
-              <strong>Sichere Zahlung</strong>
-              <small>SSL · Secure Checkout</small>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <div className="payment-secure">
+      <span className="secure-lock">🔒</span>
+      <div>
+        <strong>Sichere Zahlung</strong>
+        <small>SSL · Secure Checkout</small>
+      </div>
+    </div>
+  </div>
+</nav>
 
       <main className="about-page">
 
