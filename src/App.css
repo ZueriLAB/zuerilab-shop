@@ -4751,16 +4751,16 @@ body {
 }
 /* 5-Amino-1MQ + MT-2 */
 .cart-special-image {
-  width: 90px !important;
-  height: 90px !important;
+  width: 72px !important;
+  height: 72px !important;
   object-fit: contain !important;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .cart-special-image {
-    width: 125px !important;
-    height: 125px !important;
+    width: 138px !important;
+    height: 138px !important;
     object-fit: contain !important;
   }
 }
