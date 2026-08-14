@@ -604,15 +604,19 @@ export default function App() {
     );
   };
 
-  const renderProductCard = (product) => (
-    <div className="card" key={product.id}>
-      <div className="image-wrap">
-        <img
-          src={product.image}
-          alt={product.title}
-          className="card-image"
-        />
-      </div>
+const renderProductCard = (product) => (
+  <div className="card" key={product.id}>
+    <div className="image-wrap">
+      <img
+        src={product.image}
+        alt={product.title}
+        className={`card-image ${
+          product.id === 31 || product.id === 32
+            ? "amino-mt2-image"
+            : ""
+        }`}
+      />
+    </div>
 
       <div className="card-content">
         <div className="card-meta-row">
