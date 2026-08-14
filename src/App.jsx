@@ -935,41 +935,51 @@ const renderProductCard = (product) => (
                 >
                   🛒 Warenkorb ({cartCount})
                 </Link>
+<div className="payment-security">
 
-                <div className="payment-security">
+  <div className="payment-icons">
 
-                  <div className="payment-icons">
+    <div className="payment-card visa">
+      VISA
+    </div>
 
-                    <div className="payment-card visa">
-                      VISA
-                    </div>
+    <div className="payment-card mastercard">
+      <span></span>
+      <span></span>
+    </div>
 
-                    <div className="payment-card mastercard">
-                      <span></span>
-                      <span></span>
-                    </div>
+    <div className="payment-card apple-pay">
+      Apple Pay
+    </div>
 
-                  </div>
+    <div className="payment-card klarna">
+      Klarna.
+    </div>
 
-                  <div className="payment-secure">
-                    <span className="secure-lock">
-                      🔒
-                    </span>
+    <div className="payment-card amazon-pay">
+      amazon pay
+    </div>
 
-                    <div>
-                      <strong>
-                        Sichere Zahlung
-                      </strong>
+  </div>
 
-                      <small>
-                        SSL · Secure Checkout
-                      </small>
-                    </div>
-                  </div>
+  <div className="payment-secure">
+    <span className="secure-lock">
+      🔒
+    </span>
 
-                </div>
-              </nav>
+    <div>
+      <strong>
+        Sichere Zahlung
+      </strong>
 
+      <small>
+        SSL · Secure Checkout
+      </small>
+    </div>
+  </div>
+
+</div>
+</nav>
               {/* =========================
                   HERO
               ========================= */}
