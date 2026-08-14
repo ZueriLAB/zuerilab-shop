@@ -4180,3 +4180,99 @@ body {
   width: auto;
   object-fit: contain;
 }
+.payment-security {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 8px;
+  padding: 5px 9px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+  animation: paymentPulse 3s ease-in-out infinite;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.payment-card {
+  height: 23px;
+  min-width: 40px;
+  padding: 0 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+.visa {
+  color: #1434cb;
+  font-style: italic;
+}
+
+.mastercard {
+  position: relative;
+  overflow: hidden;
+}
+
+.mastercard span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.mastercard span:first-child {
+  left: 8px;
+  background: #eb001b;
+}
+
+.mastercard span:last-child {
+  right: 8px;
+  background: #f79e1b;
+}
+
+.payment-secure {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 9px;
+  border-left: 1px solid #ddd;
+}
+
+.payment-secure strong {
+  display: block;
+  font-size: 10px;
+}
+
+.payment-secure small {
+  display: block;
+  font-size: 8px;
+  color: #777;
+}
+
+.secure-lock {
+  font-size: 14px;
+}
+
+@keyframes paymentPulse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 800px) {
+  .payment-security {
+    display: none;
+  }
+}
