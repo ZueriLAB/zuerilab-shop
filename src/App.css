@@ -4749,18 +4749,16 @@ body {
     object-fit: contain !important;
   }
 }
-/* 5-Amino-1MQ + MT-2 */
-.cart-special-image {
-  width: 72px !important;
-  height: 72px !important;
-  object-fit: contain !important;
+/* 5-Amino-1MQ + MT-2 – STARTSEITE */
+
+/* Desktop: 20 % kleiner */
+.amino-mt2-image {
+  transform: scale(0.8) !important;
 }
 
-/* MOBILE */
+/* Mobile: 10 % größer */
 @media (max-width: 768px) {
-  .cart-special-image {
-    width: 138px !important;
-    height: 138px !important;
-    object-fit: contain !important;
+  .amino-mt2-image {
+    transform: scale(1.1) !important;
   }
 }
