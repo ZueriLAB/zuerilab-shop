@@ -4749,3 +4749,18 @@ body {
     object-fit: contain !important;
   }
 }
+/* 5-Amino-1MQ + MT-2 */
+.cart-special-image {
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: contain !important;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cart-special-image {
+    width: 125px !important;
+    height: 125px !important;
+    object-fit: contain !important;
+  }
+}

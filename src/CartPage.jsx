@@ -117,10 +117,14 @@ const finalTotal = Math.max(
                 {cart.map((item) => (
                   <div className="cart-item" key={item.id}>
                     <img
-                      src={item.image}
-                      alt={item.title}
-                      className="cart-item-image"
-                    />
+  src={item.image}
+  alt={item.title}
+  className={`cart-item-image ${
+    item.id === 31 || item.id === 32
+      ? "cart-special-image"
+      : ""
+  }`}
+/>
 
                     <div className="cart-item-info">
                     <h3>
