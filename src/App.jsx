@@ -4,6 +4,7 @@ import ProductPage from "./ProductPage";
 import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import SuccessPage from "./SuccessPage";
+import StripeTestSuccessPage from "./StripeTestSuccessPage";
 import SupportPage from "./SupportPage";
 import BusinessPage from "./BusinessPage";
 import ScrollToTop from "./ScrollToTop";
@@ -350,7 +351,7 @@ badge: "BESTSELLER",
     id: 15,
     title: "TB-500 10",
     category: "PEPTIDE",
-    price: "89.00 CHF",
+    price: "1.00 CHF",
     oldPrice: "95.00 CHF",
     badge: "SALE",
     image: "/TB500.png",
@@ -360,6 +361,22 @@ badge: "BESTSELLER",
     details:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
     gallery: ["/TB500.png"],
+    inStock: true,
+  },
+    {
+    id: 16,
+    title: "Kaugummi",
+    category: "test",
+    price: "1.00 CHF",
+    oldPrice: "3.00 CHF",
+    badge: "SALE",
+    image: "/",
+     variants: ["Vial", "Kartusche"],
+    description:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
+    gallery: ["/"],
     inStock: true,
   },
   
@@ -873,6 +890,10 @@ onClick={(e) => {
           path="/success"
           element={<SuccessPage />}
         />
+     <Route
+  path="/bestellung-erfolgreich"
+  element={<StripeTestSuccessPage />}
+/>
           </Routes>
 
       {/* WhatsApp Button */}

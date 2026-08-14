@@ -17,7 +17,7 @@ export default function CheckoutPage({ cart = [] }) {
     phone: "",
     differentShipping: false,
     notes: "",
-    paymentMethod: "TWINT",
+    paymentMethod: "Kreditkarte",
   });
 
   const [errors, setErrors] = useState({});
@@ -60,7 +60,6 @@ const finalTotal = total - discountAmount;
     if (!form.street.trim()) newErrors.street = true;
     if (!form.city.trim()) newErrors.city = true;
     if (!form.zip.trim()) newErrors.zip = true;
-    if (!form.paymentMethod.trim()) newErrors.paymentMethod = true;
 
     if (!form.email.trim()) {
       newErrors.email = true;
@@ -84,7 +83,7 @@ const finalTotal = total - discountAmount;
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/order", {
+      const res = await fetch("/api/stripe-test", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,48 +91,52 @@ const finalTotal = total - discountAmount;
         body: JSON.stringify({
           orderNumber,
           date,
-          total,
+          total: finalTotal,
           cart,
-          form,
-          paymentMethod: form.paymentMethod,
+          form: {
+            ...form,
+            paymentMethod: "Kreditkarte",
+          },
         }),
       });
 
-      console.log("Status:", res.status);
       const raw = await res.text();
-      console.log("API raw response:", raw);
+
+      console.log("Stripe API Status:", res.status);
+      console.log("Stripe API Antwort:", raw);
 
       let data = {};
+
       try {
         data = raw ? JSON.parse(raw) : {};
       } catch (e) {
-        throw new Error("API hat kein gültiges JSON zurückgegeben.");
+        throw new Error(
+          "Stripe API hat kein gültiges JSON zurückgegeben."
+        );
       }
 
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || "Mail konnte nicht gesendet werden.");
+      if (!res.ok || !data.success || !data.url) {
+        throw new Error(
+          data.error || "Stripe Checkout konnte nicht gestartet werden."
+        );
       }
+
       localStorage.removeItem("discount");
 
-      navigate("/success", {
-        state: {
-          orderNumber,
-          date,
-          total,
-          paymentMethod: form.paymentMethod,
-          cart,
-          form,
-        },
-      });
+      window.location.href = data.url;
     } catch (err) {
-      console.error("Mail Fehler:", err);
-      setSubmitError(err.message || "Mail Versand fehlgeschlagen.");
+      console.error("Stripe Fehler:", err);
+      setSubmitError(
+        err.message || "Stripe-Zahlung konnte nicht gestartet werden."
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
-
+  
   return (
+
+  
     <div className="page">
       <div className="topbar">Alle unsere Produkte sind Labor geprüft.</div>
 
@@ -275,23 +278,6 @@ const finalTotal = total - discountAmount;
                 />
               </div>
 
-              <div className="checkout-field">
-                <label>Bezahlmethode *</label>
-                <select
-                  value={form.paymentMethod}
-                  onChange={(e) =>
-                    handleChange("paymentMethod", e.target.value)
-                  }
-                >
-                  <option value="TWINT">TWINT</option>
-                  <option value="Kreditkarte">Kreditkarte</option>
-                  <option value="Bitcoin">Bitcoin</option>
-                </select>
-                {errors.paymentMethod && (
-                  <span className="error">Bitte Bezahlmethode auswählen</span>
-                )}
-              </div>
-
               <div className="checkout-checkbox-row">
                 <label className="checkbox-label">
                   Lieferung an eine andere Adresse senden?
@@ -358,53 +344,16 @@ const finalTotal = total - discountAmount;
 
             <div className="checkout-summary-divider" />
 
-            <div className="payment-methods-box">
-  <h3 className="payment-title">Bezahlmethode</h3>
-
-  <label className="payment-option">
-    <input
-      type="radio"
-      name="paymentMethod"
-      value="TWINT"
-      checked={form.paymentMethod === "TWINT"}
-      onChange={(e) =>
-        handleChange("paymentMethod", e.target.value)
-      }
-    />
-    <span>TWINT</span>
-  </label>
-
-  <label className="payment-option">
-    <input
-      type="radio"
-      name="paymentMethod"
-      value="Kreditkarte"
-      checked={form.paymentMethod === "Kreditkarte"}
-      onChange={(e) =>
-        handleChange("paymentMethod", e.target.value)
-      }
-    />
-    <span>Kreditkarte</span>
-  </label>
-
-  <label className="payment-option">
-    <input
-      type="radio"
-      name="paymentMethod"
-      value="Bitcoin"
-      checked={form.paymentMethod === "Bitcoin"}
-      onChange={(e) =>
-        handleChange("paymentMethod", e.target.value)
-      }
-    />
-    <span>Bitcoin</span>
-  </label>
-</div>
-
             <div className="checkout-summary-row">
               <span>Gesamtsumme inkl. Versand</span>
              <span>{finalTotal.toFixed(2)} CHF</span>
             </div>
+            <div className="checkout-card-logo">
+  <img
+    src="/visa.png"
+    alt="Mastercard"
+  />
+</div>
 
             <button
               type="button"
@@ -412,7 +361,7 @@ const finalTotal = total - discountAmount;
               onClick={handleSubmit}
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Wird gesendet..." : "Bezahlen"}
+              {isSubmitting ? "Wird verarbeitet..." : "Bezahlen mit Kreditkarte"}
             </button>
 
             <div className="shipping-row">

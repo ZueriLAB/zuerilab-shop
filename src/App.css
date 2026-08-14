@@ -1098,24 +1098,50 @@ button {
 
 .checkout-pay-btn {
   margin-top: 18px;
+  width: 100%;
+  padding: 16px 24px;
 
-  background: #e11d2e !important;
+  background: linear-gradient(135deg, #1c1c1c, #3b3b3b) !important;
   color: #fff !important;
-  border: none !important;
+
+  border: 1px solid #444 !important;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 
   box-shadow:
-    0 8px 20px rgba(225, 29, 46, 0.30);
+    0 8px 22px rgba(0, 0, 0, 0.20);
 
-  transition: all .25s ease;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
 .checkout-pay-btn:hover {
-  background: #c91425 !important;
+  background: linear-gradient(135deg, #111, #303030) !important;
 
   transform: translateY(-2px);
 
   box-shadow:
-    0 14px 32px rgba(225, 29, 46, 0.40);
+    0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+.checkout-pay-btn:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.20);
+}
+
+.checkout-pay-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .error {
@@ -4141,4 +4167,16 @@ body {
   .faq-contact-box h2 {
     font-size: 24px;
   }
+}
+.checkout-card-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.checkout-card-logo img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
 }
