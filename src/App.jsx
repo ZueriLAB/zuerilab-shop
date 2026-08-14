@@ -18,67 +18,7 @@ import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 const products = [
-  
-
-  // ========================================
-  // AUGUST NEWS
-  // ========================================
-
   {
-    id: 30,
-    title: "GHK-CU 50mg",
-    category: "AUGUST NEWS",
-    price: "30.00 CHF",
-    oldPrice: "110.00 CHF",
-    badge: "AUGUST",
-    image: "/GHK-CU.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "GHK-CU – Hochreiner Laborwirkstoff für Forschungszwecke.",
-    details:
-      "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex in lyophilisierter Pulverform. Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-    gallery: ["/GHK-CU.png"],
-    inStock: true,
-  },
-
-  {
-    id: 31,
-    title: "5-Amino-1MQ",
-    category: "AUGUST NEWS",
-    price: "60.00 CHF",
-    oldPrice: "80.00 CHF",
-    badge: "AUGUST",
-    image: "/amino.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "5-Amino-1MQ – Hochreiner Laborwirkstoff für Forschungszwecke.",
-    details:
-      "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-    gallery: ["/amino.png"],
-    inStock: true,
-  },
-
-  {
-    id: 32,
-    title: "MT-2 10mg",
-    category: "AUGUST NEWS",
-    price: "30.00 CHF",
-    oldPrice: "60.00 CHF",
-    badge: "AUGUST",
-    image: "/mt2.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "MT-2 – Hochreiner Laborwirkstoff für Forschungszwecke.",
-    details:
-      "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-    gallery: ["/mt2.png"],
-    inStock: true,
-  },
-  
-
-
-
-    {
     id: 99,
     title: "RETATRUTIDE 20mg Fertigpen",
     category: "NEU",
@@ -88,11 +28,12 @@ const products = [
     description:
       "Retatrutide 20mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "RETATRUTIDE 10mg ist ein synthetisches Peptid in Forschungsqualität, ausschließlich für Labor-, Analyse- und Referenzzwecke. Geeignet für kontrollierte Forschungsumgebungen mit dokumentierter Chargenrückverfolgbarkeit und standardisierter Handhabung.",
+      "RETATRUTIDE 20mg ist ein synthetisches Peptid in Forschungsqualität, ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     gallery: ["/RETAPEN.png"],
     inStock: true,
   },
-    {
+
+  {
     id: 98,
     title: "GHK-CU 50mg Fertigpen",
     category: "NEU",
@@ -102,11 +43,12 @@ const products = [
     description:
       "GHK-CU 50mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "GHK-Cu ist ein hochwertiges Kupferpeptid. Es wird häufig zur Förderung eines frischen Hautbildes sowie zur Unterstützung natürlicher Erneuerungsprozesse eingesetzt.",
+      "GHK-Cu ist ein hochwertiges Kupferpeptid für kontrollierte Forschungs- und Analysezwecke.",
     gallery: ["/OZEN.png"],
     inStock: true,
   },
-    {
+
+  {
     id: 97,
     title: "MOTS-C 10mg Fertigpen",
     category: "NEU",
@@ -116,11 +58,12 @@ const products = [
     description:
       "MOTS-C 10mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "MOTS-C Forschungsqualität ist ein synthetisches Peptid für Laborforschung, analytische Verfahren und standardisierte Referenzanwendungen. Die lyophilisierte Form ermöglicht eine kontrollierte und nachvollziehbare Handhabung..",
+      "MOTS-C Forschungsqualität ist ein synthetisches Peptid für Laborforschung, analytische Verfahren und standardisierte Referenzanwendungen.",
     gallery: ["/MOTS.png"],
     inStock: true,
   },
-   {
+
+  {
     id: 96,
     title: "NAD+ 500mg Fertigpen",
     category: "NEU",
@@ -128,13 +71,14 @@ const products = [
     badge: "NEU",
     image: "/NAD.png",
     description:
-      "NAD+ 10mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+      "NAD+ 500mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-      "Nur für Laborforschungszwecke. Nicht zur Anwendung am Menschen oder Tier. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht zur Anwendung am Menschen oder Tier.",
     gallery: ["/NAD.png"],
     inStock: true,
   },
-   {
+
+  {
     id: 95,
     title: "IGF-1 LR3 1mg Fertigpen",
     category: "NEU",
@@ -142,40 +86,27 @@ const products = [
     badge: "NEU",
     image: "/IGF.png",
     description:
-      "IGF-1 LR3 Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+      "IGF-1 LR3 Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-      "IGF-1 LR3 ist ein rekombinantes Analogon von IGF-1 mit verlängerter Halbwertszeit, das in der präklinischen. Forschung untersucht wird. Lieferung als lyophilisiertes Pulver mit einer Reinheit von ≥99 %. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+      "IGF-1 LR3 ist ein rekombinantes Analogon von IGF-1 für präklinische Forschungszwecke.",
     gallery: ["/IGF.png"],
     inStock: true,
   },
-    {
 
+  {
     id: 94,
-
-    title: "Semax 30mg Fertigpen", 
-
+    title: "Semax 30mg Fertigpen",
     category: "NEU",
-
     price: "190.00 CHF",
-
     badge: "NEU",
-
-    image: "/semax.png", 
-
+    image: "/semax.png",
     description:
-
-      "Semax 30mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
-
+      "Semax 30mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
-
-    gallery: ["/semax.png"], 
-
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/semax.png"],
     inStock: true,
-
   },
-  
 
   {
     id: 1,
@@ -185,14 +116,15 @@ const products = [
     oldPrice: "110.00 CHF",
     badge: "BESTSELLER",
     image: "/GHK-CU.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
       "GHK-CU - Hochreiner Laborwirkstoff für Forschungszwecke.",
     details:
-      "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex (Glycyl-L-Histidyl-L-Lysin-Kupfer) in lyophilisierter Pulverform. Er wird als Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen dokumentiert.",
+      "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex in lyophilisierter Pulverform.",
     gallery: ["/GHK-CU.png"],
     inStock: true,
   },
+
   {
     id: 2,
     title: "HGH FRAGMENT 176-191 5mg",
@@ -201,14 +133,15 @@ const products = [
     oldPrice: "125.00 CHF",
     badge: "BESTSELLER",
     image: "/HGH-FRAG.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "HGH Fragment 176–191 ist ein stabilisiertes Analogon des C-terminalen Bereichs des menschlichen Wachstumshormons, dass in der präklinischen Stoffwechselforschung untersucht wird. Lieferung als lyophilisiertes Pulver mit einer Reinheit von ≥99 % Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+      "HGH Fragment 176–191 ist ein stabilisiertes Analogon für präklinische Forschungszwecke.",
     gallery: ["/HGH-FRAG.png"],
     inStock: true,
   },
+
   {
     id: 3,
     title: "RETATRUTIDE 10mg / 20mg",
@@ -218,32 +151,35 @@ const products = [
     badge: "BESTSELLER",
     image: "/RETA10.png",
     doses: [
-  { label: "10 mg", price: "120.00 CHF" },
-  { label: "20 mg", price: "170.00 CHF" }
-],
-     variants: ["Vial", "Kartusche"],
+      { label: "10 mg", price: "120.00 CHF" },
+      { label: "20 mg", price: "170.00 CHF" },
+    ],
+    variants: ["Vial", "Kartusche"],
     description:
-      " Retatrutide ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+      "Retatrutide ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-      "RETATRUTIDE 10mg/20mg ist ein synthetisches Peptid in Forschungsqualität, ausschließlich für Labor-, Analyse- und Referenzzwecke. Geeignet für kontrollierte Forschungsumgebungen mit dokumentierter Chargenrückverfolgbarkeit und standardisierter Handhabung.",
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
     gallery: ["/RETA10.png"],
     inStock: true,
   },
+
   {
     id: 4,
     title: "MOTS-C 10mg",
     category: "PEPTIDE",
     price: "110.00 CHF",
     oldPrice: "120.00 CHF",
-badge: "BESTSELLER",
+    badge: "BESTSELLER",
     image: "/MOTS1.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-    "MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+      "MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-      ",MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke. Geeignet für kontrollierte Forschungsumgebungen mit dokumentierter Chargenrückverfolgbarkeit und standardisierter Handhabung.",
+      "MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    gallery: ["/MOTS1.png"],
     inStock: true,
   },
+
   {
     id: 5,
     title: "IGF-1 LR3 1mg",
@@ -252,14 +188,15 @@ badge: "BESTSELLER",
     oldPrice: "120.00 CHF",
     badge: "SALE",
     image: "/igf-lr.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-      " IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+      "IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-      "IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+      "IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     gallery: ["/igf-lr.png"],
     inStock: true,
   },
+
   {
     id: 6,
     title: "IPAMORELIN",
@@ -268,14 +205,15 @@ badge: "BESTSELLER",
     oldPrice: "75.00 CHF",
     badge: "SALE",
     image: "/IPA.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
       "Hinweis zur ausschließlichen Forschung.",
     gallery: ["/IPA.png"],
     inStock: true,
   },
+
   {
     id: 7,
     title: "THYMOSIN ALPHA",
@@ -284,14 +222,15 @@ badge: "BESTSELLER",
     oldPrice: "109.00 CHF",
     badge: "SALE",
     image: "/THY.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
       "Hinweis zur ausschließlichen Forschung.",
     details:
-      "Thymosin Alpha-1 (Tα1) ist ein aus 28 Aminosäuren bestehendes Peptid, das aufgrund seiner immunmodulatorischen Eigenschaften in der präklinischen und klinischen Forschung untersucht wird Lieferung als lyophilisiertes Pulver mit einer Reinheit von ≥99 %. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+      "Thymosin Alpha-1 ist ein Peptid, das in präklinischer Forschung untersucht wird.",
     gallery: ["/THY.png"],
     inStock: true,
   },
+
   {
     id: 8,
     title: "KLOW",
@@ -300,14 +239,15 @@ badge: "BESTSELLER",
     oldPrice: "180.00 CHF",
     badge: "SALE",
     image: "/KLOW.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-      "Synthetische Peptid-Mischung aus GHK-Cu, BPC-157, TB-500 und KPV. Hinweis zur ausschließlichen Forschung",
+      "Synthetische Peptid-Mischung. Hinweis zur ausschließlichen Forschung.",
     details:
-      "Der Klow Blend Peptide enthält GHK-Cu, BPC-157, TB-500 und KPV Hinweis zur ausschließlichen Forschung",
+      "Hinweis zur ausschließlichen Forschung.",
     gallery: ["/KLOW.png"],
     inStock: true,
   },
+
   {
     id: 9,
     title: "GLOW",
@@ -316,14 +256,15 @@ badge: "BESTSELLER",
     oldPrice: "130.00 CHF",
     badge: "SALE",
     image: "/GLOW.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-      "Synthetische Peptid-Mischung Hinweis zur ausschließlichen Forschung",
+      "Synthetische Peptid-Mischung. Hinweis zur ausschließlichen Forschung.",
     details:
-      "Hinweis zur ausschließlichen Forschung",
+      "Hinweis zur ausschließlichen Forschung.",
     gallery: ["/GLOW.png"],
     inStock: true,
   },
+
   {
     id: 10,
     title: "SEMAX 30mg",
@@ -332,15 +273,16 @@ badge: "BESTSELLER",
     oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/semaxx.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-    "Semax 30mg ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
-
+      "Semax 30mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/semaxx.png"],
     inStock: true,
   },
-    {
+
+  {
     id: 11,
     title: "NAD+ 500mg",
     category: "PEPTIDE",
@@ -348,15 +290,16 @@ badge: "BESTSELLER",
     oldPrice: "85.00 CHF",
     badge: "SALE",
     image: "/nad++.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/nad++.png"],
     inStock: true,
   },
-   {
+
+  {
     id: 12,
     title: "GHRP-2",
     category: "PEPTIDE",
@@ -364,15 +307,16 @@ badge: "BESTSELLER",
     oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/GHRP.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/GHRP.png"],
     inStock: true,
   },
-    {
+
+  {
     id: 13,
     title: "GHRP-6",
     category: "PEPTIDE",
@@ -380,16 +324,16 @@ badge: "BESTSELLER",
     oldPrice: "99.00 CHF",
     badge: "SALE",
     image: "/GHRP6.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/GHRP6.png"],
     inStock: true,
   },
 
- {
+  {
     id: 14,
     title: "BPC-157",
     category: "PEPTIDE",
@@ -397,15 +341,16 @@ badge: "BESTSELLER",
     oldPrice: "85.00 CHF",
     badge: "SALE",
     image: "/BPC.png",
-     variants: ["Vial", "Kartusche"],
+    variants: ["Vial", "Kartusche"],
     description:
-       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/BPC.png"],
     inStock: true,
   },
-    {
+
+  {
     id: 15,
     title: "TB-500 10",
     category: "PEPTIDE",
@@ -417,16 +362,11 @@ badge: "BESTSELLER",
     description:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/TB500.png"],
     inStock: true,
   },
 ];
-
-// AUGUST NEWS Produkte separat aus der vollständigen Produktliste filtern
-const augustProducts = products.filter(
-  (product) => product.category === "AUGUST NEWS"
-);
 
 export default function App() {
   const navigate = useNavigate();
