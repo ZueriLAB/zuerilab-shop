@@ -10,6 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import AboutUsPage from "./AboutUsPage";
 import FAQPage from "./FAQPage";
 import TermsPage from "./TermsPage";
+import PrivacyPolicyPage from "./PrivacyPolicyPage";
 import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
@@ -813,6 +814,10 @@ onClick={(e) => {
         <Route path="/about-us" element={<AboutUsPage cart={cart} />} />
         <Route path="/faqs" element={<FAQPage cart={cart} />} />
         <Route path="/terms" element={<TermsPage cart={cart} />} />
+        <Route
+  path="/privacy-policy"
+  element={<PrivacyPolicyPage cart={cart} />}
+/>
 
         <Route
           path="/warenkorb"

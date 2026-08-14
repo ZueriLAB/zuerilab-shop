@@ -20,10 +20,8 @@ export default function TermsPage({ cart }) {
         </Link>
       </header>
 
-
       {/* NAVIGATION */}
       <nav className="nav">
-
         <Link to="/" className="nav-link">
           Peptide
         </Link>
@@ -39,24 +37,19 @@ export default function TermsPage({ cart }) {
         <Link to="/warenkorb" className="nav-link cart-link">
           🛒 Warenkorb ({cartCount})
         </Link>
-
       </nav>
 
-
-      {/* MAIN */}
+      {/* TERMS PAGE */}
       <main className="legal-page">
-
 
         {/* HERO */}
         <div className="legal-hero">
 
           <div className="about-badge">
-            SWISSPHARMALAB • TERMS & CONDITIONS
+            SWISS QUALITY • TRUST • PRECISION
           </div>
 
-          <h1>
-            Allgemeine Geschäftsbedingungen
-          </h1>
+          <h1>Allgemeine Geschäftsbedingungen</h1>
 
           <p className="legal-updated">
             Letzte Aktualisierung: Juli 2026
@@ -64,45 +57,39 @@ export default function TermsPage({ cart }) {
 
         </div>
 
-
         {/* CONTENT */}
         <div className="legal-content">
-
 
           {/* 1 */}
           <section>
             <h2>1. Über uns</h2>
 
             <p>
-              Diese Website wird von{" "}
-              <strong>SwissPharmaLab</strong>{" "}
-              („wir“, „uns“, „unser“) mit Sitz in Zürich,
-              Schweiz, betrieben.
+              Diese Website wird von <strong>SwissPharmaLab</strong> („wir“,
+              „uns“, „unser“) mit Sitz in Zürich, Schweiz, betrieben.
             </p>
 
             <p>
-              Durch den Zugriff auf unsere Website oder die Aufgabe
-              einer Bestellung auf swisspharmalab.ch erklären Sie sich
-              mit diesen Allgemeinen Geschäftsbedingungen vollständig
-              einverstanden.
+              Durch den Zugriff auf unsere Website oder die Aufgabe einer
+              Bestellung auf swisspharmalab.ch erklären Sie sich mit diesen
+              Allgemeinen Geschäftsbedingungen vollständig einverstanden.
             </p>
           </section>
-
 
           {/* 2 */}
           <section>
             <h2>2. Ausschließlich für Forschungszwecke</h2>
 
             <p>
-              Alle auf dieser Website angebotenen Produkte sind
-              ausschließlich für In-vitro-Labor- und wissenschaftliche
-              Forschungszwecke bestimmt.
+              Alle auf dieser Website angebotenen Produkte sind ausschließlich
+              für In-vitro-Labor- und wissenschaftliche Forschungszwecke
+              bestimmt.
             </p>
 
             <p>
               Sie sind nicht für den menschlichen oder tiermedizinischen
-              Verzehr, therapeutische Anwendungen, klinische Anwendungen
-              oder andere nicht-wissenschaftliche Zwecke bestimmt.
+              Verzehr, therapeutische Anwendungen, klinische Anwendungen oder
+              andere nicht-wissenschaftliche Zwecke bestimmt.
             </p>
 
             <p>
@@ -110,58 +97,54 @@ export default function TermsPage({ cart }) {
             </p>
 
             <ul>
-
               <li>
-                Sie ein qualifizierter Forscher, zugelassener Fachmann
-                oder institutioneller Käufer sind und die Produkte im
-                Rahmen einer professionellen Forschungstätigkeit erwerben.
+                Sie ein qualifizierter Forscher, zugelassener Fachmann oder
+                institutioneller Käufer sind und die Produkte im Rahmen einer
+                professionellen Forschungstätigkeit erwerben.
               </li>
 
               <li>
-                Sie alle erworbenen Produkte ausschließlich für
-                rechtmäßige und nicht-klinische Forschungszwecke verwenden.
+                Sie alle erworbenen Produkte ausschließlich für rechtmäßige
+                und nicht-klinische Forschungszwecke verwenden.
               </li>
 
               <li>
-                Sie die Produkte nicht weiterverkaufen, weiterverteilen
-                oder anderen Personen zur Anwendung am Menschen oder
-                an Tieren zur Verfügung stellen.
+                Sie die Produkte nicht weiterverkaufen, weiterverteilen oder
+                anderen Personen zur Anwendung am Menschen oder an Tieren
+                zur Verfügung stellen.
               </li>
 
               <li>
                 Sie mindestens 18 Jahre alt sind.
               </li>
-
             </ul>
           </section>
-
 
           {/* 3 */}
           <section>
             <h2>3. Teilnahmeberechtigung</h2>
 
             <p>
-              Der Zugang zu dieser Website sowie der Kauf von Produkten
-              ist auf verifizierte Forscher und Fachpersonen beschränkt.
+              Der Zugang zu dieser Website sowie der Kauf von Produkten ist
+              auf verifizierte Forscher und Fachpersonen beschränkt.
             </p>
 
             <p>
               Wir behalten uns das Recht vor, Bestellungen nach eigenem
-              Ermessen abzulehnen oder zu stornieren, insbesondere wenn
-              Grund zu der Annahme besteht, dass die Produkte nicht für
-              legitime Forschungszwecke verwendet werden.
+              Ermessen abzulehnen oder zu stornieren, insbesondere wenn Grund
+              zu der Annahme besteht, dass die Produkte nicht für legitime
+              Forschungszwecke verwendet werden.
             </p>
           </section>
-
 
           {/* 4 */}
           <section>
             <h2>4. Bestellungen & Zahlung</h2>
 
             <p>
-              Alle Preise werden in Schweizer Franken (CHF) angegeben
-              und verstehen sich, sofern nicht anders angegeben,
-              ohne Mehrwertsteuer.
+              Alle Preise werden in Schweizer Franken (CHF) angegeben und
+              verstehen sich, sofern nicht anders angegeben, ohne
+              Mehrwertsteuer.
             </p>
 
             <p>
@@ -170,12 +153,11 @@ export default function TermsPage({ cart }) {
             </p>
 
             <p>
-              Eine Bestellbestätigung per E-Mail stellt noch keine
-              endgültige Annahme der Bestellung dar. Wir behalten uns
-              das Recht vor, eine Bestellung vor dem Versand zu stornieren.
+              Eine Bestellbestätigung per E-Mail stellt noch keine endgültige
+              Annahme der Bestellung dar. Wir behalten uns das Recht vor, eine
+              Bestellung vor dem Versand zu stornieren.
             </p>
           </section>
-
 
           {/* 5 */}
           <section>
@@ -187,9 +169,9 @@ export default function TermsPage({ cart }) {
             </p>
 
             <p>
-              Wir versenden aus der Schweiz und bieten internationalen
-              Versand an. Die Lieferzeiten können je nach Zielland
-              variieren.
+              Der Versand erfolgt aus der Schweiz. Wir bieten internationalen
+              Versand an. Die Lieferzeit beträgt in der Regel 1 bis 7
+              Werktage und kann je nach Zielland und Versandart variieren.
             </p>
 
             <p>
@@ -199,17 +181,15 @@ export default function TermsPage({ cart }) {
             </p>
 
             <p>
-              SwissPharmaLab übernimmt keine Haftung für Bestellungen,
-              die von Zollbehörden beschlagnahmt, zurückgehalten oder
-              verzögert werden.
+              SwissPharmaLab übernimmt keine Haftung für Bestellungen, die von
+              Zollbehörden beschlagnahmt, zurückgehalten oder verzögert werden.
             </p>
 
             <p>
-              Das Versandrisiko geht mit der Übergabe der Bestellung
-              an den Versanddienstleister auf den Kunden über.
+              Das Versandrisiko geht mit der Übergabe der Bestellung an den
+              Versanddienstleister auf den Kunden über.
             </p>
           </section>
-
 
           {/* 6 */}
           <section>
@@ -227,25 +207,23 @@ export default function TermsPage({ cart }) {
             </p>
           </section>
 
-
           {/* 7 */}
           <section>
             <h2>7. Haftungsbeschränkung</h2>
 
             <p>
-              Soweit nach Schweizer Recht zulässig, haftet
-              SwissPharmaLab nicht für indirekte, zufällige, besondere
-              oder Folgeschäden, die aus der Verwendung oder der
-              Unmöglichkeit der Verwendung unserer Produkte entstehen.
+              Soweit nach Schweizer Recht zulässig, haftet SwissPharmaLab
+              nicht für indirekte, zufällige, besondere oder Folgeschäden,
+              die aus der Verwendung oder der Unmöglichkeit der Verwendung
+              unserer Produkte entstehen.
             </p>
 
             <p>
               Die Gesamthaftung von SwissPharmaLab ist auf den Betrag
-              begrenzt, der für die konkrete Bestellung bezahlt wurde,
-              aus der der jeweilige Anspruch entstanden ist.
+              begrenzt, der für die konkrete Bestellung bezahlt wurde, aus
+              der der jeweilige Anspruch entstanden ist.
             </p>
           </section>
-
 
           {/* 8 */}
           <section>
@@ -253,36 +231,34 @@ export default function TermsPage({ cart }) {
 
             <p>
               Alle Inhalte dieser Website, einschließlich Texte, Bilder,
-              Grafiken, Produktbeschreibungen und sonstiger Materialien,
-              sind Eigentum von SwissPharmaLab oder werden mit
-              entsprechender Berechtigung verwendet.
+              Grafiken, Produktbeschreibungen und sonstiger Materialien, sind
+              Eigentum von SwissPharmaLab oder werden mit entsprechender
+              Berechtigung verwendet.
             </p>
 
             <p>
-              Eine Vervielfältigung, Veröffentlichung oder sonstige
-              Verwendung dieser Inhalte ist ohne vorherige schriftliche
-              Zustimmung von SwissPharmaLab nicht gestattet.
+              Eine Vervielfältigung, Veröffentlichung oder sonstige Verwendung
+              dieser Inhalte ist ohne vorherige schriftliche Zustimmung von
+              SwissPharmaLab nicht gestattet.
             </p>
           </section>
-
 
           {/* 9 */}
           <section>
             <h2>9. Anwendbares Recht</h2>
 
             <p>
-              Diese Allgemeinen Geschäftsbedingungen unterliegen
-              dem Recht der Schweiz.
+              Diese Allgemeinen Geschäftsbedingungen unterliegen dem Recht
+              der Schweiz.
             </p>
 
             <p>
-              Für sämtliche Streitigkeiten aus oder im Zusammenhang
-              mit diesen Allgemeinen Geschäftsbedingungen ist, soweit
-              gesetzlich zulässig, die Zuständigkeit der Gerichte in
-              Zürich, Schweiz, vereinbart.
+              Für sämtliche Streitigkeiten aus oder im Zusammenhang mit
+              diesen Allgemeinen Geschäftsbedingungen ist, soweit gesetzlich
+              zulässig, die Zuständigkeit der Gerichte in Zürich, Schweiz,
+              vereinbart.
             </p>
           </section>
-
 
           {/* 10 */}
           <section>
@@ -290,8 +266,7 @@ export default function TermsPage({ cart }) {
 
             <p>
               Wir behalten uns das Recht vor, diese Allgemeinen
-              Geschäftsbedingungen jederzeit zu ändern oder zu
-              aktualisieren.
+              Geschäftsbedingungen jederzeit zu ändern oder zu aktualisieren.
             </p>
 
             <p>
@@ -306,10 +281,8 @@ export default function TermsPage({ cart }) {
             </p>
           </section>
 
-
-          {/* KONTAKT */}
+          {/* CONTACT */}
           <section className="legal-contact">
-
             <h2>Kontakt</h2>
 
             <p>
@@ -324,12 +297,9 @@ export default function TermsPage({ cart }) {
                 info@swisspharmalab.ch
               </a>
             </p>
-
           </section>
 
-
         </div>
-
 
         {/* BUTTON */}
         <Link
@@ -338,7 +308,6 @@ export default function TermsPage({ cart }) {
         >
           Zurück zum Shop
         </Link>
-
 
       </main>
 
