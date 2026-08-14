@@ -4271,8 +4271,3 @@ body {
   }
 }
 
-@media (max-width: 800px) {
-  .payment-security {
-    display: none;
-  }
-}

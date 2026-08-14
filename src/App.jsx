@@ -484,46 +484,29 @@ export default function App() {
       )
     );
   };
+const renderProductCard = (product) => (
+  <div className="card" key={product.id}>
+    <div className="image-wrap">
+      <img
+        src={product.image}
+        alt={product.title}
+        className="card-image"
+      />
+    </div>
 
-  const renderProductCard = (product) => (
-    <div className="card" key={product.id}>
-      <div className="image-wrap">
-        <img
-          src={product.image}
-          alt={product.title}
-          className="card-image"
-        />
-
-      {(product.inStock === false || product.badge) && (
-  <div
-    className={`badge card-badge ${
-      product.inStock === false
-        ? "badge-out"
-        : product.badge === "BESTSELLER"
-        ? "badge-bestseller"
-        : product.badge === "NEU"
-        ? "badge-new"
-        : "badge-default"
-    }`}
-  >
-    {product.inStock === false ? "AUSVERKAUFT" : product.badge}
-  </div>
-)}
+    <div className="card-content">
+      <div className="card-meta-row">
+        <span className="card-category">{product.category}</span>
       </div>
 
-      <div className="card-content">
-        <div className="card-meta-row">
-          <span className="card-category">{product.category}</span>
-        </div>
+      <h3>{product.title}</h3>
 
-        <h3>{product.title}</h3>
-
-        <div className="price-row">
-          <span className="price">{product.price}</span>
-          {product.oldPrice && (
-            <span className="old-price">{product.oldPrice}</span>
-          )}
-        </div>
+      <div className="price-row">
+        <span className="price">{product.price}</span>
+        {product.oldPrice && (
+          <span className="old-price">{product.oldPrice}</span>
+        )}
+      </div>
 
         <p>{product.description}</p>
         {product.variants && (
