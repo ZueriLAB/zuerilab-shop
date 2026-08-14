@@ -4759,6 +4759,6 @@ body {
 /* Mobile: 10 % größer */
 @media (max-width: 768px) {
   .amino-mt2-image {
-    transform: scale(1.1) !important;
+    transform: scale(1.2) !important;
   }
 }
