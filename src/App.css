@@ -4686,3 +4686,35 @@ body {
   opacity: 0.45 !important;
   text-decoration: line-through !important;
 }
+
+/* =================================
+   PRODUKTBILDER – EINHEITLICHE GRÖSSE
+================================= */
+
+.card-image {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Produktbild-Container */
+.image-wrap {
+  width: 100% !important;
+  height: 220px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card-image {
+    height: 180px !important;
+  }
+
+  .image-wrap {
+    height: 180px !important;
+  }
+}
