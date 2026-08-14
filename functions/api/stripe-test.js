@@ -10,27 +10,16 @@ export async function onRequestPost({ request, env }) {
         }),
         {
           status: 500,
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
         }
       );
     }
 
     const body = await request.json();
 
-    const {
-      orderNumber,
-      date,
-      cart,
-      form,
-    } = body;
+    const { orderNumber, date, cart, form } = body;
 
-    if (
-      !orderNumber ||
-      !Array.isArray(cart) ||
-      cart.length === 0
-    ) {
+    if (!orderNumber || !Array.isArray(cart) || cart.length === 0) {
       return new Response(
         JSON.stringify({
           success: false,
@@ -38,9 +27,7 @@ export async function onRequestPost({ request, env }) {
         }),
         {
           status: 400,
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
         }
       );
     }
@@ -78,10 +65,21 @@ export async function onRequestPost({ request, env }) {
       metadata: {
         orderNumber: String(orderNumber),
         date: String(date || ""),
+
+        firstName: String(form?.firstName || ""),
+        lastName: String(form?.lastName || ""),
+        country: String(form?.country || ""),
+        street: String(form?.street || ""),
+        addressExtra: String(form?.addressExtra || ""),
+        city: String(form?.city || ""),
+        zip: String(form?.zip || ""),
+        email: String(form?.email || ""),
+        phone: String(form?.phone || ""),
+        notes: String(form?.notes || ""),
       },
 
-    success_url:
-  `${baseUrl}/bestellung-erfolgreich?session_id={CHECKOUT_SESSION_ID}`,
+      success_url:
+        `${baseUrl}/bestellung-erfolgreich?session_id={CHECKOUT_SESSION_ID}`,
 
       cancel_url:
         `${baseUrl}/stripe-test-cancel`,
@@ -94,9 +92,7 @@ export async function onRequestPost({ request, env }) {
       }),
       {
         status: 200,
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       }
     );
   } catch (error) {
@@ -109,9 +105,7 @@ export async function onRequestPost({ request, env }) {
       }),
       {
         status: 500,
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       }
     );
   }

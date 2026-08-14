@@ -1,6 +1,5 @@
 import Stripe from "stripe";
 
-
 export async function onRequestPost({ request, env }) {
   try {
     if (!env.STRIPE_SECRET_KEY) {
@@ -46,9 +45,13 @@ export async function onRequestPost({ request, env }) {
     }
 
     const session = event.data.object;
+    const metadata = session.metadata || {};
 
-    const orderNumber = session.metadata?.orderNumber || session.id;
-    const customerEmail = session.customer_details?.email;
+    const orderNumber = metadata.orderNumber || session.id;
+
+    const customerEmail =
+      session.customer_details?.email ||
+      metadata.email;
 
     if (!customerEmail) {
       console.error("Keine Kunden-E-Mail vorhanden.");
@@ -94,6 +97,26 @@ export async function onRequestPost({ request, env }) {
           <strong>Bestellnummer:</strong> ${orderNumber}
         </p>
 
+        <h2>Kundendaten</h2>
+
+        <p>
+          <strong>Vorname:</strong> ${metadata.firstName}<br>
+          <strong>Nachname:</strong> ${metadata.lastName}<br>
+          <strong>E-Mail:</strong> ${customerEmail}<br>
+          <strong>Telefon:</strong> ${metadata.phone || "-"}<br>
+          <strong>Adresse:</strong> ${metadata.street}<br>
+          ${metadata.addressExtra ? `<strong>Zusatz:</strong> ${metadata.addressExtra}<br>` : ""}
+          <strong>PLZ:</strong> ${metadata.zip}<br>
+          <strong>Ort:</strong> ${metadata.city}<br>
+          <strong>Land:</strong> ${metadata.country}
+        </p>
+
+        ${
+          metadata.notes
+            ? `<p><strong>Anmerkungen:</strong><br>${metadata.notes}</p>`
+            : ""
+        }
+
         <h2>Bestellübersicht</h2>
 
         <table style="width:100%;border-collapse:collapse;">
@@ -114,25 +137,42 @@ export async function onRequestPost({ request, env }) {
           Gesamt: ${total} CHF
         </h2>
 
-        <p>
-          Zahlung erfolgreich per Kreditkarte.
-        </p>
+        <p>Zahlung erfolgreich.</p>
 
-        <p>
-          SwissPharmaLab
-        </p>
+        <p>SwissPharmaLab</p>
       </div>
     `;
 
     const adminHtml = `
-      <div style="font-family:Arial,sans-serif;">
-        <h1>Neue Bestellung</h1>
+      <div style="font-family:Arial,sans-serif;max-width:700px;margin:auto;">
+        <h1>Neue Bestellung ✓</h1>
 
         <p>
           <strong>Bestellnummer:</strong> ${orderNumber}<br>
-          <strong>Kunde:</strong> ${customerEmail}<br>
           <strong>Betrag:</strong> ${total} CHF
         </p>
+
+        <h2>Kundendaten</h2>
+
+        <p>
+          <strong>Vorname:</strong> ${metadata.firstName}<br>
+          <strong>Nachname:</strong> ${metadata.lastName}<br>
+          <strong>E-Mail:</strong> ${customerEmail}<br>
+          <strong>Telefon:</strong> ${metadata.phone || "-"}<br>
+          <strong>Straße:</strong> ${metadata.street}<br>
+          ${metadata.addressExtra ? `<strong>Zusatz:</strong> ${metadata.addressExtra}<br>` : ""}
+          <strong>PLZ:</strong> ${metadata.zip}<br>
+          <strong>Ort:</strong> ${metadata.city}<br>
+          <strong>Land:</strong> ${metadata.country}
+        </p>
+
+        ${
+          metadata.notes
+            ? `<p><strong>Anmerkungen:</strong><br>${metadata.notes}</p>`
+            : ""
+        }
+
+        <h2>Bestellübersicht</h2>
 
         <table style="width:100%;border-collapse:collapse;">
           <thead>
@@ -203,9 +243,7 @@ export async function onRequestPost({ request, env }) {
       }),
       {
         status: 200,
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       }
     );
   } catch (error) {
@@ -218,11 +256,8 @@ export async function onRequestPost({ request, env }) {
       }),
       {
         status: 500,
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       }
     );
   }
 }
-
