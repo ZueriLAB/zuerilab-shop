@@ -4718,3 +4718,34 @@ body {
     height: 180px !important;
   }
 }
+/* Einheitliche Produktbild-Darstellung */
+.image-wrap {
+  width: 100% !important;
+  height: 220px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+}
+
+.card-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .image-wrap {
+    height: 180px !important;
+  }
+
+  .card-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
