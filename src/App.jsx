@@ -26,9 +26,9 @@ const products = [
     badge: "NEU",
     image: "/RETAPEN.png",
     description:
-      "Retatrutide 20mg exclusive nur bei SwissPharmaLab.",
+      "Retatrutide 20mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "Unser 20mg Retatrutide Pen wurde exklusiv für SwissPharmaLab entwickelt und bietet maximale Benutzerfreundlichkeit durch individuell einstellbare Dosierungen. Dank der einfachen Handhabung ermöglicht der Pen eine präzise und flexible Anwendung – ganz ohne komplizierte Vorbereitung. Als derzeit einziges Unternehmen in der Schweiz bieten wir diese innovative Lösung in dieser Form an. Hochwertige Verarbeitung, moderne Technologie und maximaler Komfort machen unseren Pen zur idealen Wahl für anspruchsvolle Nutzer.Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
+      "RETATRUTIDE 10mg ist ein synthetisches Peptid in Forschungsqualität, ausschließlich für Labor-, Analyse- und Referenzzwecke. Geeignet für kontrollierte Forschungsumgebungen mit dokumentierter Chargenrückverfolgbarkeit und standardisierter Handhabung.",
     gallery: ["/RETAPEN.png"],
     inStock: true,
   },
@@ -40,9 +40,9 @@ const products = [
     badge: "NEU",
     image: "/OZEN.png",
     description:
-      "GHK-CU 50mg Fertigpen exclusive nur bei SwissPharmaLab.",
+      "GHK-CU 50mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "GHK-Cu ist ein hochwertiges Kupferpeptid, das für seine regenerierenden Eigenschaften und seine Unterstützung der Kollagenbildung geschätzt wird. Es wird häufig zur Förderung eines frischen Hautbildes sowie zur Unterstützung natürlicher Erneuerungsprozesse eingesetzt.",
+      "GHK-Cu ist ein hochwertiges Kupferpeptid. Es wird häufig zur Förderung eines frischen Hautbildes sowie zur Unterstützung natürlicher Erneuerungsprozesse eingesetzt.",
     gallery: ["/OZEN.png"],
     inStock: true,
   },
@@ -54,9 +54,9 @@ const products = [
     badge: "NEU",
     image: "/MOTS.png",
     description:
-      "MOTS-C 10mg Fertigpen exclusive nur bei SwissPharmaLab",
+      "MOTS-C 10mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "MOTS-C ist ein modernes Peptid, das den zellulären Energiestoffwechsel unterstützt und zu mehr Vitalität beitragen kann. Es wird häufig zur Förderung von Regeneration, Ausdauer und allgemeinem Wohlbefinden eingesetzt.",
+      "MOTS-C Forschungsqualität ist ein synthetisches Peptid für Laborforschung, analytische Verfahren und standardisierte Referenzanwendungen. Die lyophilisierte Form ermöglicht eine kontrollierte und nachvollziehbare Handhabung..",
     gallery: ["/MOTS.png"],
     inStock: true,
   },
@@ -68,9 +68,9 @@ const products = [
     badge: "NEU",
     image: "/NAD.png",
     description:
-      "MOTS-C 10mg Fertigpen exclusive nur bei SwissPharmaLab",
+      "NAD+ 10mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "NAD+ ist ein essenzieller Bestandteil des zellulären Energiestoffwechsels und unterstützt Vitalität sowie natürliche Regenerationsprozesse. Es wird besonders von Menschen geschätzt, die ihre Energie und Leistungsfähigkeit im Alltag fördern möchten.",
+      "Nur für Laborforschungszwecke. Nicht zur Anwendung am Menschen oder Tier. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
     gallery: ["/NAD.png"],
     inStock: true,
   },
@@ -82,9 +82,9 @@ const products = [
     badge: "NEU",
     image: "/IGF.png",
     description:
-      "IGF-1 LR3 Fertigpen exclusiv nur bei SwisPharmaLab.",
+      "IGF-1 LR3 Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "IGF-1 LR3 unterstützt Muskelwachstum, Regeneration und körperliche Leistungsfähigkeit. Es wird besonders von Athleten geschätzt, die ihre Erholung optimieren und ihre Fortschritte im Training fördern möchten.",
+      "IGF-1 LR3 ist ein rekombinantes Analogon von IGF-1 mit verlängerter Halbwertszeit, das in der präklinischen. Forschung untersucht wird. Lieferung als lyophilisiertes Pulver mit einer Reinheit von ≥99 %. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/IGF.png"],
     inStock: true,
   },
@@ -104,11 +104,11 @@ const products = [
 
     description:
 
-      "Semax 30mg Fertigpen exclusive nur bei SwissPharmaLab",
+      "Semax 30mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
 
     details:
 
-      "Semax wird besonders für seine Unterstützung von Konzentration, mentaler Leistungsfähigkeit und Fokus geschätzt. Es eignet sich ideal für Menschen, die im Alltag oder Beruf dauerhaft aufmerksam und leistungsfähig bleiben möchten.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
 
     gallery: ["/semax.png"], 
 
@@ -127,9 +127,9 @@ const products = [
     image: "/GHK-CU.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Ein hautverjüngendes Kupfer-Peptid, das die natürliche Regeneration ankurbelt und für sichtbar glattere, festere und gesünder aussehende Haut sorgt.",
+      "GHK-CU - Hochreiner Laborwirkstoff für Forschungszwecke.",
     details:
-      "Hauptwirkungen von GHK-CU Hautregeneration & Anti-Aging: GHK-Cu strafft die Haut, erhöht die Elastizität, reduziert feine Linien und hellt Pigmentflecken auf. Wundheilung & Narbenreduktion: Es stimuliert Fibroblasten, fördert die Angiogenese (Bildung neuer Blutgefäße) und hemmt die Narbenbildung. Entzündungshemmung & Antioxidativ: Kupferpeptide beruhigen gereizte Haut, reduzieren Rötungen und wirken als Antioxidantien gegen Lichtschäden. Haarwachstum: Es kann die Haarfollikel stimulieren, die Mikrozirkulation der Kopfhaut verbessern und so Haarausfall entgegenwirken.",
+      "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex (Glycyl-L-Histidyl-L-Lysin-Kupfer) in lyophilisierter Pulverform. Er wird als Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen dokumentiert.",
     gallery: ["/GHK-CU.png"],
     inStock: true,
   },
@@ -143,9 +143,9 @@ const products = [
     image: "/HGH-FRAG.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Ein Peptid, das gezielt den Fettabbau (Lipolyse) unterstützt ohne die typischen Nebenwirkungen des vollständigen Wachstumshormons zu verursachen.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Hauptwirkungen von HGH Fragment 176-191: Intensiver Fettabbau: Es aktiviert den Abbau von gespeichertem Körperfett, insbesondere in Problemzonen. Hemmung der Fettspeicherung: Es verhindert, dass Nahrungsbestandteile in neues Körperfett umgewandelt werden. Kein Einfluss auf Blutzucker/Wachstum: Da es nur ein Fragment ist, hat es nicht die typischen Nebenwirkungen von HGH wie Insulinresistenz oder gesteigertes Gewebewachstum. Muskelerhalt: Es unterstützt den Erhalt der Muskelmasse während kalorienreduzierter Diäten.",
+      "HGH Fragment 176–191 ist ein stabilisiertes Analogon des C-terminalen Bereichs des menschlichen Wachstumshormons, dass in der präklinischen Stoffwechselforschung untersucht wird. Lieferung als lyophilisiertes Pulver mit einer Reinheit von ≥99 % Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/HGH-FRAG.png"],
     inStock: true,
   },
@@ -163,9 +163,9 @@ const products = [
 ],
      variants: ["Vial", "Kartusche"],
     description:
-      " Wenn du abnehmen willst bist du hier Richtig. Es reduziert den Appetit, steigert den Energieverbrauch und fördert signifikant die Gewichtsabnahme.",
+      " Retatrutide ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "Hauptwirkungen von Retatrutide,Dreifache Rezeptor-Aktivierung: Retatrutid ahmt die Hormone GLP-1, GIP und Glukagon nach, was zu einer intensiven Stoffwechselregulation führt. Appetitregulation & Sättigung: Die Kombination aus GLP-1 und GIP dämpft den Hunger deutlich stärker und fördert ein früheres Sättigungsgefühl. Erhöhter Kalorienverbrauch: Die Glukagon-Aktivierung kurbelt die Thermogenese an und unterstützt die Fettverbrennung. Blutzuckerkontrolle & Gewichtsabnahme: Es verbessert den HbA1c-Wert und führt in Studien zu einer starken Gewichtsabnahme.",
+      "RETATRUTIDE 10mg/20mg ist ein synthetisches Peptid in Forschungsqualität, ausschließlich für Labor-, Analyse- und Referenzzwecke. Geeignet für kontrollierte Forschungsumgebungen mit dokumentierter Chargenrückverfolgbarkeit und standardisierter Handhabung.",
     gallery: ["/RETA10.png"],
     inStock: true,
   },
@@ -179,10 +179,9 @@ badge: "BESTSELLER",
     image: "/MOTS1.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "MOTS-C ist ein modernes Peptid, das den zellulären Energiestoffwechsel unterstützt und zu mehr Vitalität beitragen kann. Es wird häufig zur Förderung von Regeneration, Ausdauer und allgemeinem Wohlbefinden eingesetzt.",
+    "MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      ",MOTS-C ist ein modernes Peptid, das den zellulären Energiestoffwechsel unterstützt und zu mehr Vitalität beitragen kann. Es wird häufig zur Förderung von Regeneration, Ausdauer und allgemeinem Wohlbefinden eingesetzt.",
-    gallery: ["/MOTS1.png"],
+      ",MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke. Geeignet für kontrollierte Forschungsumgebungen mit dokumentierter Chargenrückverfolgbarkeit und standardisierter Handhabung.",
     inStock: true,
   },
   {
@@ -195,9 +194,9 @@ badge: "BESTSELLER",
     image: "/igf-lr.png",
      variants: ["Vial", "Kartusche"],
     description:
-      " IGF-1 LR3 stimuliert das Muskelwachstum durch Hyperplasie (Zunahme der Anzahl der Muskelzellen) und Hypertrophie (Zunahme der Größe der bestehenden Muskelzellen). Es verbessert auch die Proteinsynthese, die für den Aufbau und die Reparatur von Muskelgewebe entscheidend ist..",
+      " IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     details:
-      "IGF-1 LR3 fördert den Muskelaufbau durch Aktivierung des mTOR-Signalwegs und kann zusätzlich die Bildung neuer Muskelzellen (Hyperplasie) unterstützen. Außerdem beeinflusst es den Fettstoffwechsel zugunsten der Muskelmasse, birgt jedoch Risiken wie Blutzuckerschwankungen und bei langfristiger Anwendung eine mögliche Insulinresistenz..",
+      "IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
     gallery: ["/igf-lr.png"],
     inStock: true,
   },
@@ -211,9 +210,9 @@ badge: "BESTSELLER",
     image: "/IPA.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Ipamorelin steigert gezielt die natürliche Ausschüttung von Wachstumshormon.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
     details:
-      "Muskelaufbau & Fettverbrennung: Es wird häufig zur Verbesserung der Körperzusammensetzung eingesetzt. Regeneration & Anti-Aging: Nutzer berichten von einer schnelleren Erholung nach dem Training, besserem Schlaf und positiven Effekten auf Haut und Gelenke. Wirkungsweise: Im Gegensatz zu exogenem HGH regt Ipamorelin den Körper an, seine eigene Produktion zu nutzen. Sicherheit: Es gilt als relativ sicher, da es kaum Einfluss auf Cortisol- oder Prolaktinwerte hat.",
+      "Hinweis zur ausschließlichen Forschung.",
     gallery: ["/IPA.png"],
     inStock: true,
   },
@@ -227,9 +226,9 @@ badge: "BESTSELLER",
     image: "/THY.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Thymosin Alpha-1 stärkt das Immunsystem und verbessert die körpereigene Immunantwort.",
+      "Hinweis zur ausschließlichen Forschung.",
     details:
-      "Stärkt angeborene Immunität: Aktiviert dendritische Zellen und NK-Zellen. Fördert Th1-Antwort: Erhöht IFN-γ-Produktion, was besonders bei chronischen Virusinfektionen relevant ist. Schützt Gewebe: Tiermodelle zeigen Zellschutz vor oxidativem Stress in Herz- und Lebergewebe. Fördert Antikörperreifung, weshalb es als Impf-Adjuvans getestet wird.",
+      "Thymosin Alpha-1 (Tα1) ist ein aus 28 Aminosäuren bestehendes Peptid, das aufgrund seiner immunmodulatorischen Eigenschaften in der präklinischen und klinischen Forschung untersucht wird Lieferung als lyophilisiertes Pulver mit einer Reinheit von ≥99 %. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/THY.png"],
     inStock: true,
   },
@@ -243,9 +242,9 @@ badge: "BESTSELLER",
     image: "/KLOW.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Synthetische Peptid-Mischung aus GHK-Cu, BPC-157, TB-500 und KPV.",
+      "Synthetische Peptid-Mischung aus GHK-Cu, BPC-157, TB-500 und KPV. Hinweis zur ausschließlichen Forschung",
     details:
-      "Der Klow Blend Peptide enthält GHK-Cu, BPC-157, TB-500 und KPV und wird zur Regeneration und Entzündungshemmung eingesetzt. Entzündungshemmung: Besonders durch KPV und GHK-Cu. Geweberegeneration: BPC-157 und TB-500 sind für ihre potenzielle Förderung der Heilung bekannt. Haut- und Follikelstimulation: GHK-Cu kann die Kopfhautgesundheit verbessern und Kollagen stimulieren.",
+      "Der Klow Blend Peptide enthält GHK-Cu, BPC-157, TB-500 und KPV Hinweis zur ausschließlichen Forschung",
     gallery: ["/KLOW.png"],
     inStock: true,
   },
@@ -259,9 +258,9 @@ badge: "BESTSELLER",
     image: "/GLOW.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Synthetische Peptid-Mischung zur Geweberegeneration, Hautverjüngung und Heilungsförderung.",
+      "Synthetische Peptid-Mischung Hinweis zur ausschließlichen Forschung",
     details:
-      "Glow-Peptide zielen darauf ab, die Hautstruktur durch Förderung von Kollagen und Elastin zu verbessern. Verbesserte Hautelastizität & Festigkeit: Peptide aktivieren die Kollagensynthese. Feuchtigkeitszufuhr: Fördert ein pralleres Hautbild. Anti-Aging-Effekt: Reduziert feine Linien und Faltentiefe. Unterstützung der Hautbarriere: Stärkt die Haut gegen äußere Einflüsse. Gelenk- und Gewebegesundheit: Kann positiv auf Sehnen, Bänder und Knorpel wirken.",
+      "Hinweis zur ausschließlichen Forschung",
     gallery: ["/GLOW.png"],
     inStock: true,
   },
@@ -275,9 +274,10 @@ badge: "BESTSELLER",
     image: "/semaxx.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "Semax ist hilfreich zur Verbesserung der kognitiven Fähigkeiten, zur Steigerung der Leistungsfähigkeit nach einer schlaflosen Nacht, zur Erleichterung des Lern- und Erinnerungsprozesses sowie zur Reduktion von chronischem Stress und Angst..",
+    "Semax 30mg ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+
     details:
-      "N-Acetyl Semax Amidate unterstützt die kognitive Funktion und fördert Konzentration sowie mentale Klarheit. Durch seine neuroprotektiven und neurotrophen Eigenschaften kann es die Bildung von BDNF und NGF anregen und mentale Erschöpfung sowie Stress reduzieren. Im Vergleich zu nicht-acyliertem Semax zeichnet es sich zudem durch eine längere und stabilere Wirkungsdauer aus.",
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches, kosmetisches oder Haushaltsprodukt.",
     inStock: true,
   },
     {
@@ -290,9 +290,9 @@ badge: "BESTSELLER",
     image: "/nad++.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "SS-31 bindet an Cardiolipin in der inneren mitochondrialen Membran, verhindert dessen Oxidation und stabilisiert so die Struktur der Mitochondrien.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "NAD+ (Nicotinamid-Adenin-Dinukleotid) ist ein lebenswichtiges Coenzym für den Energiestoffwechsel, die Zellregeneration und DNA-Reparatur. Es steigert die körperliche und mentale Leistungsfähigkeit, reduziert Müdigkeit (Brain Fog) und wirkt als zentrales Element in der Anti-Aging- bzw. Langlebigkeitsforschung, da es altersbedingte Zellschäden bekämpft.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
     gallery: ["/nad++.png"],
     inStock: true,
   },
@@ -306,9 +306,9 @@ badge: "BESTSELLER",
     image: "/GHRP.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "GHRP-2 (Growth Hormone Releasing Peptide-2) ist ein synthetisches Peptid, das die Ausschüttung von Wachstumshormon (GH) anregt, indem es die Hypophyse stimuliert.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Das Peptid GHRP-2 (Growth Hormone Releasing Peptide-2) ist ein synthetisches Peptid, das die Ausschüttung von Wachstumshormon (GH) anregt, indem es die Hypophyse stimuliert. Dadurch kann es Muskelaufbau, Regeneration und Fettabbau unterstützen sowie den Schlaf und die Erholung verbessern. Zusätzlich steigert es oft den Appetit und kann die körpereigene IGF-1-Produktion erhöhen.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
     gallery: ["/GHRP.png"],
     inStock: true,
   },
@@ -322,9 +322,9 @@ badge: "BESTSELLER",
     image: "/GHRP6.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "GHRP-6 (Growth Hormone Releasing Peptide-6) ist ein Peptid, das die Freisetzung von Wachstumshormon stark stimuliert. Es kann Muskelaufbau, Fettabbau und Regeneration fördern, wirkt aber besonders deutlich appetitsteigernd.",
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "Das Peptid GHRP-6 (Growth Hormone Releasing Peptide-6) ist ein Peptid, das die Freisetzung von Wachstumshormon stark stimuliert. Es kann Muskelaufbau, Fettabbau und Regeneration fördern, wirkt aber besonders deutlich appetitsteigernd. Zusätzlich wird es häufig mit verbessertem Schlaf und schnellerer Erholung in Verbindung gebracht.",
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
     gallery: ["/GHRP6.png"],
     inStock: true,
   },
@@ -339,9 +339,9 @@ badge: "BESTSELLER",
     image: "/BPC.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "BPC-157 (Body Protection Compound-157) ist ein Peptid, das für seine mögliche heilungsfördernde Wirkung bekannt ist, besonders bei Sehnen, Muskeln und dem Verdauungstrakt.",
+       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "BPC-157 (Body Protection Compound-157) ist ein Peptid, das für seine mögliche heilungsfördernde Wirkung bekannt ist, besonders bei Sehnen, Muskeln und dem Verdauungstrakt. Es kann die Geweberegeneration beschleunigen, Entzündungen reduzieren und die Durchblutung verbessern. Deshalb wird es häufig im Kontext von Verletzungen und Magen-Darm-Beschwerden erforscht.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
     gallery: ["/BPC.png"],
     inStock: true,
   },
@@ -356,9 +356,9 @@ badge: "BESTSELLER",
     image: "/TB500.png",
      variants: ["Vial", "Kartusche"],
     description:
-      "TB-500 (Thymosin Beta-4) ist ein Peptid, das die Zellmigration und Gewebereparatur fördert, wodurch Heilungsprozesse besonders bei Muskeln, Sehnen und Bändern beschleunigt werden.",
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
-      "TB-500 (Thymosin Beta-4) ist ein Peptid, das die Zellmigration und Gewebereparatur fördert, wodurch Heilungsprozesse – besonders bei Muskeln, Sehnen und Bändern – beschleunigt werden können. Es kann zudem Entzündungen reduzieren und die Flexibilität des Gewebes verbessern.",
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
     gallery: ["/TB500.png"],
     inStock: true,
   },
