@@ -19,6 +19,73 @@ import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 const products = [
   {
+  id: 30,
+  title: "GHK-CU 50mg",
+  category: "AUGUST NEWS",
+  price: "30.00 CHF",
+  oldPrice: "110.00 CHF",
+  badge: "AUGUST",
+  image: "/GHK-CU.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "GHK-CU – Hochreiner Laborwirkstoff für Forschungszwecke.",
+  details:
+    "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex in lyophilisierter Pulverform.",
+  gallery: ["/GHK-CU.png"],
+  inStock: true,
+},
+
+{
+  id: 31,
+  title: "5-Amino-1MQ",
+  category: "AUGUST NEWS",
+  price: "60.00 CHF",
+  oldPrice: "80.00 CHF",
+  badge: "AUGUST",
+  image: "/amino.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "5-Amino-1MQ – Hochreiner Laborwirkstoff für Forschungszwecke.",
+  details:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  gallery: ["/amino.png"],
+  inStock: true,
+},
+
+{
+  id: 32,
+  title: "MT-2 10mg",
+  category: "AUGUST NEWS",
+  price: "30.00 CHF",
+  oldPrice: "60.00 CHF",
+  badge: "AUGUST",
+  image: "/mt2.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "MT-2 – Hochreiner Laborwirkstoff für Forschungszwecke.",
+  details:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  gallery: ["/mt2.png"],
+  inStock: true,
+},
+{
+  id: 33,
+  title: "Semax 30mg",
+  category: "AUGUST NEWS",
+  price: "30.00 CHF",
+  oldPrice: "60.00 CHF",
+  badge: "AUGUST",
+  image: "/semaxx.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "Semax – Hochreiner Laborwirkstoff für Forschungszwecke.",
+  details:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  gallery: ["/semaxx.png"],
+  inStock: true,
+},
+
+  {
     id: 99,
     title: "RETATRUTIDE 20mg Fertigpen",
     category: "NEU",
@@ -37,7 +104,7 @@ const products = [
     id: 98,
     title: "GHK-CU 50mg Fertigpen",
     category: "NEU",
-    price: "210.00 CHF",
+    price: "130.00 CHF",
     badge: "NEU",
     image: "/OZEN.png",
     description:
@@ -97,7 +164,7 @@ const products = [
     id: 94,
     title: "Semax 30mg Fertigpen",
     category: "NEU",
-    price: "190.00 CHF",
+    price: "140.00 CHF",
     badge: "NEU",
     image: "/semax.png",
     description:
@@ -368,6 +435,10 @@ const products = [
   },
 ];
 
+const augustProducts = products.filter(
+  (product) => product.category === "AUGUST NEWS"
+);
+
 export default function App() {
   const navigate = useNavigate();
 
@@ -549,20 +620,31 @@ export default function App() {
             {product.category}
           </span>
         </div>
+<h3>{product.title}</h3>
 
-        <h3>{product.title}</h3>
+<div className="price-row">
+  <span
+    className={
+      product.category === "AUGUST NEWS"
+        ? "price august-price"
+        : "price"
+    }
+  >
+    {product.price}
+  </span>
 
-        <div className="price-row">
-          <span className="price">
-            {product.price}
-          </span>
-
-          {product.oldPrice && (
-            <span className="old-price">
-              {product.oldPrice}
-            </span>
-          )}
-        </div>
+  {product.oldPrice && (
+    <span
+      className={
+        product.category === "AUGUST NEWS"
+          ? "old-price august-old-price"
+          : "old-price"
+      }
+    >
+      {product.oldPrice}
+    </span>
+  )}
+</div>
 
         <p>{product.description}</p>
 
@@ -979,14 +1061,51 @@ export default function App() {
 
                 </section>
 
-              ) : (
+ ) : (
 
-                <>
+  <>
 
-                  {/* =========================
-                      NEUE PRODUKTE
-                  ========================= */}
+    {/* =========================
+        AUGUST NEWS
+    ========================= */}
 
+    {augustProducts.length > 0 && (
+      <section
+        className="product-section"
+        id="august-news"
+      >
+
+        <div className="section-heading-wrap">
+
+          <span className="section-kicker">
+            August
+          </span>
+
+          <h2 className="section-title">
+            AUGUST NEWS
+          </h2>
+
+        </div>
+
+        <div className="product-grid august-grid">
+
+          {augustProducts.map((product) => (
+            <div
+              id={`product-${product.id}`}
+              key={product.id}
+            >
+              {renderProductCard(product)}
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+    )}
+
+    {/* =========================
+        NEUE PRODUKTE
+    ========================= */}
                   {newProducts.length > 0 && (
                     <section
                       className="product-section"
