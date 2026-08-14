@@ -4270,4 +4270,151 @@ body {
     transform: translateY(-1px);
   }
 }
+.age-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(15, 20, 18, 0.72);
+  backdrop-filter: blur(6px);
+}
 
+.age-modal {
+  width: 90%;
+  max-width: 380px;
+  padding: 26px 28px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+.age-logo {
+  width: 155px;
+  max-width: 75%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.age-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #eef6f1;
+  color: #28734a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.age-modal h2 {
+  margin: 0 0 6px;
+  color: #202522;
+  font-size: 21px;
+}
+
+.age-title {
+  margin: 0 0 14px;
+  color: #28734a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.age-modal p {
+  margin: 6px 0;
+  color: #606762;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.age-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 18px 0 16px;
+  padding: 11px;
+  border: 1px solid #e2e8e4;
+  border-radius: 9px;
+  background: #fafcfb;
+  text-align: left;
+  cursor: pointer;
+}
+
+.age-check input {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #28734a;
+}
+
+.age-check span {
+  color: #505751;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.age-confirm-btn {
+  width: 100%;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #28734a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.age-confirm-btn:hover:not(:disabled) {
+  background: #205d3b;
+}
+
+.age-confirm-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.age-leave-btn {
+  margin-top: 11px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #777777;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.age-leave-btn:hover {
+  color: #222222;
+}
+
+.age-secure {
+  margin-top: 15px;
+  color: #8a918d;
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  .age-modal {
+    width: 92%;
+    max-width: 350px;
+    padding: 23px 20px;
+  }
+
+  .age-logo {
+    width: 140px;
+  }
+
+  .age-modal h2 {
+    font-size: 19px;
+  }
+}

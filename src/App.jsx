@@ -382,6 +382,11 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [ageConfirmed, setAgeConfirmed] = useState(() => {
+  return localStorage.getItem("swisspharmalab_age_confirmed") === "true";
+});
+
+const [ageAccepted, setAgeAccepted] = useState(false);
   console.log("APP CART:", cart);
 
   useEffect(() => {
@@ -592,6 +597,78 @@ onClick={(e) => {
           path="/"
           element={
             <div className="page">
+              {!ageConfirmed && (
+  <div className="age-overlay">
+    <div className="age-modal">
+
+      <img
+        src="/logo1.png"
+        alt="SwissPharmaLab"
+        className="age-logo"
+      />
+
+      <div className="age-badge">18+</div>
+
+      <h2>Willkommen bei SwissPharmaLab</h2>
+
+      <p className="age-title">
+        Alters- und Nutzungshinweis
+      </p>
+
+      <p>
+        Diese Website richtet sich ausschließlich an Personen
+        ab 18 Jahren.
+      </p>
+
+      <p>
+        Die angebotenen Produkte sind ausschließlich für
+        Forschungszwecke bestimmt.
+      </p>
+
+      <label className="age-check">
+        <input
+          type="checkbox"
+          checked={ageAccepted}
+          onChange={(e) => setAgeAccepted(e.target.checked)}
+        />
+
+        <span>
+          Ich bestätige, dass ich mindestens 18 Jahre alt bin
+          und verstanden habe, dass es sich um
+          Forschungsprodukte handelt.
+        </span>
+      </label>
+
+      <button
+        className="age-confirm-btn"
+        disabled={!ageAccepted}
+        onClick={() => {
+          localStorage.setItem(
+            "swisspharmalab_age_confirmed",
+            "true"
+          );
+          setAgeConfirmed(true);
+        }}
+      >
+        Zugang bestätigen
+      </button>
+
+      <button
+        className="age-leave-btn"
+        onClick={() => {
+          window.location.href = "https://www.google.com";
+        }}
+      >
+        Website verlassen
+      </button>
+
+      <div className="age-secure">
+        🔒 Verantwortungsvoller Zugang
+      </div>
+
+    </div>
+  </div>
+)}
               <div className="topbar">
                 Alle unsere Produkte sind Labor geprüft.
               </div>
