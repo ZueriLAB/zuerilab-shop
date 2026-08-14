@@ -122,8 +122,8 @@ const products = [
     id: 1,
     title: "GHK-CU 50mg",
     category: "PEPTIDE",
-    price: "110.00 CHF",
-    oldPrice: "125.00 CHF",
+    price: "30.00 CHF",
+    oldPrice: "110.00 CHF",
     badge: "BESTSELLER",
     image: "/GHK-CU.png",
      variants: ["Vial", "Kartusche"],
@@ -351,7 +351,7 @@ badge: "BESTSELLER",
     id: 15,
     title: "TB-500 10",
     category: "PEPTIDE",
-    price: "1.00 CHF",
+    price: "80.00 CHF",
     oldPrice: "95.00 CHF",
     badge: "SALE",
     image: "/TB500.png",
@@ -363,22 +363,7 @@ badge: "BESTSELLER",
     gallery: ["/TB500.png"],
     inStock: true,
   },
-    {
-    id: 16,
-    title: "Kaugummi",
-    category: "test",
-    price: "1.00 CHF",
-    oldPrice: "3.00 CHF",
-    badge: "SALE",
-    image: "/",
-     variants: ["Vial", "Kartusche"],
-    description:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr. Kein medizinisches,kosmetisches oder Haushaltsprodukt.",
-    gallery: ["/"],
-    inStock: true,
-  },
+
   
 ];
 export default function App() {
