@@ -69,8 +69,7 @@ export default function CheckoutPage({ cart = [] }) {
   // 80 CHF GUTSCHEIN
   // =========================
 
-  const voucherCode =
-    localStorage.getItem("voucherCode") || "";
+  const voucherAmount = voucherApplied ? 80 : 0;
 
   const voucherAmount =
     voucherCode === "SIBEL" ? 80 : 0;
@@ -88,31 +87,22 @@ export default function CheckoutPage({ cart = [] }) {
   // GUTSCHEIN ANWENDEN
   // =========================
 
-  const applyVoucher = () => {
-    const code = voucherInput
-      .trim()
-      .toUpperCase();
+ const applyVoucher = () => {
+  const code = voucherInput.trim().toUpperCase();
 
-    if (code === "SIBEL") {
-      localStorage.setItem(
-        "voucherCode",
-        "SIBEL"
-      );
+  if (code === "SIBEL") {
+    localStorage.setItem("voucherCode", "SIBEL");
 
-      setVoucherApplied(true);
-      setVoucherError("");
-    } else {
-      localStorage.removeItem(
-        "voucherCode"
-      );
+    setVoucherApplied(true);
+    setVoucherError("");
+    setVoucherInput("SIBEL");
+  } else {
+    localStorage.removeItem("voucherCode");
 
-      setVoucherApplied(false);
-
-      setVoucherError(
-        "Dieser Gutscheincode ist nicht gültig."
-      );
-    }
-  };
+    setVoucherApplied(false);
+    setVoucherError("Dieser Gutscheincode ist nicht gültig.");
+  }
+};
 
   // =========================
   // FORMULAR
