@@ -4753,7 +4753,7 @@ body {
 
 /* Desktop: 20 % kleiner */
 .amino-mt2-image {
-  transform: scale(1.2) !important;
+  transform: scale(1.4) !important;
 }
 
 /* Mobile: 10 % größer */
