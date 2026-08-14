@@ -71,9 +71,6 @@ export default function CheckoutPage({ cart = [] }) {
 
   const voucherAmount = voucherApplied ? 80 : 0;
 
-  const voucherAmount =
-    voucherCode === "SIBEL" ? 80 : 0;
-
   // =========================
   // ENDGÜLTIGER PREIS
   // =========================
