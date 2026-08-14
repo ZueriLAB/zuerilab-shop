@@ -11,6 +11,8 @@ import AboutUsPage from "./AboutUsPage";
 import FAQPage from "./FAQPage";
 import TermsPage from "./TermsPage";
 import PrivacyPolicyPage from "./PrivacyPolicyPage";
+import ShippingPolicyPage from "./ShippingPolicyPage";
+import RefundPolicyPage from "./RefundPolicyPage";
 import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
@@ -818,7 +820,14 @@ onClick={(e) => {
   path="/privacy-policy"
   element={<PrivacyPolicyPage cart={cart} />}
 />
-
+<Route
+  path="/shipping-policy"
+  element={<ShippingPolicyPage cart={cart} />}
+/>
+<Route
+  path="/refund-policy"
+  element={<RefundPolicyPage cart={cart} />}
+/>
         <Route
           path="/warenkorb"
           element={
