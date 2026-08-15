@@ -4966,3 +4966,19 @@ body {
 
   }
 }
+@media (max-width: 768px) {
+  .payment-card.visa img {
+    width: 44px;
+    height: auto;
+  }
+
+  .payment-card.klarna img {
+    width: 46px;
+    height: auto;
+  }
+
+  .payment-card.amazon-pay img {
+    width: 46px;
+    height: auto;
+  }
+}
