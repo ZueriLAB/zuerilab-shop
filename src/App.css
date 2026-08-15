@@ -4786,9 +4786,9 @@ body {
 /* einzelne Zahlungslogos */
 
 .payment-card {
-  width: 52px;
-  height: 32px;
-  flex: 0 0 52px;
+  width: 60px;
+  height: 36px;
+  flex: 0 0 60px;
 
   display: flex;
   align-items: center;
@@ -4799,18 +4799,13 @@ body {
 
 .payment-card img {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 46px;
-  max-height: 24px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 /* Visa */
 
-.payment-card.visa img {
-  width: 44px;
-}
 
 /* Mastercard */
 
@@ -4834,10 +4829,7 @@ body {
 
 /* Amazon Pay */
 
-.payment-card.amazon-pay img {
-  width: 44px;
-  max-height: 24px;
-}
+
 
 /* Sichere Zahlung */
 
@@ -4901,10 +4893,10 @@ body {
     will-change: transform;
   }
 
-  .payment-card {
-    width: 52px;
-    height: 32px;
-    flex: 0 0 52px;
+ .payment-card {
+  width: 60px;
+  height: 36px;
+  flex: 0 0 60px;
 
     display: flex;
     align-items: center;
@@ -4912,13 +4904,11 @@ body {
   }
 
   .payment-card img {
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 46px;
-    max-height: 24px;
-    object-fit: contain;
-  }
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
   .payment-card.visa img {
     width: 44px;
@@ -4934,10 +4924,6 @@ body {
   }
 
   .payment-card.klarna img {
-    width: 46px;
-  }
-
-  .payment-card.amazon-pay img {
     width: 46px;
   }
 
