@@ -4982,3 +4982,12 @@ body {
     height: auto;
   }
 }
+@media (max-width: 768px) {
+  .payment-card.visa img,
+  .payment-card.amazon-pay img {
+    width: auto !important;
+    height: 24px !important;
+    max-width: 46px !important;
+    object-fit: contain !important;
+  }
+}
