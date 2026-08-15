@@ -940,8 +940,8 @@ const renderProductCard = (product) => (
 >
   🛒 Warenkorb ({cartCount})
 </Link>
-
 <div className="payment-security">
+
   <div className="payment-scroll">
 
     <div className="payment-icons">
@@ -975,17 +975,19 @@ const renderProductCard = (product) => (
         />
       </div>
 
-    </div>
+      <div className="payment-secure">
+        <span className="secure-lock">🔒</span>
 
-    <div className="payment-secure">
-      <span className="secure-lock">🔒</span>
-      <div>
-        <strong>Sichere Zahlung</strong>
-        <small>SSL · Secure Checkout</small>
+        <div>
+          <strong>Sichere Zahlung</strong>
+          <small>SSL · Secure Checkout</small>
+        </div>
       </div>
+
     </div>
 
   </div>
+
 </div>
 </nav>
               <section
