@@ -4860,3 +4860,8 @@ body {
     transform: translateX(-100%);
   }
 }
+@media (max-width: 768px) {
+  .fertigpen-image {
+    transform: scale(1.25);
+  }
+}

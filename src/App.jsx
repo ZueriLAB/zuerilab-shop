@@ -610,11 +610,15 @@ const renderProductCard = (product) => (
       <img
         src={product.image}
         alt={product.title}
-        className={`card-image ${
-          product.id === 31 || product.id === 32
-            ? "amino-mt2-image"
-            : ""
-        }`}
+  className={`card-image ${
+  product.id === 31 || product.id === 32
+    ? "amino-mt2-image"
+    : ""
+} ${
+  [99, 98, 97, 96, 95, 94].includes(product.id)
+    ? "fertigpen-image"
+    : ""
+}`}
       />
     </div>
 
