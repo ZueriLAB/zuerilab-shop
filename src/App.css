@@ -4762,3 +4762,71 @@ body {
     transform: scale(1.2) !important;
   }
 }
+```css
+/* =========================
+   ZAHLUNGSLOGOS NAVIGATION
+========================= */
+
+.payment-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: auto;
+  overflow: hidden;
+  background: transparent;
+}
+
+.payment-card img {
+  display: block;
+  width: auto;
+  height: 24px;
+  max-width: 70px;
+  object-fit: contain;
+}
+
+/* VISA */
+.payment-card.visa img {
+  width: 48px;
+  height: 24px;
+}
+
+/* MASTERCARD */
+.payment-card.mastercard img {
+  width: 30px;
+  height: 24px;
+}
+
+/* APPLE PAY */
+.payment-card.apple-pay img {
+  width: 48px;
+  height: 24px;
+}
+
+/* KLARNA */
+.payment-card.klarna img {
+  width: 50px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* AMAZON PAY */
+.payment-card.amazon-pay img {
+  width: 65px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Sichere Zahlung */
+.payment-secure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+```
