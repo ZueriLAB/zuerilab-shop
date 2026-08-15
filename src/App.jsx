@@ -975,19 +975,19 @@ const renderProductCard = (product) => (
         />
       </div>
 
-      <div className="payment-secure">
-        <span className="secure-lock">🔒</span>
+    </div>
 
-       <div>
-          <strong>Sichere Zahlung</strong>
-          <small>SSL · Secure Checkout</small>
-        </div>
+    <div className="payment-secure">
+      <span className="secure-lock">🔒</span>
+      <div>
+        <strong>Sichere Zahlung</strong>
+        <small>SSL · Secure Checkout</small>
       </div>
-
     </div>
 
   </div>
 </div>
+</nav>
               <section
                 className="hero-section"
                 id="neu"
