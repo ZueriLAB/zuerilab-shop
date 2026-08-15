@@ -967,7 +967,7 @@ const renderProductCard = (product) => (
 
                     <div className="payment-card klarna">
                       <img
-                        src="/clarna.png"
+                        src="/klarna-logo.png"
                         alt="Klarna"
                       />
                     </div>
