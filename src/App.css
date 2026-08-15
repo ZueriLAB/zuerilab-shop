@@ -4766,129 +4766,205 @@ body {
    ZAHLUNGSLOGOS NAVIGATION
 ========================= */
 
+.payment-security {
+  width: 100%;
+  overflow: hidden;
+}
+
+.payment-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
 .payment-icons {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  width: max-content;
 }
 
+/* einzelne Zahlungslogos */
+
 .payment-card {
+  width: 52px;
+  height: 32px;
+  flex: 0 0 52px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  width: auto;
+
   overflow: hidden;
-  background: transparent;
 }
 
 .payment-card img {
   display: block;
   width: auto;
-  height: 24px;
-  max-width: 70px;
+  height: auto;
+  max-width: 46px;
+  max-height: 24px;
   object-fit: contain;
 }
 
-/* VISA */
+/* Visa */
+
 .payment-card.visa img {
-  width: 48px;
-  height: 24px;
+  width: 44px;
 }
 
-/* MASTERCARD */
+/* Mastercard */
+
 .payment-card.mastercard img {
-  width: 30px;
-  height: 24px;
+  width: 29px;
+  height: 29px;
 }
 
-/* APPLE PAY */
+/* Apple Pay */
+
 .payment-card.apple-pay img {
-  width: 48px;
-  height: 24px;
+  width: 40px;
 }
 
-/* KLARNA */
+/* Klarna */
+
 .payment-card.klarna img {
-  width: 50px;
-  height: 24px;
-  object-fit: contain;
+  width: 44px;
+  max-height: 24px;
 }
 
-/* AMAZON PAY */
+/* Amazon Pay */
+
 .payment-card.amazon-pay img {
-  width: 65px;
-  height: 24px;
-  object-fit: contain;
+  width: 44px;
+  max-height: 24px;
 }
 
 /* Sichere Zahlung */
+
 .payment-secure {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+
+  width: 145px;
+  min-width: 145px;
+  height: 32px;
+
+  flex: 0 0 145px;
 }
+
+.secure-lock {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.payment-secure strong {
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  white-space: nowrap;
+}
+
+.payment-secure small {
+  display: block;
+  font-size: 8px;
+  line-height: 10px;
+  white-space: nowrap;
+}
+
+
 /* =========================
-MOBILE ZAHLUNGSLOGOS
+   MOBILE
+   Logos + Sichere Zahlung
+   laufen gemeinsam
 ========================= */
 
 @media (max-width: 768px) {
 
-.payment-security {
- width: 100%;
- overflow: hidden;
- margin-left: 0;
- gap: 0;
-}
+  .payment-security {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
 
-.payment-icons {
- display: flex;
- flex-shrink: 0;
- gap: 5px;
- animation: payment-logo-scroll 14s linear infinite;
- will-change: transform;
-}
+  .payment-scroll {
+    width: 100%;
+    overflow: hidden;
+  }
 
-.payment-card {
- width: 52px;
- height: 30px;
- flex-shrink: 0;
-}
+  .payment-icons {
+    gap: 6px;
+    width: max-content;
 
-.payment-card img {
- max-width: 46px;
- max-height: 21px;
- object-fit: contain;
-}
+    animation: payment-logo-scroll 18s linear infinite;
+    will-change: transform;
+  }
 
-.payment-card.visa img {
- width: 44px;
-}
+  .payment-card {
+    width: 48px;
+    height: 30px;
+    flex: 0 0 48px;
+  }
 
-.payment-card.mastercard img {
- width: 28px;
- height: 28px;
-}
+  .payment-card img {
+    max-width: 43px;
+    max-height: 22px;
+  }
 
-.payment-card.apple-pay img {
- width: 44px;
-}
+  .payment-card.visa img {
+    width: 42px;
+  }
 
-.payment-card.klarna img {
- width: 46px;
-}
+  .payment-card.mastercard img {
+    width: 27px;
+    height: 27px;
+  }
 
-.payment-card.amazon-pay img {
- width: 46px;
-}
+  .payment-card.apple-pay img {
+    width: 38px;
+  }
 
-@keyframes payment-logo-scroll {
- 0% {
-   transform: translateX(100%);
- }
+  .payment-card.klarna img {
+    width: 42px;
+    max-height: 22px;
+  }
 
- 100% {
-   transform: translateX(-100%);
- }
-}
+  .payment-card.amazon-pay img {
+    width: 42px;
+    max-height: 22px;
+  }
+
+  .payment-secure {
+    width: 140px;
+    min-width: 140px;
+    flex: 0 0 140px;
+    height: 30px;
+  }
+
+  .secure-lock {
+    font-size: 16px;
+  }
+
+  .payment-secure strong {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .payment-secure small {
+    font-size: 8px;
+    line-height: 9px;
+  }
+
+  @keyframes payment-logo-scroll {
+
+    0% {
+      transform: translateX(100vw);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+
+  }
 }
