@@ -947,7 +947,7 @@ const renderProductCard = (product) => (
     <div className="payment-icons">
 
       <div className="payment-card visa">
-        <img src="/visa.svg" alt="Visa" />
+        <img src="/visa1.png" alt="Visa" />
       </div>
 
       <div className="payment-card mastercard">
@@ -963,14 +963,14 @@ const renderProductCard = (product) => (
 
       <div className="payment-card klarna">
         <img
-          src="/Marketing Badge With Clear Space.png"
+          src="/klarna-logo.png"
           alt="Klarna"
         />
       </div>
 
       <div className="payment-card amazon-pay">
         <img
-          src="/amazonpay.png"
+          src="/amazon1.png"
           alt="Amazon Pay"
         />
       </div>
