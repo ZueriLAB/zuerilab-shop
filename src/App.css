@@ -4871,12 +4871,8 @@ body {
   line-height: 10px;
   white-space: nowrap;
 }
-
-
 /* =========================
-   MOBILE
-   Logos + Sichere Zahlung
-   laufen gemeinsam
+   MOBILE ZAHLUNGSLOGOS
 ========================= */
 
 @media (max-width: 768px) {
@@ -4891,55 +4887,69 @@ body {
   .payment-scroll {
     width: 100%;
     overflow: hidden;
+    position: relative;
   }
 
   .payment-icons {
-    gap: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     width: max-content;
+    flex-shrink: 0;
 
     animation: payment-logo-scroll 18s linear infinite;
     will-change: transform;
   }
 
   .payment-card {
-    width: 48px;
-    height: 30px;
-    flex: 0 0 48px;
+    width: 52px;
+    height: 32px;
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .payment-card img {
-    max-width: 43px;
-    max-height: 22px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 46px;
+    max-height: 24px;
+    object-fit: contain;
   }
 
   .payment-card.visa img {
-    width: 42px;
+    width: 44px;
   }
 
   .payment-card.mastercard img {
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
   }
 
   .payment-card.apple-pay img {
-    width: 38px;
+    width: 44px;
   }
 
   .payment-card.klarna img {
-    width: 42px;
-    max-height: 22px;
+    width: 46px;
   }
 
   .payment-card.amazon-pay img {
-    width: 42px;
-    max-height: 22px;
+    width: 46px;
   }
 
   .payment-secure {
-    width: 140px;
-    min-width: 140px;
-    flex: 0 0 140px;
-    height: 30px;
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    white-space: nowrap;
+    padding-left: 6px;
   }
 
   .secure-lock {
@@ -4947,13 +4957,15 @@ body {
   }
 
   .payment-secure strong {
-    font-size: 10px;
-    line-height: 12px;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .payment-secure small {
-    font-size: 8px;
-    line-height: 9px;
+    display: block;
+    font-size: 9px;
+    line-height: 11px;
   }
 
   @keyframes payment-logo-scroll {
