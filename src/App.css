@@ -4828,3 +4828,69 @@ body {
   align-items: center;
   gap: 8px;
 }
+```css
+/* =========================
+   MOBILE ZAHLUNGSLOGOS
+========================= */
+
+@media (max-width: 768px) {
+
+  .payment-security {
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0;
+    gap: 0;
+  }
+
+  .payment-icons {
+    display: flex;
+    flex-shrink: 0;
+    gap: 5px;
+    animation: payment-logo-scroll 14s linear infinite;
+    will-change: transform;
+  }
+
+  .payment-card {
+    width: 52px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .payment-card img {
+    max-width: 46px;
+    max-height: 21px;
+    object-fit: contain;
+  }
+
+  .payment-card.visa img {
+    width: 44px;
+  }
+
+  .payment-card.mastercard img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .payment-card.apple-pay img {
+    width: 44px;
+  }
+
+  .payment-card.klarna img {
+    width: 46px;
+  }
+
+  .payment-card.amazon-pay img {
+    width: 46px;
+  }
+
+  @keyframes payment-logo-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+```
