@@ -898,6 +898,10 @@ const renderProductCard = (product) => (
               {/* =========================
                   NAVIGATION
               ========================= */}
+```jsx
+              {/* =========================
+                  NAVIGATION
+              ========================= */}
 
               <nav className="nav">
 
@@ -935,51 +939,70 @@ const renderProductCard = (product) => (
                 >
                   🛒 Warenkorb ({cartCount})
                 </Link>
-<div className="payment-security">
 
-  <div className="payment-icons">
+                <div className="payment-security">
 
-    <div className="payment-card visa">
-      VISA
-    </div>
+                  <div className="payment-icons">
 
-    <div className="payment-card mastercard">
-      <span></span>
-      <span></span>
-    </div>
+                    <div className="payment-card visa">
+                      <img
+                        src="/visa.svg"
+                        alt="Visa"
+                      />
+                    </div>
 
-    <div className="payment-card apple-pay">
-      Apple Pay
-    </div>
+                    <div className="payment-card mastercard">
+                      <img
+                        src="/ma_symbol.svg"
+                        alt="Mastercard"
+                      />
+                    </div>
 
-    <div className="payment-card klarna">
-      Klarna.
-    </div>
+                    <div className="payment-card apple-pay">
+                      <img
+                        src="/Apple_Pay_Mark_RGB_041619.svg"
+                        alt="Apple Pay"
+                      />
+                    </div>
 
-    <div className="payment-card amazon-pay">
-      amazon pay
-    </div>
+                    <div className="payment-card klarna">
+                      <img
+                        src="/Marketing Badge With Clear Space.png"
+                        alt="Klarna"
+                      />
+                    </div>
 
-  </div>
+                    <div className="payment-card amazon-pay">
+                      <img
+                        src="/amazonpay.png"
+                        alt="Amazon Pay"
+                      />
+                    </div>
 
-  <div className="payment-secure">
-    <span className="secure-lock">
-      🔒
-    </span>
+                  </div>
 
-    <div>
-      <strong>
-        Sichere Zahlung
-      </strong>
+                  <div className="payment-secure">
 
-      <small>
-        SSL · Secure Checkout
-      </small>
-    </div>
-  </div>
+                    <span className="secure-lock">
+                      🔒
+                    </span>
 
-</div>
-</nav>
+                    <div>
+                      <strong>
+                        Sichere Zahlung
+                      </strong>
+
+                      <small>
+                        SSL · Secure Checkout
+                      </small>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </nav>
+              
               {/* =========================
                   HERO
               ========================= */}
