@@ -1,3 +1,4 @@
+// Cloudflare deployment trigger
 import Stripe from "stripe";
 
 export async function onRequestPost({ request, env }) {
