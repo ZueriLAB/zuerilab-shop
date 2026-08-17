@@ -109,7 +109,7 @@ useEffect(() => {
       <h3>Kostenlos dabei, im Preis inbegriffen!</h3>
 
       <p>
-        Zu diesem Peptid erhältst du 10ml Bakteriostatisches Wasser (BAC) gratis dazu.
+        Zu diesem Peptid erhältst du 3ml Bakteriostatisches Wasser (BAC) gratis dazu.
       </p>
 
       <ul className="bonus-list">
