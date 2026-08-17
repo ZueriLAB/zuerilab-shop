@@ -134,7 +134,7 @@ const products = [
   price: "30.00 CHF",
   oldPrice: "60.00 CHF",
   badge: "AUGUST",
-  image: "/semaxx.png",
+  image: "/semax2.png",
   variants: ["Vial", "Kartusche"],
   description:
     "Semax – Hochreiner Laborwirkstoff für Forschungszwecke.",
@@ -398,7 +398,7 @@ const products = [
     price: "90.00 CHF",
     oldPrice: "99.00 CHF",
     badge: "SALE",
-    image: "/semaxx.png",
+    image: "/semax2.png",
     variants: ["Vial", "Kartusche"],
     description:
       "Semax 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
