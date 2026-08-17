@@ -17,7 +17,7 @@ export async function onRequestPost({ request, env }) {
 
     const body = await request.json();
 
-    const { orderNumber, date, cart, form } = body;
+    const { orderNumber, date, cart, form, total } = body;
 
     if (!orderNumber || !Array.isArray(cart) || cart.length === 0) {
       return new Response(
@@ -34,24 +34,33 @@ export async function onRequestPost({ request, env }) {
 
     const stripe = new Stripe(env.STRIPE_SECRET_KEY);
 
-    const lineItems = cart.map((item) => {
-      const price = Number(
-        String(item.price)
-          .replace(" CHF", "")
-          .replace(",", ".")
-      );
+const finalTotal = Number(total);
 
-      return {
-        price_data: {
-          currency: "chf",
-          product_data: {
-            name: item.title,
-          },
-          unit_amount: Math.round(price * 100),
-        },
-        quantity: item.quantity,
-      };
-    });
+if (!Number.isFinite(finalTotal) || finalTotal <= 0) {
+  return new Response(
+    JSON.stringify({
+      success: false,
+      error: "Ungültiger Endbetrag",
+    }),
+    {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    }
+  );
+}
+
+const lineItems = [
+  {
+    price_data: {
+      currency: "chf",
+      product_data: {
+        name: `Bestellung ${orderNumber}`,
+      },
+      unit_amount: Math.round(finalTotal * 100),
+    },
+    quantity: 1,
+  },
+];
 
     const baseUrl = new URL(request.url).origin;
 
