@@ -97,7 +97,8 @@ useEffect(() => {
           <div className="info-box">✔ Sofort verfügbar</div>
           <div className="info-box">✔ Lieferzeit 1–7 Tage</div>
           <div className="info-box">✔ Sichere Bestellung</div>
- {product.category === "PEPTIDE" && (
+ {(product.category === "PEPTIDE" ||
+  product.category === "AUGUST SALES") && (
   <div className="bonus-box">
     <img
       src="/BAC.png"
