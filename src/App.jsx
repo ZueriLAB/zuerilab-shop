@@ -503,7 +503,7 @@ const products = [
   description:
     "PE-22-28 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "Synthetisches Peptid, abgeleitet von Spadin (einem natürlichen Fragment des Sortilin-Proteins). Ein eigenständiges Molekül mit eigenem Wirkmechanismus. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/pe-22-28.png"],
   inStock: true,
 },
@@ -519,7 +519,7 @@ const products = [
   description:
     "WOLVERINE (BPC-157 + TB-500) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "Blend aus BPC-157 & TB-500. Nur für Laborforschungszwecke.Synthetisches Pentadecapeptid, abgeleitet von einem im Magensaft vorkommenden Schutzprotein. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/wolverine.png"],
   inStock: true,
 },
@@ -535,7 +535,7 @@ const products = [
   description:
     "THYMULIN ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "Natürliches Nonapeptidhormon, sezerniert vom Thymus. Zink-abhängig — biologisch inaktiv ohne gebundenes Zn²⁺ Halbwertszeit, subkutane Injektion. KurzeNur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/thymulin.png"],
   inStock: true,
 },
@@ -551,7 +551,7 @@ const products = [
   description:
     "EPITALON ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "Synthetisches Tetrapeptid (Ala-Glu-Asp-Gly), abgeleitet von Epithalamin, einem aus der Zirbeldrüse (Pinealdrüse) gewonnenen Peptidpräparat. Kurze Halbwertszeit, subkutane Injektion. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/epitalon.png"],
   inStock: true,
 },
@@ -567,7 +567,7 @@ const products = [
   description:
     "ADAMAX ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "Synthetisches Neuropeptid (ACTH-Analogon). Halbwertszeit ca. 1–2 Stunden, subkutane Injektion. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/adamax.png"],
   inStock: true,
 },
@@ -583,7 +583,7 @@ const products = [
   description:
     "PT-141 (Bremelanotide) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "PT-141. Melanocortin-Rezeptoragonist (MC3R/MC4R). Halbwertszeit ca. 6-12 Stunden. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/pt-141.png"],
   inStock: true,
 },
@@ -599,7 +599,7 @@ const products = [
   description:
     "LL-37 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "LL-37. Humanes Cathelicidin-Peptid (antimikrobielles Peptid / AMP). Halbwertszeit ca. 2-3 Stunden, subkutane Injektion oder intranasale Applikation. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/ll-37.png"],
   inStock: true,
 },
@@ -615,7 +615,7 @@ const products = [
   description:
     "HCG ausschließlich für Labor-, Analyse- und Referenzzwecke.",
   details:
-    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    "Gonadotropin-Hormon zur Aufrechterhaltung der Hodenfunktion. Halbwertszeit ca. 24-36 Stunden, subkutane oder intramuskuläre Injektion typischerweise 2-3x wöchentlich. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
   gallery: ["/hcg.png"],
   inStock: true,
 },
