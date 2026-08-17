@@ -90,8 +90,8 @@ const lineItems = [
       success_url:
         `${baseUrl}/bestellung-erfolgreich?session_id={CHECKOUT_SESSION_ID}`,
 
-      cancel_url:
-        `${baseUrl}/stripe-test-cancel`,
+   cancel_url:
+  `${baseUrl}/checkout`,
     });
 
     return new Response(
