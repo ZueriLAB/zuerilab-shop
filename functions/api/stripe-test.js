@@ -50,12 +50,27 @@ if (!Number.isFinite(finalTotal) || finalTotal <= 0) {
   );
 }
 
+const orderDescription = cart
+  .map((item) => {
+    const variant = item.variant
+      ? ` – ${item.variant}`
+      : "";
+
+    const dose = item.dose
+      ? ` – ${item.dose}`
+      : "";
+
+    return `${item.quantity}x ${item.title}${variant}${dose}`;
+  })
+  .join(", ");
+
 const lineItems = [
   {
     price_data: {
       currency: "chf",
       product_data: {
         name: `Bestellung ${orderNumber}`,
+        description: orderDescription,
       },
       unit_amount: Math.round(finalTotal * 100),
     },
