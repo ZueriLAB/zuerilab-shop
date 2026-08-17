@@ -21,9 +21,9 @@ const products = [
   {
   id: 30,
   title: "GHK-CU 50mg",
-  category: "AUGUST NEWS",
+  category: "AUGUST SALES",
   price: "30.00 CHF",
-  oldPrice: "110.00 CHF",
+  oldPrice: "80.00 CHF",
   badge: "AUGUST",
   image: "/GHK-CU.png",
   variants: ["Vial", "Kartusche"],
@@ -38,7 +38,7 @@ const products = [
 {
   id: 31,
   title: "5-Amino-1MQ",
-  category: "AUGUST NEWS",
+  category: "AUGUST SALES",
   price: "60.00 CHF",
   oldPrice: "80.00 CHF",
   badge: "AUGUST",
@@ -55,7 +55,7 @@ const products = [
 {
   id: 32,
   title: "MT-2 10mg",
-  category: "AUGUST NEWS",
+  category: "AUGUST SALES",
   price: "30.00 CHF",
   oldPrice: "60.00 CHF",
   badge: "AUGUST",
@@ -71,7 +71,7 @@ const products = [
 {
   id: 33,
   title: "Semax 30mg",
-  category: "AUGUST NEWS",
+  category: "AUGUST SALES",
   price: "30.00 CHF",
   oldPrice: "60.00 CHF",
   badge: "AUGUST",
@@ -436,7 +436,7 @@ const products = [
 ];
 
 const augustProducts = products.filter(
-  (product) => product.category === "AUGUST NEWS"
+  (product) => product.category === "AUGUST SALES"
 );
 
 export default function App() {
@@ -633,7 +633,7 @@ const renderProductCard = (product) => (
 <div className="price-row">
   <span
     className={
-      product.category === "AUGUST NEWS"
+      product.category === "AUGUST SALES"
         ? "price august-price"
         : "price"
     }
@@ -644,7 +644,7 @@ const renderProductCard = (product) => (
   {product.oldPrice && (
     <span
       className={
-        product.category === "AUGUST NEWS"
+        product.category === "AUGUST SALES"
           ? "old-price august-old-price"
           : "old-price"
       }
@@ -1106,7 +1106,7 @@ const renderProductCard = (product) => (
           </span>
 
           <h2 className="section-title">
-            AUGUST NEWS
+            AUGUST SALES
           </h2>
 
         </div>
