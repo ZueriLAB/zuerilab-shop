@@ -4862,6 +4862,490 @@ body {
 }
 @media (max-width: 768px) {
   .fertigpen-image {
-    transform: scale(1.25);
+    transform: scale(1.5);
+  }
+}
+/* =========================================
+   NEUE RESEARCH PRODUKTE
+========================================= */
+
+.research-news-section {
+  width: min(1600px, calc(100vw - 30px));
+  max-width: none;
+
+  position: relative;
+
+  margin-left: 50%;
+  margin-right: 0;
+  transform: translateX(-50%);
+
+  box-sizing: border-box;
+
+  margin-top: 45px;
+  margin-bottom: 45px;
+
+  padding: 42px 24px 30px;
+
+  overflow: hidden;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.92) 28%,
+      transparent 48%
+    ),
+    linear-gradient(
+      105deg,
+      #f9f9f9 0%,
+      #eeeeee 40%,
+      #d8dbde 72%,
+      #c6cacf 100%
+    );
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* sichtbares Molekül-/Netzwerk-Muster */
+
+.research-news-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(95, 100, 105, 0.22) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      30deg,
+      transparent 48%,
+      rgba(105, 110, 115, 0.16) 49%,
+      rgba(105, 110, 115, 0.16) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      150deg,
+      transparent 48%,
+      rgba(105, 110, 115, 0.16) 49%,
+      rgba(105, 110, 115, 0.16) 51%,
+      transparent 52%
+    );
+
+  background-size:
+    44px 44px,
+    88px 76px,
+    88px 76px;
+
+  background-position:
+    0 0,
+    0 0,
+    44px 38px;
+
+  opacity: 0.85;
+}
+
+
+/* Inhalt über Hintergrund */
+
+.research-news-heading,
+.research-news-grid {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   TITEL
+========================================= */
+
+.research-news-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.research-news-heading > span {
+  display: inline-block;
+
+  color: #c49a00;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.research-news-heading h2 {
+  margin: 5px 0 0;
+
+  color: #111;
+
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.research-news-heading h2::after {
+  content: "";
+
+  display: block;
+
+  width: 72px;
+  height: 4px;
+
+  margin: 11px auto 0;
+
+  background: #f4c400;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.research-news-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   KARTE
+========================================= */
+
+.research-news-card {
+  height: 360px;
+
+  box-sizing: border-box;
+
+  padding: 22px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(190, 190, 190, 0.35);
+  border-radius: 14px;
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.08),
+    inset 0 0 25px rgba(255, 255, 255, 0.55);
+}
+
+
+/* dezentes Molekül-Muster in Karten */
+
+.research-news-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(115, 120, 125, 0.10) 1.5px,
+      transparent 1.5px
+    ),
+    linear-gradient(
+      30deg,
+      transparent 48%,
+      rgba(115, 120, 125, 0.08) 49%,
+      rgba(115, 120, 125, 0.08) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      150deg,
+      transparent 48%,
+      rgba(115, 120, 125, 0.08) 49%,
+      rgba(115, 120, 125, 0.08) 51%,
+      transparent 52%
+    );
+
+  background-size:
+    36px 36px,
+    72px 62px,
+    72px 62px;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   TEXT LINKS
+========================================= */
+
+.research-news-info {
+  width: 54%;
+  height: 100%;
+
+  position: relative;
+  z-index: 4;
+}
+
+.research-news-badge {
+  display: inline-block;
+
+  padding: 6px 9px;
+  margin-bottom: 20px;
+
+  background: #f4c400;
+  color: #111;
+
+  border-radius: 5px;
+
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.research-news-info h3 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 24px;
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.research-news-info h3::after {
+  content: "";
+
+  display: block;
+
+  width: 40px;
+  height: 3px;
+
+  margin: 11px 0 8px;
+
+  background: var(--accent);
+
+  border-radius: 10px;
+}
+
+.research-news-info p {
+  margin: 0;
+
+  max-width: 150px;
+
+  color: #444;
+
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.research-news-button {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  display: inline-block;
+
+  padding: 12px 16px;
+
+  background: #fff;
+  color: #111;
+
+  border: 1px solid #ddd;
+  border-radius: 7px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-news-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   VIAL RECHTS
+========================================= */
+
+.research-news-image-wrap {
+  position: absolute;
+
+  right: 8px;
+  bottom: 8px;
+
+  width: 56%;
+  height: 290px;
+
+  z-index: 3;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.research-news-image {
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: contain;
+
+  transform: scale(1.12);
+  transform-origin: center bottom;
+
+  filter:
+    drop-shadow(0 7px 6px rgba(0, 0, 0, 0.16));
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .research-news-section {
+    width: calc(100% - 24px);
+
+    padding: 30px 16px 22px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: none;
+  }
+
+  .research-news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-news-card {
+    height: 330px;
+  }
+
+  .research-news-image-wrap {
+    height: 255px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .research-news-section {
+    width: calc(100% - 16px);
+
+    margin: 25px auto;
+
+    padding: 24px 9px 15px;
+
+    border-radius: 14px;
+
+    transform: none;
+  }
+
+  .research-news-heading {
+    margin-bottom: 20px;
+  }
+
+  .research-news-heading > span {
+    font-size: 9px;
+  }
+
+  .research-news-heading h2 {
+    font-size: 24px;
+  }
+
+  .research-news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .research-news-card {
+    height: 260px;
+
+    padding: 11px;
+
+    border-radius: 10px;
+  }
+
+  .research-news-info {
+    width: 58%;
+  }
+
+  .research-news-badge {
+    padding: 4px 6px;
+
+    margin-bottom: 10px;
+
+    font-size: 8px;
+  }
+
+  .research-news-info h3 {
+    font-size: 15px;
+  }
+
+  .research-news-info h3::after {
+    width: 27px;
+    height: 2px;
+
+    margin: 6px 0 5px;
+  }
+
+  .research-news-info p {
+    max-width: 80px;
+
+    font-size: 8px;
+  }
+
+  .research-news-button {
+    padding: 8px 8px;
+
+    font-size: 8px;
+  }
+
+  .research-news-image-wrap {
+    right: 0;
+    bottom: 3px;
+
+    width: 58%;
+    height: 190px;
+  }
+
+  .research-news-image {
+    transform: scale(1.07);
   }
 }

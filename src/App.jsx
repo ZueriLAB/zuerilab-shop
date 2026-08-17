@@ -17,6 +17,65 @@ import RefundPolicyPage from "./RefundPolicyPage";
 import reportImage from "./assets/test-report.png";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
+const researchNewsProducts = [
+  {
+    id: 20,
+    name: "PE-22-28",
+    subtitle: "PE-22-28",
+    image: "/pe-22-28.png",
+    color: "#f4c400",
+  },
+  {
+    id: 21,
+    name: "WOLVERINE",
+    subtitle: "BPC-157 + TB-500",
+    image: "/wolverine.png",
+    color: "#76b82a",
+  },
+  {
+    id: 22,
+    name: "THYMULIN",
+    subtitle: "THYMULIN",
+    image: "/thymulin.png",
+    color: "#e83e8c",
+  },
+  {
+    id: 23,
+    name: "EPITALON",
+    subtitle: "EPITHALONE",
+    image: "/epitalon.png",
+    color: "#76b82a",
+  },
+  {
+    id: 24,
+    name: "ADAMAX",
+    subtitle: "AC-MEH-FPGPAG-NH2",
+    image: "/adamax.png",
+    color: "#ef2929",
+  },
+  {
+    id: 25,
+    name: "PT-141",
+    subtitle: "BREMELANOTIDE",
+    image: "/pt-141.png",
+    color: "#6541a5",
+  },
+  {
+    id: 26,
+    name: "LL-37",
+    subtitle: "CATHELICIDIN ANTIMICROBIAL PEPTIDE",
+    image: "/ll-37.png",
+    color: "#b58a45",
+  },
+  {
+    id: 27,
+    name: "HCG",
+    subtitle: "HUMAN CHORIONIC GONADOTROPIN",
+    image: "/hcg.png",
+    color: "#6541a5",
+  },
+];
+
 const products = [
   {
   id: 30,
@@ -70,7 +129,7 @@ const products = [
 },
 {
   id: 33,
-  title: "Semax 30mg",
+  title: "Semax 10mg",
   category: "AUGUST SALES",
   price: "30.00 CHF",
   oldPrice: "60.00 CHF",
@@ -334,7 +393,7 @@ const products = [
 
   {
     id: 10,
-    title: "SEMAX 30mg",
+    title: "SEMAX 10mg",
     category: "PEPTIDE",
     price: "90.00 CHF",
     oldPrice: "99.00 CHF",
@@ -342,7 +401,7 @@ const products = [
     image: "/semaxx.png",
     variants: ["Vial", "Kartusche"],
     description:
-      "Semax 30mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+      "Semax 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     gallery: ["/semaxx.png"],
@@ -433,7 +492,135 @@ const products = [
     gallery: ["/TB500.png"],
     inStock: true,
   },
+    {
+    id: 20,
+    title: "PE-22-28",
+    category: "PEPTIDE",
+    price: "110.00 CHF",
+    badge: "NEU",
+    image: "/pe-22-28.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "PE-22-28 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/pe-22-28.png"],
+    inStock: true,
+  },
+
+  {
+    id: 21,
+    title: "WOLVERINE",
+    category: "PEPTIDE",
+    price: "180.00 CHF",
+    badge: "NEU",
+    image: "/wolverine.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "WOLVERINE (BPC-157 + TB-500) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/wolverine.png"],
+    inStock: true,
+  },
+
+  {
+    id: 22,
+    title: "THYMULIN",
+    category: "PEPTIDE",
+    price: "109.00 CHF",
+    badge: "NEU",
+    image: "/thymulin.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "THYMULIN ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/thymulin.png"],
+    inStock: true,
+  },
+
+  {
+    id: 23,
+    title: "EPITALON",
+    category: "PEPTIDE",
+    price: "160.00 CHF",
+    badge: "NEU",
+    image: "/epitalon.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "EPITALON ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/epitalon.png"],
+    inStock: true,
+  },
+
+  {
+    id: 24,
+    title: "ADAMAX",
+    category: "PEPTIDE",
+    price: "110.00 CHF",
+    badge: "NEU",
+    image: "/adamax.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "ADAMAX ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/adamax.png"],
+    inStock: true,
+  },
+
+  {
+    id: 25,
+    title: "PT-141",
+    category: "PEPTIDE",
+    price: "90.00 CHF",
+    badge: "NEU",
+    image: "/pt-141.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "PT-141 (Bremelanotide) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/pt-141.png"],
+    inStock: true,
+  },
+
+  {
+    id: 26,
+    title: "LL-37",
+    category: "PEPTIDE",
+    price: "98.00 CHF",
+    badge: "NEU",
+    image: "/ll-37.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "LL-37 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/ll-37.png"],
+    inStock: true,
+  },
+
+  {
+    id: 27,
+    title: "HCG",
+    category: "PEPTIDE",
+    price: "120.00 CHF",
+    badge: "NEU",
+    image: "/hcg.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "HCG ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/hcg.png"],
+    inStock: true,
+  },
 ];
+
 
 const augustProducts = products.filter(
   (product) => product.category === "AUGUST SALES"
@@ -1088,7 +1275,46 @@ const renderProductCard = (product) => (
  ) : (
 
   <>
+<section className="research-news-section">
 
+  <div className="research-news-heading">
+    <span>NEU</span>
+    <h2>NEUE RESEARCH PRODUKTE</h2>
+  </div>
+
+  <div className="research-news-grid">
+    {researchNewsProducts.map((product) => (
+      <div
+        className="research-news-card"
+        key={product.id}
+        style={{ "--accent": product.color }}
+      >
+        <div className="research-news-info">
+          <span className="research-news-badge">NEU</span>
+
+          <h3>{product.name}</h3>
+          <p>{product.subtitle}</p>
+
+          <Link
+            to={`/produkt/${product.id}`}
+            className="research-news-button"
+          >
+            Jetzt ansehen →
+          </Link>
+        </div>
+
+        <div className="research-news-image-wrap">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="research-news-image"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+
+</section>
     {/* =========================
         AUGUST NEWS
     ========================= */}
