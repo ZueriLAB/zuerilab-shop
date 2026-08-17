@@ -492,133 +492,133 @@ const products = [
     gallery: ["/TB500.png"],
     inStock: true,
   },
-    {
-    id: 20,
-    title: "PE-22-28",
-    category: "PEPTIDE",
-    price: "110.00 CHF",
-    badge: "NEU",
-    image: "/pe-22-28.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "PE-22-28 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/pe-22-28.png"],
-    inStock: true,
-  },
+   {
+  id: 20,
+  title: "PE-22-28",
+  category: "RESEARCH",
+  price: "110.00 CHF",
+  badge: "RESEARCH",
+  image: "/pe-22-28.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "PE-22-28 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/pe-22-28.png"],
+  inStock: true,
+},
 
-  {
-    id: 21,
-    title: "WOLVERINE",
-    category: "PEPTIDE",
-    price: "180.00 CHF",
-    badge: "NEU",
-    image: "/wolverine.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "WOLVERINE (BPC-157 + TB-500) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/wolverine.png"],
-    inStock: true,
-  },
+{
+  id: 21,
+  title: "WOLVERINE",
+  category: "RESEARCH",
+  price: "180.00 CHF",
+  badge: "RESEARCH",
+  image: "/wolverine.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "WOLVERINE (BPC-157 + TB-500) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/wolverine.png"],
+  inStock: true,
+},
 
-  {
-    id: 22,
-    title: "THYMULIN",
-    category: "PEPTIDE",
-    price: "109.00 CHF",
-    badge: "NEU",
-    image: "/thymulin.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "THYMULIN ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/thymulin.png"],
-    inStock: true,
-  },
+{
+  id: 22,
+  title: "THYMULIN",
+  category: "RESEARCH",
+  price: "109.00 CHF",
+  badge: "RESEARCH",
+  image: "/thymulin.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "THYMULIN ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/thymulin.png"],
+  inStock: true,
+},
 
-  {
-    id: 23,
-    title: "EPITALON",
-    category: "PEPTIDE",
-    price: "160.00 CHF",
-    badge: "NEU",
-    image: "/epitalon.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "EPITALON ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/epitalon.png"],
-    inStock: true,
-  },
+{
+  id: 23,
+  title: "EPITALON",
+  category: "RESEARCH",
+  price: "160.00 CHF",
+  badge: "RESEARCH",
+  image: "/epitalon.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "EPITALON ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/epitalon.png"],
+  inStock: true,
+},
 
-  {
-    id: 24,
-    title: "ADAMAX",
-    category: "PEPTIDE",
-    price: "110.00 CHF",
-    badge: "NEU",
-    image: "/adamax.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "ADAMAX ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/adamax.png"],
-    inStock: true,
-  },
+{
+  id: 24,
+  title: "ADAMAX",
+  category: "RESEARCH",
+  price: "110.00 CHF",
+  badge: "RESEARCH",
+  image: "/adamax.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "ADAMAX ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/adamax.png"],
+  inStock: true,
+},
 
-  {
-    id: 25,
-    title: "PT-141",
-    category: "PEPTIDE",
-    price: "90.00 CHF",
-    badge: "NEU",
-    image: "/pt-141.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "PT-141 (Bremelanotide) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/pt-141.png"],
-    inStock: true,
-  },
+{
+  id: 25,
+  title: "PT-141",
+  category: "RESEARCH",
+  price: "90.00 CHF",
+  badge: "RESEARCH",
+  image: "/pt-141.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "PT-141 (Bremelanotide) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/pt-141.png"],
+  inStock: true,
+},
 
-  {
-    id: 26,
-    title: "LL-37",
-    category: "PEPTIDE",
-    price: "98.00 CHF",
-    badge: "NEU",
-    image: "/ll-37.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "LL-37 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/ll-37.png"],
-    inStock: true,
-  },
+{
+  id: 26,
+  title: "LL-37",
+  category: "RESEARCH",
+  price: "98.00 CHF",
+  badge: "RESEARCH",
+  image: "/ll-37.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "LL-37 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/ll-37.png"],
+  inStock: true,
+},
 
-  {
-    id: 27,
-    title: "HCG",
-    category: "PEPTIDE",
-    price: "120.00 CHF",
-    badge: "NEU",
-    image: "/hcg.png",
-    variants: ["Vial", "Kartusche"],
-    description:
-      "HCG ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    details:
-      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/hcg.png"],
-    inStock: true,
-  },
+{
+  id: 27,
+  title: "HCG",
+  category: "RESEARCH",
+  price: "120.00 CHF",
+  badge: "RESEARCH",
+  image: "/hcg.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "HCG ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/hcg.png"],
+  inStock: true,
+},
 ];
 
 
