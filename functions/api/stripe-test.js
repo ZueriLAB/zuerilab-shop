@@ -69,8 +69,8 @@ const lineItems = [
     price_data: {
       currency: "chf",
       product_data: {
-        name: `Bestellung ${orderNumber}`,
-        description: orderDescription,
+        name: orderDescription,
+        description: `Bestellnummer: ${orderNumber}`,
       },
       unit_amount: Math.round(finalTotal * 100),
     },
