@@ -282,7 +282,7 @@ const products = [
     ],
     variants: ["Vial", "Kartusche"],
     description:
-      "Retatrutide ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+      "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
     details:
       "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
     gallery: ["/RETA10.png"],
