@@ -1193,20 +1193,16 @@ const renderProductCard = (product) => (
                   </div>
 
                   <h1 className="hero-title">
-                    Premium Performance
-                    Forschungs Produkte
-                    <br />
-                    mit klarem Fokus auf Qualität
-                  </h1>
+  Research Peptide & Laborprodukte
+  <br />
+  aus der Schweiz
+</h1>
 
                   <p className="hero-subtitle">
-                    Entdecke ausgewählte
-                    Forschungs Peptide und
-                    Performance-Produkte in einem
-                    klaren, diskreten und modernen
-                    Bestellprozess mit Versand aus
-                    der Schweiz
-                  </p>
+  Entdecke ausgewählte Research Peptide und Laborprodukte
+  für Forschungs-, Analyse- und Referenzzwecke.
+  Laborgeprüfte Produkte mit diskretem Versand aus der Schweiz.
+</p>
 
                   <div className="hero-actions">
 
