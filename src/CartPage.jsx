@@ -25,57 +25,7 @@ const [voucherCode, setVoucherCode] = useState(() => {
   return localStorage.getItem("voucherCode") || "";
 });
 
-const applyDiscount = () => {
-  const code = discountCode.trim().toUpperCase();
 
-  if (code === "SIBEL") {
-    setDiscount(0);
-    setVoucherCode("SIBEL");
-
-    localStorage.setItem("discount", "0");
-    localStorage.setItem("voucherCode", "SIBEL");
-
-    return;
-  }
-
-  if (code === "RETA10") {
-    setDiscount(10);
-    setVoucherCode("");
-
-    localStorage.setItem("discount", "10");
-    localStorage.removeItem("voucherCode");
-
-    return;
-  }
-
-  if (code === "WELCOME15") {
-    setDiscount(15);
-    setVoucherCode("");
-
-    localStorage.setItem("discount", "15");
-    localStorage.removeItem("voucherCode");
-
-    return;
-  }
-
-  if (code === "ANNA") {
-    setDiscount(20);
-    setVoucherCode("");
-
-    localStorage.setItem("discount", "20");
-    localStorage.removeItem("voucherCode");
-
-    return;
-  }
-
-  setDiscount(0);
-  setVoucherCode("");
-
-  localStorage.removeItem("discount");
-  localStorage.removeItem("voucherCode");
-
-  alert("Ungültiger Rabattcode");
-};
 const discountAmount = total * (discount / 100);
 
 const afterPercentDiscount =
@@ -88,6 +38,84 @@ const finalTotal = Math.max(
   0,
   afterPercentDiscount - voucherAmount
 );
+const applyDiscount = () => {
+  const code = discountCode.trim().toUpperCase();
+
+  // 80 CHF Gutschein
+  if (code === "SIBEL") {
+    setDiscount(0);
+    setVoucherCode("SIBEL");
+
+    localStorage.setItem("discount", "0");
+    localStorage.setItem("voucherCode", "SIBEL");
+
+    return;
+  }
+
+  // 10% Rabatt
+  if (code === "RETA10") {
+    setDiscount(10);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "10");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  // 15% Rabatt
+  if (code === "WELCOME15") {
+    setDiscount(15);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "15");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  // 20% Rabatt
+  if (code === "ANNA") {
+    setDiscount(20);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "20");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  // Bojan06 - 30% Rabatt
+  if (code === "BOJAN06") {
+    setDiscount(30);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "30");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  // Thien10 - 10% Rabatt
+  if (code === "THIEN10") {
+    setDiscount(10);
+    setVoucherCode("");
+
+    localStorage.setItem("discount", "10");
+    localStorage.removeItem("voucherCode");
+
+    return;
+  }
+
+  // Ungültiger Code
+  setDiscount(0);
+  setVoucherCode("");
+
+  localStorage.removeItem("discount");
+  localStorage.removeItem("voucherCode");
+
+  alert("Ungültiger Rabattcode");
+};
 
   return (
     <div className="page">
