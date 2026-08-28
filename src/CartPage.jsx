@@ -84,6 +84,26 @@ const applyDiscount = () => {
 
     return;
   }
+  // Loic35 - 20% Rabatt
+if (code === "LOIC35") {
+  setDiscount(20);
+  setVoucherCode("");
+
+  localStorage.setItem("discount", "20");
+  localStorage.removeItem("voucherCode");
+
+  return;
+}
+// Deal10 - 10% Rabatt
+if (code === "DEAL10") {
+  setDiscount(10);
+  setVoucherCode("");
+
+  localStorage.setItem("discount", "10");
+  localStorage.removeItem("voucherCode");
+
+  return;
+}
 
   // Bojan06 - 30% Rabatt
   if (code === "BOJAN06") {
