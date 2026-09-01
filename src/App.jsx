@@ -1317,23 +1317,23 @@ const renderProductCard = (product) => (
 
 </section>
     {/* =========================
-        AUGUST NEWS
+        September NEWS
     ========================= */}
 
     {augustProducts.length > 0 && (
       <section
         className="product-section"
-        id="august-news"
+        id="september-news"
       >
 
         <div className="section-heading-wrap">
 
           <span className="section-kicker">
-            August
+            SEPTEMBER
           </span>
 
           <h2 className="section-title">
-            AUGUST SALES
+            SEPTEMBER SALES
           </h2>
 
         </div>
