@@ -77,30 +77,35 @@ const researchNewsProducts = [
 ];
 
 const products = [
-  {
-  id: 30,
-  title: "GHK-CU 50mg",
-  category: "AUGUST SALES",
-  price: "30.00 CHF",
-  oldPrice: "80.00 CHF",
-  badge: "AUGUST",
-  image: "/GHK-CU.png",
-  variants: ["Vial", "Kartusche"],
-  description:
-    "GHK-CU – Hochreiner Laborwirkstoff für Forschungszwecke.",
-  details:
-    "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex in lyophilisierter Pulverform.",
-  gallery: ["/GHK-CU.png"],
-  inStock: true,
-},
+
+{
+    id: 30,
+    title: "RETATRUTIDE 10mg / 20mg",
+    category: "SEPTEMBER SALES",
+    price: "90.00 CHF",
+    oldPrice: "120.00 CHF",
+    badge: "SEPTEMBER",
+    image: "/RETA10.png",
+    doses: [
+      { label: "10 mg", price: "90.00 CHF" },
+      { label: "20 mg", price: "140.00 CHF" },
+    ],
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+    details:
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+    gallery: ["/RETA10.png"],
+    inStock: true,
+  },
 
 {
   id: 31,
   title: "5-Amino-1MQ",
-  category: "AUGUST SALES",
+  category: "SEPTEMBER SALES",
   price: "60.00 CHF",
   oldPrice: "80.00 CHF",
-  badge: "AUGUST",
+  badge: "SEPTEMBER",
   image: "/amino.png",
   variants: ["Vial", "Kartusche"],
   description:
@@ -114,10 +119,10 @@ const products = [
 {
   id: 32,
   title: "MT-2 10mg",
-  category: "AUGUST SALES",
+  category: "SEPTEMBER SALES",
   price: "30.00 CHF",
   oldPrice: "60.00 CHF",
-  badge: "AUGUST",
+  badge: "SEPTEMBER",
   image: "/mt2.png",
   variants: ["Vial", "Kartusche"],
   description:
@@ -130,10 +135,10 @@ const products = [
 {
   id: 33,
   title: "Semax 10mg",
-  category: "AUGUST SALES",
+  category: "SEPTEMBER SALES",
   price: "30.00 CHF",
   oldPrice: "60.00 CHF",
-  badge: "AUGUST",
+  badge: "SEPTEMBER",
   image: "/semax2.png",
   variants: ["Vial", "Kartusche"],
   description:
@@ -272,13 +277,13 @@ const products = [
     id: 3,
     title: "RETATRUTIDE 10mg / 20mg",
     category: "PEPTIDE",
-    price: "120.00 CHF",
-    oldPrice: "130.00 CHF",
+    price: "90.00 CHF",
+    oldPrice: "120.00 CHF",
     badge: "BESTSELLER",
     image: "/RETA10.png",
     doses: [
-      { label: "10 mg", price: "120.00 CHF" },
-      { label: "20 mg", price: "170.00 CHF" },
+      { label: "10 mg", price: "90.00 CHF" },
+      { label: "20 mg", price: "140.00 CHF" },
     ],
     variants: ["Vial", "Kartusche"],
     description:
@@ -395,8 +400,8 @@ const products = [
     id: 10,
     title: "SEMAX 10mg",
     category: "PEPTIDE",
-    price: "90.00 CHF",
-    oldPrice: "99.00 CHF",
+    price: "30.00 CHF",
+    oldPrice: "60.00 CHF",
     badge: "SALE",
     image: "/semax2.png",
     variants: ["Vial", "Kartusche"],
@@ -623,7 +628,7 @@ const products = [
 
 
 const augustProducts = products.filter(
-  (product) => product.category === "AUGUST SALES"
+  (product) => product.category === "SEPTEMBER SALES"
 );
 
 export default function App() {
@@ -820,7 +825,7 @@ const renderProductCard = (product) => (
 <div className="price-row">
   <span
     className={
-      product.category === "AUGUST SALES"
+      product.category === "SEPTEMBER SALES"
         ? "price august-price"
         : "price"
     }
@@ -831,7 +836,7 @@ const renderProductCard = (product) => (
   {product.oldPrice && (
     <span
       className={
-        product.category === "AUGUST SALES"
+        product.category === "SEPTEMBER SALES"
           ? "old-price august-old-price"
           : "old-price"
       }
