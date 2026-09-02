@@ -643,15 +643,21 @@ export default function App() {
       return [];
     }
   });
-  const [searchTerm, setSearchTerm] = useState("");
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+ const [searchTerm, setSearchTerm] = useState("");
 
-  const [ageConfirmed, setAgeConfirmed] = useState(() => {
-    return (
-      localStorage.getItem("swisspharmalab_age_confirmed") === "true"
-    );
-  });
+const [isCartOpen, setIsCartOpen] = useState(false);
+
+// Altes Testreport-Popup
+const [showPopup, setShowPopup] = useState(false);
+
+// Neues September-Sales-Popup
+const [showSeptemberPopup, setShowSeptemberPopup] = useState(false);
+
+const [ageConfirmed, setAgeConfirmed] = useState(() => {
+  return (
+    localStorage.getItem("swisspharmalab_age_confirmed") === "true"
+  );
+});
 
   const [ageAccepted, setAgeAccepted] = useState(false);
 
@@ -662,6 +668,23 @@ export default function App() {
       console.error("Fehler beim Speichern des Warenkorbs:", error);
     }
   }, [cart]);
+  useEffect(() => {
+  const alreadyShown =
+    sessionStorage.getItem("september_sales_popup_shown");
+
+  if (!alreadyShown) {
+    const timer = setTimeout(() => {
+      setShowSeptemberPopup(true);
+
+      sessionStorage.setItem(
+        "september_sales_popup_shown",
+        "true"
+      );
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }
+}, []);
 
   const filteredProducts = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -1066,6 +1089,126 @@ const renderProductCard = (product) => (
                   </div>
                 </div>
               )}
+
+              {showSeptemberPopup && ageConfirmed && (
+  <div className="september-popup-overlay">
+    <div className="september-popup">
+
+      <button
+        className="september-popup-close"
+        onClick={() => setShowSeptemberPopup(false)}
+        aria-label="Popup schließen"
+      >
+        ×
+      </button>
+
+      <div className="september-popup-top">
+
+        <span className="september-popup-kicker">
+          SEPTEMBER
+        </span>
+
+        <h2>SEPTEMBER SALES</h2>
+
+        <div className="september-popup-line">
+          <span></span>
+          <b>+</b>
+          <span></span>
+        </div>
+
+        <p>
+          Ausgewählte Research-Produkte im September
+          jetzt zum Aktionspreis.
+        </p>
+
+      </div>
+
+      <div className="september-popup-products">
+
+        <div className="september-popup-product">
+          <img
+            src="/RETA10.png"
+            alt="Retatrutide 10mg / 20mg"
+          />
+
+          <h3>RETATRUTIDE</h3>
+          <small>10mg / 20mg</small>
+
+          <div className="september-popup-price">
+            <strong>90.00 CHF</strong>
+            <span>120.00 CHF</span>
+          </div>
+        </div>
+
+
+        <div className="september-popup-product">
+          <img
+            src="/amino.png"
+            alt="5-Amino-1MQ"
+          />
+
+          <h3>5-Amino-1MQ</h3>
+
+          <div className="september-popup-price">
+            <strong>60.00 CHF</strong>
+            <span>80.00 CHF</span>
+          </div>
+        </div>
+
+
+        <div className="september-popup-product">
+          <img
+            src="/mt2.png"
+            alt="MT-2 10mg"
+          />
+
+          <h3>MT-2 10mg</h3>
+
+          <div className="september-popup-price">
+            <strong>30.00 CHF</strong>
+            <span>60.00 CHF</span>
+          </div>
+        </div>
+
+
+        <div className="september-popup-product">
+          <img
+            src="/semax2.png"
+            alt="Semax 10mg"
+          />
+
+          <h3>Semax 10mg</h3>
+
+          <div className="september-popup-price">
+            <strong>30.00 CHF</strong>
+            <span>60.00 CHF</span>
+          </div>
+        </div>
+
+      </div>
+
+      <button
+        className="september-popup-button"
+        onClick={() => {
+          setShowSeptemberPopup(false);
+
+          setTimeout(() => {
+            document
+              .getElementById("august-news")
+              ?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+          }, 100);
+        }}
+      >
+        SEPTEMBER SALES ANSEHEN
+        <span>›</span>
+      </button>
+
+    </div>
+  </div>
+)}
 
               {/* =========================
                   TOPBAR
