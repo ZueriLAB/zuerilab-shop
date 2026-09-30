@@ -5348,12 +5348,13 @@ body {
   .research-news-image {
     transform: scale(1.07);
   }
-}
-/* =========================================
-   SEPTEMBER SALES POPUP
+
+  }
+  /* =========================================
+   OKTOBER SALES POPUP
 ========================================= */
 
-.september-popup-overlay {
+.oktober-popup-overlay {
   position: fixed;
   inset: 0;
   z-index: 99999;
@@ -5370,7 +5371,8 @@ body {
   -webkit-backdrop-filter: blur(7px);
 }
 
-.september-popup {
+
+.oktober-popup {
   position: relative;
 
   width: min(1120px, 94vw);
@@ -5406,7 +5408,7 @@ body {
 
 /* dezentes Hintergrundmuster */
 
-.september-popup::before {
+.oktober-popup::before {
   content: "";
 
   position: absolute;
@@ -5448,7 +5450,7 @@ body {
 
 /* Inhalt immer über Muster */
 
-.september-popup > * {
+.oktober-popup > * {
   position: relative;
   z-index: 2;
 }
@@ -5456,7 +5458,7 @@ body {
 
 /* SCHLIESSEN */
 
-.september-popup-close {
+.oktober-popup-close {
   position: absolute;
   top: 16px;
   right: 18px;
@@ -5486,12 +5488,13 @@ body {
 
 /* HEADER */
 
-.september-popup-top {
+.oktober-popup-top {
   text-align: center;
   margin-bottom: 24px;
 }
 
-.september-popup-kicker {
+
+.oktober-popup-kicker {
   display: inline-block;
 
   padding: 4px 8px;
@@ -5507,7 +5510,8 @@ body {
   letter-spacing: 1.2px;
 }
 
-.september-popup-top h2 {
+
+.oktober-popup-top h2 {
   margin: 10px 0 8px;
 
   color: #111;
@@ -5518,7 +5522,8 @@ body {
   letter-spacing: 3px;
 }
 
-.september-popup-top p {
+
+.oktober-popup-top p {
   margin: 10px auto 0;
 
   max-width: 480px;
@@ -5532,7 +5537,7 @@ body {
 
 /* kleine Linie unter Titel */
 
-.september-popup-line {
+.oktober-popup-line {
   width: 240px;
   max-width: 70%;
 
@@ -5545,7 +5550,8 @@ body {
   gap: 8px;
 }
 
-.september-popup-line span {
+
+.oktober-popup-line span {
   flex: 1;
 
   height: 1px;
@@ -5553,7 +5559,8 @@ body {
   background: #c9c9c9;
 }
 
-.september-popup-line b {
+
+.oktober-popup-line b {
   width: 18px;
   height: 18px;
 
@@ -5574,7 +5581,7 @@ body {
    PRODUKTE
 ========================================= */
 
-.september-popup-products {
+.oktober-popup-products {
   display: grid;
 
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -5582,7 +5589,8 @@ body {
   gap: 12px;
 }
 
-.september-popup-product {
+
+.oktober-popup-product {
   min-width: 0;
 
   display: flex;
@@ -5601,7 +5609,8 @@ body {
   text-align: center;
 }
 
-.september-popup-product img {
+
+.oktober-popup-product img {
   width: 100%;
   height: 210px;
 
@@ -5612,7 +5621,8 @@ body {
   object-fit: contain;
 }
 
-.september-popup-product h3 {
+
+.oktober-popup-product h3 {
   margin: 3px 0 2px;
 
   color: #111;
@@ -5622,7 +5632,8 @@ body {
   font-weight: 900;
 }
 
-.september-popup-product small {
+
+.oktober-popup-product small {
   min-height: 18px;
 
   color: #555;
@@ -5633,7 +5644,7 @@ body {
 
 /* PREISE */
 
-.september-popup-price {
+.oktober-popup-price {
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -5645,7 +5656,8 @@ body {
   padding-top: 13px;
 }
 
-.september-popup-price strong {
+
+.oktober-popup-price strong {
   color: #00a000;
 
   font-size: 18px;
@@ -5653,7 +5665,8 @@ body {
   font-weight: 900;
 }
 
-.september-popup-price span {
+
+.oktober-popup-price span {
   color: #999;
 
   font-size: 11px;
@@ -5664,7 +5677,7 @@ body {
 
 /* BUTTON */
 
-.september-popup-button {
+.oktober-popup-button {
   width: min(430px, 100%);
 
   display: flex;
@@ -5699,7 +5712,8 @@ body {
   cursor: pointer;
 }
 
-.september-popup-button span {
+
+.oktober-popup-button span {
   font-size: 20px;
 }
 
@@ -5710,43 +5724,43 @@ body {
 
 @media (max-width: 900px) {
 
-  .september-popup-overlay {
+  .oktober-popup-overlay {
     padding: 14px;
   }
 
-  .september-popup {
+  .oktober-popup {
     width: 96vw;
     max-height: 92vh;
 
     padding: 26px 18px 20px;
   }
 
-  .september-popup-top {
+  .oktober-popup-top {
     margin-bottom: 18px;
   }
 
-  .september-popup-top h2 {
+  .oktober-popup-top h2 {
     font-size: 30px;
     letter-spacing: 2px;
   }
 
-  .september-popup-products {
+  .oktober-popup-products {
     gap: 8px;
   }
 
-  .september-popup-product {
+  .oktober-popup-product {
     padding: 10px 8px 12px;
   }
 
-  .september-popup-product img {
+  .oktober-popup-product img {
     height: 165px;
   }
 
-  .september-popup-product h3 {
+  .oktober-popup-product h3 {
     font-size: 13px;
   }
 
-  .september-popup-price strong {
+  .oktober-popup-price strong {
     font-size: 15px;
   }
 }
@@ -5758,11 +5772,11 @@ body {
 
 @media (max-width: 600px) {
 
-  .september-popup-overlay {
+  .oktober-popup-overlay {
     padding: 7px;
   }
 
-  .september-popup {
+  .oktober-popup {
     width: 100%;
     max-height: 94vh;
 
@@ -5771,7 +5785,7 @@ body {
     border-radius: 16px;
   }
 
-  .september-popup-close {
+  .oktober-popup-close {
     top: 7px;
     right: 8px;
 
@@ -5781,17 +5795,17 @@ body {
     font-size: 23px;
   }
 
-  .september-popup-top {
+  .oktober-popup-top {
     margin-bottom: 10px;
   }
 
-  .september-popup-kicker {
+  .oktober-popup-kicker {
     padding: 2px 6px;
 
     font-size: 7px;
   }
 
-  .september-popup-top h2 {
+  .oktober-popup-top h2 {
     margin: 5px 0 4px;
 
     font-size: 21px;
@@ -5799,18 +5813,18 @@ body {
     letter-spacing: 1px;
   }
 
-  .september-popup-line {
+  .oktober-popup-line {
     width: 150px;
   }
 
-  .september-popup-line b {
+  .oktober-popup-line b {
     width: 14px;
     height: 14px;
 
     font-size: 10px;
   }
 
-  .september-popup-top p {
+  .oktober-popup-top p {
     margin-top: 5px;
 
     max-width: 280px;
@@ -5819,45 +5833,39 @@ body {
     line-height: 1.25;
   }
 
-  /*
-    Wichtig:
-    Auf Mobile bleiben die vier Produkte nebeneinander,
-    genau wie auf deinem Referenzbild.
-  */
-
-  .september-popup-products {
+  .oktober-popup-products {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 4px;
   }
 
-  .september-popup-product {
+  .oktober-popup-product {
     padding: 5px 3px 7px;
 
     border-radius: 8px;
   }
 
-  .september-popup-product img {
+  .oktober-popup-product img {
     height: 105px;
 
     margin-bottom: 3px;
   }
 
-  .september-popup-product h3 {
+  .oktober-popup-product h3 {
     margin: 2px 0;
 
     font-size: 8.5px;
     line-height: 1.05;
   }
 
-  .september-popup-product small {
+  .oktober-popup-product small {
     min-height: 11px;
 
     font-size: 7px;
     line-height: 1;
   }
 
-  .september-popup-price {
+  .oktober-popup-price {
     flex-direction: column;
 
     gap: 2px;
@@ -5865,15 +5873,15 @@ body {
     padding-top: 6px;
   }
 
-  .september-popup-price strong {
+  .oktober-popup-price strong {
     font-size: 9px;
   }
 
-  .september-popup-price span {
+  .oktober-popup-price span {
     font-size: 7px;
   }
 
-  .september-popup-button {
+  .oktober-popup-button {
     width: min(300px, 90%);
 
     margin-top: 10px;
@@ -5882,7 +5890,7 @@ body {
     font-size: 9px;
   }
 
-  .september-popup-button span {
+  .oktober-popup-button span {
     font-size: 15px;
   }
 }

@@ -78,13 +78,31 @@ const researchNewsProducts = [
 
 const products = [
 
+
 {
-    id: 30,
+  id: 30,
+  title: "Ipamorelin",
+  category: "Oktober SALES",
+  price: "50.00 CHF",
+  oldPrice: "70.00 CHF",
+  badge: "Oktober",
+  image: "/IPA.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "Ipamorelin – Hochreiner Laborwirkstoff für Forschungszwecke.",
+  details:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  gallery: ["/IPA.png"],
+  inStock: true,
+},
+
+{
+    id: 31,
     title: "RETATRUTIDE 10mg / 20mg",
-    category: "SEPTEMBER SALES",
+    category: "Oktober SALES",
     price: "90.00 CHF",
     oldPrice: "120.00 CHF",
-    badge: "SEPTEMBER",
+    badge: "Oktober",
     image: "/RETA10.png",
     doses: [
       { label: "10 mg", price: "90.00 CHF" },
@@ -100,52 +118,33 @@ const products = [
   },
 
 {
-  id: 31,
-  title: "5-Amino-1MQ",
-  category: "SEPTEMBER SALES",
-  price: "60.00 CHF",
-  oldPrice: "80.00 CHF",
-  badge: "SEPTEMBER",
-  image: "/amino.png",
-  variants: ["Vial", "Kartusche"],
-  description:
-    "5-Amino-1MQ – Hochreiner Laborwirkstoff für Forschungszwecke.",
-  details:
-    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-  gallery: ["/amino.png"],
-  inStock: true,
-},
-
-{
   id: 32,
-  title: "MT-2 10mg",
-  category: "SEPTEMBER SALES",
-  price: "30.00 CHF",
-  oldPrice: "60.00 CHF",
-  badge: "SEPTEMBER",
-  image: "/mt2.png",
-  variants: ["Vial", "Kartusche"],
+  title: "Research Peptide Case",
+  category: "Oktober SALES",
+  price: "39.00 CHF",
+  oldPrice: "49.00 CHF",
+  badge: "Oktober",
+  image: "/case.png",
   description:
     "MT-2 – Hochreiner Laborwirkstoff für Forschungszwecke.",
   details:
-    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-  gallery: ["/mt2.png"],
+    "Passend für 4 Vials und Div. Zubehör. Erhältlich in schwarz, rot und hell-braun.",
+  gallery: ["/case.png"],
   inStock: true,
 },
 {
   id: 33,
-  title: "Semax 10mg",
-  category: "SEPTEMBER SALES",
-  price: "30.00 CHF",
-  oldPrice: "60.00 CHF",
-  badge: "SEPTEMBER",
-  image: "/semax2.png",
-  variants: ["Vial", "Kartusche"],
+  title: "The Ordinary GHK-CU Serum 3ml",
+  category: "Oktober SALES",
+  price: "49.00 CHF",
+  oldPrice: "59.00 CHF",
+  badge: "Oktober",
+  image: "/serum.png",
   description:
-    "Semax – Hochreiner Laborwirkstoff für Forschungszwecke.",
+    "The Ordinary GHK-CU Serum 3ml ",
   details:
-    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-  gallery: ["/semaxx.png"],
+    "Das Multi-Peptide + Copper Peptides 1% Serum von The Ordinary ist eine Formel, die sich ideal für reife Haut eignet und das Erscheinungsbild einer glatten, kollagenreich wirkenden Haut unterstützt. Die Pflege enthält eine Kombination aus Peptiden, die das Erscheinungsbild feiner Linien mildert und die Haut sichtbar straffer und strahlender wirken lässt. Aminosäuren und Hyaluronsäure sorgen zusätzlich für einen intensiven Feuchtigkeitsboost. Das multifunktionale Serum hilft außerdem, die Haut vor schädlichen Umwelteinflüssen zu schützen, die zu vorzeitiger Hautalterung beitragen.",
+  gallery: ["/serum.png"],
   inStock: true,
 },
 
@@ -332,8 +331,8 @@ const products = [
     id: 6,
     title: "IPAMORELIN",
     category: "PEPTIDE",
-    price: "70.00 CHF",
-    oldPrice: "75.00 CHF",
+    price: "50.00 CHF",
+    oldPrice: "70.00 CHF",
     badge: "SALE",
     image: "/IPA.png",
     variants: ["Vial", "Kartusche"],
@@ -628,7 +627,7 @@ const products = [
 
 
 const augustProducts = products.filter(
-  (product) => product.category === "SEPTEMBER SALES"
+  (product) => product.category === "Oktober SALES"
 );
 
 export default function App() {
@@ -651,7 +650,7 @@ const [isCartOpen, setIsCartOpen] = useState(false);
 const [showPopup, setShowPopup] = useState(false);
 
 // Neues September-Sales-Popup
-const [showSeptemberPopup, setShowSeptemberPopup] = useState(false);
+const [showOktoberPopup, setShowOktoberPopup] = useState(false);
 
 const [ageConfirmed, setAgeConfirmed] = useState(() => {
   return (
@@ -674,7 +673,7 @@ const [ageConfirmed, setAgeConfirmed] = useState(() => {
 
   if (!alreadyShown) {
     const timer = setTimeout(() => {
-      setShowSeptemberPopup(true);
+      setShowOktoberPopup(true);
 
       sessionStorage.setItem(
         "september_sales_popup_shown",
@@ -848,7 +847,7 @@ const renderProductCard = (product) => (
 <div className="price-row">
   <span
     className={
-      product.category === "SEPTEMBER SALES"
+      product.category === "Oktober SALES"
         ? "price august-price"
         : "price"
     }
@@ -859,7 +858,7 @@ const renderProductCard = (product) => (
   {product.oldPrice && (
     <span
       className={
-        product.category === "SEPTEMBER SALES"
+        product.category === "Oktober SALES"
           ? "old-price august-old-price"
           : "old-price"
       }
@@ -1090,124 +1089,126 @@ const renderProductCard = (product) => (
                 </div>
               )}
 
-              {showSeptemberPopup && ageConfirmed && (
-  <div className="september-popup-overlay">
-    <div className="september-popup">
+              {showOktoberPopup && ageConfirmed && (
+  <div className="oktober-popup-overlay">
+    <div className="oktober-popup">
 
       <button
-        className="september-popup-close"
-        onClick={() => setShowSeptemberPopup(false)}
-        aria-label="Popup schließen"
-      >
-        ×
-      </button>
+  className="oktober-popup-close"
+  onClick={() => setShowOktoberPopup(false)}
+  aria-label="Popup schließen"
+>
+  ×
+</button>
 
-      <div className="september-popup-top">
+<div className="oktober-popup-top">
+  <span className="oktober-popup-kicker">
+    OKTOBER
+  </span>
 
-        <span className="september-popup-kicker">
-          SEPTEMBER
-        </span>
+  <h2>Oktober SALES</h2>
 
-        <h2>SEPTEMBER SALES</h2>
+  <div className="oktober-popup-line">
+    <span></span>
+    <b>+</b>
+    <span></span>
+  </div>
 
-        <div className="september-popup-line">
-          <span></span>
-          <b>+</b>
-          <span></span>
-        </div>
+  <p>
+    Ausgewählte Research-Produkte im Oktober
+    jetzt zum Aktionspreis.
+  </p>
+</div>
 
-        <p>
-          Ausgewählte Research-Produkte im September
-          jetzt zum Aktionspreis.
-        </p>
+<div className="oktober-popup-products">
 
-      </div>
+  {/* IPAMORELIN */}
+  <div className="oktober-popup-product">
+    <img
+      src="/IPA.png"
+      alt="Ipamorelin"
+    />
 
-      <div className="september-popup-products">
+    <h3>Ipamorelin</h3>
 
-        <div className="september-popup-product">
-          <img
-            src="/RETA10.png"
-            alt="Retatrutide 10mg / 20mg"
-          />
-
-          <h3>RETATRUTIDE</h3>
-          <small>10mg / 20mg</small>
-
-          <div className="september-popup-price">
-            <strong>90.00 CHF</strong>
-            <span>120.00 CHF</span>
-          </div>
-        </div>
-
-
-        <div className="september-popup-product">
-          <img
-            src="/amino.png"
-            alt="5-Amino-1MQ"
-          />
-
-          <h3>5-Amino-1MQ</h3>
-
-          <div className="september-popup-price">
-            <strong>60.00 CHF</strong>
-            <span>80.00 CHF</span>
-          </div>
-        </div>
-
-
-        <div className="september-popup-product">
-          <img
-            src="/mt2.png"
-            alt="MT-2 10mg"
-          />
-
-          <h3>MT-2 10mg</h3>
-
-          <div className="september-popup-price">
-            <strong>30.00 CHF</strong>
-            <span>60.00 CHF</span>
-          </div>
-        </div>
-
-
-        <div className="september-popup-product">
-          <img
-            src="/semax2.png"
-            alt="Semax 10mg"
-          />
-
-          <h3>Semax 10mg</h3>
-
-          <div className="september-popup-price">
-            <strong>30.00 CHF</strong>
-            <span>60.00 CHF</span>
-          </div>
-        </div>
-
-      </div>
-
-      <button
-        className="september-popup-button"
-        onClick={() => {
-          setShowSeptemberPopup(false);
-
-          setTimeout(() => {
-            document
-              .getElementById("august-news")
-              ?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-          }, 100);
-        }}
-      >
-        SEPTEMBER SALES ANSEHEN
-        <span>›</span>
-      </button>
-
+    <div className="oktober-popup-price">
+      <strong>50.00 CHF</strong>
+      <span>70.00 CHF</span>
     </div>
   </div>
+
+
+  {/* RETATRUTIDE */}
+  <div className="oktober-popup-product">
+    <img
+      src="/RETA10.png"
+      alt="Retatrutide 10mg / 20mg"
+    />
+
+    <h3>RETATRUTIDE</h3>
+    <small>10mg / 20mg</small>
+
+    <div className="oktober-popup-price">
+      <strong>90.00 CHF</strong>
+      <span>120.00 CHF</span>
+    </div>
+  </div>
+
+
+  {/* RESEARCH PEPTIDE CASE */}
+  <div className="oktober-popup-product">
+    <img
+      src="/case.png"
+      alt="Research Peptide Case"
+    />
+
+    <h3>Research Peptide Case</h3>
+
+    <div className="oktober-popup-price">
+      <strong>39.00 CHF</strong>
+      <span>49.00 CHF</span>
+    </div>
+  </div>
+
+
+  {/* GHK-CU SERUM */}
+  <div className="oktober-popup-product">
+    <img
+      src="/serum.png"
+      alt="The Ordinary GHK-CU Serum 3ml"
+    />
+
+    <h3>The Ordinary GHK-CU Serum 3ml</h3>
+
+    <div className="oktober-popup-price">
+      <strong>49.00 CHF</strong>
+      <span>59.00 CHF</span>
+    </div>
+  </div>
+
+</div>
+
+<button
+  className="oktober-popup-button"
+  onClick={() => {
+    setShowOktoberPopup(false);
+
+    setTimeout(() => {
+      document
+        .getElementById("august-news")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+    }, 100);
+  }}
+>
+  Oktober SALES ANSEHEN
+  <span>›</span>
+</button>
+
+</div>
+</div>
 )}
 
               {/* =========================
@@ -1460,23 +1461,23 @@ const renderProductCard = (product) => (
 
 </section>
     {/* =========================
-        September NEWS
+        Oktober NEWS
     ========================= */}
 
     {augustProducts.length > 0 && (
       <section
         className="product-section"
-        id="september-news"
+        id="oktober-news"
       >
 
         <div className="section-heading-wrap">
 
           <span className="section-kicker">
-            SEPTEMBER
+            Oktober
           </span>
 
           <h2 className="section-title">
-            SEPTEMBER SALES
+            Oktober SALES
           </h2>
 
         </div>
