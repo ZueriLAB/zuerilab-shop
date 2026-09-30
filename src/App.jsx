@@ -126,7 +126,7 @@ const products = [
   badge: "Oktober",
   image: "/case.png",
   description:
-    "MT-2 – Hochreiner Laborwirkstoff für Forschungszwecke.",
+    "Peptide Aufbewahrungs Case.",
   details:
     "Passend für 4 Vials und Div. Zubehör. Erhältlich in schwarz, rot und hell-braun.",
   gallery: ["/case.png"],
