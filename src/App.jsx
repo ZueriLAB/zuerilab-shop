@@ -100,13 +100,13 @@ const products = [
     id: 31,
     title: "RETATRUTIDE 10mg / 20mg",
     category: "Oktober SALES",
-    price: "90.00 CHF",
+    price: "110.00 CHF",
     oldPrice: "120.00 CHF",
     badge: "Oktober",
     image: "/RETA10.png",
     doses: [
-      { label: "10 mg", price: "90.00 CHF" },
-      { label: "20 mg", price: "140.00 CHF" },
+      { label: "10 mg", price: "110.00 CHF" },
+      { label: "20 mg", price: "160.00 CHF" },
     ],
     variants: ["Vial", "Kartusche"],
     description:
@@ -276,13 +276,13 @@ const products = [
     id: 3,
     title: "RETATRUTIDE 10mg / 20mg",
     category: "PEPTIDE",
-    price: "90.00 CHF",
+    price: "110.00 CHF",
     oldPrice: "120.00 CHF",
     badge: "BESTSELLER",
     image: "/RETA10.png",
     doses: [
-      { label: "10 mg", price: "90.00 CHF" },
-      { label: "20 mg", price: "140.00 CHF" },
+      { label: "10 mg", price: "110.00 CHF" },
+      { label: "20 mg", price: "160.00 CHF" },
     ],
     variants: ["Vial", "Kartusche"],
     description:
