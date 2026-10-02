@@ -1149,8 +1149,8 @@ const renderProductCard = (product) => (
     <small>10mg / 20mg</small>
 
     <div className="oktober-popup-price">
-      <strong>90.00 CHF</strong>
-      <span>120.00 CHF</span>
+      <strong>110.00 CHF</strong>
+      <span>160.00 CHF</span>
     </div>
   </div>
 
