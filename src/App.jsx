@@ -1420,46 +1420,7 @@ const renderProductCard = (product) => (
  ) : (
 
   <>
-<section className="research-news-section">
 
-  <div className="research-news-heading">
-    <span>NEU</span>
-    <h2>NEUE RESEARCH PRODUKTE</h2>
-  </div>
-
-  <div className="research-news-grid">
-    {researchNewsProducts.map((product) => (
-      <div
-        className="research-news-card"
-        key={product.id}
-        style={{ "--accent": product.color }}
-      >
-        <div className="research-news-info">
-          <span className="research-news-badge">NEU</span>
-
-          <h3>{product.name}</h3>
-          <p>{product.subtitle}</p>
-
-          <Link
-            to={`/produkt/${product.id}`}
-            className="research-news-button"
-          >
-            Jetzt ansehen →
-          </Link>
-        </div>
-
-        <div className="research-news-image-wrap">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="research-news-image"
-          />
-        </div>
-      </div>
-    ))}
-  </div>
-
-</section>
     {/* =========================
         Oktober NEWS
     ========================= */}
@@ -1537,6 +1498,8 @@ const renderProductCard = (product) => (
                     </section>
                   )}
 
+                  
+
                   {/* =========================
                       PEPTIDE
                   ========================= */}
@@ -1578,6 +1541,47 @@ const renderProductCard = (product) => (
 
                     </section>
                   )}
+
+                  <section className="research-news-section">
+
+  <div className="research-news-heading">
+    <span>NEU</span>
+    <h2>NEUE RESEARCH PRODUKTE</h2>
+  </div>
+
+  <div className="research-news-grid">
+    {researchNewsProducts.map((product) => (
+      <div
+        className="research-news-card"
+        key={product.id}
+        style={{ "--accent": product.color }}
+      >
+        <div className="research-news-info">
+          <span className="research-news-badge">NEU</span>
+
+          <h3>{product.name}</h3>
+          <p>{product.subtitle}</p>
+
+          <Link
+            to={`/produkt/${product.id}`}
+            className="research-news-button"
+          >
+            Jetzt ansehen →
+          </Link>
+        </div>
+
+        <div className="research-news-image-wrap">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="research-news-image"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+
+</section>
 
                   {/* =========================
                       MUSKELAUFBAU
