@@ -236,9 +236,14 @@ export default function ProductPage({ products, addToCart, cart }) {
             ✔ Sichere Bestellung
           </div>
 
-          {(product.category === "PEPTIDE" ||
-            product.category ===
-              "AUGUST SALES") && (
+       {(product.category === "PEPTIDE" ||
+  product.category === "AUGUST SALES") &&
+ ![
+  "1 x Pack Alcohol Pads",
+  "10 x PEN Nadel 31G x 5mm",
+  "10 x Insulinspritzen 1ml 30g x 6/8mm",
+  "BAC Water 3ml"
+].includes(product.title) && (
 
             <div className="bonus-box">
 

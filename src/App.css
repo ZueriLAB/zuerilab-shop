@@ -5894,3 +5894,99 @@ body {
     font-size: 15px;
   }
 }
+/* SPECIAL OFFERS – volle Breite */
+
+.special-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  align-items: stretch;
+}
+
+/* Produktkarten vollständig ausfüllen */
+
+.special-offers-grid > div {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+}
+
+.special-offers-grid .card {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .special-offers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .special-offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Produktdetail – weisser Bildhintergrund */
+
+.detail-gallery {
+  background: #ffffff !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.detail-main-image {
+  background: #ffffff !important;
+  object-fit: contain !important;
+}
+
+/* STARTSEITE – weisser Bildhintergrund */
+
+.product-grid .image-wrap {
+  background: #ffffff !important;
+}
+
+.product-grid .card-image {
+  background: #ffffff !important;
+  object-fit: contain !important;
+}
+
+/* Auch auf Handy und Tablet */
+.product-grid .image-wrap img {
+  background-color: #ffffff !important;
+}
+
+
+/* WARENKORB POPUP – PRODUKTBILDER */
+
+.cart-drawer-item img,
+.cart-popup-item img,
+.mini-cart-item img {
+  width: 75px !important;
+  height: 75px !important;
+  object-fit: contain !important;
+  background-color: #ffffff !important;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+/* Bildcontainer */
+.cart-drawer-item,
+.cart-popup-item,
+.mini-cart-item {
+  align-items: center;
+}
+/* Warenkorb-Popup: Produktbilder */
+
+.cart-drawer img,
+.cart-popup img {
+  background: #fff !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}

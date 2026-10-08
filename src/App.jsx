@@ -78,10 +78,61 @@ const researchNewsProducts = [
 
 const products = [
 
+  {
+  id: 50,
+  title: "RETATRUTIDE 10mg + MOTS-C 10mg",
+  category: "Special Offers",
+  price: "140.00 CHF",
+  oldPrice: "190.00 CHF",
+  badge: "Special Offers",
+  image: "/retamots.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  details:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  gallery: ["/retamots.png"],
+  inStock: true,
+},
+
+{
+    id: 51,
+    title: "RETATRUTIDE 5 x 10mg",
+    category: "Special Offers",
+    price: "320.00 CHF",
+    oldPrice: "420.00 CHF",
+    badge: "Special Offers",
+    image: "/5reta.png",
+  
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+    details:
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+    gallery: ["/5reta.png"],
+    inStock: true,
+  },
+
+{
+  id: 52,
+  title: "RETATRUTIDE 3 x 10mg",
+  category: "Special Offers",
+  price: "240.00 CHF",
+  oldPrice: "330.00 CHF",
+  badge: "Special Offers",
+  image: "/3reta.png",
+   variants: ["Vial", "Kartusche"],
+  description:
+    "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+  details:
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+  gallery: ["/3reta.png"],
+  inStock: true,
+},
 
 {
   id: 30,
-  title: "Ipamorelin",
+  title: "IPAMORELIN",
   category: "Oktober SALES",
   price: "50.00 CHF",
   oldPrice: "70.00 CHF",
@@ -496,6 +547,70 @@ const products = [
     gallery: ["/TB500.png"],
     inStock: true,
   },
+    {
+    id: 16,
+    title: "1 x Pack Alcohol Pads",
+    category: "PEPTIDE",
+    price: "12.00 CHF",
+    oldPrice: "15.00 CHF",
+    badge: "SALE",
+    image: "/pads.png",
+  
+    description:
+      "100 Stk Sterile and individually packaged for maximum hygiene.",
+    details:
+      "100 Stk Sterile and individually packaged for maximum hygiene.",
+    gallery: ["/pads.png"],
+    inStock: true,
+  },
+    {
+    id: 17,
+    title: "10 x PEN Nadel 31G x 5mm",
+    category: "PEPTIDE",
+    price: "5.00 CHF",
+    oldPrice: "8.00 CHF",
+    badge: "SALE",
+    image: "/pennadel.png",
+
+    description:
+      "10 x Disposable needles for insulin injection devices.",
+    details:
+      "10 x Disposable needles for insulin injection devices.",
+    gallery: ["/pennadel.png"],
+    inStock: true,
+  },
+    {
+    id: 18,
+    title: "10 x Insulinspritzen 1ml 30g x 6/8mm",
+    category: "PEPTIDE",
+    price: "10.00 CHF",
+    oldPrice: "12.00 CHF",
+    badge: "SALE",
+    image: "/insulin.png",
+  
+    description:
+      "Insulinspritzen sind sterile Produkte für den Einmalgebrauch und sollen nicht wiederverwendet werden!.",
+    details:
+      "Insulinspritzen sind sterile Produkte für den Einmalgebrauch und sollen nicht wiederverwendet werden!.",
+    gallery: ["/insulin.png"],
+    inStock: true,
+  },
+  {
+    id: 19,
+    title: "BAC Water 3ml",
+    category: "PEPTIDE",
+    price: "10.00 CHF",
+    oldPrice: "12.00 CHF",
+    badge: "SALE",
+    image: "/BAC.png",
+  
+    description:
+      "Steriles Wasser (für Injektionszwecke keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
+    details:
+       "Steriles Wasser (für Injektionszwecke keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
+    gallery: ["/BAC.png"],
+    inStock: true,
+  },
    {
   id: 20,
   title: "PE-22-28",
@@ -624,7 +739,9 @@ const products = [
   inStock: true,
 },
 ];
-
+const specialOffers = products.filter(
+  (product) => product.category === "Special Offers"
+);
 
 const augustProducts = products.filter(
   (product) => product.category === "Oktober SALES"
@@ -1420,6 +1537,31 @@ const renderProductCard = (product) => (
  ) : (
 
   <>
+
+  {specialOffers.length > 0 && (
+  <section className="product-section special-offers-section">
+    <div className="section-heading-wrap">
+      <span className="section-kicker">
+        SPECIAL
+      </span>
+
+      <h2 className="section-title">
+        SPECIAL OFFERS
+      </h2>
+    </div>
+
+    <div className="product-grid special-offers-grid">
+      {specialOffers.map((product) => (
+        <div
+          id={`product-${product.id}`}
+          key={product.id}
+        >
+          {renderProductCard(product)}
+        </div>
+      ))}
+    </div>
+  </section>
+)}
 
     {/* =========================
         Oktober NEWS
