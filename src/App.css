@@ -823,12 +823,14 @@ button {
 }
 
 .cart-summary-box {
-  background: #050505;
-  border: 1px solid #222;
+  background: #ffffff;
+  color: #101828;
+  border: 1px solid #dfe4eb;
   border-radius: 16px;
   padding: 20px;
   position: sticky;
   top: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .cart-summary-title {
@@ -1015,12 +1017,37 @@ button {
 }
 
 .checkout-summary-box {
-  background: #050505;
-  border: 1px solid #222;
-  border-radius: 24px;
-  padding: 22px;
+  background: #ffffff;
+  color: #101828;
+  border: 1px solid #dfe4eb;
+  border-radius: 22px;
+  padding: 24px;
   position: sticky;
-  top: 20px;
+  top: 84px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.10);
+}
+.voucher-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.voucher-input-row input {
+  min-width: 0;
+  height: 44px;
+}
+
+.voucher-input-row .buy-btn {
+  width: auto;
+  min-height: 44px;
+  padding: 0 16px;
+  background: #0b1424;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: none;
 }
 
 .checkout-summary-title {
@@ -1099,27 +1126,17 @@ button {
 .checkout-pay-btn {
   margin-top: 18px;
   width: 100%;
-  padding: 16px 24px;
-
-  background: linear-gradient(135deg, #1c1c1c, #3b3b3b) !important;
+  min-height: 44px;
+  padding: 12px 16px;
+  background: #0b1424 !important;
   color: #fff !important;
-
-  border: 1px solid #444 !important;
+  border: none !important;
   border-radius: 10px;
-
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-
-  box-shadow:
-    0 8px 22px rgba(0, 0, 0, 0.20);
-
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: none;
   cursor: pointer;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+  transition: background 0.2s ease;
 }
 
 .checkout-pay-btn:hover {
@@ -1555,10 +1572,10 @@ button {
 }
 
 .cart-drawer-list {
-  flex: 1;
-  overflow-y: auto;
+  flex: none;
+  overflow-y: visible;
   padding-right: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .cart-drawer-item {
@@ -2698,7 +2715,7 @@ button {
   --apple-shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.04);
   --apple-shadow-md: 0 18px 48px rgba(0, 0, 0, 0.08);
   --apple-shadow-lg: 0 28px 80px rgba(0, 0, 0, 0.10);
-  --apple-red: #e30613;
+  --apple-red: #181b18;
   --apple-red-soft: rgba(227, 6, 19, 0.10);
 }
 
@@ -2771,8 +2788,6 @@ body {
 .reviews-luxury-section,
 .support-card,
 .business-card,
-.cart-summary-box,
-.checkout-summary-box,
 .success-box,
 .payment-box,
 .payment-method-box,
@@ -3067,17 +3082,12 @@ body {
 }
 
 .cart-drawer-footer {
-  position: sticky;
-  bottom: 0;
-  z-index: 20;
-
-  background: #ffffff !important;
-  padding: 16px;
-
-  border-top: 1px solid #ddd;
-
-  box-shadow:
-    0 -8px 24px rgba(0,0,0,.08);
+  position: static;
+  margin-top: 12px;
+  background: transparent;
+  padding: 0;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: none;
 }
 
 .cart-overlay,
@@ -4779,9 +4789,11 @@ body {
 .payment-icons {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   width: max-content;
-  animation: payment-logo-scroll 18s linear infinite;
+  margin: 0 auto;
+  animation: none;
 }
 
 .payment-card {
@@ -5989,4 +6001,156 @@ body {
   background: #fff !important;
   object-fit: contain !important;
   object-position: center !important;
+}
+/* =========================
+   MINIMAL TECH LOGO
+========================= */
+
+.brand-tech {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-tech-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #ff334e, #dc0025);
+  transform: skewX(-9deg);
+  box-shadow: 0 8px 20px rgba(225, 0, 40, 0.16);
+  animation: logoIconReveal 0.8s ease both;
+}
+
+.brand-tech-cross {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  transform: skewX(9deg);
+}
+
+.brand-tech-cross::before,
+.brand-tech-cross::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.brand-tech-cross::before {
+  width: 100%;
+  height: 9px;
+  top: 10px;
+  left: 0;
+}
+
+.brand-tech-cross::after {
+  width: 9px;
+  height: 100%;
+  left: 10px;
+  top: 0;
+}
+
+.brand-tech-text {
+  color: #111827;
+  font-family: Arial, sans-serif;
+  font-size: clamp(24px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  animation: logoTextReveal 0.9s ease 0.2s both;
+}
+
+.brand-tech-text > span {
+  color: #087cf5;
+}
+
+.brand-tech:hover .brand-tech-icon {
+  box-shadow: 0 10px 28px rgba(225, 0, 40, 0.28);
+}
+
+@keyframes logoIconReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) skewX(-9deg) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) skewX(-9deg) scale(1);
+  }
+}
+
+@keyframes logoTextReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-tech {
+    gap: 9px;
+  }
+
+  .brand-tech-icon {
+    width: 44px;
+    height: 39px;
+  }
+
+  .brand-tech-text {
+    font-size: 25px;
+    letter-spacing: -1.3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-tech-icon,
+  .brand-tech-text {
+    animation: none;
+  }
+}
+/* Minimal Tech Logo – Feinschliff */
+
+.header .brand-tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.header .brand-tech-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.header .brand-tech-text {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+  line-height: 1;
+  white-space: nowrap;
+  color: #17212b;
+}
+
+.header .brand-tech-text > span {
+  color: #2474c7;
+  font-weight: 500;
+}
+.hero-title {
+  white-space: pre-line;
 }

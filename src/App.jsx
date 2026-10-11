@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./App.css";
+import SplitText from "./SplitText";
+import BlurText from "./BlurText";
 import ProductPage from "./ProductPage";
 import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
@@ -1327,7 +1329,6 @@ const renderProductCard = (product) => (
 </div>
 </div>
 )}
-
               {/* =========================
                   TOPBAR
               ========================= */}
@@ -1340,19 +1341,15 @@ const renderProductCard = (product) => (
                   HEADER
               ========================= */}
 
-              <header className="header">
-                <Link
-                  to="/"
-                  className="brand"
-                >
-                  <img
-                    src="/logo1.png"
-                    alt="SwissPharmaLab"
-                    className="logo"
-                  />
-                </Link>
-              </header>
-
+   <header className="header">
+  <Link to="/" className="brand">
+    <img
+      src="/logo1.png"
+      alt="SwissPharmaLab"
+      className="logo"
+    />
+  </Link>
+</header>
               {/* =========================
                   NAVIGATION
               ========================= */}
@@ -1455,20 +1452,45 @@ const renderProductCard = (product) => (
 
                   <div className="hero-badge">
                     Schweizer Qualität • Laborgeprüft
-                    • Diskreter Versand
+                    • Versand aus der Schweiz
                   </div>
 
-                  <h1 className="hero-title">
-  Research Peptide & Laborprodukte
-  <br />
-  aus der Schweiz
-</h1>
+ <div className="hero-heading">
+  <SplitText
+    tag="h1"
+    text="Research Peptide & Laborprodukte"
+    className="hero-title"
+    splitType="words"
+    delay={350}
+    duration={1.5}
+    ease="power3.out"
+    from={{ opacity: 0, y: 40 }}
+    to={{ opacity: 1, y: 0 }}
+    textAlign="left"
+  />
 
-                  <p className="hero-subtitle">
-  Entdecke ausgewählte Research Peptide und Laborprodukte
-  für Forschungs-, Analyse- und Referenzzwecke.
-  Laborgeprüfte Produkte mit diskretem Versand aus der Schweiz.
-</p>
+  <SplitText
+    tag="div"
+    text="aus der Schweiz"
+    className="hero-title"
+    splitType="words"
+    delay={500}
+    duration={1.5}
+    ease="power3.out"
+    from={{ opacity: 0, y: 40 }}
+    to={{ opacity: 1, y: 0 }}
+    textAlign="left"
+  />
+</div>
+
+ <BlurText
+  text="Entdecke ausgewählte Research Peptide und Laborprodukte für Forschungs-, Analyse- und Referenzzwecke. Laborgeprüfte Produkte mit diskretem Versand aus der Schweiz."
+  className="hero-subtitle"
+  animateBy="words"
+  direction="top"
+  delay={100}
+  stepDuration={0.5}
+/>
 
                   <div className="hero-actions">
 

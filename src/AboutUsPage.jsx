@@ -7,13 +7,15 @@ export default function AboutUsPage({ cart }) {
     <div className="page">
 
       <header className="header">
-        <Link to="/" className="brand">
-          <img
-            src="/logo1.png"
-            alt="SwissPharmaLab"
-            className="logo"
-          />
-        </Link>
+  <Link to="/" className="brand brand-tech">
+  <span className="brand-tech-icon" aria-hidden="true">
+    <span className="brand-tech-cross"></span>
+  </span>
+
+  <span className="brand-tech-text">
+    SwissPharma<span>Lab</span>
+  </span>
+</Link>
       </header>
 <nav className="nav">
   <Link to="/" className="nav-link">Peptide</Link>

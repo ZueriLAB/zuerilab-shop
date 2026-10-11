@@ -809,12 +809,37 @@ export default function CheckoutPage({ cart = [] }) {
               </span>
             </div>
 
-            <div className="checkout-card-logo">
-              <img
-                src="/visa.png"
-                alt="Kreditkartenzahlung"
-              />
-            </div>
+          <div className="payment-security checkout-payment-logos">
+  <div className="payment-icons">
+    <div className="payment-card visa">
+      <img src="/visa1.png" alt="Visa" />
+    </div>
+
+    <div className="payment-card mastercard">
+      <img src="/ma_symbol.svg" alt="Mastercard" />
+    </div>
+
+    <div className="payment-card apple-pay">
+      <img src="/Apple_Pay_Mark_RGB_041619.svg" alt="Apple Pay" />
+    </div>
+
+    <div className="payment-card klarna">
+      <img src="/klarna-logo.png" alt="Klarna" />
+    </div>
+
+    <div className="payment-card amazon-pay">
+      <img src="/amazon1.png" alt="Amazon Pay" />
+    </div>
+
+    <div className="payment-secure">
+      <span className="secure-lock">🔒</span>
+      <div>
+        <strong>Sichere Zahlung</strong>
+        <small>SSL · Secure Checkout</small>
+      </div>
+    </div>
+  </div>
+</div>
 
             <button
               type="button"
