@@ -1835,11 +1835,11 @@ button {
     margin: 20px auto;
   }
 
-  .checkout-form-box,
-  .checkout-summary-box {
-    padding: 18px;
-    border-radius: 18px;
-  }
+ .checkout-form-box,
+.checkout-summary-box {
+  padding: 12px;
+  border-radius: 12px;
+}
 
   .checkout-title,
   .checkout-summary-title {
