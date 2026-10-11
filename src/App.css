@@ -1830,10 +1830,13 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .checkout-page {
-    padding: 14px;
-    margin: 20px auto;
-  }
+ .checkout-page {
+  width: 100%;
+  max-width: 360px;
+  padding: 8px;
+  margin: 16px auto;
+  box-sizing: border-box;
+}
 
  .checkout-form-box,
 .checkout-summary-box {
