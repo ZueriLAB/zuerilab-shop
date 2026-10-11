@@ -1682,11 +1682,11 @@ button {
     border-radius: 22px;
   }
 
-  .hero-badge {
-    font-size: 11px;
-    line-height: 1.4;
-    padding: 9px 12px;
-  }
+ .hero-badge {
+  font-size: 11px;
+  line-height: 1.15;
+  padding: 6px 12px;
+}
 
  .hero-title {
   font-size: 34px;
