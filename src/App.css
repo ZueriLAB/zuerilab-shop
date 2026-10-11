@@ -1688,11 +1688,11 @@ button {
     padding: 9px 12px;
   }
 
-  .hero-title {
-    font-size: 34px;
-    line-height: 1.08;
-    margin-top: 18px;
-  }
+ .hero-title {
+  font-size: 34px;
+  line-height: 1.08;
+  margin: 8px 0 6px;
+}
 
   .hero-subtitle {
     font-size: 15px;
@@ -4789,7 +4789,7 @@ body {
 .payment-icons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
   width: max-content;
   margin: 0 auto;
