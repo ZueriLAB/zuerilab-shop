@@ -416,6 +416,10 @@ export default function CheckoutPage({ cart = [] }) {
                     Schweiz
                   </option>
 
+<option value="Italien">
+                    Italien
+                  </option>
+
                   <option value="Österreich">
                     Österreich
                   </option>
