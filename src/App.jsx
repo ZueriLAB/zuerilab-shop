@@ -90,9 +90,9 @@ const products = [
   image: "/retamots.png",
   variants: ["Vial", "Kartusche"],
   description:
-    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
-  details:
-    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren. ",
+    
+  details: "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen. Es gehört zu einer neuen Generation von Peptide aus der Stoffwechselforschung konzipiert für den Energieaufwand zu erhöhen, den Appetit zügelnund Verbesserung des Glukose- und Fettstoffwechsels. MOTS-C (Mitochondrial Open Reading Frame of the 12S rRNA-C) ist ein aus Mitochondrien stammendes Peptid das ist natürlich kodiert in der menschlichen mitochondrialen DNA. Es ist Gegenstand intensiver Forschung, da es in der Lage ist den zellulären Energiestoffwechsel regulieren, die Insulinempfindlichkeit zu verbessernund den Körper vor Stoffwechselstress zu schützen. ",
   gallery: ["/retamots.png"],
   inStock: true,
 },
@@ -108,9 +108,9 @@ const products = [
   
     variants: ["Vial", "Kartusche"],
     description:
-      "Retatrutide und Tesamorelin in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+      "Retatrutide und Tesamorelin in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren.",
     details:
-      "RETATRUTIDE und Tesamorelin ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+      "Retatrutide und Tesamorelin in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren. Es gehört zu einer neuen Generation von Peptide aus der Stoffwechselforschung konzipiert für den Energieaufwand zu erhöhen, den Appetit zügelnund Verbesserung des Glukose- und Fettstoffwechsels. Tesamorelin - Wachstumshormon-freisetzendes Peptid für die Stoffwechsel- und Regenerationsforschung In wissenschaftlichen Studien wird Tesamorelin in erster Linie auf seine Fähigkeit untersucht das viszerale Fettgewebe zu reduzieren, Verbesserung der Proteinbiosyntheseund die zelluläre Regeneration zu fördern durch die IGF-1-Signalweg.",
     gallery: ["/tesareta.png"],
     inStock: true,
   },
@@ -119,13 +119,13 @@ const products = [
   id: 52,
   title: "RETATRUTIDE 3 x 10mg",
   category: "Special Offers",
-  price: "250.00 CHF",
+  price: "240.00 CHF",
   oldPrice: "330.00 CHF",
   badge: "Special Offers",
   image: "/3reta.png",
    variants: ["Vial", "Kartusche"],
   description:
-    "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+    "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren. Es gehört zu einer neuen Generation von Peptide aus der Stoffwechselforschung konzipiert für den Energieaufwand zu erhöhen, den Appetit zügelnund Verbesserung des Glukose- und Fettstoffwechsels.",
   details:
       "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
   gallery: ["/3reta.png"],
@@ -365,18 +365,18 @@ const products = [
 
   {
     id: 5,
-    title: "IGF-1 LR3 1mg",
+    title: "TESAMORELIN",
     category: "PEPTIDE",
     price: "110.00 CHF",
     oldPrice: "120.00 CHF",
     badge: "SALE",
-    image: "/igf-lr.png",
+    image: "/tesa10.png",
     variants: ["Vial", "Kartusche"],
     description:
-      "IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+      "Tesamorelin ausschließlich für Labor-, Analyse- und Referenzzwecke.",
     details:
-      "IGF-1 LR3 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
-    gallery: ["/igf-lr.png"],
+      "Tesamorelin ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    gallery: ["/tesa10.png"],
     inStock: true,
   },
 
