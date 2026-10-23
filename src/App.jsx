@@ -99,19 +99,19 @@ const products = [
 
 {
     id: 51,
-    title: "RETATRUTIDE 5 x 10mg",
+    title: "RETATRUTIDE 10mg + TESAMORELIN 10mg",
     category: "Special Offers",
-    price: "350.00 CHF",
-    oldPrice: "450.00 CHF",
+    price: "160.00 CHF",
+    oldPrice: "210.00 CHF",
     badge: "Special Offers",
-    image: "/5reta.png",
+    image: "/tesareta.png",
   
     variants: ["Vial", "Kartusche"],
     description:
-      "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+      "Retatrutide und Tesamorelin in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
     details:
-      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
-    gallery: ["/5reta.png"],
+      "RETATRUTIDE und Tesamorelin ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+    gallery: ["/tesareta.png"],
     inStock: true,
   },
 
