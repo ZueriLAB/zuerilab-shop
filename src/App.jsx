@@ -21,22 +21,165 @@ import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 const researchNewsProducts = [
   {
- 
+    id: 20,
+    name: "PE-22-28",
+    subtitle: "PE-22-28",
+    image: "/pe-22-28.png",
+    color: "#f4c400",
+  },
+  {
+    id: 21,
+    name: "WOLVERINE",
+    subtitle: "BPC-157 + TB-500",
+    image: "/wolverine.png",
+    color: "#76b82a",
+  },
+  {
+    id: 22,
+    name: "THYMULIN",
+    subtitle: "THYMULIN",
+    image: "/thymulin.png",
+    color: "#e83e8c",
+  },
+  {
+    id: 23,
+    name: "EPITALON",
+    subtitle: "EPITHALONE",
+    image: "/epitalon.png",
+    color: "#76b82a",
+  },
+  {
+    id: 24,
+    name: "ADAMAX",
+    subtitle: "AC-MEH-FPGPAG-NH2",
+    image: "/adamax.png",
+    color: "#ef2929",
+  },
+  {
+    id: 25,
+    name: "PT-141",
+    subtitle: "BREMELANOTIDE",
+    image: "/pt-141.png",
+    color: "#6541a5",
+  },
+  {
+    id: 26,
+    name: "LL-37",
+    subtitle: "CATHELICIDIN ANTIMICROBIAL PEPTIDE",
+    image: "/ll-37.png",
+    color: "#b58a45",
+  },
+  {
+    id: 27,
+    name: "HCG",
+    subtitle: "HUMAN CHORIONIC GONADOTROPIN",
+    image: "/hcg.png",
+    color: "#6541a5",
   },
 ];
 
 const products = [
 
+  {
+  id: 50,
+  title: "RETATRUTIDE 10mg + MOTS-C 10mg",
+  category: "Special Offers",
+  price: "140.00 CHF",
+  oldPrice: "190.00 CHF",
+  badge: "Special Offers",
+  image: "/retamots.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren. ",
+    
+  details: "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen. Es gehört zu einer neuen Generation von Peptide aus der Stoffwechselforschung konzipiert für den Energieaufwand zu erhöhen, den Appetit zügelnund Verbesserung des Glukose- und Fettstoffwechsels. MOTS-C (Mitochondrial Open Reading Frame of the 12S rRNA-C) ist ein aus Mitochondrien stammendes Peptid das ist natürlich kodiert in der menschlichen mitochondrialen DNA. Es ist Gegenstand intensiver Forschung, da es in der Lage ist den zellulären Energiestoffwechsel regulieren, die Insulinempfindlichkeit zu verbessernund den Körper vor Stoffwechselstress zu schützen. ",
+  gallery: ["/retamots.png"],
+  inStock: true,
+},
+
+{
+    id: 51,
+    title: "RETATRUTIDE 10mg + TESAMORELIN 10mg",
+    category: "Special Offers",
+    price: "160.00 CHF",
+    oldPrice: "210.00 CHF",
+    badge: "Special Offers",
+    image: "/tesareta.png",
+  
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Retatrutide und Tesamorelin in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren.",
+    details:
+      "Retatrutide und Tesamorelin in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren. Es gehört zu einer neuen Generation von Peptide aus der Stoffwechselforschung konzipiert für den Energieaufwand zu erhöhen, den Appetit zügelnund Verbesserung des Glukose- und Fettstoffwechsels. Tesamorelin - Wachstumshormon-freisetzendes Peptid für die Stoffwechsel- und Regenerationsforschung In wissenschaftlichen Studien wird Tesamorelin in erster Linie auf seine Fähigkeit untersucht das viszerale Fettgewebe zu reduzieren, Verbesserung der Proteinbiosyntheseund die zelluläre Regeneration zu fördern durch die IGF-1-Signalweg.",
+    gallery: ["/tesareta.png"],
+    inStock: true,
+  },
+
+{
+  id: 52,
+  title: "RETATRUTIDE 3 x 10mg",
+  category: "Special Offers",
+  price: "240.00 CHF",
+  oldPrice: "330.00 CHF",
+  badge: "Special Offers",
+  image: "/3reta.png",
+   variants: ["Vial", "Kartusche"],
+  description:
+    "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg. Retatrutid ist ein fortschrittliches, lang wirkendes dreifach agonistisches Peptid die gleichzeitig die GLP-1 (Glucagon-Like Peptide-1), GIP (Glukose-abhängiges insulinotropes Polypeptid)und Glucagon-Rezeptoren. Es gehört zu einer neuen Generation von Peptide aus der Stoffwechselforschung konzipiert für den Energieaufwand zu erhöhen, den Appetit zügelnund Verbesserung des Glukose- und Fettstoffwechsels.",
+  details:
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+  gallery: ["/3reta.png"],
+  inStock: true,
+},
+
+{
+  id: 30,
+  title: "IPAMORELIN",
+  category: "Oktober SALES",
+  price: "50.00 CHF",
+  oldPrice: "70.00 CHF",
+  badge: "Oktober",
+  image: "/IPA.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "Ipamorelin – Hochreiner Laborwirkstoff für Forschungszwecke.",
+  details:
+    "Research-Grade-Laborverbindung für kontrollierte Forschungs- und Modellanwendungen.",
+  gallery: ["/IPA.png"],
+  inStock: true,
+},
+
+{
+    id: 31,
+    title: "RETATRUTIDE 10mg / 20mg",
+    category: "Oktober SALES",
+    price: "110.00 CHF",
+    oldPrice: "120.00 CHF",
+    badge: "Oktober",
+    image: "/RETA10.png",
+    doses: [
+      { label: "10 mg", price: "110.00 CHF" },
+      { label: "20 mg", price: "160.00 CHF" },
+    ],
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+    details:
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+    gallery: ["/RETA10.png"],
+    inStock: true,
+  },
+
 {
   id: 32,
-  title: "Research Vial Case",
+  title: "Research Peptide Case",
   category: "Oktober SALES",
   price: "39.00 CHF",
   oldPrice: "49.00 CHF",
   badge: "Oktober",
   image: "/case.png",
   description:
-    "Vial Aufbewahrungs Case.",
+    "Peptide Aufbewahrungs Case.",
   details:
     "Passend für 4 Vials und Div. Zubehör. Erhältlich in schwarz, rot und hell-braun.",
   gallery: ["/case.png"],
@@ -53,45 +196,363 @@ const products = [
   description:
     "The Ordinary GHK-CU Serum 3ml ",
   details:
-    "Das Multi- + Copper  1% Serum von The Ordinary ist eine Formel, die sich ideal für reife Haut eignet und das Erscheinungsbild einer glatten, kollagenreich wirkenden Haut unterstützt. Die Pflege enthält eine Kombination aus, die das Erscheinungsbild feiner Linien mildert und die Haut sichtbar straffer und strahlender wirken lässt. Aminosäuren und Hyaluronsäure sorgen zusätzlich für einen intensiven Feuchtigkeitsboost. Das multifunktionale Serum hilft außerdem, die Haut vor schädlichen Umwelteinflüssen zu schützen, die zu vorzeitiger Hautalterung beitragen.",
+    "Das Multi-Peptide + Copper Peptides 1% Serum von The Ordinary ist eine Formel, die sich ideal für reife Haut eignet und das Erscheinungsbild einer glatten, kollagenreich wirkenden Haut unterstützt. Die Pflege enthält eine Kombination aus Peptiden, die das Erscheinungsbild feiner Linien mildert und die Haut sichtbar straffer und strahlender wirken lässt. Aminosäuren und Hyaluronsäure sorgen zusätzlich für einen intensiven Feuchtigkeitsboost. Das multifunktionale Serum hilft außerdem, die Haut vor schädlichen Umwelteinflüssen zu schützen, die zu vorzeitiger Hautalterung beitragen.",
   gallery: ["/serum.png"],
   inStock: true,
 },
-{
-  id: 34,
-  title: "V3 Pen Kit ",
-  category: "Oktober SALES",
-  price: "210.00 CHF",
-  oldPrice: "250.00 CHF",
-  badge: "Oktober",
-  image: "/images.jpg",
-  description:
-    "V3 Pen Set mit Etui, leerer Kartusche und 3 Nadeln",
-  details:
-    " Das V3 Pen Set umfasst einen Pen mit Injektionsmechanismus, ein passendes Etui, eine leere Kartusche und drei passende Nadeln. Wichtige Produktinformationen Das Set wird ohne Wirkstoff und ohne Arzneimittel geliefert. Die Kartusche ist leer. Es wird keine pharmakologische Wirkung des Sets oder seiner Bestandteile zugesichert.",
-  gallery: ["/images.jpg"],
-  inStock: true,
-},
-{
-  id: 35,
-  title: "Resarch Vial Case Reta ",
-  category: "Oktober SALES",
-  price: "110.00 CHF",
-  oldPrice: "130.00 CHF",
-  badge: "Oktober",
-  image: "/81Xn4AtkAyL.jpg",
-  description:
-    "Peptid Reta Case 3d Druck platz für 4 x 3ml Vials.",
-  details:
-    "Wichtige Produktinformationen Das Set wird ohne Wirkstoff und ohne Arzneimittel geliefert. Die Kartusche ist leer. Es wird keine pharmakologische Wirkung des Sets oder seiner Bestandteile zugesichert.",
-  gallery: ["/81Xn4AtkAyL.jpg"],
-  inStock: true,
-},
 
+  {
+    id: 99,
+    title: "RETATRUTIDE 20mg Fertigpen",
+    category: "NEU",
+    price: "210.00 CHF",
+    badge: "NEU",
+    image: "/RETAPEN.png",
+    description:
+      "Retatrutide 20mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+    details:
+      "RETATRUTIDE 20mg ist ein synthetisches Peptid in Forschungsqualität, ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    gallery: ["/RETAPEN.png"],
+    inStock: true,
+  },
+
+  {
+    id: 98,
+    title: "GHK-CU 50mg Fertigpen",
+    category: "NEU",
+    price: "130.00 CHF",
+    badge: "NEU",
+    image: "/OZEN.png",
+    description:
+      "GHK-CU 50mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+    details:
+      "GHK-Cu ist ein hochwertiges Kupferpeptid für kontrollierte Forschungs- und Analysezwecke.",
+    gallery: ["/OZEN.png"],
+    inStock: true,
+  },
+
+  {
+    id: 97,
+    title: "MOTS-C 10mg Fertigpen",
+    category: "NEU",
+    price: "220.00 CHF",
+    badge: "NEU",
+    image: "/MOTS.png",
+    description:
+      "MOTS-C 10mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke. Exclusive nur bei SwissPharmaLab.",
+    details:
+      "MOTS-C Forschungsqualität ist ein synthetisches Peptid für Laborforschung, analytische Verfahren und standardisierte Referenzanwendungen.",
+    gallery: ["/MOTS.png"],
+    inStock: true,
+  },
+
+  {
+    id: 96,
+    title: "NAD+ 500mg Fertigpen",
+    category: "NEU",
+    price: "200.00 CHF",
+    badge: "NEU",
+    image: "/NAD.png",
+    description:
+      "NAD+ 500mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht zur Anwendung am Menschen oder Tier.",
+    gallery: ["/NAD.png"],
+    inStock: true,
+  },
+
+  {
+    id: 95,
+    title: "IGF-1 LR3 1mg Fertigpen",
+    category: "NEU",
+    price: "230.00 CHF",
+    badge: "NEU",
+    image: "/IGF.png",
+    description:
+      "IGF-1 LR3 Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "IGF-1 LR3 ist ein rekombinantes Analogon von IGF-1 für präklinische Forschungszwecke.",
+    gallery: ["/IGF.png"],
+    inStock: true,
+  },
+
+  {
+    id: 94,
+    title: "Semax 30mg Fertigpen",
+    category: "NEU",
+    price: "140.00 CHF",
+    badge: "NEU",
+    image: "/semax.png",
+    description:
+      "Semax 30mg Fertigpen ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/semax.png"],
+    inStock: true,
+  },
+
+  {
+    id: 1,
+    title: "GHK-CU 50mg",
+    category: "PEPTIDE",
+    price: "50.00 CHF",
+    oldPrice: "80.00 CHF",
+    badge: "BESTSELLER",
+    image: "/GHK-CU.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "GHK-CU - Hochreiner Laborwirkstoff für Forschungszwecke.",
+    details:
+      "GHK-CU ist ein synthetischer kupfergebundener Peptidkomplex in lyophilisierter Pulverform.",
+    gallery: ["/GHK-CU.png"],
+    inStock: true,
+  },
+
+  {
+    id: 2,
+    title: "HGH FRAGMENT 176-191 5mg",
+    category: "PEPTIDE",
+    price: "110.00 CHF",
+    oldPrice: "125.00 CHF",
+    badge: "BESTSELLER",
+    image: "/HGH-FRAG.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "HGH Fragment 176–191 ist ein stabilisiertes Analogon für präklinische Forschungszwecke.",
+    gallery: ["/HGH-FRAG.png"],
+    inStock: true,
+  },
+
+  {
+    id: 3,
+    title: "RETATRUTIDE 10mg / 20mg",
+    category: "PEPTIDE",
+    price: "110.00 CHF",
+    oldPrice: "120.00 CHF",
+    badge: "BESTSELLER",
+    image: "/RETA10.png",
+    doses: [
+      { label: "10 mg", price: "110.00 CHF" },
+      { label: "20 mg", price: "160.00 CHF" },
+    ],
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Retatrutide in Forschungsqualität für Labor-, Analyse- und Referenzzwecke. Versand aus der Schweiz. Erhältlich in 10 mg und 20 mg.",
+    details:
+      "RETATRUTIDE ist ein synthetisches Peptid in Forschungsqualität für kontrollierte Forschungsumgebungen.",
+    gallery: ["/RETA10.png"],
+    inStock: true,
+  },
+
+  {
+    id: 4,
+    title: "MOTS-C 10mg",
+    category: "PEPTIDE",
+    price: "110.00 CHF",
+    oldPrice: "120.00 CHF",
+    badge: "BESTSELLER",
+    image: "/MOTS1.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "MOTS-C 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    gallery: ["/MOTS1.png"],
+    inStock: true,
+  },
+
+  {
+    id: 5,
+    title: "TESAMORELIN",
+    category: "PEPTIDE",
+    price: "110.00 CHF",
+    oldPrice: "120.00 CHF",
+    badge: "SALE",
+    image: "/tesa10.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Tesamorelin ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Tesamorelin ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    gallery: ["/tesa10.png"],
+    inStock: true,
+  },
+
+  {
+    id: 6,
+    title: "IPAMORELIN",
+    category: "PEPTIDE",
+    price: "50.00 CHF",
+    oldPrice: "70.00 CHF",
+    badge: "SALE",
+    image: "/IPA.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Hinweis zur ausschließlichen Forschung.",
+    gallery: ["/IPA.png"],
+    inStock: true,
+  },
+
+  {
+    id: 7,
+    title: "THYMOSIN ALPHA",
+    category: "PEPTIDE",
+    price: "100.00 CHF",
+    oldPrice: "109.00 CHF",
+    badge: "SALE",
+    image: "/THY.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Hinweis zur ausschließlichen Forschung.",
+    details:
+      "Thymosin Alpha-1 ist ein Peptid, das in präklinischer Forschung untersucht wird.",
+    gallery: ["/THY.png"],
+    inStock: true,
+  },
+
+  {
+    id: 8,
+    title: "KLOW",
+    category: "PEPTIDE",
+    price: "170.00 CHF",
+    oldPrice: "180.00 CHF",
+    badge: "SALE",
+    image: "/KLOW.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Synthetische Peptid-Mischung. Hinweis zur ausschließlichen Forschung.",
+    details:
+      "Hinweis zur ausschließlichen Forschung.",
+    gallery: ["/KLOW.png"],
+    inStock: true,
+  },
+
+  {
+    id: 9,
+    title: "GLOW",
+    category: "PEPTIDE",
+    price: "125.00 CHF",
+    oldPrice: "130.00 CHF",
+    badge: "SALE",
+    image: "/GLOW.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Synthetische Peptid-Mischung. Hinweis zur ausschließlichen Forschung.",
+    details:
+      "Hinweis zur ausschließlichen Forschung.",
+    gallery: ["/GLOW.png"],
+    inStock: true,
+  },
+
+  {
+    id: 10,
+    title: "SEMAX 10mg",
+    category: "PEPTIDE",
+    price: "30.00 CHF",
+    oldPrice: "60.00 CHF",
+    badge: "SALE",
+    image: "/semax2.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Semax 10mg ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/semaxx.png"],
+    inStock: true,
+  },
+
+  {
+    id: 11,
+    title: "NAD+ 500mg",
+    category: "PEPTIDE",
+    price: "80.00 CHF",
+    oldPrice: "85.00 CHF",
+    badge: "SALE",
+    image: "/nad++.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/nad++.png"],
+    inStock: true,
+  },
+
+  {
+    id: 12,
+    title: "GHRP-2",
+    category: "PEPTIDE",
+    price: "90.00 CHF",
+    oldPrice: "99.00 CHF",
+    badge: "SALE",
+    image: "/GHRP.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/GHRP.png"],
+    inStock: true,
+  },
+
+  {
+    id: 13,
+    title: "GHRP-6",
+    category: "PEPTIDE",
+    price: "90.00 CHF",
+    oldPrice: "99.00 CHF",
+    badge: "SALE",
+    image: "/GHRP6.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/GHRP6.png"],
+    inStock: true,
+  },
+
+  {
+    id: 14,
+    title: "BPC-157",
+    category: "PEPTIDE",
+    price: "79.00 CHF",
+    oldPrice: "85.00 CHF",
+    badge: "SALE",
+    image: "/BPC.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/BPC.png"],
+    inStock: true,
+  },
+
+  {
+    id: 15,
+    title: "TB-500 10",
+    category: "PEPTIDE",
+    price: "80.00 CHF",
+    oldPrice: "95.00 CHF",
+    badge: "SALE",
+    image: "/TB500.png",
+    variants: ["Vial", "Kartusche"],
+    description:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    details:
+      "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+    gallery: ["/TB500.png"],
+    inStock: true,
+  },
     {
     id: 16,
     title: "1 x Pack Alcohol Pads",
-    category: "Laborbedarf",
+    category: "PEPTIDE",
     price: "12.00 CHF",
     oldPrice: "15.00 CHF",
     badge: "SALE",
@@ -107,7 +568,7 @@ const products = [
     {
     id: 17,
     title: "10 x PEN Nadel 31G x 5mm",
-    category: "Laborbedarf",
+    category: "PEPTIDE",
     price: "5.00 CHF",
     oldPrice: "8.00 CHF",
     badge: "SALE",
@@ -123,7 +584,7 @@ const products = [
     {
     id: 18,
     title: "10 x Insulinspritzen 1ml 30g x 6/8mm",
-    category: "Laborbedarf",
+    category: "PEPTIDE",
     price: "10.00 CHF",
     oldPrice: "12.00 CHF",
     badge: "SALE",
@@ -139,36 +600,146 @@ const products = [
   {
     id: 19,
     title: "BAC Water 3ml",
-    category: "Laborbedarf",
+    category: "PEPTIDE",
     price: "10.00 CHF",
     oldPrice: "12.00 CHF",
     badge: "SALE",
     image: "/BAC.png",
   
     description:
-      "Steriles Wasser ( keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
+      "Steriles Wasser (für Injektionszwecke keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
     details:
        "Steriles Wasser (für Injektionszwecke keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
     gallery: ["/BAC.png"],
     inStock: true,
   },
-  {
-    id: 20,
-    title: "BAC Water 3ml",
-    category: "Laborbedarf",
-    price: "90.00 CHF",
-    oldPrice: "110.00 CHF",
-    badge: "SALE",
-    image: "/hospira.jpg",
-  
-    description:
-      "Steriles Wasser von Hospira (keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
-    details:
-       "Steriles Wasser von Hospira (für Injektionszwecke keimfrei und endotoxinfrei 0,9% Benzylalkohol),",
-    gallery: ["/hospira.jpg"],
-    inStock: true,
-  },
-   
+   {
+  id: 20,
+  title: "PE-22-28",
+  category: "RESEARCH",
+  price: "110.00 CHF",
+  badge: "RESEARCH",
+  image: "/pe-22-28.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "PE-22-28 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Synthetisches Peptid, abgeleitet von Spadin (einem natürlichen Fragment des Sortilin-Proteins). Ein eigenständiges Molekül mit eigenem Wirkmechanismus. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/pe-22-28.png"],
+  inStock: true,
+},
+
+{
+  id: 21,
+  title: "WOLVERINE",
+  category: "RESEARCH",
+  price: "180.00 CHF",
+  badge: "RESEARCH",
+  image: "/wolverine.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "WOLVERINE (BPC-157 + TB-500) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Blend aus BPC-157 & TB-500. Nur für Laborforschungszwecke.Synthetisches Pentadecapeptid, abgeleitet von einem im Magensaft vorkommenden Schutzprotein. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/wolverine.png"],
+  inStock: true,
+},
+
+{
+  id: 22,
+  title: "THYMULIN",
+  category: "RESEARCH",
+  price: "109.00 CHF",
+  badge: "RESEARCH",
+  image: "/thymulin.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "THYMULIN ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Natürliches Nonapeptidhormon, sezerniert vom Thymus. Zink-abhängig — biologisch inaktiv ohne gebundenes Zn²⁺ Halbwertszeit, subkutane Injektion. KurzeNur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/thymulin.png"],
+  inStock: true,
+},
+
+{
+  id: 23,
+  title: "EPITALON",
+  category: "RESEARCH",
+  price: "160.00 CHF",
+  badge: "RESEARCH",
+  image: "/epitalon.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "EPITALON ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Synthetisches Tetrapeptid (Ala-Glu-Asp-Gly), abgeleitet von Epithalamin, einem aus der Zirbeldrüse (Pinealdrüse) gewonnenen Peptidpräparat. Kurze Halbwertszeit, subkutane Injektion. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/epitalon.png"],
+  inStock: true,
+},
+
+{
+  id: 24,
+  title: "ADAMAX",
+  category: "RESEARCH",
+  price: "110.00 CHF",
+  badge: "RESEARCH",
+  image: "/adamax.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "ADAMAX ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Synthetisches Neuropeptid (ACTH-Analogon). Halbwertszeit ca. 1–2 Stunden, subkutane Injektion. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/adamax.png"],
+  inStock: true,
+},
+
+{
+  id: 25,
+  title: "PT-141",
+  category: "RESEARCH",
+  price: "90.00 CHF",
+  badge: "RESEARCH",
+  image: "/pt-141.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "PT-141 (Bremelanotide) ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "PT-141. Melanocortin-Rezeptoragonist (MC3R/MC4R). Halbwertszeit ca. 6-12 Stunden. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/pt-141.png"],
+  inStock: true,
+},
+
+{
+  id: 26,
+  title: "LL-37",
+  category: "RESEARCH",
+  price: "98.00 CHF",
+  badge: "RESEARCH",
+  image: "/ll-37.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "LL-37 ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "LL-37. Humanes Cathelicidin-Peptid (antimikrobielles Peptid / AMP). Halbwertszeit ca. 2-3 Stunden, subkutane Injektion oder intranasale Applikation. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/ll-37.png"],
+  inStock: true,
+},
+
+{
+  id: 27,
+  title: "HCG",
+  category: "RESEARCH",
+  price: "120.00 CHF",
+  badge: "RESEARCH",
+  image: "/hcg.png",
+  variants: ["Vial", "Kartusche"],
+  description:
+    "HCG ausschließlich für Labor-, Analyse- und Referenzzwecke.",
+  details:
+    "Gonadotropin-Hormon zur Aufrechterhaltung der Hodenfunktion. Halbwertszeit ca. 24-36 Stunden, subkutane oder intramuskuläre Injektion typischerweise 2-3x wöchentlich. Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
+  gallery: ["/hcg.png"],
+  inStock: true,
+},
 ];
 const specialOffers = products.filter(
   (product) => product.category === "Special Offers"
@@ -256,12 +827,12 @@ const [ageConfirmed, setAgeConfirmed] = useState(() => {
     });
   }, [searchTerm]);
 
-  const laborbedarfProducts = filteredProducts.filter(
-    (product) => product.category === "Laborbedarf"
+  const peptideProducts = filteredProducts.filter(
+    (product) => product.category === "PEPTIDE"
   );
 
   const muscleGainProducts = filteredProducts.filter(
-    (product) => product.category === "Laboraufbau"
+    (product) => product.category === "Muskelaufbau"
   );
 
   const supportProducts = filteredProducts.filter(
@@ -790,17 +1361,17 @@ const renderProductCard = (product) => (
               <nav className="nav">
 
                 <a
-                  href="#Laborbedarf"
+                  href="#peptide"
                   className="nav-link"
                 >
-                  Laborbedarf
+                  Peptide
                 </a>
 
                 <a
-                  href="#Laboraufbau"
+                  href="#Muskelaufbau"
                   className="nav-link"
                 >
-                  Laboraufbau
+                  Muskelaufbau
                 </a>
 
                 <Link
@@ -887,7 +1458,7 @@ const renderProductCard = (product) => (
  <div className="hero-heading">
   <SplitText
     tag="h1"
-    text="Laborprodukte"
+    text="Research Peptide & Laborprodukte"
     className="hero-title"
     splitType="words"
     delay={350}
@@ -913,7 +1484,7 @@ const renderProductCard = (product) => (
 </div>
 
  <BlurText
-  text="Entdecke ausgewählte  Laborprodukte für Forschungs-, Analyse- und Referenzzwecke. Versand aus der Schweiz."
+  text="Entdecke ausgewählte Research Peptide und Laborprodukte für Forschungs-, Analyse- und Referenzzwecke. Laborgeprüfte Produkte mit diskretem Versand aus der Schweiz."
   className="hero-subtitle"
   animateBy="words"
   direction="top"
@@ -924,7 +1495,7 @@ const renderProductCard = (product) => (
                   <div className="hero-actions">
 
                     <a
-                      href="#laborbedarf"
+                      href="#peptide"
                       className="hero-btn hero-btn-primary"
                     >
                       Bestseller ansehen
@@ -1097,10 +1668,10 @@ const renderProductCard = (product) => (
                       PEPTIDE
                   ========================= */}
 
-                  {laborbedarfProducts.length > 0 && (
+                  {peptideProducts.length > 0 && (
                     <section
                       className="product-section"
-                      id="Laborbedarf"
+                      id="peptide"
                     >
 
                       <div className="section-heading-wrap">
@@ -1110,14 +1681,14 @@ const renderProductCard = (product) => (
                         </span>
 
                         <h2 className="section-title">
-                          Laborbedarf
+                          PEPTIDE
                         </h2>
 
                       </div>
 
                       <div className="product-grid">
 
-                        {laborbedarfProducts.map(
+                        {peptideProducts.map(
                           (product) => (
                             <div
                               id={`product-${product.id}`}
@@ -1137,8 +1708,42 @@ const renderProductCard = (product) => (
 
                   <section className="research-news-section">
 
- 
+  <div className="research-news-heading">
+    <span>NEU</span>
+    <h2>NEUE RESEARCH PRODUKTE</h2>
+  </div>
 
+  <div className="research-news-grid">
+    {researchNewsProducts.map((product) => (
+      <div
+        className="research-news-card"
+        key={product.id}
+        style={{ "--accent": product.color }}
+      >
+        <div className="research-news-info">
+          <span className="research-news-badge">NEU</span>
+
+          <h3>{product.name}</h3>
+          <p>{product.subtitle}</p>
+
+          <Link
+            to={`/produkt/${product.id}`}
+            className="research-news-button"
+          >
+            Jetzt ansehen →
+          </Link>
+        </div>
+
+        <div className="research-news-image-wrap">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="research-news-image"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
 
 </section>
 
@@ -1148,7 +1753,7 @@ const renderProductCard = (product) => (
 
                   <section
                     className="product-section"
-                    id="Laboraufbau"
+                    id="Muskelaufbau"
                   >
 
                     <div className="section-heading-wrap">
@@ -1158,7 +1763,7 @@ const renderProductCard = (product) => (
                       </span>
 
                       <h2 className="section-title">
-                        Laboraufbau
+                        Muskelaufbau
                       </h2>
 
                     </div>
@@ -1166,13 +1771,13 @@ const renderProductCard = (product) => (
                     <div className="muscle-whatsapp-box">
 
                       <h3>
-                        Laboraufbau-Produkte
+                        Muskelaufbau-Produkte
                       </h3>
 
                       <p>
                         Informationen zu unseren
                         Produkten für den Bereich
-                        Laboraufbau erhalten Sie
+                        Muskelaufbau erhalten Sie
                         gerne direkt über WhatsApp.
                       </p>
 
@@ -1188,7 +1793,7 @@ const renderProductCard = (product) => (
                         rel="noopener noreferrer"
                         className="muscle-whatsapp-btn"
                       >
-                        💬 Laboraufbau via WhatsApp
+                        💬 Muskelaufbau via WhatsApp
                         anfragen
                       </a>
 
