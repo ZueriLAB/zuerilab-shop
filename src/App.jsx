@@ -501,18 +501,18 @@ const products = [
 
   {
     id: 13,
-    title: "GHRP-6",
+    title: "CJC-1295",
     category: "PEPTIDE",
-    price: "90.00 CHF",
-    oldPrice: "99.00 CHF",
+    price: "50.00 CHF",
+    oldPrice: "70.00 CHF",
     badge: "SALE",
-    image: "/GHRP6.png",
+    image: "/CJC.png",
     variants: ["Vial", "Kartusche"],
     description:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
     details:
       "Nur für Laborforschungszwecke. Nicht für den menschlichen oder tierischen Verzehr.",
-    gallery: ["/GHRP6.png"],
+    gallery: ["/CJC.png"],
     inStock: true,
   },
 
