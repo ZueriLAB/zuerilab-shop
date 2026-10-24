@@ -549,54 +549,7 @@ const products = [
     gallery: ["/TB500.png"],
     inStock: true,
   },
-    {
-    id: 16,
-    title: "1 x Pack Alcohol Pads",
-    category: "PEPTIDE",
-    price: "12.00 CHF",
-    oldPrice: "15.00 CHF",
-    badge: "SALE",
-    image: "/pads.png",
   
-    description:
-      "100 Stk Sterile and individually packaged for maximum hygiene.",
-    details:
-      "100 Stk Sterile and individually packaged for maximum hygiene.",
-    gallery: ["/pads.png"],
-    inStock: true,
-  },
-    {
-    id: 17,
-    title: "10 x PEN Nadel 31G x 5mm",
-    category: "PEPTIDE",
-    price: "5.00 CHF",
-    oldPrice: "8.00 CHF",
-    badge: "SALE",
-    image: "/pennadel.png",
-
-    description:
-      "10 x Disposable needles for insulin injection devices.",
-    details:
-      "10 x Disposable needles for insulin injection devices.",
-    gallery: ["/pennadel.png"],
-    inStock: true,
-  },
-    {
-    id: 18,
-    title: "10 x Insulinspritzen 1ml 30g x 6/8mm",
-    category: "PEPTIDE",
-    price: "10.00 CHF",
-    oldPrice: "12.00 CHF",
-    badge: "SALE",
-    image: "/insulin.png",
-  
-    description:
-      "Insulinspritzen sind sterile Produkte für den Einmalgebrauch und sollen nicht wiederverwendet werden!.",
-    details:
-      "Insulinspritzen sind sterile Produkte für den Einmalgebrauch und sollen nicht wiederverwendet werden!.",
-    gallery: ["/insulin.png"],
-    inStock: true,
-  },
   {
     id: 19,
     title: "BAC Water 3ml",
